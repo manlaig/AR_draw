@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.iOS;
 
 public class UpdateWorldMappingStatus : MonoBehaviour 
 {
-
 	public Text text;
 	public Text tracking;
+    public Text textAnchor;
 
 
 	// Use this for initialization
@@ -27,5 +25,10 @@ public class UpdateWorldMappingStatus : MonoBehaviour
 	{
 		UnityARSessionNativeInterface.ARFrameUpdatedEvent -= CheckWorldMapStatus;
 	}
+
+    public void ChangeTextTo(string txt)
+    {
+        textAnchor.text = txt;
+    }
 
 }

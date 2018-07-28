@@ -8224,6 +8224,7 @@ extern "C" void GameObject_SendMessage_m3720186693 ();
 extern "C" void GameObject_Internal_AddComponentWithType_m3797731663 ();
 extern "C" void GameObject_AddComponent_m136524825 ();
 extern "C" void GameObject_Internal_CreateGameObject_m2533291801 ();
+extern "C" void GameObject_Find_m2032535176 ();
 extern "C" void GameObject_get_gameObject_m3693461266 ();
 extern "C" void Gradient__ctor_m173848750 ();
 extern "C" void Gradient_Init_m3104802093 ();
@@ -8275,6 +8276,7 @@ extern "C" void LightmapSettings_get_lightProbes_m2185879844 ();
 extern "C" void LightProbes__ctor_m2758937784 ();
 extern "C" void LightProbes_get_bakedProbes_m3582948181 ();
 extern "C" void LightProbes_get_count_m2728320420 ();
+extern "C" void LineRenderer_set_startWidth_m1093267133 ();
 extern "C" void LineRenderer_set_endWidth_m4252049505 ();
 extern "C" void LineRenderer_set_startColor_m307692187 ();
 extern "C" void LineRenderer_get_endColor_m450072797 ();
@@ -11396,6 +11398,9 @@ extern "C" void BlendshapePrinter_FaceAdded_m3245869843 ();
 extern "C" void BlendshapePrinter_FaceUpdated_m407913393 ();
 extern "C" void BlendshapePrinter_FaceRemoved_m2395226457 ();
 extern "C" void BlendshapePrinter_Update_m924547839 ();
+extern "C" void BrushEditor__ctor_m2820859869 ();
+extern "C" void BrushEditor_ChangeWidth_m1867125230 ();
+extern "C" void BrushEditor_ToggleEditor_m1806226556 ();
 extern "C" void ColorChangedEvent__ctor_m3679212596 ();
 extern "C" void ColorImage__ctor_m1410208884 ();
 extern "C" void ColorImage_Awake_m2153631725 ();
@@ -11444,6 +11449,7 @@ extern "C" void ColorPresets_ColorChanged_m2591254891 ();
 extern "C" void ColorSelector__ctor_m1272174889 ();
 extern "C" void ColorSelector_Start_m227686813 ();
 extern "C" void ColorSelector_ChangeColor_m4067763905 ();
+extern "C" void ColorSelector_ToggleColorSelector_m2166636917 ();
 extern "C" void ColorSlider__ctor_m3228885083 ();
 extern "C" void ColorSlider_Awake_m1852362835 ();
 extern "C" void ColorSlider_OnDestroy_m526066216 ();
@@ -11471,6 +11477,8 @@ extern "C" void DontDestroyOnLoad_Start_m760802735 ();
 extern "C" void DontDestroyOnLoad_Update_m329266444 ();
 extern "C" void DrawLine__ctor_m3370701202 ();
 extern "C" void DrawLine_Start_m3217532138 ();
+extern "C" void DrawLine_NewAnchorAdded_m2446121377 ();
+extern "C" void DrawLine_OnDestroy_m2422330585 ();
 extern "C" void DrawLine_Update_m733080672 ();
 extern "C" void DrawLine_DrawOnTouch_m961454683 ();
 extern "C" void DrawLine_InitializeLineRenderer_m1875194751 ();
@@ -12336,6 +12344,7 @@ extern "C" void UpdateWorldMappingStatus__ctor_m1849069329 ();
 extern "C" void UpdateWorldMappingStatus_Start_m2506491011 ();
 extern "C" void UpdateWorldMappingStatus_CheckWorldMapStatus_m3083395961 ();
 extern "C" void UpdateWorldMappingStatus_OnDestroy_m1257722125 ();
+extern "C" void UpdateWorldMappingStatus_ChangeTextTo_m1464168588 ();
 extern "C" void VideoFormatButton__ctor_m7407655 ();
 extern "C" void VideoFormatButton_add_FormatButtonPressedEvent_m1863116585 ();
 extern "C" void VideoFormatButton_remove_FormatButtonPressedEvent_m3255418780 ();
@@ -12361,7 +12370,7 @@ extern "C" void WorldMapManager_Load_m1471745247 ();
 extern "C" void WorldMapManager_OnWorldMapSerialized_m286052464 ();
 extern "C" void WorldMapManager_SaveSerialized_m1057740694 ();
 extern "C" void WorldMapManager_LoadSerialized_m3529669931 ();
-extern const Il2CppMethodPointer g_MethodPointers[12342] = 
+extern const Il2CppMethodPointer g_MethodPointers[12351] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -20568,6 +20577,7 @@ extern const Il2CppMethodPointer g_MethodPointers[12342] =
 	GameObject_Internal_AddComponentWithType_m3797731663,
 	GameObject_AddComponent_m136524825,
 	GameObject_Internal_CreateGameObject_m2533291801,
+	GameObject_Find_m2032535176,
 	GameObject_get_gameObject_m3693461266,
 	Gradient__ctor_m173848750,
 	Gradient_Init_m3104802093,
@@ -20619,6 +20629,7 @@ extern const Il2CppMethodPointer g_MethodPointers[12342] =
 	LightProbes__ctor_m2758937784,
 	LightProbes_get_bakedProbes_m3582948181,
 	LightProbes_get_count_m2728320420,
+	LineRenderer_set_startWidth_m1093267133,
 	LineRenderer_set_endWidth_m4252049505,
 	LineRenderer_set_startColor_m307692187,
 	LineRenderer_get_endColor_m450072797,
@@ -23740,6 +23751,9 @@ extern const Il2CppMethodPointer g_MethodPointers[12342] =
 	BlendshapePrinter_FaceUpdated_m407913393,
 	BlendshapePrinter_FaceRemoved_m2395226457,
 	BlendshapePrinter_Update_m924547839,
+	BrushEditor__ctor_m2820859869,
+	BrushEditor_ChangeWidth_m1867125230,
+	BrushEditor_ToggleEditor_m1806226556,
 	ColorChangedEvent__ctor_m3679212596,
 	ColorImage__ctor_m1410208884,
 	ColorImage_Awake_m2153631725,
@@ -23788,6 +23802,7 @@ extern const Il2CppMethodPointer g_MethodPointers[12342] =
 	ColorSelector__ctor_m1272174889,
 	ColorSelector_Start_m227686813,
 	ColorSelector_ChangeColor_m4067763905,
+	ColorSelector_ToggleColorSelector_m2166636917,
 	ColorSlider__ctor_m3228885083,
 	ColorSlider_Awake_m1852362835,
 	ColorSlider_OnDestroy_m526066216,
@@ -23815,6 +23830,8 @@ extern const Il2CppMethodPointer g_MethodPointers[12342] =
 	DontDestroyOnLoad_Update_m329266444,
 	DrawLine__ctor_m3370701202,
 	DrawLine_Start_m3217532138,
+	DrawLine_NewAnchorAdded_m2446121377,
+	DrawLine_OnDestroy_m2422330585,
 	DrawLine_Update_m733080672,
 	DrawLine_DrawOnTouch_m961454683,
 	DrawLine_InitializeLineRenderer_m1875194751,
@@ -24680,6 +24697,7 @@ extern const Il2CppMethodPointer g_MethodPointers[12342] =
 	UpdateWorldMappingStatus_Start_m2506491011,
 	UpdateWorldMappingStatus_CheckWorldMapStatus_m3083395961,
 	UpdateWorldMappingStatus_OnDestroy_m1257722125,
+	UpdateWorldMappingStatus_ChangeTextTo_m1464168588,
 	VideoFormatButton__ctor_m7407655,
 	VideoFormatButton_add_FormatButtonPressedEvent_m1863116585,
 	VideoFormatButton_remove_FormatButtonPressedEvent_m3255418780,

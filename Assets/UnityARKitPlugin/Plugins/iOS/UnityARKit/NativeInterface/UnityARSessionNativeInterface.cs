@@ -529,7 +529,7 @@ namespace UnityEngine.XR.iOS
 		{
 			if (completionCallback == null)
 				return;
-
+           
 #if !UNITY_EDITOR && UNITY_IOS
 			Matrix4x4 arkitTransform = UnityARMatrixOps.UnityToARKitCoordChange(objectTransform.position, objectTransform.rotation);
 			Vector3 arkitCenter = new Vector3(center.x, center.y, -center.z);

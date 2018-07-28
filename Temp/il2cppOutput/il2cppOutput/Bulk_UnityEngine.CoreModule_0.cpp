@@ -29605,6 +29605,16 @@ extern "C"  void GameObject_Internal_CreateGameObject_m2533291801 (RuntimeObject
 	_il2cpp_icall_func = (GameObject_Internal_CreateGameObject_m2533291801_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::Internal_CreateGameObject(UnityEngine.GameObject,System.String)");
 	_il2cpp_icall_func(___mono0, ___name1);
 }
+// UnityEngine.GameObject UnityEngine.GameObject::Find(System.String)
+extern "C"  GameObject_t1113636619 * GameObject_Find_m2032535176 (RuntimeObject * __this /* static, unused */, String_t* ___name0, const RuntimeMethod* method)
+{
+	typedef GameObject_t1113636619 * (*GameObject_Find_m2032535176_ftn) (String_t*);
+	static GameObject_Find_m2032535176_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GameObject_Find_m2032535176_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::Find(System.String)");
+	GameObject_t1113636619 * retVal = _il2cpp_icall_func(___name0);
+	return retVal;
+}
 // UnityEngine.GameObject UnityEngine.GameObject::get_gameObject()
 extern "C"  GameObject_t1113636619 * GameObject_get_gameObject_m3693461266 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
 {
@@ -30641,6 +30651,15 @@ extern "C"  int32_t LightProbes_get_count_m2728320420 (LightProbes_t649210852 * 
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void UnityEngine.LineRenderer::set_startWidth(System.Single)
+extern "C"  void LineRenderer_set_startWidth_m1093267133 (LineRenderer_t3154350270 * __this, float ___value0, const RuntimeMethod* method)
+{
+	typedef void (*LineRenderer_set_startWidth_m1093267133_ftn) (LineRenderer_t3154350270 *, float);
+	static LineRenderer_set_startWidth_m1093267133_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (LineRenderer_set_startWidth_m1093267133_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.LineRenderer::set_startWidth(System.Single)");
+	_il2cpp_icall_func(__this, ___value0);
+}
 // System.Void UnityEngine.LineRenderer::set_endWidth(System.Single)
 extern "C"  void LineRenderer_set_endWidth_m4252049505 (LineRenderer_t3154350270 * __this, float ___value0, const RuntimeMethod* method)
 {

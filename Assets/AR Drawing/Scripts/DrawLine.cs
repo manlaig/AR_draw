@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.XR.iOS;
 
 public class DrawLine : MonoBehaviour
 {
@@ -13,9 +12,22 @@ public class DrawLine : MonoBehaviour
 	void Start ()
     {
         lineRenderer = null;
+        UnityARSessionNativeInterface.ARUserAnchorAddedEvent += NewAnchorAdded;
 	}
-	
-	void Update ()
+
+    // debugging functions
+    void NewAnchorAdded(ARUserAnchor anchor)
+    {
+        GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo("New User Anchor!!!");
+    }
+
+    void OnDestroy()
+    {
+        UnityARSessionNativeInterface.ARUserAnchorAddedEvent -= NewAnchorAdded;
+    }
+    // end debugging functions
+
+    void Update ()
     {
         if (Input.touchCount > 0)
             DrawOnTouch();

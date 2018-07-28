@@ -406,6 +406,7 @@ extern const Il2CppType ARReferenceObjectResourceContents_t4233467830_0_0_0;
 extern const Il2CppType MeshRenderer_t587009260_0_0_0;
 extern const Il2CppType SkinnedMeshRenderer_t245602842_0_0_0;
 extern const Il2CppType ObjectText_t3366579983_0_0_0;
+extern const Il2CppType UpdateWorldMappingStatus_t2738391865_0_0_0;
 extern const Il2CppType LineRenderer_t3154350270_0_0_0;
 extern const Il2CppType PickBoundingBox_t873364976_0_0_0;
 extern const Il2CppType ReflectionProbe_t175708936_0_0_0;
@@ -1520,6 +1521,8 @@ static const RuntimeType* GenInst_SkinnedMeshRenderer_t245602842_0_0_0_Types[] =
 extern const Il2CppGenericInst GenInst_SkinnedMeshRenderer_t245602842_0_0_0 = { 1, GenInst_SkinnedMeshRenderer_t245602842_0_0_0_Types };
 static const RuntimeType* GenInst_ObjectText_t3366579983_0_0_0_Types[] = { (&ObjectText_t3366579983_0_0_0) };
 extern const Il2CppGenericInst GenInst_ObjectText_t3366579983_0_0_0 = { 1, GenInst_ObjectText_t3366579983_0_0_0_Types };
+static const RuntimeType* GenInst_UpdateWorldMappingStatus_t2738391865_0_0_0_Types[] = { (&UpdateWorldMappingStatus_t2738391865_0_0_0) };
+extern const Il2CppGenericInst GenInst_UpdateWorldMappingStatus_t2738391865_0_0_0 = { 1, GenInst_UpdateWorldMappingStatus_t2738391865_0_0_0_Types };
 static const RuntimeType* GenInst_LineRenderer_t3154350270_0_0_0_Types[] = { (&LineRenderer_t3154350270_0_0_0) };
 extern const Il2CppGenericInst GenInst_LineRenderer_t3154350270_0_0_0 = { 1, GenInst_LineRenderer_t3154350270_0_0_0_Types };
 static const RuntimeType* GenInst_PickBoundingBox_t873364976_0_0_0_Types[] = { (&PickBoundingBox_t873364976_0_0_0) };
@@ -1942,7 +1945,7 @@ static const RuntimeType* GenInst_LinkedListDictionary_2_t983847087_gp_0_0_0_0_L
 extern const Il2CppGenericInst GenInst_LinkedListDictionary_2_t983847087_gp_0_0_0_0_LinkedListDictionary_2_t983847087_gp_1_0_0_0 = { 2, GenInst_LinkedListDictionary_2_t983847087_gp_0_0_0_0_LinkedListDictionary_2_t983847087_gp_1_0_0_0_Types };
 static const RuntimeType* GenInst_LLEntry_t3405167986_gp_1_0_0_0_Types[] = { (&LLEntry_t3405167986_gp_1_0_0_0) };
 extern const Il2CppGenericInst GenInst_LLEntry_t3405167986_gp_1_0_0_0 = { 1, GenInst_LLEntry_t3405167986_gp_1_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[680] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[681] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_Int32_t2950945753_0_0_0,
@@ -2413,6 +2416,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[680] =
 	&GenInst_MeshRenderer_t587009260_0_0_0,
 	&GenInst_SkinnedMeshRenderer_t245602842_0_0_0,
 	&GenInst_ObjectText_t3366579983_0_0_0,
+	&GenInst_UpdateWorldMappingStatus_t2738391865_0_0_0,
 	&GenInst_LineRenderer_t3154350270_0_0_0,
 	&GenInst_PickBoundingBox_t873364976_0_0_0,
 	&GenInst_ReflectionProbe_t175708936_0_0_0,

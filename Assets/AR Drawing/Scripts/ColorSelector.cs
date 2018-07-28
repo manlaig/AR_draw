@@ -4,8 +4,7 @@ using UnityEngine.UI;
 public class ColorSelector : MonoBehaviour
 {
     [SerializeField] LineRenderer line;
-    [SerializeField] Image colorIcon;
-    //[SerializeField] Material lineColor;
+    [SerializeField] Image colorIcon, smallWidth, bigWidth;
 
 	void Start ()
     {
@@ -14,11 +13,18 @@ public class ColorSelector : MonoBehaviour
 
     public void ChangeColor(Button button)
     {
-        //Debug.Log("Color.r: " + r + " Color.g: " + g + " Color.b: " + b);
-        colorIcon.color = button.colors.disabledColor;
-        line.startColor = colorIcon.color;
-        line.endColor = colorIcon.color;
-        //line.material.color = colorIcon.color;
-        //line.sharedMaterial.color = colorIcon.color;
+        line.startColor = button.colors.disabledColor;
+        line.endColor = button.colors.disabledColor;
+
+        if(colorIcon != null)
+            colorIcon.color = button.colors.disabledColor;
+
+        if (smallWidth != null && bigWidth != null)
+            smallWidth.color = bigWidth.color = button.colors.disabledColor;
+    }
+
+    public void ToggleColorSelector()
+    {
+        gameObject.SetActive(!gameObject.activeInHierarchy);
     }
 }
