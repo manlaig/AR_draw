@@ -4,27 +4,45 @@ using UnityEngine.UI;
 public class ColorSelector : MonoBehaviour
 {
     [SerializeField] LineRenderer line;
-    [SerializeField] Image colorIcon, smallWidth, bigWidth;
+    [SerializeField] Image colorIcon, smallWidth, bigWidth,
+                     standardBrush, streamBrush, brush;
 
 	void Start ()
     {
-        colorIcon.color = line.endColor;
+        if(line != null)
+            SetColors(line.endColor);
 	}
 
     public void ChangeColor(Button button)
     {
-        line.startColor = button.colors.disabledColor;
-        line.endColor = button.colors.disabledColor;
-
-        if(colorIcon != null)
-            colorIcon.color = button.colors.disabledColor;
-
-        if (smallWidth != null && bigWidth != null)
-            smallWidth.color = bigWidth.color = button.colors.disabledColor;
+        if (line != null)
+        {
+            line.startColor = button.colors.disabledColor;
+            line.endColor = button.colors.disabledColor;
+        }
+        SetColors(button.colors.disabledColor);
     }
 
-    public void ToggleColorSelector()
+    void SetColors(Color color)
     {
-        gameObject.SetActive(!gameObject.activeInHierarchy);
+        if (colorIcon != null)
+            colorIcon.color = color;
+
+        if (standardBrush != null)
+            standardBrush.color = color;
+
+        if (streamBrush != null)
+            streamBrush.color = color;
+
+        if (brush != null)
+            brush.color = color;
+
+        if (smallWidth != null && bigWidth != null)
+            smallWidth.color = bigWidth.color = color;
+    }
+
+    public Color GetCurrentColor()
+    {
+        return colorIcon.color;
     }
 }

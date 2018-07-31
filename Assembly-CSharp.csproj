@@ -62,6 +62,7 @@
     <Compile Include="Assets\AR Drawing\Scripts\BrushEditor.cs" />
     <Compile Include="Assets\AR Drawing\Scripts\ColorSelector.cs" />
     <Compile Include="Assets\AR Drawing\Scripts\DrawLine.cs" />
+    <Compile Include="Assets\AR Drawing\Scripts\SaveLoadManager.cs" />
     <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitFaceTrackingRemoteConnection.cs" />
     <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitRemoteConnection.cs" />
     <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ConnectionMessageIds.cs" />
@@ -169,12 +170,20 @@
     <Compile Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\ARWorldMap.cs" />
     <Compile Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\UnityARSessionNativeInterface.cs" />
     <Compile Include="Assets\UnityARKitPlugin\UnityARKitPluginSettings.cs" />
+    <None Include="Assets\UnityARKitPlugin\Examples\Common\Shaders\Particle Alpha Blend HDR.shader" />
     <None Include="Assets\UnityARKitPlugin\Examples\Common\Shaders\MobileOcclusion.shader" />
+    <None Include="Assets\SKJ Particle Tutorial\Plugins\Effect\Shader\effect_distortion_mask.shader" />
+    <None Include="Assets\SKJ Particle Tutorial\Plugins\Effect\Shader\ParticleAddSoftEffect.shader" />
     <None Include="Assets\UnityARKitPlugin\ARKitRemote\ARKITREMOTE.txt" />
+    <None Include="Assets\SKJ Particle Tutorial\Plugins\Effect\Shader\Toon Blended Premmultiply.shader" />
+    <None Include="Assets\SKJ Particle Tutorial\Plugins\Effect\Shader\ParticlePremultiplyBlend.shader" />
     <None Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\Shaders\YUVShaderLinear.shader" />
     <None Include="Assets\UnityARKitPlugin\Examples\Common\Shaders\MobileARShadow.shader" />
     <None Include="Assets\UnityARKitPlugin\Examples\Common\Shaders\InstancedSurfaceShader.shader" />
     <None Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\Shaders\YUVShader.shader" />
+    <None Include="Assets\SKJ Particle Tutorial\Plugins\Effect\Shader\ParticleAddEffect.shader" />
+    <None Include="Assets\SKJ Particle Tutorial\Plugins\Effect\Shader\Toon Additive.shader" />
+    <None Include="Assets\SKJ Particle Tutorial\Plugins\Effect\Shader\ParticleBlendEffect.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/Ganaa/Documents/Unity Projects/arkit 2/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

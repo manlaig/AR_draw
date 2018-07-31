@@ -20,6 +20,7 @@ public class WorldMapManager : MonoBehaviour
     }
 
     ARTrackingStateReason m_LastReason;
+    ARWorldMappingStatus lastStatus;
 
     void OnFrameUpdate(UnityARCamera arCamera)
     {
@@ -30,6 +31,7 @@ public class WorldMapManager : MonoBehaviour
             Debug.LogFormat("trackingState: {0} {1}", arCamera.trackingState, arCamera.trackingReason);
             m_LastReason = arCamera.trackingReason;
         }
+        lastStatus = arCamera.worldMappingStatus;
     }
 
     static UnityARSessionNativeInterface session
@@ -53,7 +55,10 @@ public class WorldMapManager : MonoBehaviour
 
     public void Save()
     {
-        session.GetCurrentWorldMapAsync(OnWorldMap);
+        SaveLoadManager saveLoadManager = GameObject.Find("SaveLoadManager").GetComponent<SaveLoadManager>();
+        if(saveLoadManager != null)
+            if(saveLoadManager.CanSave(m_LastReason, lastStatus))
+                session.GetCurrentWorldMapAsync(OnWorldMap);
     }
 
     public void Load()

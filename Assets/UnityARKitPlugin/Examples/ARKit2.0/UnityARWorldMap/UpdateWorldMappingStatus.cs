@@ -6,7 +6,7 @@ public class UpdateWorldMappingStatus : MonoBehaviour
 {
 	public Text text;
 	public Text tracking;
-    public Text textAnchor;
+    //public Text textAnchor;
 
 
 	// Use this for initialization
@@ -28,7 +28,7 @@ public class UpdateWorldMappingStatus : MonoBehaviour
 
     public void ChangeTextTo(string txt)
     {
-        textAnchor.text = txt;
+        //textAnchor.text = txt;
     }
 
 }

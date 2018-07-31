@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/UnityARKitPlugin/Examples/ARKit2.0/UnityARWorldMap/UnityARWorldMapSerialized.unity
+- path: Assets/Scenes/line.unity
   isLoaded: 1
   isActive: 1

@@ -1,6 +1,6 @@
 iOS
 PlayerPath?
-/Users/Ganaa/Desktop/arkit draw 11
+/Users/Ganaa/Desktop/arkit draw 16
 SceneListBegin?
 Assets/Scenes/line.unity
 SceneListEnd?
@@ -108,7 +108,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-e37fd3b77f41cff14b35c075881e9b27 Assembly-CSharp.dll:.ColorSelector
+d2afceb5986829a365b7d275d3965c10 Assembly-CSharp.dll:.ColorSelector
 c1465577256149eb2fdaaf3754ab7da9 Assembly-CSharp.dll:.TiltWindow
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -210,7 +210,7 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 b4c1c774e36b4c43ff0133d4d57455fa Assembly-CSharp.dll:.RelocalizationControl
 63ee4d254596e7e33706786578d0fdfc Assembly-CSharp.dll:.AR3DOFCameraManager
 dd6501652c91cb163a39e051d37a965f Assembly-CSharp.dll:.Ballz
-8830eed9512843e2fde59b54e9818cbd Assembly-CSharp.dll:.UpdateWorldMappingStatus
+1ace1708f95e4a48ffcb0c697a5435c5 Assembly-CSharp.dll:.UpdateWorldMappingStatus
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:UnityEngine.XR.iOS.UnityARAmbient
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BlendshapeDriver
 3c131bc1fcd62a99173616f1006723eb Assembly-CSharp.dll:.SVBoxSlider
@@ -310,6 +310,7 @@ c9bbe18a2932f1262000b3f2eb971892 Assembly-CSharp.dll:.ReflectionProbeGameObject
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.UnityARKitLightManager
 eb4fd2b7e0cd698b07603d3e2b00ab7c Assembly-CSharp.dll:.ARKitPlaneMeshRender
 391d84b859f3b155fe38f54bfce79162 Assembly-CSharp.dll:.UnityPointCloudExample
+40658c3d17a9dc411748456c85f8ec1d Assembly-CSharp.dll:.BrushEditor
 9354536bfef284fc7fd71a13d42f5489 Assembly-CSharp.dll:.TongueDetector
 bc79872c81f3cda9be1ec427f70f92aa Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 0561521e336e270e6e5a9c61387cb838 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
@@ -345,4 +346,4 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.UnityARCameraNearFar
-40658c3d17a9dc411748456c85f8ec1d Assembly-CSharp.dll:.BrushEditor
+4cef34fdd0039973333b61258c428a95 Assembly-CSharp.dll:.SaveLoadManager
