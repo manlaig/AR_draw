@@ -7,7 +7,7 @@ using System.Collections.Generic;
 public class DrawLine : MonoBehaviour
 {
     [SerializeField] float distanceFromCamera = 1f;
-    [SerializeField] GameObject line;
+    [SerializeField] GameObject line = null;
 
     LineRenderer lineRenderer;
     int index = 2;
@@ -15,20 +15,27 @@ public class DrawLine : MonoBehaviour
 	void Start ()
     {
         lineRenderer = null;
-        //UnityARSessionNativeInterface.ARUserAnchorAddedEvent += NewAnchorAdded;
+        UnityARSessionNativeInterface.ARUserAnchorAddedEvent += NewAnchorAdded;
 	}
 
-    /* debugging functions
+    // debugging functions
     void NewAnchorAdded(ARUserAnchor anchor)
     {
-        //GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo("New User Anchor!!!");
+        if (anchor.identifier != null)
+        {
+            //GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(anchor.identifier);
+            Debug.Log("Anchor identifier: " + anchor.identifier);
+            Debug.Log("Anchor position: " + UnityARMatrixOps.GetPosition(anchor.transform));
+        }
+        else
+            Debug.Log("Anchor is added, but it's null");
     }
 
     void OnDestroy()
     {
         UnityARSessionNativeInterface.ARUserAnchorAddedEvent -= NewAnchorAdded;
     }
-    end debugging functions*/
+    //end debugging functions
 
     void Update ()
     {
@@ -72,13 +79,14 @@ public class DrawLine : MonoBehaviour
     void UpdateLineRenderer(int i = 0)
     {
         Vector3 newPos = GetScreenPoint(i);
-        // TODO: update the position if the position has changed significantly since the last pos
+
         if(PositionChanged(newPos))
         {
             if (index >= lineRenderer.positionCount)
                 lineRenderer.positionCount++;
 
-            lineRenderer.SetPosition(index++, newPos - lineRenderer.transform.position); // subtracting to always draw in front of the camera
+            lineRenderer.SetPosition(index++, newPos - lineRenderer.transform.position);
+            // subtracting to always draw in front of the camera
         }
     }
 
@@ -109,9 +117,6 @@ public class DrawLine : MonoBehaviour
 
     bool PositionChanged(Vector3 newPos)
     {
-        // take the absolute value of the vectors and check the sum of it to be bigger than 0.1
-        //Vector3 diff = lineRenderer.GetPosition(index - 1) - newPos;
-        //if(diff.x + diff.y + diff.z >= 0.01f)
         Vector3 pos = lineRenderer.GetPosition(index - 1);
         Vector3 diff = new Vector3(Mathf.Abs(pos.x), Mathf.Abs(pos.y), Mathf.Abs(pos.z)) -
             new Vector3(Mathf.Abs(newPos.x), Mathf.Abs(newPos.y), Mathf.Abs(newPos.z));

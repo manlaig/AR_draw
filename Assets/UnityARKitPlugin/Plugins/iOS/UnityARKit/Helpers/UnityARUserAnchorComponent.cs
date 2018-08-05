@@ -1,45 +1,21 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.XR.iOS;
 
 namespace UnityEngine.XR.iOS
 {
-public class UnityARUserAnchorComponent : MonoBehaviour {
+    public class UnityARUserAnchorComponent : MonoBehaviour
+    {
+        private string m_AnchorId;
 
-    private string m_AnchorId;
+        public string AnchorId { get { return m_AnchorId; } }
 
-	public string AnchorId  { get { return m_AnchorId; } }
+        void Start()
+        {
+            DontDestroyOnLoad(this.gameObject);
 
-	void Awake()
-	{
-		UnityARSessionNativeInterface.ARUserAnchorUpdatedEvent += GameObjectAnchorUpdated;
-		UnityARSessionNativeInterface.ARUserAnchorRemovedEvent += AnchorRemoved;
-		this.m_AnchorId = UnityARSessionNativeInterface.GetARSessionNativeInterface ().AddUserAnchorFromGameObject(this.gameObject).identifierStr;
-        // the above line is creating a user anchor at the gameobject's position and rotation
-	}
-	void Start () {
-
-	}
-
-	public void AnchorRemoved(ARUserAnchor anchor)
-	{
-		if (anchor.identifier.Equals(m_AnchorId))
-		{
-			Destroy(this.gameObject);
-		}
-	}
-
-    void OnDestroy() {
-		UnityARSessionNativeInterface.ARUserAnchorUpdatedEvent -= GameObjectAnchorUpdated;
-		UnityARSessionNativeInterface.ARUserAnchorRemovedEvent -= AnchorRemoved;
-		UnityARSessionNativeInterface.GetARSessionNativeInterface ().RemoveUserAnchor(this.m_AnchorId); 
+            UnityARUserAnchorData anchor = UnityARSessionNativeInterface.GetARSessionNativeInterface().AddUserAnchorFromGameObject(this.gameObject);
+            m_AnchorId = anchor.identifierStr;
+            // the above line is creating a user anchor at the gameobject's position and rotation
+        }
     }
-
-	private void GameObjectAnchorUpdated(ARUserAnchor anchor)
-	{
-		
-	}
-}
 }

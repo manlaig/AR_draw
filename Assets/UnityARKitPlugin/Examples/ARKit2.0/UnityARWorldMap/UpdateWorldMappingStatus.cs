@@ -6,19 +6,33 @@ public class UpdateWorldMappingStatus : MonoBehaviour
 {
 	public Text text;
 	public Text tracking;
-    //public Text textAnchor;
+    public Text textAnchor;
 
-
-	// Use this for initialization
-	void Start () 
+   	void Start () 
 	{
 		UnityARSessionNativeInterface.ARFrameUpdatedEvent += CheckWorldMapStatus;
 	}
 
 	void CheckWorldMapStatus(UnityARCamera cam)
 	{
-		text.text = cam.worldMappingStatus.ToString ();
-		tracking.text = cam.trackingState.ToString () + " " + cam.trackingReason.ToString ();
+        if (cam.worldMappingStatus == ARWorldMappingStatus.ARWorldMappingStatusMapped)
+            text.text = "Ready to Save";
+        else
+            text.text = "Exploring Surroundings";
+
+        if (cam.trackingState == ARTrackingState.ARTrackingStateLimited)
+        {
+            if (cam.trackingReason == ARTrackingStateReason.ARTrackingStateReasonExcessiveMotion)
+                tracking.text = "Too much motion";
+            else if (cam.trackingReason == ARTrackingStateReason.ARTrackingStateReasonInsufficientFeatures)
+                tracking.text = "Not enough features";
+            else if (cam.trackingReason == ARTrackingStateReason.ARTrackingStateReasonRelocalizing)
+                tracking.text = "Relocalizing";
+            else
+                tracking.text = "";
+        }
+        else
+            tracking.text = "";
 	}
 
 	void OnDestroy()
@@ -30,5 +44,4 @@ public class UpdateWorldMappingStatus : MonoBehaviour
     {
         //textAnchor.text = txt;
     }
-
 }

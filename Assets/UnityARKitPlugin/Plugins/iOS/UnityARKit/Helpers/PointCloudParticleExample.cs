@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.iOS;
 
-public class PointCloudParticleExample : MonoBehaviour {
+public class PointCloudParticleExample : MonoBehaviour
+{
     public ParticleSystem pointCloudParticlePrefab;
     public int maxPointsToShow;
     public float particleSize = 1.0f;

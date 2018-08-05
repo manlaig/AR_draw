@@ -1,38 +1,20 @@
 ﻿using System.IO;
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.XR.iOS;
 
 public class WorldMapManager : MonoBehaviour
 {
-    [SerializeField]
-    UnityARCameraManager m_ARCameraManager;
+    [SerializeField] UnityARCameraManager m_ARCameraManager = null;
+    [SerializeField] GameObject loadingScreen = null;
 
-    ARWorldMap m_LoadedMap;
+    SaveLoadManager saveLoadManager; // my custom component (not part of plugin)
+    bool relocalizing; // my custom defined variable
 
 	serializableARWorldMap serializedWorldMap;
-
-    // Use this for initialization
-    void Start ()
-    {
-        UnityARSessionNativeInterface.ARFrameUpdatedEvent += OnFrameUpdate;
-    }
-
+	ARWorldMap m_LoadedMap;
     ARTrackingStateReason m_LastReason;
     ARWorldMappingStatus lastStatus;
-
-    void OnFrameUpdate(UnityARCamera arCamera)
-    {
-        if (arCamera.trackingReason != m_LastReason)
-        {
-            Application.SetStackTraceLogType(LogType.Log, StackTraceLogType.None);
-            Debug.LogFormat("worldTransform: {0}", arCamera.worldTransform.column3);
-            Debug.LogFormat("trackingState: {0} {1}", arCamera.trackingState, arCamera.trackingReason);
-            m_LastReason = arCamera.trackingReason;
-        }
-        lastStatus = arCamera.worldMappingStatus;
-    }
 
     static UnityARSessionNativeInterface session
     {
@@ -41,36 +23,86 @@ public class WorldMapManager : MonoBehaviour
 
     static string path
     {
-        get { return Path.Combine(Application.persistentDataPath, "myFirstWorldMap.worldmap"); }
+        get { return GetPathToSave(); }
     }
+
+
+    void Start ()
+    {
+        UnityARSessionNativeInterface.ARFrameUpdatedEvent += OnFrameUpdate;
+        saveLoadManager = GameObject.Find("SaveLoadManager").GetComponent<SaveLoadManager>();
+        relocalizing = false;
+    }
+
+
+    void OnFrameUpdate(UnityARCamera arCamera)
+    {
+        m_LastReason = arCamera.trackingReason;
+        lastStatus = arCamera.worldMappingStatus;
+
+        if (relocalizing && finishedRelocalizing())
+        {
+            relocalizing = false;
+            saveLoadManager.RelocalizeSuccessful();
+        }
+    }
+
+
+    bool finishedRelocalizing()
+    {
+        bool res = (m_LastReason == ARTrackingStateReason.ARTrackingStateReasonNone &&
+                    (lastStatus == ARWorldMappingStatus.ARWorldMappingStatusMapped
+                     || lastStatus == ARWorldMappingStatus.ARWorldMappingStatusLimited));
+        return res;
+    }
+
+
+    static string GetPathToSave()
+    {
+        DateTime dt = DateTime.Now;
+        string pathToSave = dt.Month.ToString() + "-" + dt.Day.ToString() + "-" + dt.Year.ToString() + " ";
+        pathToSave += dt.Hour.ToString() + ":" + dt.Minute.ToString() + ":" + dt.Second.ToString() + ".worldmap";
+        return pathToSave;
+    }
+
 
     void OnWorldMap(ARWorldMap worldMap)
     {
         if (worldMap != null)
         {
-            worldMap.Save(path);
-            Debug.LogFormat("ARWorldMap saved to {0}", path);
+            loadingScreen.SetActive(true);
+
+            string pathCurrent = path;
+            worldMap.Save(Path.Combine(Application.persistentDataPath, pathCurrent));
+
+            string allMaps = PlayerPrefs.GetString("AllWorldMaps", "");
+            allMaps += pathCurrent + '?';
+            PlayerPrefs.SetString("AllWorldMaps", allMaps);
+
+			saveLoadManager.SaveSuccessful();
+            loadingScreen.SetActive(false);
         }
     }
 
+
     public void Save()
     {
-        SaveLoadManager saveLoadManager = GameObject.Find("SaveLoadManager").GetComponent<SaveLoadManager>();
         if(saveLoadManager != null)
             if(saveLoadManager.CanSave(m_LastReason, lastStatus))
                 session.GetCurrentWorldMapAsync(OnWorldMap);
     }
 
-    public void Load()
+
+    public void Load(string pathText)
     {
-        Debug.LogFormat("Loading ARWorldMap {0}", path);
-        var worldMap = ARWorldMap.Load(path);
-        if (worldMap != null)
+        var worldMap = ARWorldMap.Load(Path.Combine(Application.persistentDataPath, pathText));
+        if (worldMap != null && m_LoadedMap != worldMap)
         {
             m_LoadedMap = worldMap;
             Debug.LogFormat("Map loaded. Center: {0} Extent: {1}", worldMap.center, worldMap.extent);
 
             UnityARSessionNativeInterface.ARSessionShouldAttemptRelocalization = true;
+            relocalizing = true;
 
             var config = m_ARCameraManager.sessionConfiguration;
             config.worldMap = worldMap;
@@ -99,6 +131,7 @@ public class WorldMapManager : MonoBehaviour
 		session.GetCurrentWorldMapAsync(OnWorldMapSerialized);
 	}
 
+
 	public void LoadSerialized()
 	{
 		Debug.Log("Loading ARWorldMap from serialized data");
@@ -118,6 +151,6 @@ public class WorldMapManager : MonoBehaviour
 			Debug.Log("Restarting session with worldMap");
 			session.RunWithConfigAndOptions(config, runOption);
 		}
-
 	}
+
 }
