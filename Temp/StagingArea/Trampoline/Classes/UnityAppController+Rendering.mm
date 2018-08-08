@@ -111,7 +111,21 @@ static bool _enableRunLoopAcceptInput = false;
     if (_skipPresent || _didResignActive)
         return;
 
-    [[DisplayManager Instance] present];
+    // metal needs special processing, because in case of airplay we need extra command buffers to present non-main screen drawables
+    if (UnitySelectedRenderingAPI() == apiMetal)
+    {
+    #if UNITY_CAN_USE_METAL
+        [[DisplayManager Instance].mainDisplay present];
+        [[DisplayManager Instance] enumerateNonMainDisplaysWithBlock:^(DisplayConnection* conn) {
+            PreparePresentNonMainScreenMTL((UnityDisplaySurfaceMTL*)conn.surface);
+        }];
+    #endif
+    }
+    else
+    {
+        [[DisplayManager Instance] present];
+    }
+
     Profiler_FramePresent(frameStats);
 }
 

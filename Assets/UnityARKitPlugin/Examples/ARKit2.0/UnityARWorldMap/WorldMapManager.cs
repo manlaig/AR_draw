@@ -13,7 +13,7 @@ public class WorldMapManager : MonoBehaviour
 
     SaveLoadManager saveLoadManager; // my custom component (not part of plugin)
     bool relocalizing; // my custom defined variable
-    float delayToLoad;
+    float delayToLoad; // my custom defined variable
     string loadedWorldMapName; // my custom defined variable
 
 	serializableARWorldMap serializedWorldMap;
@@ -24,11 +24,6 @@ public class WorldMapManager : MonoBehaviour
     static UnityARSessionNativeInterface session
     {
         get { return UnityARSessionNativeInterface.GetARSessionNativeInterface(); }
-    }
-
-    static string path
-    {
-        get { return GetFileName(); }
     }
 
 
@@ -63,7 +58,7 @@ public class WorldMapManager : MonoBehaviour
             // load the lines from path here because the user has to be relocalized in order to draw the lines
             if(loadedWorldMapName != "")
             {
-                string linesFileName = loadedWorldMapName.Split('.')[0] + "line" + ".dat";
+                string linesFileName = loadedWorldMapName.Split('.')[0] + ".dat";
                 LoadLinesFromFile(linesFileName);
             }
         }
@@ -82,7 +77,7 @@ public class WorldMapManager : MonoBehaviour
     static string GetFileName()
     {
         DateTime dt = DateTime.Now;
-        string pathToSave = dt.Month.ToString() + "-" + dt.Day.ToString() + "-" + dt.Year.ToString() + " ";
+        string pathToSave = dt.ToString("MMM dd") + " " + " ";
         pathToSave += dt.Hour.ToString() + ":" + dt.Minute.ToString() + ":" + dt.Second.ToString() + ".worldmap";
         return pathToSave;
     }
@@ -91,8 +86,18 @@ public class WorldMapManager : MonoBehaviour
     public void Save()
     {
         if(saveLoadManager != null)
+        {
             if(saveLoadManager.CanSave(m_LastReason, lastStatus))
-                session.GetCurrentWorldMapAsync(OnWorldMap);
+            {
+                if(PlayerPrefs.GetString("IsFirstTime", "true") == "true")
+                {
+                    PlayerPrefs.SetString("IsFirstTime", "false");
+                    saveLoadManager.SpawnWarningToExplore();
+                }
+                else
+                    session.GetCurrentWorldMapAsync(OnWorldMap);
+            }
+        }
     }
 
 
@@ -121,7 +126,7 @@ public class WorldMapManager : MonoBehaviour
 
     void SaveLinesInScene(string fileName)
     {
-        string pathToSave = Path.Combine(Application.persistentDataPath, fileName.Split('.')[0] + "line" + ".dat");
+        string pathToSave = Path.Combine(Application.persistentDataPath, fileName.Split('.')[0] + ".dat");
 
         BinaryFormatter formatter = new BinaryFormatter();
 

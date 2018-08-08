@@ -29,9 +29,6 @@
 // method type encoding for methods we override
 // to get this you need to do: method_getTypeEncoding(class_getInstanceMethod(class, sel)) or method_getTypeEncoding(class_getClassMethod(class, sel))
 #define UIView_LayerClass_Enc "#8@0:4"
-#define UIViewController_viewWillTransitionToSize_Enc "v40@0:8{CGSize=dd}16@32"
-#define UIViewController_willRotateToInterfaceOrientation_Enc "v32@0:8q16d24"
-#define UIViewController_didRotateFromInterfaceOrientation_Enc "v24@0:8q16"
 #define UIViewController_supportedInterfaceOrientations_Enc "Q16@0:8"
 #define UIViewController_prefersStatusBarHidden_Enc "B16@0:8"
 #define CADisplayLink_setPreferredFramesPerSecond_Enc "v24@0:8q16"

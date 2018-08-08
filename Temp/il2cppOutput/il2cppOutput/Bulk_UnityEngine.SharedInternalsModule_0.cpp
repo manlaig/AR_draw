@@ -20,32 +20,50 @@
 #include "il2cpp-object-internals.h"
 
 
-// UnityEngine.AssetFileNameExtensionAttribute
-struct AssetFileNameExtensionAttribute_t1361241164;
+// System.ArgumentException
+struct ArgumentException_t132251570;
+// System.ArgumentNullException
+struct ArgumentNullException_t1615371798;
+// System.Attribute
+struct Attribute_t861562559;
+// System.Char[]
+struct CharU5BU5D_t3528271667;
+// System.Collections.Generic.IEnumerable`1<System.String>
+struct IEnumerable_1_t827303578;
+// System.Collections.IDictionary
+struct IDictionary_t1363984059;
+// System.IntPtr[]
+struct IntPtrU5BU5D_t4013366056;
+// System.Object[]
+struct ObjectU5BU5D_t2843939325;
 // System.String
 struct String_t;
 // System.String[]
 struct StringU5BU5D_t1281789340;
-// System.Attribute
-struct Attribute_t861562559;
+// UnityEngine.AssetFileNameExtensionAttribute
+struct AssetFileNameExtensionAttribute_t1361241164;
 // UnityEngine.Bindings.FreeFunctionAttribute
 struct FreeFunctionAttribute_t2020741617;
-// UnityEngine.Bindings.NativeMethodAttribute
-struct NativeMethodAttribute_t4187428193;
+// UnityEngine.Bindings.IgnoreAttribute
+struct IgnoreAttribute_t1982719709;
+// UnityEngine.Bindings.NativeAsStructAttribute
+struct NativeAsStructAttribute_t270414901;
 // UnityEngine.Bindings.NativeConditionalAttribute
 struct NativeConditionalAttribute_t2439539374;
 // UnityEngine.Bindings.NativeHeaderAttribute
 struct NativeHeaderAttribute_t5261382;
-// System.ArgumentNullException
-struct ArgumentNullException_t1615371798;
-// System.ArgumentException
-struct ArgumentException_t132251570;
+// UnityEngine.Bindings.NativeMethodAttribute
+struct NativeMethodAttribute_t4187428193;
 // UnityEngine.Bindings.NativeNameAttribute
 struct NativeNameAttribute_t3268151526;
 // UnityEngine.Bindings.NativePropertyAttribute
 struct NativePropertyAttribute_t1305929258;
+// UnityEngine.Bindings.NativeThrowsAttribute
+struct NativeThrowsAttribute_t1697526064;
 // UnityEngine.Bindings.NativeTypeAttribute
 struct NativeTypeAttribute_t2250406315;
+// UnityEngine.Bindings.NativeWritableSelfAttribute
+struct NativeWritableSelfAttribute_t3843992162;
 // UnityEngine.Bindings.NotNullAttribute
 struct NotNullAttribute_t1114947401;
 // UnityEngine.Bindings.StaticAccessorAttribute
@@ -56,10 +74,10 @@ struct ThreadSafeAttribute_t3376653515;
 struct UnmarshalledAttribute_t1517743549;
 // UnityEngine.Bindings.VisibleToOtherModulesAttribute
 struct VisibleToOtherModulesAttribute_t1429630568;
+// UnityEngine.NativeClassAttribute
+struct NativeClassAttribute_t2601352714;
 // UnityEngine.Scripting.GeneratedByOldBindingsGeneratorAttribute
 struct GeneratedByOldBindingsGeneratorAttribute_t433318409;
-// UnityEngine.Scripting.GenerateManagedProxyAttribute
-struct GenerateManagedProxyAttribute_t2394178854;
 // UnityEngine.Scripting.RequiredByNativeCodeAttribute
 struct RequiredByNativeCodeAttribute_t4130846357;
 // UnityEngine.Scripting.UsedByNativeCodeAttribute
@@ -68,39 +86,31 @@ struct UsedByNativeCodeAttribute_t1703770351;
 struct ThreadAndSerializationSafeAttribute_t363116225;
 // UnityEngine.UnityEngineModuleAssembly
 struct UnityEngineModuleAssembly_t2421846737;
-// System.Object[]
-struct ObjectU5BU5D_t2843939325;
 // UnityEngine.WritableAttribute
 struct WritableAttribute_t812406054;
-// System.IntPtr[]
-struct IntPtrU5BU5D_t4013366056;
-// System.Collections.IDictionary
-struct IDictionary_t1363984059;
-// System.Char[]
-struct CharU5BU5D_t3528271667;
-// System.Collections.Generic.IEnumerable`1<System.String>
-struct IEnumerable_1_t827303578;
 
+extern RuntimeClass* ArgumentException_t132251570_il2cpp_TypeInfo_var;
 extern RuntimeClass* ArgumentNullException_t1615371798_il2cpp_TypeInfo_var;
 extern RuntimeClass* String_t_il2cpp_TypeInfo_var;
-extern RuntimeClass* ArgumentException_t132251570_il2cpp_TypeInfo_var;
-extern const RuntimeMethod* NativeHeaderAttribute__ctor_m457462113_RuntimeMethod_var;
-extern String_t* _stringLiteral3529812190;
-extern String_t* _stringLiteral757602046;
 extern String_t* _stringLiteral2581250844;
-extern const uint32_t NativeHeaderAttribute__ctor_m457462113_MetadataUsageId;
-extern const RuntimeMethod* NativeMethodAttribute__ctor_m2941746701_RuntimeMethod_var;
+extern String_t* _stringLiteral3529812190;
+extern String_t* _stringLiteral353412967;
 extern String_t* _stringLiteral62725243;
 extern String_t* _stringLiteral648666413;
-extern const uint32_t NativeMethodAttribute__ctor_m2941746701_MetadataUsageId;
+extern String_t* _stringLiteral757602046;
+extern const RuntimeMethod* NativeHeaderAttribute__ctor_m457462113_RuntimeMethod_var;
+extern const RuntimeMethod* NativeMethodAttribute__ctor_m2941746701_RuntimeMethod_var;
 extern const RuntimeMethod* NativeNameAttribute__ctor_m3296876808_RuntimeMethod_var;
-extern const uint32_t NativeNameAttribute__ctor_m3296876808_MetadataUsageId;
 extern const RuntimeMethod* NativeTypeAttribute__ctor_m133676646_RuntimeMethod_var;
+extern const uint32_t NativeClassAttribute__ctor_m3911617424_MetadataUsageId;
+extern const uint32_t NativeHeaderAttribute__ctor_m457462113_MetadataUsageId;
+extern const uint32_t NativeMethodAttribute__ctor_m2941746701_MetadataUsageId;
+extern const uint32_t NativeNameAttribute__ctor_m3296876808_MetadataUsageId;
 extern const uint32_t NativeTypeAttribute__ctor_m133676646_MetadataUsageId;
 extern const uint32_t UnityString_Format_m261690510_MetadataUsageId;
 
-struct StringU5BU5D_t1281789340;
 struct ObjectU5BU5D_t2843939325;
+struct StringU5BU5D_t1281789340;
 
 
 #ifndef U3CMODULEU3E_T692745529_H
@@ -152,16 +162,16 @@ struct Il2CppArrayBounds;
 #pragma clang diagnostic pop
 #endif
 #endif // RUNTIMEARRAY_H
-#ifndef VALUETYPE_T3640485471_H
-#define VALUETYPE_T3640485471_H
+#ifndef ATTRIBUTE_T861562559_H
+#define ATTRIBUTE_T861562559_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.ValueType
-struct  ValueType_t3640485471  : public RuntimeObject
+// System.Attribute
+struct  Attribute_t861562559  : public RuntimeObject
 {
 public:
 
@@ -171,35 +181,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Native definition for P/Invoke marshalling of System.ValueType
-struct ValueType_t3640485471_marshaled_pinvoke
-{
-};
-// Native definition for COM marshalling of System.ValueType
-struct ValueType_t3640485471_marshaled_com
-{
-};
-#endif // VALUETYPE_T3640485471_H
-#ifndef UNITYSTRING_T1423233093_H
-#define UNITYSTRING_T1423233093_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.UnityString
-struct  UnityString_t1423233093  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // UNITYSTRING_T1423233093_H
+#endif // ATTRIBUTE_T861562559_H
 #ifndef EXCEPTION_T_H
 #define EXCEPTION_T_H
 #ifdef __clang__
@@ -338,26 +320,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // EXCEPTION_T_H
-#ifndef ATTRIBUTE_T861562559_H
-#define ATTRIBUTE_T861562559_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Attribute
-struct  Attribute_t861562559  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // ATTRIBUTE_T861562559_H
 #ifndef STRING_T_H
 #define STRING_T_H
 #ifdef __clang__
@@ -425,16 +387,16 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // STRING_T_H
-#ifndef NOTNULLATTRIBUTE_T1114947401_H
-#define NOTNULLATTRIBUTE_T1114947401_H
+#ifndef VALUETYPE_T3640485471_H
+#define VALUETYPE_T3640485471_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.Bindings.NotNullAttribute
-struct  NotNullAttribute_t1114947401  : public Attribute_t861562559
+// System.ValueType
+struct  ValueType_t3640485471  : public RuntimeObject
 {
 public:
 
@@ -444,47 +406,25 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // NOTNULLATTRIBUTE_T1114947401_H
-#ifndef GENERATEMANAGEDPROXYATTRIBUTE_T2394178854_H
-#define GENERATEMANAGEDPROXYATTRIBUTE_T2394178854_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Scripting.GenerateManagedProxyAttribute
-struct  GenerateManagedProxyAttribute_t2394178854  : public Attribute_t861562559
+// Native definition for P/Invoke marshalling of System.ValueType
+struct ValueType_t3640485471_marshaled_pinvoke
 {
-public:
-	// System.String UnityEngine.Scripting.GenerateManagedProxyAttribute::<NativeType>k__BackingField
-	String_t* ___U3CNativeTypeU3Ek__BackingField_0;
-
-public:
-	inline static int32_t get_offset_of_U3CNativeTypeU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(GenerateManagedProxyAttribute_t2394178854, ___U3CNativeTypeU3Ek__BackingField_0)); }
-	inline String_t* get_U3CNativeTypeU3Ek__BackingField_0() const { return ___U3CNativeTypeU3Ek__BackingField_0; }
-	inline String_t** get_address_of_U3CNativeTypeU3Ek__BackingField_0() { return &___U3CNativeTypeU3Ek__BackingField_0; }
-	inline void set_U3CNativeTypeU3Ek__BackingField_0(String_t* value)
-	{
-		___U3CNativeTypeU3Ek__BackingField_0 = value;
-		Il2CppCodeGenWriteBarrier((&___U3CNativeTypeU3Ek__BackingField_0), value);
-	}
 };
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // GENERATEMANAGEDPROXYATTRIBUTE_T2394178854_H
-#ifndef GENERATEDBYOLDBINDINGSGENERATORATTRIBUTE_T433318409_H
-#define GENERATEDBYOLDBINDINGSGENERATORATTRIBUTE_T433318409_H
+// Native definition for COM marshalling of System.ValueType
+struct ValueType_t3640485471_marshaled_com
+{
+};
+#endif // VALUETYPE_T3640485471_H
+#ifndef UNITYSTRING_T1423233093_H
+#define UNITYSTRING_T1423233093_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.Scripting.GeneratedByOldBindingsGeneratorAttribute
-struct  GeneratedByOldBindingsGeneratorAttribute_t433318409  : public Attribute_t861562559
+// UnityEngine.UnityString
+struct  UnityString_t1423233093  : public RuntimeObject
 {
 public:
 
@@ -494,288 +434,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // GENERATEDBYOLDBINDINGSGENERATORATTRIBUTE_T433318409_H
-#ifndef VISIBLETOOTHERMODULESATTRIBUTE_T1429630568_H
-#define VISIBLETOOTHERMODULESATTRIBUTE_T1429630568_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Bindings.VisibleToOtherModulesAttribute
-struct  VisibleToOtherModulesAttribute_t1429630568  : public Attribute_t861562559
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // VISIBLETOOTHERMODULESATTRIBUTE_T1429630568_H
-#ifndef UNMARSHALLEDATTRIBUTE_T1517743549_H
-#define UNMARSHALLEDATTRIBUTE_T1517743549_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Bindings.UnmarshalledAttribute
-struct  UnmarshalledAttribute_t1517743549  : public Attribute_t861562559
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // UNMARSHALLEDATTRIBUTE_T1517743549_H
-#ifndef THREADANDSERIALIZATIONSAFEATTRIBUTE_T363116225_H
-#define THREADANDSERIALIZATIONSAFEATTRIBUTE_T363116225_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.ThreadAndSerializationSafeAttribute
-struct  ThreadAndSerializationSafeAttribute_t363116225  : public Attribute_t861562559
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // THREADANDSERIALIZATIONSAFEATTRIBUTE_T363116225_H
-#ifndef UNITYENGINEMODULEASSEMBLY_T2421846737_H
-#define UNITYENGINEMODULEASSEMBLY_T2421846737_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.UnityEngineModuleAssembly
-struct  UnityEngineModuleAssembly_t2421846737  : public Attribute_t861562559
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // UNITYENGINEMODULEASSEMBLY_T2421846737_H
-#ifndef SYSTEMEXCEPTION_T176217640_H
-#define SYSTEMEXCEPTION_T176217640_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.SystemException
-struct  SystemException_t176217640  : public Exception_t
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // SYSTEMEXCEPTION_T176217640_H
-#ifndef VOID_T1185182177_H
-#define VOID_T1185182177_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Void
-struct  Void_t1185182177 
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // VOID_T1185182177_H
-#ifndef NATIVENAMEATTRIBUTE_T3268151526_H
-#define NATIVENAMEATTRIBUTE_T3268151526_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Bindings.NativeNameAttribute
-struct  NativeNameAttribute_t3268151526  : public Attribute_t861562559
-{
-public:
-	// System.String UnityEngine.Bindings.NativeNameAttribute::<Name>k__BackingField
-	String_t* ___U3CNameU3Ek__BackingField_0;
-
-public:
-	inline static int32_t get_offset_of_U3CNameU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(NativeNameAttribute_t3268151526, ___U3CNameU3Ek__BackingField_0)); }
-	inline String_t* get_U3CNameU3Ek__BackingField_0() const { return ___U3CNameU3Ek__BackingField_0; }
-	inline String_t** get_address_of_U3CNameU3Ek__BackingField_0() { return &___U3CNameU3Ek__BackingField_0; }
-	inline void set_U3CNameU3Ek__BackingField_0(String_t* value)
-	{
-		___U3CNameU3Ek__BackingField_0 = value;
-		Il2CppCodeGenWriteBarrier((&___U3CNameU3Ek__BackingField_0), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // NATIVENAMEATTRIBUTE_T3268151526_H
-#ifndef WRITABLEATTRIBUTE_T812406054_H
-#define WRITABLEATTRIBUTE_T812406054_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.WritableAttribute
-struct  WritableAttribute_t812406054  : public Attribute_t861562559
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // WRITABLEATTRIBUTE_T812406054_H
-#ifndef ASSETFILENAMEEXTENSIONATTRIBUTE_T1361241164_H
-#define ASSETFILENAMEEXTENSIONATTRIBUTE_T1361241164_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.AssetFileNameExtensionAttribute
-struct  AssetFileNameExtensionAttribute_t1361241164  : public Attribute_t861562559
-{
-public:
-	// System.String UnityEngine.AssetFileNameExtensionAttribute::<preferredExtension>k__BackingField
-	String_t* ___U3CpreferredExtensionU3Ek__BackingField_0;
-	// System.Collections.Generic.IEnumerable`1<System.String> UnityEngine.AssetFileNameExtensionAttribute::<otherExtensions>k__BackingField
-	RuntimeObject* ___U3CotherExtensionsU3Ek__BackingField_1;
-
-public:
-	inline static int32_t get_offset_of_U3CpreferredExtensionU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(AssetFileNameExtensionAttribute_t1361241164, ___U3CpreferredExtensionU3Ek__BackingField_0)); }
-	inline String_t* get_U3CpreferredExtensionU3Ek__BackingField_0() const { return ___U3CpreferredExtensionU3Ek__BackingField_0; }
-	inline String_t** get_address_of_U3CpreferredExtensionU3Ek__BackingField_0() { return &___U3CpreferredExtensionU3Ek__BackingField_0; }
-	inline void set_U3CpreferredExtensionU3Ek__BackingField_0(String_t* value)
-	{
-		___U3CpreferredExtensionU3Ek__BackingField_0 = value;
-		Il2CppCodeGenWriteBarrier((&___U3CpreferredExtensionU3Ek__BackingField_0), value);
-	}
-
-	inline static int32_t get_offset_of_U3CotherExtensionsU3Ek__BackingField_1() { return static_cast<int32_t>(offsetof(AssetFileNameExtensionAttribute_t1361241164, ___U3CotherExtensionsU3Ek__BackingField_1)); }
-	inline RuntimeObject* get_U3CotherExtensionsU3Ek__BackingField_1() const { return ___U3CotherExtensionsU3Ek__BackingField_1; }
-	inline RuntimeObject** get_address_of_U3CotherExtensionsU3Ek__BackingField_1() { return &___U3CotherExtensionsU3Ek__BackingField_1; }
-	inline void set_U3CotherExtensionsU3Ek__BackingField_1(RuntimeObject* value)
-	{
-		___U3CotherExtensionsU3Ek__BackingField_1 = value;
-		Il2CppCodeGenWriteBarrier((&___U3CotherExtensionsU3Ek__BackingField_1), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // ASSETFILENAMEEXTENSIONATTRIBUTE_T1361241164_H
-#ifndef NATIVEHEADERATTRIBUTE_T5261382_H
-#define NATIVEHEADERATTRIBUTE_T5261382_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Bindings.NativeHeaderAttribute
-struct  NativeHeaderAttribute_t5261382  : public Attribute_t861562559
-{
-public:
-	// System.String UnityEngine.Bindings.NativeHeaderAttribute::<Header>k__BackingField
-	String_t* ___U3CHeaderU3Ek__BackingField_0;
-
-public:
-	inline static int32_t get_offset_of_U3CHeaderU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(NativeHeaderAttribute_t5261382, ___U3CHeaderU3Ek__BackingField_0)); }
-	inline String_t* get_U3CHeaderU3Ek__BackingField_0() const { return ___U3CHeaderU3Ek__BackingField_0; }
-	inline String_t** get_address_of_U3CHeaderU3Ek__BackingField_0() { return &___U3CHeaderU3Ek__BackingField_0; }
-	inline void set_U3CHeaderU3Ek__BackingField_0(String_t* value)
-	{
-		___U3CHeaderU3Ek__BackingField_0 = value;
-		Il2CppCodeGenWriteBarrier((&___U3CHeaderU3Ek__BackingField_0), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // NATIVEHEADERATTRIBUTE_T5261382_H
-#ifndef NATIVECONDITIONALATTRIBUTE_T2439539374_H
-#define NATIVECONDITIONALATTRIBUTE_T2439539374_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Bindings.NativeConditionalAttribute
-struct  NativeConditionalAttribute_t2439539374  : public Attribute_t861562559
-{
-public:
-	// System.String UnityEngine.Bindings.NativeConditionalAttribute::<Condition>k__BackingField
-	String_t* ___U3CConditionU3Ek__BackingField_0;
-	// System.Boolean UnityEngine.Bindings.NativeConditionalAttribute::<Enabled>k__BackingField
-	bool ___U3CEnabledU3Ek__BackingField_1;
-
-public:
-	inline static int32_t get_offset_of_U3CConditionU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(NativeConditionalAttribute_t2439539374, ___U3CConditionU3Ek__BackingField_0)); }
-	inline String_t* get_U3CConditionU3Ek__BackingField_0() const { return ___U3CConditionU3Ek__BackingField_0; }
-	inline String_t** get_address_of_U3CConditionU3Ek__BackingField_0() { return &___U3CConditionU3Ek__BackingField_0; }
-	inline void set_U3CConditionU3Ek__BackingField_0(String_t* value)
-	{
-		___U3CConditionU3Ek__BackingField_0 = value;
-		Il2CppCodeGenWriteBarrier((&___U3CConditionU3Ek__BackingField_0), value);
-	}
-
-	inline static int32_t get_offset_of_U3CEnabledU3Ek__BackingField_1() { return static_cast<int32_t>(offsetof(NativeConditionalAttribute_t2439539374, ___U3CEnabledU3Ek__BackingField_1)); }
-	inline bool get_U3CEnabledU3Ek__BackingField_1() const { return ___U3CEnabledU3Ek__BackingField_1; }
-	inline bool* get_address_of_U3CEnabledU3Ek__BackingField_1() { return &___U3CEnabledU3Ek__BackingField_1; }
-	inline void set_U3CEnabledU3Ek__BackingField_1(bool value)
-	{
-		___U3CEnabledU3Ek__BackingField_1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // NATIVECONDITIONALATTRIBUTE_T2439539374_H
+#endif // UNITYSTRING_T1423233093_H
 #ifndef BOOLEAN_T97287965_H
 #define BOOLEAN_T97287965_H
 #ifdef __clang__
@@ -833,6 +492,251 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BOOLEAN_T97287965_H
+#ifndef ENUM_T4135868527_H
+#define ENUM_T4135868527_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Enum
+struct  Enum_t4135868527  : public ValueType_t3640485471
+{
+public:
+
+public:
+};
+
+struct Enum_t4135868527_StaticFields
+{
+public:
+	// System.Char[] System.Enum::split_char
+	CharU5BU5D_t3528271667* ___split_char_0;
+
+public:
+	inline static int32_t get_offset_of_split_char_0() { return static_cast<int32_t>(offsetof(Enum_t4135868527_StaticFields, ___split_char_0)); }
+	inline CharU5BU5D_t3528271667* get_split_char_0() const { return ___split_char_0; }
+	inline CharU5BU5D_t3528271667** get_address_of_split_char_0() { return &___split_char_0; }
+	inline void set_split_char_0(CharU5BU5D_t3528271667* value)
+	{
+		___split_char_0 = value;
+		Il2CppCodeGenWriteBarrier((&___split_char_0), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+// Native definition for P/Invoke marshalling of System.Enum
+struct Enum_t4135868527_marshaled_pinvoke
+{
+};
+// Native definition for COM marshalling of System.Enum
+struct Enum_t4135868527_marshaled_com
+{
+};
+#endif // ENUM_T4135868527_H
+#ifndef SYSTEMEXCEPTION_T176217640_H
+#define SYSTEMEXCEPTION_T176217640_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.SystemException
+struct  SystemException_t176217640  : public Exception_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // SYSTEMEXCEPTION_T176217640_H
+#ifndef VOID_T1185182177_H
+#define VOID_T1185182177_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Void
+struct  Void_t1185182177 
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // VOID_T1185182177_H
+#ifndef ASSETFILENAMEEXTENSIONATTRIBUTE_T1361241164_H
+#define ASSETFILENAMEEXTENSIONATTRIBUTE_T1361241164_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.AssetFileNameExtensionAttribute
+struct  AssetFileNameExtensionAttribute_t1361241164  : public Attribute_t861562559
+{
+public:
+	// System.String UnityEngine.AssetFileNameExtensionAttribute::<preferredExtension>k__BackingField
+	String_t* ___U3CpreferredExtensionU3Ek__BackingField_0;
+	// System.Collections.Generic.IEnumerable`1<System.String> UnityEngine.AssetFileNameExtensionAttribute::<otherExtensions>k__BackingField
+	RuntimeObject* ___U3CotherExtensionsU3Ek__BackingField_1;
+
+public:
+	inline static int32_t get_offset_of_U3CpreferredExtensionU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(AssetFileNameExtensionAttribute_t1361241164, ___U3CpreferredExtensionU3Ek__BackingField_0)); }
+	inline String_t* get_U3CpreferredExtensionU3Ek__BackingField_0() const { return ___U3CpreferredExtensionU3Ek__BackingField_0; }
+	inline String_t** get_address_of_U3CpreferredExtensionU3Ek__BackingField_0() { return &___U3CpreferredExtensionU3Ek__BackingField_0; }
+	inline void set_U3CpreferredExtensionU3Ek__BackingField_0(String_t* value)
+	{
+		___U3CpreferredExtensionU3Ek__BackingField_0 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CpreferredExtensionU3Ek__BackingField_0), value);
+	}
+
+	inline static int32_t get_offset_of_U3CotherExtensionsU3Ek__BackingField_1() { return static_cast<int32_t>(offsetof(AssetFileNameExtensionAttribute_t1361241164, ___U3CotherExtensionsU3Ek__BackingField_1)); }
+	inline RuntimeObject* get_U3CotherExtensionsU3Ek__BackingField_1() const { return ___U3CotherExtensionsU3Ek__BackingField_1; }
+	inline RuntimeObject** get_address_of_U3CotherExtensionsU3Ek__BackingField_1() { return &___U3CotherExtensionsU3Ek__BackingField_1; }
+	inline void set_U3CotherExtensionsU3Ek__BackingField_1(RuntimeObject* value)
+	{
+		___U3CotherExtensionsU3Ek__BackingField_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CotherExtensionsU3Ek__BackingField_1), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ASSETFILENAMEEXTENSIONATTRIBUTE_T1361241164_H
+#ifndef IGNOREATTRIBUTE_T1982719709_H
+#define IGNOREATTRIBUTE_T1982719709_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Bindings.IgnoreAttribute
+struct  IgnoreAttribute_t1982719709  : public Attribute_t861562559
+{
+public:
+	// System.Boolean UnityEngine.Bindings.IgnoreAttribute::<DoesNotContributeToSize>k__BackingField
+	bool ___U3CDoesNotContributeToSizeU3Ek__BackingField_0;
+
+public:
+	inline static int32_t get_offset_of_U3CDoesNotContributeToSizeU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(IgnoreAttribute_t1982719709, ___U3CDoesNotContributeToSizeU3Ek__BackingField_0)); }
+	inline bool get_U3CDoesNotContributeToSizeU3Ek__BackingField_0() const { return ___U3CDoesNotContributeToSizeU3Ek__BackingField_0; }
+	inline bool* get_address_of_U3CDoesNotContributeToSizeU3Ek__BackingField_0() { return &___U3CDoesNotContributeToSizeU3Ek__BackingField_0; }
+	inline void set_U3CDoesNotContributeToSizeU3Ek__BackingField_0(bool value)
+	{
+		___U3CDoesNotContributeToSizeU3Ek__BackingField_0 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // IGNOREATTRIBUTE_T1982719709_H
+#ifndef NATIVEASSTRUCTATTRIBUTE_T270414901_H
+#define NATIVEASSTRUCTATTRIBUTE_T270414901_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Bindings.NativeAsStructAttribute
+struct  NativeAsStructAttribute_t270414901  : public Attribute_t861562559
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // NATIVEASSTRUCTATTRIBUTE_T270414901_H
+#ifndef NATIVECONDITIONALATTRIBUTE_T2439539374_H
+#define NATIVECONDITIONALATTRIBUTE_T2439539374_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Bindings.NativeConditionalAttribute
+struct  NativeConditionalAttribute_t2439539374  : public Attribute_t861562559
+{
+public:
+	// System.String UnityEngine.Bindings.NativeConditionalAttribute::<Condition>k__BackingField
+	String_t* ___U3CConditionU3Ek__BackingField_0;
+	// System.Boolean UnityEngine.Bindings.NativeConditionalAttribute::<Enabled>k__BackingField
+	bool ___U3CEnabledU3Ek__BackingField_1;
+
+public:
+	inline static int32_t get_offset_of_U3CConditionU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(NativeConditionalAttribute_t2439539374, ___U3CConditionU3Ek__BackingField_0)); }
+	inline String_t* get_U3CConditionU3Ek__BackingField_0() const { return ___U3CConditionU3Ek__BackingField_0; }
+	inline String_t** get_address_of_U3CConditionU3Ek__BackingField_0() { return &___U3CConditionU3Ek__BackingField_0; }
+	inline void set_U3CConditionU3Ek__BackingField_0(String_t* value)
+	{
+		___U3CConditionU3Ek__BackingField_0 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CConditionU3Ek__BackingField_0), value);
+	}
+
+	inline static int32_t get_offset_of_U3CEnabledU3Ek__BackingField_1() { return static_cast<int32_t>(offsetof(NativeConditionalAttribute_t2439539374, ___U3CEnabledU3Ek__BackingField_1)); }
+	inline bool get_U3CEnabledU3Ek__BackingField_1() const { return ___U3CEnabledU3Ek__BackingField_1; }
+	inline bool* get_address_of_U3CEnabledU3Ek__BackingField_1() { return &___U3CEnabledU3Ek__BackingField_1; }
+	inline void set_U3CEnabledU3Ek__BackingField_1(bool value)
+	{
+		___U3CEnabledU3Ek__BackingField_1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // NATIVECONDITIONALATTRIBUTE_T2439539374_H
+#ifndef NATIVEHEADERATTRIBUTE_T5261382_H
+#define NATIVEHEADERATTRIBUTE_T5261382_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Bindings.NativeHeaderAttribute
+struct  NativeHeaderAttribute_t5261382  : public Attribute_t861562559
+{
+public:
+	// System.String UnityEngine.Bindings.NativeHeaderAttribute::<Header>k__BackingField
+	String_t* ___U3CHeaderU3Ek__BackingField_0;
+
+public:
+	inline static int32_t get_offset_of_U3CHeaderU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(NativeHeaderAttribute_t5261382, ___U3CHeaderU3Ek__BackingField_0)); }
+	inline String_t* get_U3CHeaderU3Ek__BackingField_0() const { return ___U3CHeaderU3Ek__BackingField_0; }
+	inline String_t** get_address_of_U3CHeaderU3Ek__BackingField_0() { return &___U3CHeaderU3Ek__BackingField_0; }
+	inline void set_U3CHeaderU3Ek__BackingField_0(String_t* value)
+	{
+		___U3CHeaderU3Ek__BackingField_0 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CHeaderU3Ek__BackingField_0), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // NATIVEHEADERATTRIBUTE_T5261382_H
 #ifndef NATIVEMETHODATTRIBUTE_T4187428193_H
 #define NATIVEMETHODATTRIBUTE_T4187428193_H
 #ifdef __clang__
@@ -903,51 +807,215 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // NATIVEMETHODATTRIBUTE_T4187428193_H
-#ifndef ENUM_T4135868527_H
-#define ENUM_T4135868527_H
+#ifndef NATIVENAMEATTRIBUTE_T3268151526_H
+#define NATIVENAMEATTRIBUTE_T3268151526_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.Enum
-struct  Enum_t4135868527  : public ValueType_t3640485471
+// UnityEngine.Bindings.NativeNameAttribute
+struct  NativeNameAttribute_t3268151526  : public Attribute_t861562559
 {
 public:
+	// System.String UnityEngine.Bindings.NativeNameAttribute::<Name>k__BackingField
+	String_t* ___U3CNameU3Ek__BackingField_0;
 
 public:
-};
-
-struct Enum_t4135868527_StaticFields
-{
-public:
-	// System.Char[] System.Enum::split_char
-	CharU5BU5D_t3528271667* ___split_char_0;
-
-public:
-	inline static int32_t get_offset_of_split_char_0() { return static_cast<int32_t>(offsetof(Enum_t4135868527_StaticFields, ___split_char_0)); }
-	inline CharU5BU5D_t3528271667* get_split_char_0() const { return ___split_char_0; }
-	inline CharU5BU5D_t3528271667** get_address_of_split_char_0() { return &___split_char_0; }
-	inline void set_split_char_0(CharU5BU5D_t3528271667* value)
+	inline static int32_t get_offset_of_U3CNameU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(NativeNameAttribute_t3268151526, ___U3CNameU3Ek__BackingField_0)); }
+	inline String_t* get_U3CNameU3Ek__BackingField_0() const { return ___U3CNameU3Ek__BackingField_0; }
+	inline String_t** get_address_of_U3CNameU3Ek__BackingField_0() { return &___U3CNameU3Ek__BackingField_0; }
+	inline void set_U3CNameU3Ek__BackingField_0(String_t* value)
 	{
-		___split_char_0 = value;
-		Il2CppCodeGenWriteBarrier((&___split_char_0), value);
+		___U3CNameU3Ek__BackingField_0 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CNameU3Ek__BackingField_0), value);
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Native definition for P/Invoke marshalling of System.Enum
-struct Enum_t4135868527_marshaled_pinvoke
+#endif // NATIVENAMEATTRIBUTE_T3268151526_H
+#ifndef NATIVETHROWSATTRIBUTE_T1697526064_H
+#define NATIVETHROWSATTRIBUTE_T1697526064_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Bindings.NativeThrowsAttribute
+struct  NativeThrowsAttribute_t1697526064  : public Attribute_t861562559
 {
+public:
+	// System.Boolean UnityEngine.Bindings.NativeThrowsAttribute::<ThrowsException>k__BackingField
+	bool ___U3CThrowsExceptionU3Ek__BackingField_0;
+
+public:
+	inline static int32_t get_offset_of_U3CThrowsExceptionU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(NativeThrowsAttribute_t1697526064, ___U3CThrowsExceptionU3Ek__BackingField_0)); }
+	inline bool get_U3CThrowsExceptionU3Ek__BackingField_0() const { return ___U3CThrowsExceptionU3Ek__BackingField_0; }
+	inline bool* get_address_of_U3CThrowsExceptionU3Ek__BackingField_0() { return &___U3CThrowsExceptionU3Ek__BackingField_0; }
+	inline void set_U3CThrowsExceptionU3Ek__BackingField_0(bool value)
+	{
+		___U3CThrowsExceptionU3Ek__BackingField_0 = value;
+	}
 };
-// Native definition for COM marshalling of System.Enum
-struct Enum_t4135868527_marshaled_com
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // NATIVETHROWSATTRIBUTE_T1697526064_H
+#ifndef NATIVEWRITABLESELFATTRIBUTE_T3843992162_H
+#define NATIVEWRITABLESELFATTRIBUTE_T3843992162_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Bindings.NativeWritableSelfAttribute
+struct  NativeWritableSelfAttribute_t3843992162  : public Attribute_t861562559
 {
+public:
+	// System.Boolean UnityEngine.Bindings.NativeWritableSelfAttribute::<WritableSelf>k__BackingField
+	bool ___U3CWritableSelfU3Ek__BackingField_0;
+
+public:
+	inline static int32_t get_offset_of_U3CWritableSelfU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(NativeWritableSelfAttribute_t3843992162, ___U3CWritableSelfU3Ek__BackingField_0)); }
+	inline bool get_U3CWritableSelfU3Ek__BackingField_0() const { return ___U3CWritableSelfU3Ek__BackingField_0; }
+	inline bool* get_address_of_U3CWritableSelfU3Ek__BackingField_0() { return &___U3CWritableSelfU3Ek__BackingField_0; }
+	inline void set_U3CWritableSelfU3Ek__BackingField_0(bool value)
+	{
+		___U3CWritableSelfU3Ek__BackingField_0 = value;
+	}
 };
-#endif // ENUM_T4135868527_H
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // NATIVEWRITABLESELFATTRIBUTE_T3843992162_H
+#ifndef NOTNULLATTRIBUTE_T1114947401_H
+#define NOTNULLATTRIBUTE_T1114947401_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Bindings.NotNullAttribute
+struct  NotNullAttribute_t1114947401  : public Attribute_t861562559
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // NOTNULLATTRIBUTE_T1114947401_H
+#ifndef UNMARSHALLEDATTRIBUTE_T1517743549_H
+#define UNMARSHALLEDATTRIBUTE_T1517743549_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Bindings.UnmarshalledAttribute
+struct  UnmarshalledAttribute_t1517743549  : public Attribute_t861562559
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // UNMARSHALLEDATTRIBUTE_T1517743549_H
+#ifndef VISIBLETOOTHERMODULESATTRIBUTE_T1429630568_H
+#define VISIBLETOOTHERMODULESATTRIBUTE_T1429630568_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Bindings.VisibleToOtherModulesAttribute
+struct  VisibleToOtherModulesAttribute_t1429630568  : public Attribute_t861562559
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // VISIBLETOOTHERMODULESATTRIBUTE_T1429630568_H
+#ifndef NATIVECLASSATTRIBUTE_T2601352714_H
+#define NATIVECLASSATTRIBUTE_T2601352714_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.NativeClassAttribute
+struct  NativeClassAttribute_t2601352714  : public Attribute_t861562559
+{
+public:
+	// System.String UnityEngine.NativeClassAttribute::<QualifiedNativeName>k__BackingField
+	String_t* ___U3CQualifiedNativeNameU3Ek__BackingField_0;
+	// System.String UnityEngine.NativeClassAttribute::<Declaration>k__BackingField
+	String_t* ___U3CDeclarationU3Ek__BackingField_1;
+
+public:
+	inline static int32_t get_offset_of_U3CQualifiedNativeNameU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(NativeClassAttribute_t2601352714, ___U3CQualifiedNativeNameU3Ek__BackingField_0)); }
+	inline String_t* get_U3CQualifiedNativeNameU3Ek__BackingField_0() const { return ___U3CQualifiedNativeNameU3Ek__BackingField_0; }
+	inline String_t** get_address_of_U3CQualifiedNativeNameU3Ek__BackingField_0() { return &___U3CQualifiedNativeNameU3Ek__BackingField_0; }
+	inline void set_U3CQualifiedNativeNameU3Ek__BackingField_0(String_t* value)
+	{
+		___U3CQualifiedNativeNameU3Ek__BackingField_0 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CQualifiedNativeNameU3Ek__BackingField_0), value);
+	}
+
+	inline static int32_t get_offset_of_U3CDeclarationU3Ek__BackingField_1() { return static_cast<int32_t>(offsetof(NativeClassAttribute_t2601352714, ___U3CDeclarationU3Ek__BackingField_1)); }
+	inline String_t* get_U3CDeclarationU3Ek__BackingField_1() const { return ___U3CDeclarationU3Ek__BackingField_1; }
+	inline String_t** get_address_of_U3CDeclarationU3Ek__BackingField_1() { return &___U3CDeclarationU3Ek__BackingField_1; }
+	inline void set_U3CDeclarationU3Ek__BackingField_1(String_t* value)
+	{
+		___U3CDeclarationU3Ek__BackingField_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CDeclarationU3Ek__BackingField_1), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // NATIVECLASSATTRIBUTE_T2601352714_H
+#ifndef GENERATEDBYOLDBINDINGSGENERATORATTRIBUTE_T433318409_H
+#define GENERATEDBYOLDBINDINGSGENERATORATTRIBUTE_T433318409_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Scripting.GeneratedByOldBindingsGeneratorAttribute
+struct  GeneratedByOldBindingsGeneratorAttribute_t433318409  : public Attribute_t861562559
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // GENERATEDBYOLDBINDINGSGENERATORATTRIBUTE_T433318409_H
 #ifndef REQUIREDBYNATIVECODEATTRIBUTE_T4130846357_H
 #define REQUIREDBYNATIVECODEATTRIBUTE_T4130846357_H
 #ifdef __clang__
@@ -964,6 +1032,8 @@ public:
 	String_t* ___U3CNameU3Ek__BackingField_0;
 	// System.Boolean UnityEngine.Scripting.RequiredByNativeCodeAttribute::<Optional>k__BackingField
 	bool ___U3COptionalU3Ek__BackingField_1;
+	// System.Boolean UnityEngine.Scripting.RequiredByNativeCodeAttribute::<GenerateProxy>k__BackingField
+	bool ___U3CGenerateProxyU3Ek__BackingField_2;
 
 public:
 	inline static int32_t get_offset_of_U3CNameU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(RequiredByNativeCodeAttribute_t4130846357, ___U3CNameU3Ek__BackingField_0)); }
@@ -981,6 +1051,14 @@ public:
 	inline void set_U3COptionalU3Ek__BackingField_1(bool value)
 	{
 		___U3COptionalU3Ek__BackingField_1 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CGenerateProxyU3Ek__BackingField_2() { return static_cast<int32_t>(offsetof(RequiredByNativeCodeAttribute_t4130846357, ___U3CGenerateProxyU3Ek__BackingField_2)); }
+	inline bool get_U3CGenerateProxyU3Ek__BackingField_2() const { return ___U3CGenerateProxyU3Ek__BackingField_2; }
+	inline bool* get_address_of_U3CGenerateProxyU3Ek__BackingField_2() { return &___U3CGenerateProxyU3Ek__BackingField_2; }
+	inline void set_U3CGenerateProxyU3Ek__BackingField_2(bool value)
+	{
+		___U3CGenerateProxyU3Ek__BackingField_2 = value;
 	}
 };
 
@@ -1008,16 +1086,16 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // USEDBYNATIVECODEATTRIBUTE_T1703770351_H
-#ifndef THREADSAFEATTRIBUTE_T3376653515_H
-#define THREADSAFEATTRIBUTE_T3376653515_H
+#ifndef THREADANDSERIALIZATIONSAFEATTRIBUTE_T363116225_H
+#define THREADANDSERIALIZATIONSAFEATTRIBUTE_T363116225_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.Bindings.ThreadSafeAttribute
-struct  ThreadSafeAttribute_t3376653515  : public NativeMethodAttribute_t4187428193
+// UnityEngine.ThreadAndSerializationSafeAttribute
+struct  ThreadAndSerializationSafeAttribute_t363116225  : public Attribute_t861562559
 {
 public:
 
@@ -1027,17 +1105,17 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // THREADSAFEATTRIBUTE_T3376653515_H
-#ifndef NATIVEPROPERTYATTRIBUTE_T1305929258_H
-#define NATIVEPROPERTYATTRIBUTE_T1305929258_H
+#endif // THREADANDSERIALIZATIONSAFEATTRIBUTE_T363116225_H
+#ifndef UNITYENGINEMODULEASSEMBLY_T2421846737_H
+#define UNITYENGINEMODULEASSEMBLY_T2421846737_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.Bindings.NativePropertyAttribute
-struct  NativePropertyAttribute_t1305929258  : public NativeMethodAttribute_t4187428193
+// UnityEngine.UnityEngineModuleAssembly
+struct  UnityEngineModuleAssembly_t2421846737  : public Attribute_t861562559
 {
 public:
 
@@ -1047,7 +1125,27 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // NATIVEPROPERTYATTRIBUTE_T1305929258_H
+#endif // UNITYENGINEMODULEASSEMBLY_T2421846737_H
+#ifndef WRITABLEATTRIBUTE_T812406054_H
+#define WRITABLEATTRIBUTE_T812406054_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.WritableAttribute
+struct  WritableAttribute_t812406054  : public Attribute_t861562559
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // WRITABLEATTRIBUTE_T812406054_H
 #ifndef ARGUMENTEXCEPTION_T132251570_H
 #define ARGUMENTEXCEPTION_T132251570_H
 #ifdef __clang__
@@ -1078,6 +1176,35 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // ARGUMENTEXCEPTION_T132251570_H
+#ifndef CODEGENOPTIONS_T498890944_H
+#define CODEGENOPTIONS_T498890944_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Bindings.CodegenOptions
+struct  CodegenOptions_t498890944 
+{
+public:
+	// System.Int32 UnityEngine.Bindings.CodegenOptions::value__
+	int32_t ___value___1;
+
+public:
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(CodegenOptions_t498890944, ___value___1)); }
+	inline int32_t get_value___1() const { return ___value___1; }
+	inline int32_t* get_address_of_value___1() { return &___value___1; }
+	inline void set_value___1(int32_t value)
+	{
+		___value___1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // CODEGENOPTIONS_T498890944_H
 #ifndef FREEFUNCTIONATTRIBUTE_T2020741617_H
 #define FREEFUNCTIONATTRIBUTE_T2020741617_H
 #ifdef __clang__
@@ -1127,23 +1254,23 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // STATICACCESSORTYPE_T186341701_H
-#ifndef CODEGENOPTIONS_T498890944_H
-#define CODEGENOPTIONS_T498890944_H
+#ifndef TARGETTYPE_T2370014154_H
+#define TARGETTYPE_T2370014154_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.Bindings.CodegenOptions
-struct  CodegenOptions_t498890944 
+// UnityEngine.Bindings.TargetType
+struct  TargetType_t2370014154 
 {
 public:
-	// System.Int32 UnityEngine.Bindings.CodegenOptions::value__
+	// System.Int32 UnityEngine.Bindings.TargetType::value__
 	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(CodegenOptions_t498890944, ___value___1)); }
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(TargetType_t2370014154, ___value___1)); }
 	inline int32_t get_value___1() const { return ___value___1; }
 	inline int32_t* get_address_of_value___1() { return &___value___1; }
 	inline void set_value___1(int32_t value)
@@ -1155,47 +1282,76 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // CODEGENOPTIONS_T498890944_H
-#ifndef STATICACCESSORATTRIBUTE_T2432663902_H
-#define STATICACCESSORATTRIBUTE_T2432663902_H
+#endif // TARGETTYPE_T2370014154_H
+#ifndef THREADSAFEATTRIBUTE_T3376653515_H
+#define THREADSAFEATTRIBUTE_T3376653515_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.Bindings.StaticAccessorAttribute
-struct  StaticAccessorAttribute_t2432663902  : public Attribute_t861562559
+// UnityEngine.Bindings.ThreadSafeAttribute
+struct  ThreadSafeAttribute_t3376653515  : public NativeMethodAttribute_t4187428193
 {
 public:
-	// System.String UnityEngine.Bindings.StaticAccessorAttribute::<Name>k__BackingField
-	String_t* ___U3CNameU3Ek__BackingField_0;
-	// UnityEngine.Bindings.StaticAccessorType UnityEngine.Bindings.StaticAccessorAttribute::<Type>k__BackingField
-	int32_t ___U3CTypeU3Ek__BackingField_1;
 
 public:
-	inline static int32_t get_offset_of_U3CNameU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(StaticAccessorAttribute_t2432663902, ___U3CNameU3Ek__BackingField_0)); }
-	inline String_t* get_U3CNameU3Ek__BackingField_0() const { return ___U3CNameU3Ek__BackingField_0; }
-	inline String_t** get_address_of_U3CNameU3Ek__BackingField_0() { return &___U3CNameU3Ek__BackingField_0; }
-	inline void set_U3CNameU3Ek__BackingField_0(String_t* value)
-	{
-		___U3CNameU3Ek__BackingField_0 = value;
-		Il2CppCodeGenWriteBarrier((&___U3CNameU3Ek__BackingField_0), value);
-	}
+};
 
-	inline static int32_t get_offset_of_U3CTypeU3Ek__BackingField_1() { return static_cast<int32_t>(offsetof(StaticAccessorAttribute_t2432663902, ___U3CTypeU3Ek__BackingField_1)); }
-	inline int32_t get_U3CTypeU3Ek__BackingField_1() const { return ___U3CTypeU3Ek__BackingField_1; }
-	inline int32_t* get_address_of_U3CTypeU3Ek__BackingField_1() { return &___U3CTypeU3Ek__BackingField_1; }
-	inline void set_U3CTypeU3Ek__BackingField_1(int32_t value)
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // THREADSAFEATTRIBUTE_T3376653515_H
+#ifndef ARGUMENTNULLEXCEPTION_T1615371798_H
+#define ARGUMENTNULLEXCEPTION_T1615371798_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.ArgumentNullException
+struct  ArgumentNullException_t1615371798  : public ArgumentException_t132251570
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ARGUMENTNULLEXCEPTION_T1615371798_H
+#ifndef NATIVEPROPERTYATTRIBUTE_T1305929258_H
+#define NATIVEPROPERTYATTRIBUTE_T1305929258_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Bindings.NativePropertyAttribute
+struct  NativePropertyAttribute_t1305929258  : public NativeMethodAttribute_t4187428193
+{
+public:
+	// UnityEngine.Bindings.TargetType UnityEngine.Bindings.NativePropertyAttribute::<TargetType>k__BackingField
+	int32_t ___U3CTargetTypeU3Ek__BackingField_5;
+
+public:
+	inline static int32_t get_offset_of_U3CTargetTypeU3Ek__BackingField_5() { return static_cast<int32_t>(offsetof(NativePropertyAttribute_t1305929258, ___U3CTargetTypeU3Ek__BackingField_5)); }
+	inline int32_t get_U3CTargetTypeU3Ek__BackingField_5() const { return ___U3CTargetTypeU3Ek__BackingField_5; }
+	inline int32_t* get_address_of_U3CTargetTypeU3Ek__BackingField_5() { return &___U3CTargetTypeU3Ek__BackingField_5; }
+	inline void set_U3CTargetTypeU3Ek__BackingField_5(int32_t value)
 	{
-		___U3CTypeU3Ek__BackingField_1 = value;
+		___U3CTargetTypeU3Ek__BackingField_5 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // STATICACCESSORATTRIBUTE_T2432663902_H
+#endif // NATIVEPROPERTYATTRIBUTE_T1305929258_H
 #ifndef NATIVETYPEATTRIBUTE_T2250406315_H
 #define NATIVETYPEATTRIBUTE_T2250406315_H
 #ifdef __clang__
@@ -1247,26 +1403,46 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // NATIVETYPEATTRIBUTE_T2250406315_H
-#ifndef ARGUMENTNULLEXCEPTION_T1615371798_H
-#define ARGUMENTNULLEXCEPTION_T1615371798_H
+#ifndef STATICACCESSORATTRIBUTE_T2432663902_H
+#define STATICACCESSORATTRIBUTE_T2432663902_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// System.ArgumentNullException
-struct  ArgumentNullException_t1615371798  : public ArgumentException_t132251570
+// UnityEngine.Bindings.StaticAccessorAttribute
+struct  StaticAccessorAttribute_t2432663902  : public Attribute_t861562559
 {
 public:
+	// System.String UnityEngine.Bindings.StaticAccessorAttribute::<Name>k__BackingField
+	String_t* ___U3CNameU3Ek__BackingField_0;
+	// UnityEngine.Bindings.StaticAccessorType UnityEngine.Bindings.StaticAccessorAttribute::<Type>k__BackingField
+	int32_t ___U3CTypeU3Ek__BackingField_1;
 
 public:
+	inline static int32_t get_offset_of_U3CNameU3Ek__BackingField_0() { return static_cast<int32_t>(offsetof(StaticAccessorAttribute_t2432663902, ___U3CNameU3Ek__BackingField_0)); }
+	inline String_t* get_U3CNameU3Ek__BackingField_0() const { return ___U3CNameU3Ek__BackingField_0; }
+	inline String_t** get_address_of_U3CNameU3Ek__BackingField_0() { return &___U3CNameU3Ek__BackingField_0; }
+	inline void set_U3CNameU3Ek__BackingField_0(String_t* value)
+	{
+		___U3CNameU3Ek__BackingField_0 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CNameU3Ek__BackingField_0), value);
+	}
+
+	inline static int32_t get_offset_of_U3CTypeU3Ek__BackingField_1() { return static_cast<int32_t>(offsetof(StaticAccessorAttribute_t2432663902, ___U3CTypeU3Ek__BackingField_1)); }
+	inline int32_t get_U3CTypeU3Ek__BackingField_1() const { return ___U3CTypeU3Ek__BackingField_1; }
+	inline int32_t* get_address_of_U3CTypeU3Ek__BackingField_1() { return &___U3CTypeU3Ek__BackingField_1; }
+	inline void set_U3CTypeU3Ek__BackingField_1(int32_t value)
+	{
+		___U3CTypeU3Ek__BackingField_1 = value;
+	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // ARGUMENTNULLEXCEPTION_T1615371798_H
+#endif // STATICACCESSORATTRIBUTE_T2432663902_H
 // System.String[]
 struct StringU5BU5D_t1281789340  : public RuntimeArray
 {
@@ -1345,53 +1521,63 @@ public:
 
 
 // System.Void System.Attribute::.ctor()
-extern "C"  void Attribute__ctor_m1529526131 (Attribute_t861562559 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void Attribute__ctor_m1529526131 (Attribute_t861562559 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::.ctor()
-extern "C"  void NativeMethodAttribute__ctor_m3134540192 (NativeMethodAttribute_t4187428193 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_m3134540192 (NativeMethodAttribute_t4187428193 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::set_IsFreeFunction(System.Boolean)
-extern "C"  void NativeMethodAttribute_set_IsFreeFunction_m1931350581 (NativeMethodAttribute_t4187428193 * __this, bool ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_IsFreeFunction_m1931350581 (NativeMethodAttribute_t4187428193 * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::.ctor(System.String,System.Boolean)
-extern "C"  void NativeMethodAttribute__ctor_m3056337369 (NativeMethodAttribute_t4187428193 * __this, String_t* ___name0, bool ___isFreeFunction1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_m3056337369 (NativeMethodAttribute_t4187428193 * __this, String_t* ___name0, bool ___isFreeFunction1, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::.ctor(System.String,System.Boolean,System.Boolean)
-extern "C"  void NativeMethodAttribute__ctor_m2749818278 (NativeMethodAttribute_t4187428193 * __this, String_t* ___name0, bool ___isFreeFunction1, bool ___isThreadSafe2, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_m2749818278 (NativeMethodAttribute_t4187428193 * __this, String_t* ___name0, bool ___isFreeFunction1, bool ___isThreadSafe2, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeConditionalAttribute::set_Condition(System.String)
-extern "C"  void NativeConditionalAttribute_set_Condition_m607771195 (NativeConditionalAttribute_t2439539374 * __this, String_t* ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeConditionalAttribute_set_Condition_m607771195 (NativeConditionalAttribute_t2439539374 * __this, String_t* ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeConditionalAttribute::set_Enabled(System.Boolean)
-extern "C"  void NativeConditionalAttribute_set_Enabled_m2378894961 (NativeConditionalAttribute_t2439539374 * __this, bool ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeConditionalAttribute_set_Enabled_m2378894961 (NativeConditionalAttribute_t2439539374 * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void System.ArgumentNullException::.ctor(System.String)
-extern "C"  void ArgumentNullException__ctor_m1170824041 (ArgumentNullException_t1615371798 * __this, String_t* p0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void ArgumentNullException__ctor_m1170824041 (ArgumentNullException_t1615371798 * __this, String_t* p0, const RuntimeMethod* method);
 // System.Boolean System.String::op_Equality(System.String,System.String)
-extern "C"  bool String_op_Equality_m920492651 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR bool String_op_Equality_m920492651 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
 // System.Void System.ArgumentException::.ctor(System.String,System.String)
-extern "C"  void ArgumentException__ctor_m1216717135 (ArgumentException_t132251570 * __this, String_t* p0, String_t* p1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void ArgumentException__ctor_m1216717135 (ArgumentException_t132251570 * __this, String_t* p0, String_t* p1, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeHeaderAttribute::set_Header(System.String)
-extern "C"  void NativeHeaderAttribute_set_Header_m3310668383 (NativeHeaderAttribute_t5261382 * __this, String_t* ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeHeaderAttribute_set_Header_m3310668383 (NativeHeaderAttribute_t5261382 * __this, String_t* ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::set_Name(System.String)
-extern "C"  void NativeMethodAttribute_set_Name_m1946475768 (NativeMethodAttribute_t4187428193 * __this, String_t* ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_Name_m1946475768 (NativeMethodAttribute_t4187428193 * __this, String_t* ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::.ctor(System.String)
-extern "C"  void NativeMethodAttribute__ctor_m2941746701 (NativeMethodAttribute_t4187428193 * __this, String_t* ___name0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_m2941746701 (NativeMethodAttribute_t4187428193 * __this, String_t* ___name0, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::set_IsThreadSafe(System.Boolean)
-extern "C"  void NativeMethodAttribute_set_IsThreadSafe_m2457033065 (NativeMethodAttribute_t4187428193 * __this, bool ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_IsThreadSafe_m2457033065 (NativeMethodAttribute_t4187428193 * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeNameAttribute::set_Name(System.String)
-extern "C"  void NativeNameAttribute_set_Name_m3579254766 (NativeNameAttribute_t3268151526 * __this, String_t* ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeNameAttribute_set_Name_m3579254766 (NativeNameAttribute_t3268151526 * __this, String_t* ___value0, const RuntimeMethod* method);
+// System.Void UnityEngine.Bindings.NativePropertyAttribute::set_TargetType(UnityEngine.Bindings.TargetType)
+extern "C" IL2CPP_METHOD_ATTR void NativePropertyAttribute_set_TargetType_m1468330009 (NativePropertyAttribute_t1305929258 * __this, int32_t ___value0, const RuntimeMethod* method);
+// System.Void UnityEngine.Bindings.NativeThrowsAttribute::set_ThrowsException(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void NativeThrowsAttribute_set_ThrowsException_m4039166389 (NativeThrowsAttribute_t1697526064 * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeTypeAttribute::set_CodegenOptions(UnityEngine.Bindings.CodegenOptions)
-extern "C"  void NativeTypeAttribute_set_CodegenOptions_m3839252515 (NativeTypeAttribute_t2250406315 * __this, int32_t ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeTypeAttribute_set_CodegenOptions_m3839252515 (NativeTypeAttribute_t2250406315 * __this, int32_t ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeTypeAttribute::set_Header(System.String)
-extern "C"  void NativeTypeAttribute_set_Header_m48420006 (NativeTypeAttribute_t2250406315 * __this, String_t* ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeTypeAttribute_set_Header_m48420006 (NativeTypeAttribute_t2250406315 * __this, String_t* ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeTypeAttribute::.ctor(UnityEngine.Bindings.CodegenOptions)
-extern "C"  void NativeTypeAttribute__ctor_m1043629716 (NativeTypeAttribute_t2250406315 * __this, int32_t ___codegenOptions0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeTypeAttribute__ctor_m1043629716 (NativeTypeAttribute_t2250406315 * __this, int32_t ___codegenOptions0, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.NativeTypeAttribute::set_IntermediateScriptingStructName(System.String)
-extern "C"  void NativeTypeAttribute_set_IntermediateScriptingStructName_m3613994509 (NativeTypeAttribute_t2250406315 * __this, String_t* ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void NativeTypeAttribute_set_IntermediateScriptingStructName_m3613994509 (NativeTypeAttribute_t2250406315 * __this, String_t* ___value0, const RuntimeMethod* method);
+// System.Void UnityEngine.Bindings.NativeWritableSelfAttribute::set_WritableSelf(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void NativeWritableSelfAttribute_set_WritableSelf_m2019649977 (NativeWritableSelfAttribute_t3843992162 * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.StaticAccessorAttribute::set_Name(System.String)
-extern "C"  void StaticAccessorAttribute_set_Name_m2926172476 (StaticAccessorAttribute_t2432663902 * __this, String_t* ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void StaticAccessorAttribute_set_Name_m2926172476 (StaticAccessorAttribute_t2432663902 * __this, String_t* ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Bindings.StaticAccessorAttribute::set_Type(UnityEngine.Bindings.StaticAccessorType)
-extern "C"  void StaticAccessorAttribute_set_Type_m2333258271 (StaticAccessorAttribute_t2432663902 * __this, int32_t ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.Scripting.GenerateManagedProxyAttribute::set_NativeType(System.String)
-extern "C"  void GenerateManagedProxyAttribute_set_NativeType_m3203265247 (GenerateManagedProxyAttribute_t2394178854 * __this, String_t* ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void StaticAccessorAttribute_set_Type_m2333258271 (StaticAccessorAttribute_t2432663902 * __this, int32_t ___value0, const RuntimeMethod* method);
+// System.Void UnityEngine.NativeClassAttribute::set_QualifiedNativeName(System.String)
+extern "C" IL2CPP_METHOD_ATTR void NativeClassAttribute_set_QualifiedNativeName_m801351239 (NativeClassAttribute_t2601352714 * __this, String_t* ___value0, const RuntimeMethod* method);
+// System.String System.String::Concat(System.String,System.String)
+extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m3937257545 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
+// System.Void UnityEngine.NativeClassAttribute::set_Declaration(System.String)
+extern "C" IL2CPP_METHOD_ATTR void NativeClassAttribute_set_Declaration_m1218368926 (NativeClassAttribute_t2601352714 * __this, String_t* ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Scripting.RequiredByNativeCodeAttribute::set_Name(System.String)
-extern "C"  void RequiredByNativeCodeAttribute_set_Name_m2009346474 (RequiredByNativeCodeAttribute_t4130846357 * __this, String_t* ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR void RequiredByNativeCodeAttribute_set_Name_m2009346474 (RequiredByNativeCodeAttribute_t4130846357 * __this, String_t* ___value0, const RuntimeMethod* method);
 // System.String System.String::Format(System.String,System.Object[])
-extern "C"  String_t* String_Format_m630303134 (RuntimeObject * __this /* static, unused */, String_t* p0, ObjectU5BU5D_t2843939325* p1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR String_t* String_Format_m630303134 (RuntimeObject * __this /* static, unused */, String_t* p0, ObjectU5BU5D_t2843939325* p1, const RuntimeMethod* method);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -1406,7 +1592,7 @@ extern "C"  String_t* String_Format_m630303134 (RuntimeObject * __this /* static
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.AssetFileNameExtensionAttribute::.ctor(System.String,System.String[])
-extern "C"  void AssetFileNameExtensionAttribute__ctor_m592302761 (AssetFileNameExtensionAttribute_t1361241164 * __this, String_t* ___preferredExtension0, StringU5BU5D_t1281789340* ___otherExtensions1, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void AssetFileNameExtensionAttribute__ctor_m592302761 (AssetFileNameExtensionAttribute_t1361241164 * __this, String_t* ___preferredExtension0, StringU5BU5D_t1281789340* ___otherExtensions1, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -1434,7 +1620,7 @@ extern "C"  void AssetFileNameExtensionAttribute__ctor_m592302761 (AssetFileName
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.Bindings.FreeFunctionAttribute::.ctor()
-extern "C"  void FreeFunctionAttribute__ctor_m225850777 (FreeFunctionAttribute_t2020741617 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void FreeFunctionAttribute__ctor_m225850777 (FreeFunctionAttribute_t2020741617 * __this, const RuntimeMethod* method)
 {
 	{
 		NativeMethodAttribute__ctor_m3134540192(__this, /*hidden argument*/NULL);
@@ -1443,7 +1629,7 @@ extern "C"  void FreeFunctionAttribute__ctor_m225850777 (FreeFunctionAttribute_t
 	}
 }
 // System.Void UnityEngine.Bindings.FreeFunctionAttribute::.ctor(System.String)
-extern "C"  void FreeFunctionAttribute__ctor_m3967403258 (FreeFunctionAttribute_t2020741617 * __this, String_t* ___name0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void FreeFunctionAttribute__ctor_m3967403258 (FreeFunctionAttribute_t2020741617 * __this, String_t* ___name0, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___name0;
@@ -1452,7 +1638,7 @@ extern "C"  void FreeFunctionAttribute__ctor_m3967403258 (FreeFunctionAttribute_
 	}
 }
 // System.Void UnityEngine.Bindings.FreeFunctionAttribute::.ctor(System.String,System.Boolean)
-extern "C"  void FreeFunctionAttribute__ctor_m1198537781 (FreeFunctionAttribute_t2020741617 * __this, String_t* ___name0, bool ___isThreadSafe1, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void FreeFunctionAttribute__ctor_m1198537781 (FreeFunctionAttribute_t2020741617 * __this, String_t* ___name0, bool ___isThreadSafe1, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___name0;
@@ -1469,8 +1655,49 @@ extern "C"  void FreeFunctionAttribute__ctor_m1198537781 (FreeFunctionAttribute_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void UnityEngine.Bindings.IgnoreAttribute::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void IgnoreAttribute__ctor_m3428881723 (IgnoreAttribute_t1982719709 * __this, const RuntimeMethod* method)
+{
+	{
+		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Bindings.IgnoreAttribute::set_DoesNotContributeToSize(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void IgnoreAttribute_set_DoesNotContributeToSize_m1674813355 (IgnoreAttribute_t1982719709 * __this, bool ___value0, const RuntimeMethod* method)
+{
+	{
+		bool L_0 = ___value0;
+		__this->set_U3CDoesNotContributeToSizeU3Ek__BackingField_0(L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void UnityEngine.Bindings.NativeAsStructAttribute::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void NativeAsStructAttribute__ctor_m4170025877 (NativeAsStructAttribute_t270414901 * __this, const RuntimeMethod* method)
+{
+	{
+		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void UnityEngine.Bindings.NativeConditionalAttribute::.ctor(System.String)
-extern "C"  void NativeConditionalAttribute__ctor_m1745668596 (NativeConditionalAttribute_t2439539374 * __this, String_t* ___condition0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeConditionalAttribute__ctor_m1745668596 (NativeConditionalAttribute_t2439539374 * __this, String_t* ___condition0, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -1481,7 +1708,7 @@ extern "C"  void NativeConditionalAttribute__ctor_m1745668596 (NativeConditional
 	}
 }
 // System.Void UnityEngine.Bindings.NativeConditionalAttribute::set_Condition(System.String)
-extern "C"  void NativeConditionalAttribute_set_Condition_m607771195 (NativeConditionalAttribute_t2439539374 * __this, String_t* ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeConditionalAttribute_set_Condition_m607771195 (NativeConditionalAttribute_t2439539374 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___value0;
@@ -1490,7 +1717,7 @@ extern "C"  void NativeConditionalAttribute_set_Condition_m607771195 (NativeCond
 	}
 }
 // System.Void UnityEngine.Bindings.NativeConditionalAttribute::set_Enabled(System.Boolean)
-extern "C"  void NativeConditionalAttribute_set_Enabled_m2378894961 (NativeConditionalAttribute_t2439539374 * __this, bool ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeConditionalAttribute_set_Enabled_m2378894961 (NativeConditionalAttribute_t2439539374 * __this, bool ___value0, const RuntimeMethod* method)
 {
 	{
 		bool L_0 = ___value0;
@@ -1507,7 +1734,7 @@ extern "C"  void NativeConditionalAttribute_set_Enabled_m2378894961 (NativeCondi
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.Bindings.NativeHeaderAttribute::.ctor(System.String)
-extern "C"  void NativeHeaderAttribute__ctor_m457462113 (NativeHeaderAttribute_t5261382 * __this, String_t* ___header0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeHeaderAttribute__ctor_m457462113 (NativeHeaderAttribute_t5261382 * __this, String_t* ___header0, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -1553,7 +1780,7 @@ IL_0038:
 	}
 }
 // System.Void UnityEngine.Bindings.NativeHeaderAttribute::set_Header(System.String)
-extern "C"  void NativeHeaderAttribute_set_Header_m3310668383 (NativeHeaderAttribute_t5261382 * __this, String_t* ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeHeaderAttribute_set_Header_m3310668383 (NativeHeaderAttribute_t5261382 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___value0;
@@ -1570,7 +1797,7 @@ extern "C"  void NativeHeaderAttribute_set_Header_m3310668383 (NativeHeaderAttri
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::.ctor()
-extern "C"  void NativeMethodAttribute__ctor_m3134540192 (NativeMethodAttribute_t4187428193 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_m3134540192 (NativeMethodAttribute_t4187428193 * __this, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -1578,7 +1805,7 @@ extern "C"  void NativeMethodAttribute__ctor_m3134540192 (NativeMethodAttribute_
 	}
 }
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::.ctor(System.String)
-extern "C"  void NativeMethodAttribute__ctor_m2941746701 (NativeMethodAttribute_t4187428193 * __this, String_t* ___name0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_m2941746701 (NativeMethodAttribute_t4187428193 * __this, String_t* ___name0, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -1624,7 +1851,7 @@ IL_0038:
 	}
 }
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::.ctor(System.String,System.Boolean)
-extern "C"  void NativeMethodAttribute__ctor_m3056337369 (NativeMethodAttribute_t4187428193 * __this, String_t* ___name0, bool ___isFreeFunction1, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_m3056337369 (NativeMethodAttribute_t4187428193 * __this, String_t* ___name0, bool ___isFreeFunction1, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___name0;
@@ -1635,7 +1862,7 @@ extern "C"  void NativeMethodAttribute__ctor_m3056337369 (NativeMethodAttribute_
 	}
 }
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::.ctor(System.String,System.Boolean,System.Boolean)
-extern "C"  void NativeMethodAttribute__ctor_m2749818278 (NativeMethodAttribute_t4187428193 * __this, String_t* ___name0, bool ___isFreeFunction1, bool ___isThreadSafe2, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute__ctor_m2749818278 (NativeMethodAttribute_t4187428193 * __this, String_t* ___name0, bool ___isFreeFunction1, bool ___isThreadSafe2, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___name0;
@@ -1647,7 +1874,7 @@ extern "C"  void NativeMethodAttribute__ctor_m2749818278 (NativeMethodAttribute_
 	}
 }
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::set_Name(System.String)
-extern "C"  void NativeMethodAttribute_set_Name_m1946475768 (NativeMethodAttribute_t4187428193 * __this, String_t* ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_Name_m1946475768 (NativeMethodAttribute_t4187428193 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___value0;
@@ -1656,7 +1883,7 @@ extern "C"  void NativeMethodAttribute_set_Name_m1946475768 (NativeMethodAttribu
 	}
 }
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::set_IsThreadSafe(System.Boolean)
-extern "C"  void NativeMethodAttribute_set_IsThreadSafe_m2457033065 (NativeMethodAttribute_t4187428193 * __this, bool ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_IsThreadSafe_m2457033065 (NativeMethodAttribute_t4187428193 * __this, bool ___value0, const RuntimeMethod* method)
 {
 	{
 		bool L_0 = ___value0;
@@ -1665,7 +1892,7 @@ extern "C"  void NativeMethodAttribute_set_IsThreadSafe_m2457033065 (NativeMetho
 	}
 }
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::set_IsFreeFunction(System.Boolean)
-extern "C"  void NativeMethodAttribute_set_IsFreeFunction_m1931350581 (NativeMethodAttribute_t4187428193 * __this, bool ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_IsFreeFunction_m1931350581 (NativeMethodAttribute_t4187428193 * __this, bool ___value0, const RuntimeMethod* method)
 {
 	{
 		bool L_0 = ___value0;
@@ -1674,7 +1901,7 @@ extern "C"  void NativeMethodAttribute_set_IsFreeFunction_m1931350581 (NativeMet
 	}
 }
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::set_ThrowsException(System.Boolean)
-extern "C"  void NativeMethodAttribute_set_ThrowsException_m3369126807 (NativeMethodAttribute_t4187428193 * __this, bool ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_ThrowsException_m3369126807 (NativeMethodAttribute_t4187428193 * __this, bool ___value0, const RuntimeMethod* method)
 {
 	{
 		bool L_0 = ___value0;
@@ -1683,7 +1910,7 @@ extern "C"  void NativeMethodAttribute_set_ThrowsException_m3369126807 (NativeMe
 	}
 }
 // System.Void UnityEngine.Bindings.NativeMethodAttribute::set_HasExplicitThis(System.Boolean)
-extern "C"  void NativeMethodAttribute_set_HasExplicitThis_m2961870915 (NativeMethodAttribute_t4187428193 * __this, bool ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeMethodAttribute_set_HasExplicitThis_m2961870915 (NativeMethodAttribute_t4187428193 * __this, bool ___value0, const RuntimeMethod* method)
 {
 	{
 		bool L_0 = ___value0;
@@ -1700,7 +1927,7 @@ extern "C"  void NativeMethodAttribute_set_HasExplicitThis_m2961870915 (NativeMe
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.Bindings.NativeNameAttribute::.ctor(System.String)
-extern "C"  void NativeNameAttribute__ctor_m3296876808 (NativeNameAttribute_t3268151526 * __this, String_t* ___name0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeNameAttribute__ctor_m3296876808 (NativeNameAttribute_t3268151526 * __this, String_t* ___name0, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -1746,7 +1973,7 @@ IL_0038:
 	}
 }
 // System.Void UnityEngine.Bindings.NativeNameAttribute::set_Name(System.String)
-extern "C"  void NativeNameAttribute_set_Name_m3579254766 (NativeNameAttribute_t3268151526 * __this, String_t* ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeNameAttribute_set_Name_m3579254766 (NativeNameAttribute_t3268151526 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___value0;
@@ -1762,12 +1989,67 @@ extern "C"  void NativeNameAttribute_set_Name_m3579254766 (NativeNameAttribute_t
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void UnityEngine.Bindings.NativePropertyAttribute::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void NativePropertyAttribute__ctor_m1920537355 (NativePropertyAttribute_t1305929258 * __this, const RuntimeMethod* method)
+{
+	{
+		NativeMethodAttribute__ctor_m3134540192(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void UnityEngine.Bindings.NativePropertyAttribute::.ctor(System.String)
-extern "C"  void NativePropertyAttribute__ctor_m2033094153 (NativePropertyAttribute_t1305929258 * __this, String_t* ___name0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativePropertyAttribute__ctor_m2033094153 (NativePropertyAttribute_t1305929258 * __this, String_t* ___name0, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___name0;
 		NativeMethodAttribute__ctor_m2941746701(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Bindings.NativePropertyAttribute::.ctor(System.String,System.Boolean,UnityEngine.Bindings.TargetType)
+extern "C" IL2CPP_METHOD_ATTR void NativePropertyAttribute__ctor_m643117247 (NativePropertyAttribute_t1305929258 * __this, String_t* ___name0, bool ___isFree1, int32_t ___targetType2, const RuntimeMethod* method)
+{
+	{
+		String_t* L_0 = ___name0;
+		bool L_1 = ___isFree1;
+		NativeMethodAttribute__ctor_m3056337369(__this, L_0, L_1, /*hidden argument*/NULL);
+		int32_t L_2 = ___targetType2;
+		NativePropertyAttribute_set_TargetType_m1468330009(__this, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Bindings.NativePropertyAttribute::set_TargetType(UnityEngine.Bindings.TargetType)
+extern "C" IL2CPP_METHOD_ATTR void NativePropertyAttribute_set_TargetType_m1468330009 (NativePropertyAttribute_t1305929258 * __this, int32_t ___value0, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = ___value0;
+		__this->set_U3CTargetTypeU3Ek__BackingField_5(L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void UnityEngine.Bindings.NativeThrowsAttribute::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void NativeThrowsAttribute__ctor_m3216633458 (NativeThrowsAttribute_t1697526064 * __this, const RuntimeMethod* method)
+{
+	{
+		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
+		NativeThrowsAttribute_set_ThrowsException_m4039166389(__this, (bool)1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Bindings.NativeThrowsAttribute::set_ThrowsException(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void NativeThrowsAttribute_set_ThrowsException_m4039166389 (NativeThrowsAttribute_t1697526064 * __this, bool ___value0, const RuntimeMethod* method)
+{
+	{
+		bool L_0 = ___value0;
+		__this->set_U3CThrowsExceptionU3Ek__BackingField_0(L_0);
 		return;
 	}
 }
@@ -1780,7 +2062,7 @@ extern "C"  void NativePropertyAttribute__ctor_m2033094153 (NativePropertyAttrib
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.Bindings.NativeTypeAttribute::.ctor()
-extern "C"  void NativeTypeAttribute__ctor_m2993484825 (NativeTypeAttribute_t2250406315 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeTypeAttribute__ctor_m2993484825 (NativeTypeAttribute_t2250406315 * __this, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -1789,7 +2071,7 @@ extern "C"  void NativeTypeAttribute__ctor_m2993484825 (NativeTypeAttribute_t225
 	}
 }
 // System.Void UnityEngine.Bindings.NativeTypeAttribute::.ctor(UnityEngine.Bindings.CodegenOptions)
-extern "C"  void NativeTypeAttribute__ctor_m1043629716 (NativeTypeAttribute_t2250406315 * __this, int32_t ___codegenOptions0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeTypeAttribute__ctor_m1043629716 (NativeTypeAttribute_t2250406315 * __this, int32_t ___codegenOptions0, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -1799,7 +2081,7 @@ extern "C"  void NativeTypeAttribute__ctor_m1043629716 (NativeTypeAttribute_t225
 	}
 }
 // System.Void UnityEngine.Bindings.NativeTypeAttribute::.ctor(System.String)
-extern "C"  void NativeTypeAttribute__ctor_m133676646 (NativeTypeAttribute_t2250406315 * __this, String_t* ___header0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeTypeAttribute__ctor_m133676646 (NativeTypeAttribute_t2250406315 * __this, String_t* ___header0, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -1846,7 +2128,7 @@ IL_0038:
 	}
 }
 // System.Void UnityEngine.Bindings.NativeTypeAttribute::.ctor(UnityEngine.Bindings.CodegenOptions,System.String)
-extern "C"  void NativeTypeAttribute__ctor_m1677513894 (NativeTypeAttribute_t2250406315 * __this, int32_t ___codegenOptions0, String_t* ___intermediateStructName1, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeTypeAttribute__ctor_m1677513894 (NativeTypeAttribute_t2250406315 * __this, int32_t ___codegenOptions0, String_t* ___intermediateStructName1, const RuntimeMethod* method)
 {
 	{
 		int32_t L_0 = ___codegenOptions0;
@@ -1857,7 +2139,7 @@ extern "C"  void NativeTypeAttribute__ctor_m1677513894 (NativeTypeAttribute_t225
 	}
 }
 // System.Void UnityEngine.Bindings.NativeTypeAttribute::set_Header(System.String)
-extern "C"  void NativeTypeAttribute_set_Header_m48420006 (NativeTypeAttribute_t2250406315 * __this, String_t* ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeTypeAttribute_set_Header_m48420006 (NativeTypeAttribute_t2250406315 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___value0;
@@ -1866,7 +2148,7 @@ extern "C"  void NativeTypeAttribute_set_Header_m48420006 (NativeTypeAttribute_t
 	}
 }
 // System.Void UnityEngine.Bindings.NativeTypeAttribute::set_IntermediateScriptingStructName(System.String)
-extern "C"  void NativeTypeAttribute_set_IntermediateScriptingStructName_m3613994509 (NativeTypeAttribute_t2250406315 * __this, String_t* ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeTypeAttribute_set_IntermediateScriptingStructName_m3613994509 (NativeTypeAttribute_t2250406315 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___value0;
@@ -1875,7 +2157,7 @@ extern "C"  void NativeTypeAttribute_set_IntermediateScriptingStructName_m361399
 	}
 }
 // System.Void UnityEngine.Bindings.NativeTypeAttribute::set_CodegenOptions(UnityEngine.Bindings.CodegenOptions)
-extern "C"  void NativeTypeAttribute_set_CodegenOptions_m3839252515 (NativeTypeAttribute_t2250406315 * __this, int32_t ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NativeTypeAttribute_set_CodegenOptions_m3839252515 (NativeTypeAttribute_t2250406315 * __this, int32_t ___value0, const RuntimeMethod* method)
 {
 	{
 		int32_t L_0 = ___value0;
@@ -1891,8 +2173,34 @@ extern "C"  void NativeTypeAttribute_set_CodegenOptions_m3839252515 (NativeTypeA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void UnityEngine.Bindings.NativeWritableSelfAttribute::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void NativeWritableSelfAttribute__ctor_m3881129008 (NativeWritableSelfAttribute_t3843992162 * __this, const RuntimeMethod* method)
+{
+	{
+		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
+		NativeWritableSelfAttribute_set_WritableSelf_m2019649977(__this, (bool)1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Bindings.NativeWritableSelfAttribute::set_WritableSelf(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void NativeWritableSelfAttribute_set_WritableSelf_m2019649977 (NativeWritableSelfAttribute_t3843992162 * __this, bool ___value0, const RuntimeMethod* method)
+{
+	{
+		bool L_0 = ___value0;
+		__this->set_U3CWritableSelfU3Ek__BackingField_0(L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void UnityEngine.Bindings.NotNullAttribute::.ctor()
-extern "C"  void NotNullAttribute__ctor_m3740658540 (NotNullAttribute_t1114947401 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void NotNullAttribute__ctor_m3740658540 (NotNullAttribute_t1114947401 * __this, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -1907,8 +2215,18 @@ extern "C"  void NotNullAttribute__ctor_m3740658540 (NotNullAttribute_t111494740
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void UnityEngine.Bindings.StaticAccessorAttribute::.ctor(System.String)
+extern "C" IL2CPP_METHOD_ATTR void StaticAccessorAttribute__ctor_m1713503113 (StaticAccessorAttribute_t2432663902 * __this, String_t* ___name0, const RuntimeMethod* method)
+{
+	{
+		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
+		String_t* L_0 = ___name0;
+		StaticAccessorAttribute_set_Name_m2926172476(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void UnityEngine.Bindings.StaticAccessorAttribute::.ctor(System.String,UnityEngine.Bindings.StaticAccessorType)
-extern "C"  void StaticAccessorAttribute__ctor_m2905272167 (StaticAccessorAttribute_t2432663902 * __this, String_t* ___name0, int32_t ___type1, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void StaticAccessorAttribute__ctor_m2905272167 (StaticAccessorAttribute_t2432663902 * __this, String_t* ___name0, int32_t ___type1, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -1920,7 +2238,7 @@ extern "C"  void StaticAccessorAttribute__ctor_m2905272167 (StaticAccessorAttrib
 	}
 }
 // System.Void UnityEngine.Bindings.StaticAccessorAttribute::set_Name(System.String)
-extern "C"  void StaticAccessorAttribute_set_Name_m2926172476 (StaticAccessorAttribute_t2432663902 * __this, String_t* ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void StaticAccessorAttribute_set_Name_m2926172476 (StaticAccessorAttribute_t2432663902 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___value0;
@@ -1929,7 +2247,7 @@ extern "C"  void StaticAccessorAttribute_set_Name_m2926172476 (StaticAccessorAtt
 	}
 }
 // System.Void UnityEngine.Bindings.StaticAccessorAttribute::set_Type(UnityEngine.Bindings.StaticAccessorType)
-extern "C"  void StaticAccessorAttribute_set_Type_m2333258271 (StaticAccessorAttribute_t2432663902 * __this, int32_t ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void StaticAccessorAttribute_set_Type_m2333258271 (StaticAccessorAttribute_t2432663902 * __this, int32_t ___value0, const RuntimeMethod* method)
 {
 	{
 		int32_t L_0 = ___value0;
@@ -1953,8 +2271,16 @@ extern "C"  void StaticAccessorAttribute_set_Type_m2333258271 (StaticAccessorAtt
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void UnityEngine.Bindings.ThreadSafeAttribute::.ctor()
-extern "C"  void ThreadSafeAttribute__ctor_m601575521 (ThreadSafeAttribute_t3376653515 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void ThreadSafeAttribute__ctor_m601575521 (ThreadSafeAttribute_t3376653515 * __this, const RuntimeMethod* method)
 {
 	{
 		NativeMethodAttribute__ctor_m3134540192(__this, /*hidden argument*/NULL);
@@ -1971,7 +2297,7 @@ extern "C"  void ThreadSafeAttribute__ctor_m601575521 (ThreadSafeAttribute_t3376
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.Bindings.UnmarshalledAttribute::.ctor()
-extern "C"  void UnmarshalledAttribute__ctor_m534761184 (UnmarshalledAttribute_t1517743549 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void UnmarshalledAttribute__ctor_m534761184 (UnmarshalledAttribute_t1517743549 * __this, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -1987,7 +2313,7 @@ extern "C"  void UnmarshalledAttribute__ctor_m534761184 (UnmarshalledAttribute_t
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.Bindings.VisibleToOtherModulesAttribute::.ctor()
-extern "C"  void VisibleToOtherModulesAttribute__ctor_m3491053854 (VisibleToOtherModulesAttribute_t1429630568 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void VisibleToOtherModulesAttribute__ctor_m3491053854 (VisibleToOtherModulesAttribute_t1429630568 * __this, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -1995,10 +2321,68 @@ extern "C"  void VisibleToOtherModulesAttribute__ctor_m3491053854 (VisibleToOthe
 	}
 }
 // System.Void UnityEngine.Bindings.VisibleToOtherModulesAttribute::.ctor(System.String[])
-extern "C"  void VisibleToOtherModulesAttribute__ctor_m3047626183 (VisibleToOtherModulesAttribute_t1429630568 * __this, StringU5BU5D_t1281789340* ___modules0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void VisibleToOtherModulesAttribute__ctor_m3047626183 (VisibleToOtherModulesAttribute_t1429630568 * __this, StringU5BU5D_t1281789340* ___modules0, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void UnityEngine.NativeClassAttribute::.ctor(System.String)
+extern "C" IL2CPP_METHOD_ATTR void NativeClassAttribute__ctor_m3911617424 (NativeClassAttribute_t2601352714 * __this, String_t* ___qualifiedCppName0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (NativeClassAttribute__ctor_m3911617424_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
+		String_t* L_0 = ___qualifiedCppName0;
+		NativeClassAttribute_set_QualifiedNativeName_m801351239(__this, L_0, /*hidden argument*/NULL);
+		String_t* L_1 = ___qualifiedCppName0;
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_2 = String_Concat_m3937257545(NULL /*static, unused*/, _stringLiteral353412967, L_1, /*hidden argument*/NULL);
+		NativeClassAttribute_set_Declaration_m1218368926(__this, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.NativeClassAttribute::.ctor(System.String,System.String)
+extern "C" IL2CPP_METHOD_ATTR void NativeClassAttribute__ctor_m4136257185 (NativeClassAttribute_t2601352714 * __this, String_t* ___qualifiedCppName0, String_t* ___declaration1, const RuntimeMethod* method)
+{
+	{
+		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
+		String_t* L_0 = ___qualifiedCppName0;
+		NativeClassAttribute_set_QualifiedNativeName_m801351239(__this, L_0, /*hidden argument*/NULL);
+		String_t* L_1 = ___declaration1;
+		NativeClassAttribute_set_Declaration_m1218368926(__this, L_1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.NativeClassAttribute::set_QualifiedNativeName(System.String)
+extern "C" IL2CPP_METHOD_ATTR void NativeClassAttribute_set_QualifiedNativeName_m801351239 (NativeClassAttribute_t2601352714 * __this, String_t* ___value0, const RuntimeMethod* method)
+{
+	{
+		String_t* L_0 = ___value0;
+		__this->set_U3CQualifiedNativeNameU3Ek__BackingField_0(L_0);
+		return;
+	}
+}
+// System.Void UnityEngine.NativeClassAttribute::set_Declaration(System.String)
+extern "C" IL2CPP_METHOD_ATTR void NativeClassAttribute_set_Declaration_m1218368926 (NativeClassAttribute_t2601352714 * __this, String_t* ___value0, const RuntimeMethod* method)
+{
+	{
+		String_t* L_0 = ___value0;
+		__this->set_U3CDeclarationU3Ek__BackingField_1(L_0);
 		return;
 	}
 }
@@ -2011,45 +2395,10 @@ extern "C"  void VisibleToOtherModulesAttribute__ctor_m3047626183 (VisibleToOthe
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.Scripting.GeneratedByOldBindingsGeneratorAttribute::.ctor()
-extern "C"  void GeneratedByOldBindingsGeneratorAttribute__ctor_m3683043001 (GeneratedByOldBindingsGeneratorAttribute_t433318409 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void GeneratedByOldBindingsGeneratorAttribute__ctor_m3683043001 (GeneratedByOldBindingsGeneratorAttribute_t433318409 * __this, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void UnityEngine.Scripting.GenerateManagedProxyAttribute::.ctor()
-extern "C"  void GenerateManagedProxyAttribute__ctor_m523287391 (GenerateManagedProxyAttribute_t2394178854 * __this, const RuntimeMethod* method)
-{
-	{
-		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Scripting.GenerateManagedProxyAttribute::.ctor(System.String)
-extern "C"  void GenerateManagedProxyAttribute__ctor_m1656855187 (GenerateManagedProxyAttribute_t2394178854 * __this, String_t* ___nativeType0, const RuntimeMethod* method)
-{
-	{
-		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
-		String_t* L_0 = ___nativeType0;
-		GenerateManagedProxyAttribute_set_NativeType_m3203265247(__this, L_0, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Scripting.GenerateManagedProxyAttribute::set_NativeType(System.String)
-extern "C"  void GenerateManagedProxyAttribute_set_NativeType_m3203265247 (GenerateManagedProxyAttribute_t2394178854 * __this, String_t* ___value0, const RuntimeMethod* method)
-{
-	{
-		String_t* L_0 = ___value0;
-		__this->set_U3CNativeTypeU3Ek__BackingField_0(L_0);
 		return;
 	}
 }
@@ -2062,7 +2411,7 @@ extern "C"  void GenerateManagedProxyAttribute_set_NativeType_m3203265247 (Gener
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.Scripting.RequiredByNativeCodeAttribute::.ctor()
-extern "C"  void RequiredByNativeCodeAttribute__ctor_m119855101 (RequiredByNativeCodeAttribute_t4130846357 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void RequiredByNativeCodeAttribute__ctor_m119855101 (RequiredByNativeCodeAttribute_t4130846357 * __this, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -2070,7 +2419,7 @@ extern "C"  void RequiredByNativeCodeAttribute__ctor_m119855101 (RequiredByNativ
 	}
 }
 // System.Void UnityEngine.Scripting.RequiredByNativeCodeAttribute::.ctor(System.String)
-extern "C"  void RequiredByNativeCodeAttribute__ctor_m568872416 (RequiredByNativeCodeAttribute_t4130846357 * __this, String_t* ___name0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void RequiredByNativeCodeAttribute__ctor_m568872416 (RequiredByNativeCodeAttribute_t4130846357 * __this, String_t* ___name0, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -2080,7 +2429,7 @@ extern "C"  void RequiredByNativeCodeAttribute__ctor_m568872416 (RequiredByNativ
 	}
 }
 // System.Void UnityEngine.Scripting.RequiredByNativeCodeAttribute::set_Name(System.String)
-extern "C"  void RequiredByNativeCodeAttribute_set_Name_m2009346474 (RequiredByNativeCodeAttribute_t4130846357 * __this, String_t* ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void RequiredByNativeCodeAttribute_set_Name_m2009346474 (RequiredByNativeCodeAttribute_t4130846357 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
 	{
 		String_t* L_0 = ___value0;
@@ -2089,11 +2438,20 @@ extern "C"  void RequiredByNativeCodeAttribute_set_Name_m2009346474 (RequiredByN
 	}
 }
 // System.Void UnityEngine.Scripting.RequiredByNativeCodeAttribute::set_Optional(System.Boolean)
-extern "C"  void RequiredByNativeCodeAttribute_set_Optional_m1276771824 (RequiredByNativeCodeAttribute_t4130846357 * __this, bool ___value0, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void RequiredByNativeCodeAttribute_set_Optional_m1276771824 (RequiredByNativeCodeAttribute_t4130846357 * __this, bool ___value0, const RuntimeMethod* method)
 {
 	{
 		bool L_0 = ___value0;
 		__this->set_U3COptionalU3Ek__BackingField_1(L_0);
+		return;
+	}
+}
+// System.Void UnityEngine.Scripting.RequiredByNativeCodeAttribute::set_GenerateProxy(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void RequiredByNativeCodeAttribute_set_GenerateProxy_m2819488747 (RequiredByNativeCodeAttribute_t4130846357 * __this, bool ___value0, const RuntimeMethod* method)
+{
+	{
+		bool L_0 = ___value0;
+		__this->set_U3CGenerateProxyU3Ek__BackingField_2(L_0);
 		return;
 	}
 }
@@ -2106,7 +2464,7 @@ extern "C"  void RequiredByNativeCodeAttribute_set_Optional_m1276771824 (Require
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.Scripting.UsedByNativeCodeAttribute::.ctor()
-extern "C"  void UsedByNativeCodeAttribute__ctor_m2647015777 (UsedByNativeCodeAttribute_t1703770351 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void UsedByNativeCodeAttribute__ctor_m2647015777 (UsedByNativeCodeAttribute_t1703770351 * __this, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -2122,7 +2480,7 @@ extern "C"  void UsedByNativeCodeAttribute__ctor_m2647015777 (UsedByNativeCodeAt
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.ThreadAndSerializationSafeAttribute::.ctor()
-extern "C"  void ThreadAndSerializationSafeAttribute__ctor_m3739981144 (ThreadAndSerializationSafeAttribute_t363116225 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void ThreadAndSerializationSafeAttribute__ctor_m3739981144 (ThreadAndSerializationSafeAttribute_t363116225 * __this, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -2138,7 +2496,7 @@ extern "C"  void ThreadAndSerializationSafeAttribute__ctor_m3739981144 (ThreadAn
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.UnityEngineModuleAssembly::.ctor()
-extern "C"  void UnityEngineModuleAssembly__ctor_m242195730 (UnityEngineModuleAssembly_t2421846737 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void UnityEngineModuleAssembly__ctor_m242195730 (UnityEngineModuleAssembly_t2421846737 * __this, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);
@@ -2154,7 +2512,7 @@ extern "C"  void UnityEngineModuleAssembly__ctor_m242195730 (UnityEngineModuleAs
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.String UnityEngine.UnityString::Format(System.String,System.Object[])
-extern "C"  String_t* UnityString_Format_m261690510 (RuntimeObject * __this /* static, unused */, String_t* ___fmt0, ObjectU5BU5D_t2843939325* ___args1, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR String_t* UnityString_Format_m261690510 (RuntimeObject * __this /* static, unused */, String_t* ___fmt0, ObjectU5BU5D_t2843939325* ___args1, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -2187,7 +2545,7 @@ IL_000e:
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.WritableAttribute::.ctor()
-extern "C"  void WritableAttribute__ctor_m1991076220 (WritableAttribute_t812406054 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void WritableAttribute__ctor_m1991076220 (WritableAttribute_t812406054 * __this, const RuntimeMethod* method)
 {
 	{
 		Attribute__ctor_m1529526131(__this, /*hidden argument*/NULL);

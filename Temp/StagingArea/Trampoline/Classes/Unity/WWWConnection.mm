@@ -271,7 +271,7 @@ static NSOperationQueue *webOperationQueue;
             CFDataRef serverCertificateData = SecCertificateCopyData(serverCertificate);
             const UInt8* const data = CFDataGetBytePtr(serverCertificateData);
             const CFIndex size = CFDataGetLength(serverCertificateData);
-            bool trust = UnityReportWWWValidateCertificate(self.udata, data, size);
+            bool trust = UnityReportWWWValidateCertificate(self.udata, (const char*)data, (unsigned)size);
             CFRelease(serverCertificateData);
             if (trust)
             {
@@ -335,6 +335,7 @@ static NSOperationQueue *webOperationQueue;
     [request setURL: url];
     [request setHTTPMethod: method];
     [request setAllHTTPHeaderFields: headers];
+    [request setCachePolicy: NSURLRequestReloadIgnoringLocalCacheData];
 
     return request;
 }

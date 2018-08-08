@@ -4,17 +4,6 @@
 #import "PluginBase/UnityViewControllerListener.h"
 
 @implementation UnityViewControllerBase
-- (id)init
-{
-    if ((self = [super init]))
-    {
-    #if PLATFORM_IOS
-        AddViewControllerDefaultRotationHandling([UnityViewControllerBase class]);
-    #endif
-    }
-
-    return self;
-}
 
 - (void)viewWillLayoutSubviews
 {

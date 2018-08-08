@@ -25,8 +25,8 @@
 #error Please use tvOS SDK 9.0 or newer
 #endif
 
-#if !defined(__IPHONE_7_0) || __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
-#error Please target iOS 7.0 or newer
+#if !defined(__IPHONE_8_0) || __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_8_0
+#error Please target iOS 8.0 or newer
 #endif
 
 //------------------------------------------------------------------------------

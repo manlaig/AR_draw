@@ -1,5 +1,4 @@
-#ifndef UnityReplayKit_h
-#define UnityReplayKit_h
+#pragma once
 
 #if UNITY_REPLAY_KIT_AVAILABLE
 
@@ -42,5 +41,3 @@
 
 
 #endif  // UNITY_REPLAY_KIT_AVAILABLE
-
-#endif  // UnityReplayKit_h

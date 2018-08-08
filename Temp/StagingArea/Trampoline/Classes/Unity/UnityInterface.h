@@ -152,8 +152,7 @@ void    UnitySendRemoteNotificationError(NSError* error);
 // native events
 
 void    UnityInvalidateDisplayDataCache(void* screen);
-void    UnityUpdateDisplayList(void** screens, int screenCount);
-
+void    UnityUpdateDisplayListCache(void** screens, int screenCount);
 
 // profiler
 
@@ -184,7 +183,7 @@ void    UnityReportWWWReceivedResponse(void* udata, unsigned expectedDataLength)
 void    UnityReportWWWReceivedData(void* udata, const void* buffer, unsigned totalRead, unsigned expectedTotal);
 void    UnityReportWWWFinishedLoadingData(void* udata);
 void    UnityReportWWWSentData(void* udata, unsigned totalWritten, unsigned expectedTotal);
-bool    UnityReportWWWValidateCertificate(void* udata, const void* certificateData, unsigned certificateSize);
+int     UnityReportWWWValidateCertificate(void* udata, const void* certificateData, unsigned certificateSize);
 const void*   UnityWWWGetUploadData(void* udata, unsigned* bufferSize);
 void    UnityWWWConsumeUploadData(void* udata, unsigned consumedSize);
 

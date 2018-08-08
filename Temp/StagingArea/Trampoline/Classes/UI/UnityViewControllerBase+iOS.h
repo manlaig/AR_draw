@@ -5,6 +5,8 @@
 
 - (BOOL)prefersStatusBarHidden;
 - (UIStatusBarStyle)preferredStatusBarStyle;
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator;
 @end
 
 // for better handling of user-imposed screen orientation we will have specific ViewController implementations
@@ -24,17 +26,5 @@
 
 @interface UnityDefaultViewController : UnityViewControllerBase                 {}
 @end
-
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-// this is helper to add proper rotation handling methods depending on ios version
-void AddViewControllerRotationHandling(Class class_, IMP willRotateToInterfaceOrientation, IMP didRotateFromInterfaceOrientation, IMP viewWillTransitionToSize);
-void AddViewControllerDefaultRotationHandling(Class class_);
-
-#ifdef __cplusplus
-}
-#endif
 
 NSUInteger EnabledAutorotationInterfaceOrientations();

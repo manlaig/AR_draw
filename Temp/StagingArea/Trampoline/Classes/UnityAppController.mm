@@ -75,6 +75,11 @@ static bool _startUnityScheduled    = false;
 
 bool    _supportsMSAA           = false;
 
+#if UNITY_SUPPORT_ROTATION
+// Required to enable specific orientation for some presentation controllers: see supportedInterfaceOrientationsForWindow below for details
+NSInteger _forceInterfaceOrientationMask = 0;
+#endif
+
 @implementation UnityAppController
 
 @synthesize unityView               = _unityView;
@@ -125,7 +130,7 @@ bool    _supportsMSAA           = false;
     UnityInitApplicationGraphics();
 
     // we make sure that first level gets correct display list and orientation
-    [[DisplayManager Instance] updateDisplayListInUnity];
+    [[DisplayManager Instance] updateDisplayListCacheInUnity];
 
     UnityLoadApplication();
     Profiler_InitProfiler();
@@ -150,17 +155,26 @@ extern "C" void UnityRequestQuit()
         exit(0);
 }
 
-#if !PLATFORM_TVOS
+#if UNITY_SUPPORT_ROTATION
+
 - (NSUInteger)application:(UIApplication*)application supportedInterfaceOrientationsForWindow:(UIWindow*)window
 {
     // No rootViewController is set because we are switching from one view controller to another, all orientations should be enabled
     if ([window rootViewController] == nil)
         return UIInterfaceOrientationMaskAll;
 
-    // Before it was UIInterfaceOrientationAll because some presentation controllers insisted on being portrait only
-    // (e.g. GameCenter) so we did that do avoid crashes.
-    // As this was fixed in iOS 6.1 we can use exact same set of constraints as root view controller.
-    return [[window rootViewController] supportedInterfaceOrientations];
+    // Some presentation controllers (e.g. UIImagePickerController) require portrait orientation and will throw exception if it is not supported.
+    // At the same time enabling all orientations by returning UIInterfaceOrientationMaskAll might cause unwanted orientation change
+    // (e.g. when using UIActivityViewController to "share to" another application, iOS will use supportedInterfaceOrientations to possibly reorient).
+    // So to avoid exception we are returning combination of constraints for root view controller and orientation requested by iOS.
+    // _forceInterfaceOrientationMask is updated in willChangeStatusBarOrientation, which is called if some presentation controller insists on orientation change.
+    return [[window rootViewController] supportedInterfaceOrientations] | _forceInterfaceOrientationMask;
+}
+
+- (void)application:(UIApplication*)application willChangeStatusBarOrientation:(UIInterfaceOrientation)newStatusBarOrientation duration:(NSTimeInterval)duration
+{
+    // Setting orientation mask which is requested by iOS: see supportedInterfaceOrientationsForWindow above for details
+    _forceInterfaceOrientationMask = 1 << newStatusBarOrientation;
 }
 
 #endif

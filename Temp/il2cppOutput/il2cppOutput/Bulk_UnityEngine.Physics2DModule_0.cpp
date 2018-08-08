@@ -20,25 +20,27 @@
 #include "il2cpp-object-internals.h"
 
 
-// System.Collections.Generic.List`1<UnityEngine.Rigidbody2D>
-struct List_1_t2411569343;
 // System.Collections.Generic.List`1<System.Object>
 struct List_1_t257213610;
+// System.Collections.Generic.List`1<UnityEngine.Rigidbody2D>
+struct List_1_t2411569343;
+// System.String
+struct String_t;
+// System.Void
+struct Void_t1185182177;
 // UnityEngine.Collider2D
 struct Collider2D_t2806799626;
 // UnityEngine.Object
 struct Object_t631007953;
 // UnityEngine.Rigidbody2D[]
 struct Rigidbody2DU5BU5D_t385786356;
-// System.Void
-struct Void_t1185182177;
 
+extern RuntimeClass* Collider2D_t2806799626_il2cpp_TypeInfo_var;
 extern RuntimeClass* List_1_t2411569343_il2cpp_TypeInfo_var;
+extern RuntimeClass* Object_t631007953_il2cpp_TypeInfo_var;
 extern RuntimeClass* Physics2D_t1528932956_il2cpp_TypeInfo_var;
 extern const RuntimeMethod* List_1__ctor_m2466177744_RuntimeMethod_var;
 extern const uint32_t Physics2D__cctor_m143866755_MetadataUsageId;
-extern RuntimeClass* Object_t631007953_il2cpp_TypeInfo_var;
-extern RuntimeClass* Collider2D_t2806799626_il2cpp_TypeInfo_var;
 extern const uint32_t RaycastHit2D_get_collider_m1549426026_MetadataUsageId;
 
 
@@ -92,71 +94,6 @@ struct Il2CppArrayBounds;
 #pragma clang diagnostic pop
 #endif
 #endif // RUNTIMEARRAY_H
-#ifndef VALUETYPE_T3640485471_H
-#define VALUETYPE_T3640485471_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.ValueType
-struct  ValueType_t3640485471  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-// Native definition for P/Invoke marshalling of System.ValueType
-struct ValueType_t3640485471_marshaled_pinvoke
-{
-};
-// Native definition for COM marshalling of System.ValueType
-struct ValueType_t3640485471_marshaled_com
-{
-};
-#endif // VALUETYPE_T3640485471_H
-#ifndef PHYSICS2D_T1528932956_H
-#define PHYSICS2D_T1528932956_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Physics2D
-struct  Physics2D_t1528932956  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-struct Physics2D_t1528932956_StaticFields
-{
-public:
-	// System.Collections.Generic.List`1<UnityEngine.Rigidbody2D> UnityEngine.Physics2D::m_LastDisabledRigidbody2D
-	List_1_t2411569343 * ___m_LastDisabledRigidbody2D_0;
-
-public:
-	inline static int32_t get_offset_of_m_LastDisabledRigidbody2D_0() { return static_cast<int32_t>(offsetof(Physics2D_t1528932956_StaticFields, ___m_LastDisabledRigidbody2D_0)); }
-	inline List_1_t2411569343 * get_m_LastDisabledRigidbody2D_0() const { return ___m_LastDisabledRigidbody2D_0; }
-	inline List_1_t2411569343 ** get_address_of_m_LastDisabledRigidbody2D_0() { return &___m_LastDisabledRigidbody2D_0; }
-	inline void set_m_LastDisabledRigidbody2D_0(List_1_t2411569343 * value)
-	{
-		___m_LastDisabledRigidbody2D_0 = value;
-		Il2CppCodeGenWriteBarrier((&___m_LastDisabledRigidbody2D_0), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // PHYSICS2D_T1528932956_H
 #ifndef LIST_1_T2411569343_H
 #define LIST_1_T2411569343_H
 #ifdef __clang__
@@ -224,6 +161,71 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // LIST_1_T2411569343_H
+#ifndef VALUETYPE_T3640485471_H
+#define VALUETYPE_T3640485471_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.ValueType
+struct  ValueType_t3640485471  : public RuntimeObject
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+// Native definition for P/Invoke marshalling of System.ValueType
+struct ValueType_t3640485471_marshaled_pinvoke
+{
+};
+// Native definition for COM marshalling of System.ValueType
+struct ValueType_t3640485471_marshaled_com
+{
+};
+#endif // VALUETYPE_T3640485471_H
+#ifndef PHYSICS2D_T1528932956_H
+#define PHYSICS2D_T1528932956_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Physics2D
+struct  Physics2D_t1528932956  : public RuntimeObject
+{
+public:
+
+public:
+};
+
+struct Physics2D_t1528932956_StaticFields
+{
+public:
+	// System.Collections.Generic.List`1<UnityEngine.Rigidbody2D> UnityEngine.Physics2D::m_LastDisabledRigidbody2D
+	List_1_t2411569343 * ___m_LastDisabledRigidbody2D_0;
+
+public:
+	inline static int32_t get_offset_of_m_LastDisabledRigidbody2D_0() { return static_cast<int32_t>(offsetof(Physics2D_t1528932956_StaticFields, ___m_LastDisabledRigidbody2D_0)); }
+	inline List_1_t2411569343 * get_m_LastDisabledRigidbody2D_0() const { return ___m_LastDisabledRigidbody2D_0; }
+	inline List_1_t2411569343 ** get_address_of_m_LastDisabledRigidbody2D_0() { return &___m_LastDisabledRigidbody2D_0; }
+	inline void set_m_LastDisabledRigidbody2D_0(List_1_t2411569343 * value)
+	{
+		___m_LastDisabledRigidbody2D_0 = value;
+		Il2CppCodeGenWriteBarrier((&___m_LastDisabledRigidbody2D_0), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // PHYSICS2D_T1528932956_H
 #ifndef INT32_T2950945753_H
 #define INT32_T2950945753_H
 #ifdef __clang__
@@ -472,6 +474,61 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // VECTOR2_T2156229523_H
+#ifndef OBJECT_T631007953_H
+#define OBJECT_T631007953_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Object
+struct  Object_t631007953  : public RuntimeObject
+{
+public:
+	// System.IntPtr UnityEngine.Object::m_CachedPtr
+	intptr_t ___m_CachedPtr_0;
+
+public:
+	inline static int32_t get_offset_of_m_CachedPtr_0() { return static_cast<int32_t>(offsetof(Object_t631007953, ___m_CachedPtr_0)); }
+	inline intptr_t get_m_CachedPtr_0() const { return ___m_CachedPtr_0; }
+	inline intptr_t* get_address_of_m_CachedPtr_0() { return &___m_CachedPtr_0; }
+	inline void set_m_CachedPtr_0(intptr_t value)
+	{
+		___m_CachedPtr_0 = value;
+	}
+};
+
+struct Object_t631007953_StaticFields
+{
+public:
+	// System.Int32 UnityEngine.Object::OffsetOfInstanceIDInCPlusPlusObject
+	int32_t ___OffsetOfInstanceIDInCPlusPlusObject_1;
+
+public:
+	inline static int32_t get_offset_of_OffsetOfInstanceIDInCPlusPlusObject_1() { return static_cast<int32_t>(offsetof(Object_t631007953_StaticFields, ___OffsetOfInstanceIDInCPlusPlusObject_1)); }
+	inline int32_t get_OffsetOfInstanceIDInCPlusPlusObject_1() const { return ___OffsetOfInstanceIDInCPlusPlusObject_1; }
+	inline int32_t* get_address_of_OffsetOfInstanceIDInCPlusPlusObject_1() { return &___OffsetOfInstanceIDInCPlusPlusObject_1; }
+	inline void set_OffsetOfInstanceIDInCPlusPlusObject_1(int32_t value)
+	{
+		___OffsetOfInstanceIDInCPlusPlusObject_1 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+// Native definition for P/Invoke marshalling of UnityEngine.Object
+struct Object_t631007953_marshaled_pinvoke
+{
+	intptr_t ___m_CachedPtr_0;
+};
+// Native definition for COM marshalling of UnityEngine.Object
+struct Object_t631007953_marshaled_com
+{
+	intptr_t ___m_CachedPtr_0;
+};
+#endif // OBJECT_T631007953_H
 #ifndef RAYCASTHIT2D_T2279581989_H
 #define RAYCASTHIT2D_T2279581989_H
 #ifdef __clang__
@@ -551,61 +608,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RAYCASTHIT2D_T2279581989_H
-#ifndef OBJECT_T631007953_H
-#define OBJECT_T631007953_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Object
-struct  Object_t631007953  : public RuntimeObject
-{
-public:
-	// System.IntPtr UnityEngine.Object::m_CachedPtr
-	intptr_t ___m_CachedPtr_0;
-
-public:
-	inline static int32_t get_offset_of_m_CachedPtr_0() { return static_cast<int32_t>(offsetof(Object_t631007953, ___m_CachedPtr_0)); }
-	inline intptr_t get_m_CachedPtr_0() const { return ___m_CachedPtr_0; }
-	inline intptr_t* get_address_of_m_CachedPtr_0() { return &___m_CachedPtr_0; }
-	inline void set_m_CachedPtr_0(intptr_t value)
-	{
-		___m_CachedPtr_0 = value;
-	}
-};
-
-struct Object_t631007953_StaticFields
-{
-public:
-	// System.Int32 UnityEngine.Object::OffsetOfInstanceIDInCPlusPlusObject
-	int32_t ___OffsetOfInstanceIDInCPlusPlusObject_1;
-
-public:
-	inline static int32_t get_offset_of_OffsetOfInstanceIDInCPlusPlusObject_1() { return static_cast<int32_t>(offsetof(Object_t631007953_StaticFields, ___OffsetOfInstanceIDInCPlusPlusObject_1)); }
-	inline int32_t get_OffsetOfInstanceIDInCPlusPlusObject_1() const { return ___OffsetOfInstanceIDInCPlusPlusObject_1; }
-	inline int32_t* get_address_of_OffsetOfInstanceIDInCPlusPlusObject_1() { return &___OffsetOfInstanceIDInCPlusPlusObject_1; }
-	inline void set_OffsetOfInstanceIDInCPlusPlusObject_1(int32_t value)
-	{
-		___OffsetOfInstanceIDInCPlusPlusObject_1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-// Native definition for P/Invoke marshalling of UnityEngine.Object
-struct Object_t631007953_marshaled_pinvoke
-{
-	intptr_t ___m_CachedPtr_0;
-};
-// Native definition for COM marshalling of UnityEngine.Object
-struct Object_t631007953_marshaled_com
-{
-	intptr_t ___m_CachedPtr_0;
-};
-#endif // OBJECT_T631007953_H
 #ifndef COMPONENT_T1923634451_H
 #define COMPONENT_T1923634451_H
 #ifdef __clang__
@@ -626,26 +628,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // COMPONENT_T1923634451_H
-#ifndef RIGIDBODY2D_T939494601_H
-#define RIGIDBODY2D_T939494601_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.Rigidbody2D
-struct  Rigidbody2D_t939494601  : public Component_t1923634451
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // RIGIDBODY2D_T939494601_H
 #ifndef BEHAVIOUR_T1437897464_H
 #define BEHAVIOUR_T1437897464_H
 #ifdef __clang__
@@ -666,6 +648,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BEHAVIOUR_T1437897464_H
+#ifndef RIGIDBODY2D_T939494601_H
+#define RIGIDBODY2D_T939494601_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Rigidbody2D
+struct  Rigidbody2D_t939494601  : public Component_t1923634451
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // RIGIDBODY2D_T939494601_H
 #ifndef COLLIDER2D_T2806799626_H
 #define COLLIDER2D_T2806799626_H
 #ifdef __clang__
@@ -689,20 +691,23 @@ public:
 
 
 // System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
-extern "C"  void List_1__ctor_m2321703786_gshared (List_1_t257213610 * __this, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR void List_1__ctor_m2321703786_gshared (List_1_t257213610 * __this, const RuntimeMethod* method);
 
 // System.Void System.Collections.Generic.List`1<UnityEngine.Rigidbody2D>::.ctor()
-#define List_1__ctor_m2466177744(__this, method) ((  void (*) (List_1_t2411569343 *, const RuntimeMethod*))List_1__ctor_m2321703786_gshared)(__this, method)
+inline void List_1__ctor_m2466177744 (List_1_t2411569343 * __this, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t2411569343 *, const RuntimeMethod*))List_1__ctor_m2321703786_gshared)(__this, method);
+}
 // UnityEngine.Vector2 UnityEngine.RaycastHit2D::get_point()
-extern "C"  Vector2_t2156229523  RaycastHit2D_get_point_m1586138107 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR Vector2_t2156229523  RaycastHit2D_get_point_m1586138107 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method);
 // UnityEngine.Vector2 UnityEngine.RaycastHit2D::get_normal()
-extern "C"  Vector2_t2156229523  RaycastHit2D_get_normal_m772343376 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR Vector2_t2156229523  RaycastHit2D_get_normal_m772343376 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method);
 // System.Single UnityEngine.RaycastHit2D::get_distance()
-extern "C"  float RaycastHit2D_get_distance_m382898860 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR float RaycastHit2D_get_distance_m382898860 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method);
 // UnityEngine.Object UnityEngine.Object::FindObjectFromInstanceID(System.Int32)
-extern "C"  Object_t631007953 * Object_FindObjectFromInstanceID_m235838713 (RuntimeObject * __this /* static, unused */, int32_t p0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR Object_t631007953 * Object_FindObjectFromInstanceID_m235838713 (RuntimeObject * __this /* static, unused */, int32_t p0, const RuntimeMethod* method);
 // UnityEngine.Collider2D UnityEngine.RaycastHit2D::get_collider()
-extern "C"  Collider2D_t2806799626 * RaycastHit2D_get_collider_m1549426026 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+extern "C" IL2CPP_METHOD_ATTR Collider2D_t2806799626 * RaycastHit2D_get_collider_m1549426026 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -725,7 +730,7 @@ extern "C"  Collider2D_t2806799626 * RaycastHit2D_get_collider_m1549426026 (Rayc
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void UnityEngine.Physics2D::.cctor()
-extern "C"  void Physics2D__cctor_m143866755 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR void Physics2D__cctor_m143866755 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -749,7 +754,7 @@ extern "C"  void Physics2D__cctor_m143866755 (RuntimeObject * __this /* static, 
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // UnityEngine.Vector2 UnityEngine.RaycastHit2D::get_point()
-extern "C"  Vector2_t2156229523  RaycastHit2D_get_point_m1586138107 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR Vector2_t2156229523  RaycastHit2D_get_point_m1586138107 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method)
 {
 	Vector2_t2156229523  V_0;
 	memset(&V_0, 0, sizeof(V_0));
@@ -771,7 +776,7 @@ extern "C"  Vector2_t2156229523  RaycastHit2D_get_point_m1586138107_AdjustorThun
 	return RaycastHit2D_get_point_m1586138107(_thisAdjusted, method);
 }
 // UnityEngine.Vector2 UnityEngine.RaycastHit2D::get_normal()
-extern "C"  Vector2_t2156229523  RaycastHit2D_get_normal_m772343376 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR Vector2_t2156229523  RaycastHit2D_get_normal_m772343376 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method)
 {
 	Vector2_t2156229523  V_0;
 	memset(&V_0, 0, sizeof(V_0));
@@ -793,7 +798,7 @@ extern "C"  Vector2_t2156229523  RaycastHit2D_get_normal_m772343376_AdjustorThun
 	return RaycastHit2D_get_normal_m772343376(_thisAdjusted, method);
 }
 // System.Single UnityEngine.RaycastHit2D::get_distance()
-extern "C"  float RaycastHit2D_get_distance_m382898860 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR float RaycastHit2D_get_distance_m382898860 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method)
 {
 	float V_0 = 0.0f;
 	{
@@ -814,7 +819,7 @@ extern "C"  float RaycastHit2D_get_distance_m382898860_AdjustorThunk (RuntimeObj
 	return RaycastHit2D_get_distance_m382898860(_thisAdjusted, method);
 }
 // UnityEngine.Collider2D UnityEngine.RaycastHit2D::get_collider()
-extern "C"  Collider2D_t2806799626 * RaycastHit2D_get_collider_m1549426026 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method)
+extern "C" IL2CPP_METHOD_ATTR Collider2D_t2806799626 * RaycastHit2D_get_collider_m1549426026 (RaycastHit2D_t2279581989 * __this, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)

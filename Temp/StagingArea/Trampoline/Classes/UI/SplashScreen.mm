@@ -258,29 +258,8 @@ static NSArray<NSString*>* GetLaunchImageNames(UIUserInterfaceIdiom idiom, const
 
 @implementation SplashScreenController
 
-#if !PLATFORM_TVOS
-static void WillRotateToInterfaceOrientation_DefaultImpl(id self_, SEL _cmd, UIInterfaceOrientation toInterfaceOrientation, NSTimeInterval duration)
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
-    if (_isOrientable)
-        [_splash updateOrientation: ConvertToUnityScreenOrientation(toInterfaceOrientation)];
-
-    UNITY_OBJC_FORWARD_TO_SUPER(self_, [UIViewController class], @selector(willRotateToInterfaceOrientation:duration:), WillRotateToInterfaceOrientationSendFunc, toInterfaceOrientation, duration);
-}
-
-static void DidRotateFromInterfaceOrientation_DefaultImpl(id self_, SEL _cmd, UIInterfaceOrientation fromInterfaceOrientation)
-{
-    if (!_isOrientable)
-        OrientView((SplashScreenController*)self_, _splash, _nonOrientableDefaultOrientation);
-
-    UNITY_OBJC_FORWARD_TO_SUPER(self_, [UIViewController class], @selector(didRotateFromInterfaceOrientation:), DidRotateFromInterfaceOrientationSendFunc, fromInterfaceOrientation);
-}
-
-#endif
-
-static void ViewWillTransitionToSize_DefaultImpl(id self_, SEL _cmd, CGSize size, id<UIViewControllerTransitionCoordinator> coordinator)
-{
-    UnityViewControllerBase* self = (UnityViewControllerBase*)self_;
-
     ScreenOrientation curOrient = UIViewControllerOrientation(self);
     ScreenOrientation newOrient = OrientationAfterTransform(curOrient, [coordinator targetTransform]);
 
@@ -291,22 +270,7 @@ static void ViewWillTransitionToSize_DefaultImpl(id self_, SEL _cmd, CGSize size
         if (!_isOrientable)
             OrientView(self, _splash, _nonOrientableDefaultOrientation);
     }];
-    UNITY_OBJC_FORWARD_TO_SUPER(self_, [UIViewController class], @selector(viewWillTransitionToSize:withTransitionCoordinator:), ViewWillTransitionToSizeSendFunc, size, coordinator);
-}
-
-- (id)init
-{
-    if ((self = [super init]))
-    {
-#if !PLATFORM_TVOS
-        AddViewControllerRotationHandling(
-            [SplashScreenController class],
-            (IMP)&WillRotateToInterfaceOrientation_DefaultImpl, (IMP)&DidRotateFromInterfaceOrientation_DefaultImpl,
-            (IMP)&ViewWillTransitionToSize_DefaultImpl
-            );
-#endif
-    }
-    return self;
+    [super viewWillTransitionToSize: size withTransitionCoordinator: coordinator];
 }
 
 - (void)create:(UIWindow*)window

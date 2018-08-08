@@ -7,7 +7,7 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>en</string>
     <key>CFBundleDisplayName</key>
-    <string>arkit 2</string>
+    <string>AR Draw</string>
     <key>CFBundleExecutable</key>
     <string>${EXECUTABLE_NAME}</string>
     <key>CFBundleIdentifier</key>
@@ -30,7 +30,7 @@
       <true />
     </dict>
     <key>NSCameraUsageDescription</key>
-    <string>AR</string>
+    <string>for AR experience</string>
     <key>UIApplicationExitsOnSuspend</key>
     <false />
     <key>UILaunchStoryboardName~ipad</key>
@@ -64,7 +64,7 @@
     <key>Unity_LoadingActivityIndicatorStyle</key>
     <integer>-1</integer>
     <key>UnityCloudProjectID</key>
-    <string></string>
+    <string>b90549f0-ea6d-43ed-9616-44aac1aceb76</string>
     <key>UnityCrashSubmissionURL</key>
     <string>https://a:b@perf-events.cloud.unity3d.com/symbolicate</string>
   </dict>

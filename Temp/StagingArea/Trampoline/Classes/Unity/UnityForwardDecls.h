@@ -129,6 +129,9 @@ typedef enum
     deviceiPhoneUnknown     = 10001,
     deviceiPadUnknown       = 10002,
     deviceiPodTouchUnknown  = 10003,
+
+    deviceAppleTV1Gen  = 1001,
+    deviceAppleTV2Gen  = 1002
 }
 DeviceGeneration;
 

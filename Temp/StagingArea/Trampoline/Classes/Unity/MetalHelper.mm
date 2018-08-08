@@ -48,7 +48,7 @@ extern "C" void InitRenderingMTL()
 static MTLPixelFormat GetColorFormatForSurface(const UnityDisplaySurfaceMTL* surface)
 {
     MTLPixelFormat colorFormat = surface->srgb ? MTLPixelFormatBGRA8Unorm_sRGB : MTLPixelFormatBGRA8Unorm;
-#if PLATFORM_IOS && UNITY_HAS_IOSSDK_10_0
+#if (PLATFORM_IOS && UNITY_HAS_IOSSDK_10_0) || (PLATFORM_TVOS && UNITY_HAS_TVOSSDK_11_0)
     if (surface->wideColor)
         colorFormat = surface->srgb ? MTLPixelFormatBGR10_XR_sRGB : MTLPixelFormatBGR10_XR;
 #elif PLATFORM_OSX && __MAC_10_12
@@ -209,7 +209,7 @@ extern "C" void CreateSharedDepthbufferMTL(UnityDisplaySurfaceMTL* surface)
     depthTexDesc.resourceOptions = MTLResourceCPUCacheModeDefaultCache | MTLResourceStorageModePrivate;
 #endif
 
-    depthTexDesc.usage = MTLTextureUsageRenderTarget;
+    depthTexDesc.usage = MTLTextureUsageRenderTarget | MTLTextureUsageShaderRead;
     if (surface->msaaSamples > 1)
     {
         depthTexDesc.textureType = MTLTextureType2DMultisample;
@@ -223,7 +223,7 @@ extern "C" void CreateSharedDepthbufferMTL(UnityDisplaySurfaceMTL* surface)
     surface->stencilRB = surface->depthRB;
 #else
     MTLTextureDescriptor* stencilTexDesc = [MTLTextureDescriptorClass texture2DDescriptorWithPixelFormat: MTLPixelFormatStencil8 width: surface->targetW height: surface->targetH mipmapped: NO];
-    stencilTexDesc.usage = MTLTextureUsageRenderTarget;
+    stencilTexDesc.usage = MTLTextureUsageRenderTarget | MTLTextureUsageShaderRead;
     if (surface->msaaSamples > 1)
     {
         stencilTexDesc.textureType = MTLTextureType2DMultisample;
@@ -246,19 +246,17 @@ extern "C" void CreateUnityRenderBuffersMTL(UnityDisplaySurfaceMTL* surface)
     UnityRenderBufferDesc sys_desc = { surface->systemW, surface->systemH, 1, 1, 1 };
     UnityRenderBufferDesc tgt_desc = { surface->targetW, surface->targetH, 1, (unsigned int)surface->msaaSamples, 1 };
 
-    // drawable (final color texture) we will be updating on every frame
-    // in case of rendering to native + AA, we will also update native target every frame
-
+    surface->systemColorRB  = surface->drawableProxyRT[surface->writeCount % kUnityNumOffscreenSurfaces];
     if (surface->targetAAColorRT)
         surface->unityColorBuffer   = UnityCreateExternalColorSurfaceMTL(surface->unityColorBuffer, surface->targetAAColorRT, surface->targetColorRT, &tgt_desc, nil);
     else if (surface->targetColorRT)
         surface->unityColorBuffer   = UnityCreateExternalColorSurfaceMTL(surface->unityColorBuffer, surface->targetColorRT, nil, &tgt_desc, nil);
     else
-        surface->unityColorBuffer   = UnityCreateDummySurface(surface->unityColorBuffer, true, &sys_desc);
+        surface->unityColorBuffer   = UnityCreateExternalColorSurfaceMTL(surface->unityColorBuffer, surface->systemColorRB, nil, &tgt_desc, surface);
 
     surface->unityDepthBuffer       = UnityCreateExternalDepthSurfaceMTL(surface->unityDepthBuffer, surface->depthRB, surface->stencilRB, &tgt_desc);
 
-    surface->systemColorBuffer = UnityCreateDummySurface(surface->systemColorBuffer, true, &sys_desc);
+    surface->systemColorBuffer = UnityCreateExternalColorSurfaceMTL(surface->systemColorBuffer, surface->systemColorRB, nil, &sys_desc, surface);
     surface->systemDepthBuffer = UnityCreateDummySurface(surface->systemDepthBuffer, false, &sys_desc);
 }
 
@@ -344,8 +342,27 @@ extern "C" void StartFrameRenderingMTL(UnityDisplaySurfaceMTL* surface)
 
 extern "C" void EndFrameRenderingMTL(UnityDisplaySurfaceMTL* surface)
 {
+    if (surface->presentCB)
+    {
+        // currently we expect EndFrameRenderingMTL to be called AFTER unity is done with "main" CB
+        // alas internally main CB is enqueued right before commit (like is done there),
+        // so we need to make sure it was committed (and niled) to make sure we present to external screens AFTER drawing is done
+        assert(UnityCurrentMTLCommandBuffer() == nil);
+        [surface->presentCB enqueue]; [surface->presentCB commit];
+        surface->presentCB = nil;
+    }
+
     surface->systemColorRB  = nil;
     surface->drawable       = nil;
+}
+
+extern "C" void PreparePresentNonMainScreenMTL(UnityDisplaySurfaceMTL* surface)
+{
+    if (surface->drawable)
+    {
+        surface->presentCB = [surface->drawableCommandQueue commandBuffer];
+        [surface->presentCB presentDrawable: surface->drawable];
+    }
 }
 
 #else

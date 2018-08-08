@@ -717,7 +717,7 @@ extern "C" int  UnityGetJoystickCount()
     return count;
 }
 
-static void PrintJoystickIdentifier(int idx, char* buffer, int maxLen, const char* typeString,
+static void FormatJoystickIdentifier(int idx, char* buffer, int maxLen, const char* typeString,
     const char* attachment, const char* vendorName)
 {
     snprintf(buffer, maxLen, "[%s,%s] joystick %d by %s",
@@ -741,7 +741,7 @@ extern "C" void UnityGetJoystickName(int idx, char* buffer, int maxLen)
 
         const char* typeString = [controller extendedGamepad] != nil ? "extended" : "basic";
 
-        PrintJoystickIdentifier(idx, buffer, maxLen, typeString, attached,
+        FormatJoystickIdentifier(idx, buffer, maxLen, typeString, attached,
             [[controller vendorName] UTF8String]);
     }
     else
@@ -749,7 +749,7 @@ extern "C" void UnityGetJoystickName(int idx, char* buffer, int maxLen)
 #if UNITY_TVOS_SIMULATOR_FAKE_REMOTE
         if (idx == [QueryControllerCollection() count])
         {
-            PrintJoystickIdentifier(idx, buffer, maxLen, "basic", "wireless", "Unity");
+            FormatJoystickIdentifier(idx, buffer, maxLen, "basic", "wireless", "Unity");
             return;
         }
 #endif

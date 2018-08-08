@@ -4,9 +4,17 @@ using UnityEngine.UI;
 
 public class SaveLoadManager : MonoBehaviour
 {
-    [SerializeField] GameObject exploreEnv, saveDone, loadSession, contentItem, loadDone;
+    [SerializeField] GameObject exploreEnv, saveDone, loadSession, contentItem, loadDone, warningToExplore;
 
     static GameObject loadInstance = null;
+
+    Transform canvas;
+
+
+    void Start()
+    {
+        canvas = GameObject.Find("Canvas").transform;
+    }
 
 
     public bool CanSave (ARTrackingStateReason reason, ARWorldMappingStatus status)
@@ -32,10 +40,16 @@ public class SaveLoadManager : MonoBehaviour
     }
 
 
+    public void SpawnWarningToExplore()
+    {
+        Instantiate(warningToExplore, canvas);
+    }
+
+
 	void SpawnInCanvasAndDestroy(GameObject go)
 	{
-		GameObject instance = Instantiate(go, GameObject.Find("Canvas").transform);
-		Destroy(instance, 3f);
+		GameObject instance = Instantiate(go, canvas);
+		Destroy(instance, 4f);
 	}
 
 
@@ -45,7 +59,7 @@ public class SaveLoadManager : MonoBehaviour
         if (loadInstance == null)
             LoadSessionWindow();
         else
-            DestroyLoadSessionWindow();
+            DestroyWindow(loadInstance);
     }
 
 
@@ -59,7 +73,7 @@ public class SaveLoadManager : MonoBehaviour
     void LoadSessionWindow()
     {
 		string[] maps = FetchWorldMaps();
-        loadInstance = Instantiate(loadSession, GameObject.Find("Canvas").transform);
+        loadInstance = Instantiate(loadSession, canvas);
 
         if (maps != null)
         {
@@ -78,21 +92,21 @@ public class SaveLoadManager : MonoBehaviour
     }
 
 
-    void DestroyLoadSessionWindow()
+    public void DestroyWindow(GameObject go)
     {
-        Destroy(loadInstance);
+        Destroy(go);
     }
 
 
     string[] FetchWorldMaps()
     {
         string allMaps = PlayerPrefs.GetString("AllWorldMaps", "");
-        Debug.Log("AllMaps: " + allMaps);
 
         if (allMaps != "")
         {
             string[] words = allMaps.Split('?');
 
+            // splitting fileNames from extensions
             for (int i = 0; i < words.Length; i++)
                 words[i] = words[i].Split('.')[0];
             return words;

@@ -1,5 +1,4 @@
-#ifndef _TRAMPOLINE_PLUGINBASE_MAIN_VIEW_CONTROLLER_LISTENER_H_
-#define _TRAMPOLINE_PLUGINBASE_MAIN_VIEW_CONTROLLER_LISTENER_H_
+#pragma once
 
 #import <Foundation/NSNotification.h>
 
@@ -29,5 +28,3 @@ extern "C" __attribute__((visibility("default"))) NSString* const kUnityViewWill
 extern "C" __attribute__((visibility("default"))) NSString* const kUnityViewDidAppear;
 extern "C" __attribute__((visibility("default"))) NSString* const kUnityInterfaceWillChangeOrientation;
 extern "C" __attribute__((visibility("default"))) NSString* const kUnityInterfaceDidChangeOrientation;
-
-#endif // _TRAMPOLINE_PLUGINBASE_LIFECYCLELISTENER_H_

@@ -11,16 +11,6 @@
 #include "UnityAppController+ViewHandling.h"
 #include "Unity/ObjCRuntime.h"
 
-typedef id (*WillRotateToInterfaceOrientationSendFunc)(struct objc_super*, SEL, UIInterfaceOrientation, NSTimeInterval);
-static void WillRotateToInterfaceOrientation_DefaultImpl(id self_, SEL _cmd, UIInterfaceOrientation toInterfaceOrientation, NSTimeInterval duration);
-
-typedef id (*DidRotateFromInterfaceOrientationSendFunc)(struct objc_super*, SEL, UIInterfaceOrientation);
-static void DidRotateFromInterfaceOrientation_DefaultImpl(id self_, SEL _cmd, UIInterfaceOrientation fromInterfaceOrientation);
-
-typedef id (*ViewWillTransitionToSizeSendFunc)(struct objc_super*, SEL, CGSize, id<UIViewControllerTransitionCoordinator>);
-static void ViewWillTransitionToSize_DefaultImpl(id self_, SEL _cmd, CGSize size, id<UIViewControllerTransitionCoordinator> coordinator);
-
-
 // when returning from presenting UIViewController we might need to update app orientation to "correct" one, as we wont get rotation notification
 @interface UnityAppController ()
 - (void)updateAppOrientation:(UIInterfaceOrientation)orientation;
@@ -83,6 +73,34 @@ static void ViewWillTransitionToSize_DefaultImpl(id self_, SEL _cmd, CGSize size
 - (BOOL)prefersHomeIndicatorAutoHidden
 {
     return UnityGetHideHomeButton();
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    ScreenOrientation curOrient = UIViewControllerOrientation(self);
+    ScreenOrientation newOrient = OrientationAfterTransform(curOrient, [coordinator targetTransform]);
+
+    // in case of presentation controller it will take control over orientations
+    // so to avoid crazy corner cases, make default view controller to ignore "wrong" orientations
+    // as they will come only in case of presentation view controller and will be reverted anyway
+    // NB: we still want to pass message to super, we just want to skip unity-specific magic
+    NSUInteger targetMask = 1 << ConvertToIosScreenOrientation(newOrient);
+    if (([self supportedInterfaceOrientations] & targetMask) != 0)
+    {
+        [UIView setAnimationsEnabled: UnityUseAnimatedAutorotation() ? YES : NO];
+        [KeyboardDelegate StartReorientation];
+
+        [GetAppController() interfaceWillChangeOrientationTo: ConvertToIosScreenOrientation(newOrient)];
+
+        [coordinator animateAlongsideTransition: nil completion:^(id < UIViewControllerTransitionCoordinatorContext > context) {
+            [self.view setNeedsLayout];
+            [GetAppController() interfaceDidChangeOrientationFrom: ConvertToIosScreenOrientation(curOrient)];
+
+            [KeyboardDelegate FinishReorientation];
+            [UIView setAnimationsEnabled: YES];
+        }];
+    }
+    [super viewWillTransitionToSize: size withTransitionCoordinator: coordinator];
 }
 
 @end
@@ -152,86 +170,6 @@ static void ViewWillTransitionToSize_DefaultImpl(id self_, SEL _cmd, CGSize size
 }
 
 @end
-
-// ios8 changed the way ViewController should handle rotation, so pick correct implementation at runtime
-
-static void WillRotateToInterfaceOrientation_DefaultImpl(id self_, SEL _cmd, UIInterfaceOrientation toInterfaceOrientation, NSTimeInterval duration)
-{
-    [UIView setAnimationsEnabled: UnityUseAnimatedAutorotation() ? YES : NO];
-    [GetAppController() interfaceWillChangeOrientationTo: toInterfaceOrientation];
-
-    [KeyboardDelegate StartReorientation];
-
-    AppController_SendUnityViewControllerNotification(kUnityInterfaceWillChangeOrientation);
-    UNITY_OBJC_FORWARD_TO_SUPER(self_, [UIViewController class], @selector(willRotateToInterfaceOrientation:duration:), WillRotateToInterfaceOrientationSendFunc, toInterfaceOrientation, duration);
-}
-
-static void DidRotateFromInterfaceOrientation_DefaultImpl(id self_, SEL _cmd, UIInterfaceOrientation fromInterfaceOrientation)
-{
-    UIViewController* self = (UIViewController*)self_;
-
-    [self.view layoutSubviews];
-    [GetAppController() interfaceDidChangeOrientationFrom: fromInterfaceOrientation];
-
-    [KeyboardDelegate FinishReorientation];
-    [UIView setAnimationsEnabled: YES];
-
-    AppController_SendUnityViewControllerNotification(kUnityInterfaceDidChangeOrientation);
-    UNITY_OBJC_FORWARD_TO_SUPER(self_, [UIViewController class], @selector(didRotateFromInterfaceOrientation:), DidRotateFromInterfaceOrientationSendFunc, fromInterfaceOrientation);
-}
-
-static void ViewWillTransitionToSize_DefaultImpl(id self_, SEL _cmd, CGSize size, id<UIViewControllerTransitionCoordinator> coordinator)
-{
-    UIViewController* self = (UIViewController*)self_;
-
-    ScreenOrientation curOrient = UIViewControllerOrientation(self);
-    ScreenOrientation newOrient = OrientationAfterTransform(curOrient, [coordinator targetTransform]);
-
-    // in case of presentation controller it will take control over orientations
-    // so to avoid crazy corner cases, make default view controller to ignore "wrong" orientations
-    // as they will come only in case of presentation view controller and will be reverted anyway
-    // NB: we still want to pass message to super, we just want to skip unity-specific magic
-    NSUInteger targetMask = 1 << ConvertToIosScreenOrientation(newOrient);
-    if (([self supportedInterfaceOrientations] & targetMask) != 0)
-    {
-        [UIView setAnimationsEnabled: UnityUseAnimatedAutorotation() ? YES : NO];
-        [KeyboardDelegate StartReorientation];
-
-        [GetAppController() interfaceWillChangeOrientationTo: ConvertToIosScreenOrientation(newOrient)];
-
-        [coordinator animateAlongsideTransition: nil completion:^(id < UIViewControllerTransitionCoordinatorContext > context) {
-            [self.view setNeedsLayout];
-            [GetAppController() interfaceDidChangeOrientationFrom: ConvertToIosScreenOrientation(curOrient)];
-
-            [KeyboardDelegate FinishReorientation];
-            [UIView setAnimationsEnabled: YES];
-        }];
-    }
-    UNITY_OBJC_FORWARD_TO_SUPER(self_, [UIViewController class], @selector(viewWillTransitionToSize:withTransitionCoordinator:), ViewWillTransitionToSizeSendFunc, size, coordinator);
-}
-
-extern "C" void AddViewControllerRotationHandling(Class class_, IMP willRotateToInterfaceOrientation, IMP didRotateFromInterfaceOrientation, IMP viewWillTransitionToSize)
-{
-    // it is important to use class_addMethod as we absolutely dont want to change super class impl (but rather just add override)
-    if (viewWillTransitionToSize)
-    {
-        class_addMethod(class_, @selector(viewWillTransitionToSize:withTransitionCoordinator:), viewWillTransitionToSize, UIViewController_viewWillTransitionToSize_Enc);
-    }
-    else
-    {
-        class_addMethod(class_, @selector(willRotateToInterfaceOrientation:duration:), willRotateToInterfaceOrientation, UIViewController_willRotateToInterfaceOrientation_Enc);
-        class_addMethod(class_, @selector(didRotateFromInterfaceOrientation:), didRotateFromInterfaceOrientation, UIViewController_didRotateFromInterfaceOrientation_Enc);
-    }
-}
-
-extern "C" void AddViewControllerDefaultRotationHandling(Class class_)
-{
-    AddViewControllerRotationHandling(
-        class_,
-        (IMP)&WillRotateToInterfaceOrientation_DefaultImpl, (IMP)&DidRotateFromInterfaceOrientation_DefaultImpl,
-        (IMP)&ViewWillTransitionToSize_DefaultImpl
-        );
-}
 
 NSUInteger EnabledAutorotationInterfaceOrientations()
 {

@@ -39,15 +39,13 @@ struct RenderSurfaceBase;
 typedef struct RenderSurfaceBase* UnityRenderBufferHandle;
 
 // be aware that this struct is shared with unity implementation so you should absolutely not change it
-typedef struct
-    UnityRenderBufferDesc
+typedef struct UnityRenderBufferDesc
 {
     unsigned    width, height, depth;
     unsigned    samples;
 
     int         backbuffer;
-}
-UnityRenderBufferDesc;
+} UnityRenderBufferDesc;
 
 // trick to make structure inheritance work transparently between c/cpp
 // for c we use "anonymous struct"
@@ -74,8 +72,7 @@ UnityRenderBufferDesc;
 #endif
 
 // unity common rendering (display) surface
-typedef struct
-    UnityDisplaySurfaceBase
+typedef struct UnityDisplaySurfaceBase
 {
     UnityRenderBufferHandle unityColorBuffer;
     UnityRenderBufferHandle unityDepthBuffer;
@@ -98,8 +95,7 @@ typedef struct
     int                 allowScreenshot;        // [bool] currently we allow screenshots (from script) only on main display
 
     int                 api;                    // [UnityRenderingAPI]
-}
-UnityDisplaySurfaceBase;
+} UnityDisplaySurfaceBase;
 
 
 // START_STRUCT confuse clang c compiler (though it is idiomatic c code that works)
@@ -143,6 +139,7 @@ OBJC_OBJECT_PTR MTLDeviceRef        device;
 
 OBJC_OBJECT_PTR MTLCommandQueueRef  commandQueue;
 OBJC_OBJECT_PTR MTLCommandQueueRef  drawableCommandQueue;
+OBJC_OBJECT_PTR MTLCommandBufferRef presentCB;
 
 OBJC_OBJECT_PTR CAMetalDrawableRef  drawable;
 
@@ -170,14 +167,12 @@ END_STRUCT(UnityDisplaySurfaceMTL)
 #pragma clang diagnostic pop
 
 // be aware that this enum is shared with unity implementation so you should absolutely not change it
-typedef enum
-    UnityRenderingAPI
+typedef enum UnityRenderingAPI
 {
     apiOpenGLES2    = 2,
     apiOpenGLES3    = 3,
     apiMetal        = 4,
-}
-UnityRenderingAPI;
+} UnityRenderingAPI;
 
 #ifdef __cplusplus
 extern "C" {
@@ -233,6 +228,10 @@ void PresentMTL(UnityDisplaySurfaceMTL* surface);
 
 // Acquires CAMetalDrawable resource for the surface and returns the drawable texture
 MTLTextureRef AcquireDrawableMTL(UnityDisplaySurfaceMTL* surface);
+
+// starting with ios11 apple insists on having just one presentDrawable per command buffer
+// hence we keep normal processing for main screen, but when airplay is used we will create extra command buffers
+void PreparePresentNonMainScreenMTL(UnityDisplaySurfaceMTL* surface);
 
 #ifdef __cplusplus
 } // extern "C"

@@ -5,8 +5,7 @@
 @class EAGLContext;
 @class UnityView;
 
-typedef struct
-    RenderingSurfaceParams
+typedef struct RenderingSurfaceParams
 {
     // rendering setup
     int msaaSampleCount;
@@ -19,8 +18,7 @@ typedef struct
     // unity setup
     int disableDepthAndStencil;
     int useCVTextureCache;
-}
-RenderingSurfaceParams;
+} RenderingSurfaceParams;
 
 
 @interface DisplayConnection : NSObject
@@ -51,13 +49,14 @@ RenderingSurfaceParams;
 @interface DisplayManager : NSObject
 - (id)objectForKeyedSubscript:(id)key;
 - (BOOL)displayAvailable:(UIScreen*)targetScreen;
-- (void)updateDisplayListInUnity;
+- (void)updateDisplayListCacheInUnity;
 
 - (void)startFrameRendering;
 - (void)present;
 - (void)endFrameRendering;
 
 - (void)enumerateDisplaysWithBlock:(void (^)(DisplayConnection* conn))block;
+- (void)enumerateNonMainDisplaysWithBlock:(void (^)(DisplayConnection* conn))block;
 
 + (void)Initialize;
 + (DisplayManager*)Instance;

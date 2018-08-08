@@ -16,7 +16,7 @@
 //    most likely all you need is to subscribe to "orientation changed" notification
 //    or in case you have per-orientation UI logic override willTransitionToViewController
 //
-// 3. you create UI-rich app where uinty view is just one of many
+// 3. you create UI-rich app where unity view is just one of many
 //    in that case you might want to create your own controllers and implement transitions on top
 //    also instead of orientUnity: (and Screen.orientation in script) you should use orientInterface
 
