@@ -89,9 +89,10 @@ public class WorldMapManager : MonoBehaviour
         {
             if(saveLoadManager.CanSave(m_LastReason, lastStatus))
             {
-                if(PlayerPrefs.GetString("IsFirstTime", "true") == "true")
+                int count = PlayerPrefs.GetInt("FirstTimeSaving", 0);
+                if(count == 0)
                 {
-                    PlayerPrefs.SetString("IsFirstTime", "false");
+                    PlayerPrefs.SetInt("FirstTimeSaving", 1);
                     saveLoadManager.SpawnWarningToExplore();
                 }
                 else
@@ -107,7 +108,12 @@ public class WorldMapManager : MonoBehaviour
         {
             loadingScreen.SetActive(true);
 
-            string fileName = GetFileName();
+            string fileName = "";
+            if(loadedWorldMapName == "")
+                fileName = GetFileName();
+            else
+                fileName = loadedWorldMapName;
+
             string pathToSave = Path.Combine(Application.persistentDataPath, fileName);
 
             // saving the lineRenderers as a biteArray
@@ -118,7 +124,11 @@ public class WorldMapManager : MonoBehaviour
             allMaps += fileName + '?';
             PlayerPrefs.SetString("AllWorldMaps", allMaps);
 
-            saveLoadManager.SaveSuccessful();
+            if(fileName != loadedWorldMapName)
+                saveLoadManager.SaveSuccessful();
+            else
+                saveLoadManager.UpdateSuccessful();
+                
             loadingScreen.SetActive(false);
         }
     }
@@ -227,6 +237,12 @@ public class WorldMapManager : MonoBehaviour
 
         if (worldMap != null && m_LoadedMap != worldMap)
         {
+            if(PlayerPrefs.GetInt("FirstTimeLoading", 0) == 0)
+            {
+                PlayerPrefs.SetInt("FirstTimeLoading", 1);
+                saveLoadManager.SpawnGuideToLoad();
+            }
+
             m_LoadedMap = worldMap;
             loadedWorldMapName = fileName;
 

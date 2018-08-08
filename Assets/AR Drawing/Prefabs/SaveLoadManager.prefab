@@ -60,3 +60,6 @@ MonoBehaviour:
   loadDone: {fileID: 1733382487250252, guid: 71c0ca052bda348ab9b56c29a929c9cb, type: 2}
   warningToExplore: {fileID: 1392215117946326, guid: 52da672a1c9804adbbf7dad6a1244da7,
     type: 2}
+  guideToLoad: {fileID: 1719661681893314, guid: 25e36f04459174f20a0d7212da5a3b43,
+    type: 2}
+  updateDone: {fileID: 1513104057969776, guid: 8d8c7f012a5c64f47ba3c841acdedffc, type: 2}

@@ -4,11 +4,12 @@ using UnityEngine.UI;
 
 public class SaveLoadManager : MonoBehaviour
 {
-    [SerializeField] GameObject exploreEnv, saveDone, loadSession, contentItem, loadDone, warningToExplore;
+    [SerializeField] GameObject exploreEnv, saveDone, loadSession, contentItem;
+    [SerializeField] GameObject loadDone, warningToExplore, guideToLoad, updateDone;
 
     static GameObject loadInstance = null;
 
-    Transform canvas;
+    Transform canvas = null;
 
 
     void Start()
@@ -17,6 +18,7 @@ public class SaveLoadManager : MonoBehaviour
     }
 
 
+    // checking if the camera is currently in mapped state
     public bool CanSave (ARTrackingStateReason reason, ARWorldMappingStatus status)
     {
         if (reason != ARTrackingStateReason.ARTrackingStateReasonNone || status != ARWorldMappingStatus.ARWorldMappingStatusMapped && exploreEnv != null)
@@ -34,6 +36,12 @@ public class SaveLoadManager : MonoBehaviour
     }
 
 
+    public void UpdateSuccessful()
+    {
+        SpawnInCanvasAndDestroy(updateDone);
+    }
+
+
     public void RelocalizeSuccessful()
     {
         SpawnInCanvasAndDestroy(loadDone);
@@ -46,6 +54,12 @@ public class SaveLoadManager : MonoBehaviour
     }
 
 
+    public void SpawnGuideToLoad()
+    {
+        Instantiate(guideToLoad, canvas);
+    }
+
+
 	void SpawnInCanvasAndDestroy(GameObject go)
 	{
 		GameObject instance = Instantiate(go, canvas);
@@ -53,20 +67,21 @@ public class SaveLoadManager : MonoBehaviour
 	}
 
 
-    // spawn the window that shows saved AR sessions
+    // called when a list item clicked
+    public void LoadSession(Text worldMapText)
+    {
+        WorldMapManager manager = GameObject.Find("WorldMapManager").GetComponent<WorldMapManager>();
+        manager.Load(worldMapText.text + ".worldmap");
+    }
+
+
+    // spawn the window that shows previously saved AR sessions, called on button click
     public void LoadToggle()
     {
         if (loadInstance == null)
             LoadSessionWindow();
         else
             DestroyWindow(loadInstance);
-    }
-
-
-    public void LoadSession(Text worldMapText)
-    {
-        WorldMapManager manager = GameObject.Find("WorldMapManager").GetComponent<WorldMapManager>();
-        manager.Load(worldMapText.text + ".worldmap");
     }
 
 
@@ -95,6 +110,14 @@ public class SaveLoadManager : MonoBehaviour
     public void DestroyWindow(GameObject go)
     {
         Destroy(go);
+    }
+
+
+    public void SaveFromWindow()
+    {
+        WorldMapManager manager = GameObject.Find("WorldMapManager").GetComponent<WorldMapManager>();
+        if(manager != null)
+            manager.Save();
     }
 
 

@@ -27,7 +27,7 @@ public class UpdateWorldMappingStatus : MonoBehaviour
             else if (cam.trackingReason == ARTrackingStateReason.ARTrackingStateReasonInsufficientFeatures)
                 tracking.text = "Not enough features";
             else if (cam.trackingReason == ARTrackingStateReason.ARTrackingStateReasonRelocalizing)
-                tracking.text = "Relocalizing";
+                tracking.text = "Searching...";
             else
                 tracking.text = "";
         }
