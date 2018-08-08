@@ -9,33 +9,20 @@ public class DrawLine : MonoBehaviour
     [SerializeField] float distanceFromCamera = 1f;
     [SerializeField] GameObject line = null;
 
+    // linesInScene is used when saving the anchors 
+    public List<GameObject> linesInScene;
+
+    // reference to current lineRenderer to add more points
     LineRenderer lineRenderer;
+
+	// to show a point when user just draws a point, so index = 2
     int index = 2;
 
 	void Start ()
     {
         lineRenderer = null;
-        UnityARSessionNativeInterface.ARUserAnchorAddedEvent += NewAnchorAdded;
+        linesInScene = new List<GameObject>();
 	}
-
-    // debugging functions
-    void NewAnchorAdded(ARUserAnchor anchor)
-    {
-        if (anchor.identifier != null)
-        {
-            //GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(anchor.identifier);
-            Debug.Log("Anchor identifier: " + anchor.identifier);
-            Debug.Log("Anchor position: " + UnityARMatrixOps.GetPosition(anchor.transform));
-        }
-        else
-            Debug.Log("Anchor is added, but it's null");
-    }
-
-    void OnDestroy()
-    {
-        UnityARSessionNativeInterface.ARUserAnchorAddedEvent -= NewAnchorAdded;
-    }
-    //end debugging functions
 
     void Update ()
     {
@@ -67,10 +54,13 @@ public class DrawLine : MonoBehaviour
     {
         if (lineRenderer == null && !ButtonPressed(i))
         {
-            Vector3 screenPoint = GetScreenPoint(i); // the position where we will draw the line
+            Vector3 screenPoint = GetScreenPoint(i);
 
             lineRenderer = Instantiate(line, Camera.main.transform.position, Quaternion.identity).GetComponent<LineRenderer>();
 
+            linesInScene.Add(lineRenderer.gameObject);
+
+            // draw a point if the user just want to draw a point
             lineRenderer.SetPosition(0, screenPoint - lineRenderer.transform.position);
             lineRenderer.SetPosition(1, screenPoint - lineRenderer.transform.position);
         }
@@ -110,6 +100,7 @@ public class DrawLine : MonoBehaviour
         return false;
     }
 
+    // get the position to draw the line on the screen
     Vector3 GetScreenPoint(int i = 0)
     {
         return Camera.main.ScreenToWorldPoint(new Vector3(Input.GetTouch(i).position.x, Input.GetTouch(i).position.y, distanceFromCamera));

@@ -42,6 +42,6 @@ public class UpdateWorldMappingStatus : MonoBehaviour
 
     public void ChangeTextTo(string txt)
     {
-        //textAnchor.text = txt;
+        textAnchor.text = txt;
     }
 }

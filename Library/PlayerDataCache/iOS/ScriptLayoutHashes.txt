@@ -96,7 +96,7 @@ e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 6bb2e5603571c8c181826651a1ba0a81 Assembly-CSharp.dll:.BallMaker
 e853e897ab942dd9fb05f93f0847abc2 Assembly-CSharp.dll:.ARReferenceObjectsSetAsset
-51c9ad322b681b4ea89e23c8ca39e03e Assembly-CSharp.dll:.DrawLine
+cbd04869f31301291b08a3499a665cef Assembly-CSharp.dll:.DrawLine
 4d2d42db4c27e07841fb2faaf34c05e0 Assembly-CSharp.dll:.UnityARCameraManager
 012b296c983be26320743b44e167e73f Assembly-CSharp.dll:.UnityARFaceMeshManager
 86a8302157c3be681753dec2ada1f168 Assembly-CSharp.dll:.VideoFormatsExample
@@ -133,7 +133,7 @@ fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networki
 7ca56e063bd071986fff4f513cc4f477 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d0cb676d817ce415854e41eb01baf752 Assembly-CSharp.dll:.ARCameraTracker
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-b80da8f039b2dfb570db2cccb92a08af Assembly-CSharp.dll:.WorldMapManager
+98c6bc4232eb1478f229e76643cbcd00 Assembly-CSharp.dll:.WorldMapManager
 27338dab567a30f4b917a89f4c1b35de Assembly-CSharp.dll:.ARReferenceImagesSet
 382b8ef512fa8d6108723a01b57af65b UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 d22c788799ee45d8676254eccf20e8b8 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
@@ -233,3 +233,4 @@ be05cccf9a5a5ef0737550885f55e634 Assembly-CSharp.dll:.UnityPointCloudExample
 8daa630b83a598c370b884e9b27151af Assembly-CSharp.dll:.BrushEditor
 622aa64877982231650b7d8de8ad5f01 Assembly-CSharp.dll:.TongueDetector
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.UnityARCameraNearFar
+c4d40c1eb193d7822fc77ef2369da48f Assembly-CSharp.dll:.AllMaterials
