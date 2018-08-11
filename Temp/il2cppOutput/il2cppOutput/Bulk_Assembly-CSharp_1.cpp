@@ -181,8 +181,6 @@ struct LinkedListDictionary_2_t2551695062;
 struct ColorSer_t1940368198;
 // DontDestroyOnLoad
 struct DontDestroyOnLoad_t1456007215;
-// DrawLine
-struct DrawLine_t3711110361;
 // LineRendererData
 struct LineRendererData_t2483329549;
 // QuaternionSer
@@ -243,6 +241,8 @@ struct List_1_t2537441456;
 struct List_1_t3416529523;
 // System.Collections.Generic.List`1<Vector3Ser>
 struct List_1_t4029270237;
+// System.Collections.IDictionary
+struct IDictionary_t1363984059;
 // System.Delegate
 struct Delegate_t1188392813;
 // System.DelegateData
@@ -261,6 +261,8 @@ struct Stream_t1273022909;
 struct Int16U5BU5D_t3686840178;
 // System.Int32[]
 struct Int32U5BU5D_t385246372;
+// System.IntPtr[]
+struct IntPtrU5BU5D_t4013366056;
 // System.Object[]
 struct ObjectU5BU5D_t2843939325;
 // System.Reflection.Assembly
@@ -569,6 +571,8 @@ struct VideoFormatButton_t1937817916;
 struct VideoFormatButtonPressed_t1187798507;
 // VideoFormatsExample
 struct VideoFormatsExample_t2303262312;
+// WindowManager
+struct WindowManager_t1304188793;
 // WorldMapManager
 struct WorldMapManager_t2538599596;
 
@@ -610,12 +614,12 @@ extern RuntimeClass* Action_2_t1399479586_il2cpp_TypeInfo_var;
 extern RuntimeClass* BinaryFormatter_t3197753202_il2cpp_TypeInfo_var;
 extern RuntimeClass* BitConverter_t3118986983_il2cpp_TypeInfo_var;
 extern RuntimeClass* ByteU5BU5D_t4116647657_il2cpp_TypeInfo_var;
-extern RuntimeClass* CharU5BU5D_t3528271667_il2cpp_TypeInfo_var;
 extern RuntimeClass* Char_t3634460470_il2cpp_TypeInfo_var;
 extern RuntimeClass* CommandBuffer_t2206337031_il2cpp_TypeInfo_var;
 extern RuntimeClass* DateTime_t3738529785_il2cpp_TypeInfo_var;
 extern RuntimeClass* Debug_t3317548046_il2cpp_TypeInfo_var;
 extern RuntimeClass* Encoding_t1523322056_il2cpp_TypeInfo_var;
+extern RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
 extern RuntimeClass* GUI_t1624858472_il2cpp_TypeInfo_var;
 extern RuntimeClass* GameObject_t1113636619_il2cpp_TypeInfo_var;
 extern RuntimeClass* IDisposable_t3640265483_il2cpp_TypeInfo_var;
@@ -669,6 +673,7 @@ extern RuntimeClass* Vector4_t3319028937_il2cpp_TypeInfo_var;
 extern RuntimeClass* VideoFormatButtonPressed_t1187798507_il2cpp_TypeInfo_var;
 extern RuntimeClass* VideoFormatButton_t1937817916_il2cpp_TypeInfo_var;
 extern RuntimeClass* VideoFormatEnumerator_t3131638505_il2cpp_TypeInfo_var;
+extern RuntimeClass* WorldMapManager_t2538599596_il2cpp_TypeInfo_var;
 extern RuntimeClass* internal_ARAnchorAdded_t1565083332_il2cpp_TypeInfo_var;
 extern RuntimeClass* internal_ARAnchorRemoved_t3371657877_il2cpp_TypeInfo_var;
 extern RuntimeClass* internal_ARAnchorUpdated_t2645242205_il2cpp_TypeInfo_var;
@@ -708,45 +713,47 @@ extern String_t* _stringLiteral1205769173;
 extern String_t* _stringLiteral1273382550;
 extern String_t* _stringLiteral1432570861;
 extern String_t* _stringLiteral1448827553;
+extern String_t* _stringLiteral1533775202;
 extern String_t* _stringLiteral158429674;
-extern String_t* _stringLiteral163229389;
 extern String_t* _stringLiteral1652116954;
 extern String_t* _stringLiteral1828639942;
-extern String_t* _stringLiteral2023251955;
 extern String_t* _stringLiteral2141794953;
 extern String_t* _stringLiteral223888751;
 extern String_t* _stringLiteral2313301283;
+extern String_t* _stringLiteral2323074440;
 extern String_t* _stringLiteral2555481935;
 extern String_t* _stringLiteral2563506616;
 extern String_t* _stringLiteral2625448996;
+extern String_t* _stringLiteral2660018904;
 extern String_t* _stringLiteral2707270972;
 extern String_t* _stringLiteral2791739702;
+extern String_t* _stringLiteral2792132920;
 extern String_t* _stringLiteral2856859908;
 extern String_t* _stringLiteral2932545360;
+extern String_t* _stringLiteral299364399;
 extern String_t* _stringLiteral3005833486;
 extern String_t* _stringLiteral3031800000;
 extern String_t* _stringLiteral3041351855;
 extern String_t* _stringLiteral3093136373;
 extern String_t* _stringLiteral3093431772;
 extern String_t* _stringLiteral3170031834;
-extern String_t* _stringLiteral3199899030;
 extern String_t* _stringLiteral3279158741;
 extern String_t* _stringLiteral3418950510;
 extern String_t* _stringLiteral3450517376;
 extern String_t* _stringLiteral3452614550;
 extern String_t* _stringLiteral3452614616;
 extern String_t* _stringLiteral3490508455;
-extern String_t* _stringLiteral3573715958;
+extern String_t* _stringLiteral351172016;
 extern String_t* _stringLiteral3606922194;
 extern String_t* _stringLiteral3670053048;
 extern String_t* _stringLiteral3786253461;
-extern String_t* _stringLiteral3875954633;
-extern String_t* _stringLiteral4002445229;
+extern String_t* _stringLiteral3987835886;
 extern String_t* _stringLiteral51204818;
 extern String_t* _stringLiteral514893628;
 extern String_t* _stringLiteral757602046;
 extern String_t* _stringLiteral921768783;
 extern String_t* _stringLiteral94848434;
+extern String_t* _stringLiteral950268370;
 extern const RuntimeMethod* Action_1_Invoke_m1562016736_RuntimeMethod_var;
 extern const RuntimeMethod* Action_1_Invoke_m1813602315_RuntimeMethod_var;
 extern const RuntimeMethod* Action_1_Invoke_m3848847909_RuntimeMethod_var;
@@ -774,10 +781,12 @@ extern const RuntimeMethod* GameObject_AddComponent_TisUnityARUserAnchorComponen
 extern const RuntimeMethod* GameObject_GetComponentInChildren_TisMeshFilter_t3523625662_m478508368_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisARKitPlaneMeshRender_t1298532386_m1182690983_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisAllMaterials_t3879404035_m2001441589_RuntimeMethod_var;
-extern const RuntimeMethod* GameObject_GetComponent_TisDrawLine_t3711110361_m94459780_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisSaveLoadManager_t4010657880_m1117738828_RuntimeMethod_var;
+extern const RuntimeMethod* GameObject_GetComponent_TisUpdateWorldMappingStatus_t2738391865_m1586204052_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisVideoFormatButton_t1937817916_m1994409976_RuntimeMethod_var;
+extern const RuntimeMethod* GameObject_GetComponent_TisWindowManager_t1304188793_m4098762704_RuntimeMethod_var;
+extern const RuntimeMethod* GameObject_GetComponent_TisWorldMapManager_t2538599596_m4094422853_RuntimeMethod_var;
 extern const RuntimeMethod* LinkedListDictionary_2_Add_m3163151174_RuntimeMethod_var;
 extern const RuntimeMethod* LinkedListDictionary_2_Clear_m2078501562_RuntimeMethod_var;
 extern const RuntimeMethod* LinkedListDictionary_2_ContainsKey_m1915049007_RuntimeMethod_var;
@@ -804,7 +813,7 @@ extern const RuntimeMethod* List_1__ctor_m3651671_RuntimeMethod_var;
 extern const RuntimeMethod* List_1__ctor_m3908426868_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Count_m1186522723_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Count_m2045149193_RuntimeMethod_var;
-extern const RuntimeMethod* List_1_get_Count_m2812834599_RuntimeMethod_var;
+extern const RuntimeMethod* List_1_get_Count_m321283854_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m2893049366_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m3743125852_RuntimeMethod_var;
 extern const RuntimeMethod* ObjectSerializationExtension_Deserialize_TisInt32U5BU5D_t385246372_m1366516915_RuntimeMethod_var;
@@ -840,7 +849,6 @@ extern const RuntimeMethod* UnityARSessionNativeInterface__object_anchor_updated
 extern const RuntimeMethod* UnityARSessionNativeInterface__user_anchor_added_m3126812148_RuntimeMethod_var;
 extern const RuntimeMethod* UnityARSessionNativeInterface__user_anchor_removed_m3345544012_RuntimeMethod_var;
 extern const RuntimeMethod* UnityARSessionNativeInterface__user_anchor_updated_m2680404376_RuntimeMethod_var;
-extern const RuntimeMethod* UnityARUserAnchorComponent_RemoveAnchor_m967835569_RuntimeMethod_var;
 extern const RuntimeMethod* UnityARVideoFormat_AddToVFList_m1000405680_RuntimeMethod_var;
 extern const RuntimeMethod* UnityARVideo_UpdateFrame_m3975841991_RuntimeMethod_var;
 extern const RuntimeMethod* UnityEyeManager_FaceAdded_m743662964_RuntimeMethod_var;
@@ -983,7 +991,6 @@ extern const uint32_t UnityARSessionNativeInterface_remove_ARUserAnchorAddedEven
 extern const uint32_t UnityARSessionNativeInterface_remove_ARUserAnchorRemovedEvent_m2042627006_MetadataUsageId;
 extern const uint32_t UnityARSessionNativeInterface_remove_ARUserAnchorUpdatedEvent_m2181757746_MetadataUsageId;
 extern const uint32_t UnityARSessionNativeInterface_set_ARSessionShouldAttemptRelocalization_m3516918436_MetadataUsageId;
-extern const uint32_t UnityARUserAnchorComponent_RemoveAnchor_m967835569_MetadataUsageId;
 extern const uint32_t UnityARUserAnchorComponent_Start_m756554043_MetadataUsageId;
 extern const uint32_t UnityARUserAnchorData_UnityARUserAnchorDataFromGameObject_m1971953404_MetadataUsageId;
 extern const uint32_t UnityARUserAnchorData_get_identifierStr_m122781054_MetadataUsageId;
@@ -1020,15 +1027,25 @@ extern const uint32_t VideoFormatsExample_ExampletButtonPressed_m2588664126_Meta
 extern const uint32_t VideoFormatsExample_OnDestroy_m541603283_MetadataUsageId;
 extern const uint32_t VideoFormatsExample_PopulateVideoFormatButtons_m595526008_MetadataUsageId;
 extern const uint32_t VideoFormatsExample_Start_m1615238214_MetadataUsageId;
+extern const uint32_t WindowManager_Awake_m2702222266_MetadataUsageId;
+extern const uint32_t WindowManager_CheckCanvasTransform_m2112171164_MetadataUsageId;
+extern const uint32_t WindowManager_DestroyWindow_m1227835643_MetadataUsageId;
+extern const uint32_t WindowManager_RelocalizeSuccessful_m2124409283_MetadataUsageId;
+extern const uint32_t WindowManager_SaveFromWindow_m3890900149_MetadataUsageId;
+extern const uint32_t WindowManager_SaveSuccessful_m239911447_MetadataUsageId;
+extern const uint32_t WindowManager_SpawnExploreEnvironment_m4030748144_MetadataUsageId;
+extern const uint32_t WindowManager_SpawnInCanvas_m54798459_MetadataUsageId;
+extern const uint32_t WindowManager_UpdateSuccessful_m3367646750_MetadataUsageId;
 extern const uint32_t WorldMapManager_GetFileName_m3759558755_MetadataUsageId;
 extern const uint32_t WorldMapManager_LineRendererToData_m69957661_MetadataUsageId;
 extern const uint32_t WorldMapManager_LoadLinesFromFile_m898967437_MetadataUsageId;
 extern const uint32_t WorldMapManager_Load_m825725316_MetadataUsageId;
-extern const uint32_t WorldMapManager_OnFrameUpdate_m3236777077_MetadataUsageId;
 extern const uint32_t WorldMapManager_OnWorldMap_m528558470_MetadataUsageId;
+extern const uint32_t WorldMapManager_SaveAnyway_m3407925849_MetadataUsageId;
 extern const uint32_t WorldMapManager_SaveLinesInScene_m817905919_MetadataUsageId;
 extern const uint32_t WorldMapManager_Save_m1685066494_MetadataUsageId;
 extern const uint32_t WorldMapManager_Start_m1381697079_MetadataUsageId;
+extern const uint32_t WorldMapManager_Update_m1324246752_MetadataUsageId;
 extern const uint32_t WorldMapManager_get_session_m4054597902_MetadataUsageId;
 extern const uint32_t internal_ARAnchorAdded_BeginInvoke_m4199645137_MetadataUsageId;
 extern const uint32_t internal_ARAnchorRemoved_BeginInvoke_m2416400457_MetadataUsageId;
@@ -1100,11 +1117,11 @@ struct UnityARLightData_t2160616730_marshaled_pinvoke;;
 struct Vector3_t3722313464 ;
 
 struct ByteU5BU5D_t4116647657;
-struct CharU5BU5D_t3528271667;
 struct Int32U5BU5D_t385246372;
 struct ObjectU5BU5D_t2843939325;
 struct SingleU5BU5D_t1444911251;
 struct StringU5BU5D_t1281789340;
+struct GameObjectU5BU5D_t3328599146;
 struct MaterialU5BU5D_t561872642;
 struct Vector2U5BU5D_t1457185986;
 struct Vector3U5BU5D_t1718750761;
@@ -1958,6 +1975,144 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // LIST_1_T4029270237_H
+#ifndef EXCEPTION_T_H
+#define EXCEPTION_T_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Exception
+struct  Exception_t  : public RuntimeObject
+{
+public:
+	// System.IntPtr[] System.Exception::trace_ips
+	IntPtrU5BU5D_t4013366056* ___trace_ips_0;
+	// System.Exception System.Exception::inner_exception
+	Exception_t * ___inner_exception_1;
+	// System.String System.Exception::message
+	String_t* ___message_2;
+	// System.String System.Exception::help_link
+	String_t* ___help_link_3;
+	// System.String System.Exception::class_name
+	String_t* ___class_name_4;
+	// System.String System.Exception::stack_trace
+	String_t* ___stack_trace_5;
+	// System.String System.Exception::_remoteStackTraceString
+	String_t* ____remoteStackTraceString_6;
+	// System.Int32 System.Exception::remote_stack_index
+	int32_t ___remote_stack_index_7;
+	// System.Int32 System.Exception::hresult
+	int32_t ___hresult_8;
+	// System.String System.Exception::source
+	String_t* ___source_9;
+	// System.Collections.IDictionary System.Exception::_data
+	RuntimeObject* ____data_10;
+
+public:
+	inline static int32_t get_offset_of_trace_ips_0() { return static_cast<int32_t>(offsetof(Exception_t, ___trace_ips_0)); }
+	inline IntPtrU5BU5D_t4013366056* get_trace_ips_0() const { return ___trace_ips_0; }
+	inline IntPtrU5BU5D_t4013366056** get_address_of_trace_ips_0() { return &___trace_ips_0; }
+	inline void set_trace_ips_0(IntPtrU5BU5D_t4013366056* value)
+	{
+		___trace_ips_0 = value;
+		Il2CppCodeGenWriteBarrier((&___trace_ips_0), value);
+	}
+
+	inline static int32_t get_offset_of_inner_exception_1() { return static_cast<int32_t>(offsetof(Exception_t, ___inner_exception_1)); }
+	inline Exception_t * get_inner_exception_1() const { return ___inner_exception_1; }
+	inline Exception_t ** get_address_of_inner_exception_1() { return &___inner_exception_1; }
+	inline void set_inner_exception_1(Exception_t * value)
+	{
+		___inner_exception_1 = value;
+		Il2CppCodeGenWriteBarrier((&___inner_exception_1), value);
+	}
+
+	inline static int32_t get_offset_of_message_2() { return static_cast<int32_t>(offsetof(Exception_t, ___message_2)); }
+	inline String_t* get_message_2() const { return ___message_2; }
+	inline String_t** get_address_of_message_2() { return &___message_2; }
+	inline void set_message_2(String_t* value)
+	{
+		___message_2 = value;
+		Il2CppCodeGenWriteBarrier((&___message_2), value);
+	}
+
+	inline static int32_t get_offset_of_help_link_3() { return static_cast<int32_t>(offsetof(Exception_t, ___help_link_3)); }
+	inline String_t* get_help_link_3() const { return ___help_link_3; }
+	inline String_t** get_address_of_help_link_3() { return &___help_link_3; }
+	inline void set_help_link_3(String_t* value)
+	{
+		___help_link_3 = value;
+		Il2CppCodeGenWriteBarrier((&___help_link_3), value);
+	}
+
+	inline static int32_t get_offset_of_class_name_4() { return static_cast<int32_t>(offsetof(Exception_t, ___class_name_4)); }
+	inline String_t* get_class_name_4() const { return ___class_name_4; }
+	inline String_t** get_address_of_class_name_4() { return &___class_name_4; }
+	inline void set_class_name_4(String_t* value)
+	{
+		___class_name_4 = value;
+		Il2CppCodeGenWriteBarrier((&___class_name_4), value);
+	}
+
+	inline static int32_t get_offset_of_stack_trace_5() { return static_cast<int32_t>(offsetof(Exception_t, ___stack_trace_5)); }
+	inline String_t* get_stack_trace_5() const { return ___stack_trace_5; }
+	inline String_t** get_address_of_stack_trace_5() { return &___stack_trace_5; }
+	inline void set_stack_trace_5(String_t* value)
+	{
+		___stack_trace_5 = value;
+		Il2CppCodeGenWriteBarrier((&___stack_trace_5), value);
+	}
+
+	inline static int32_t get_offset_of__remoteStackTraceString_6() { return static_cast<int32_t>(offsetof(Exception_t, ____remoteStackTraceString_6)); }
+	inline String_t* get__remoteStackTraceString_6() const { return ____remoteStackTraceString_6; }
+	inline String_t** get_address_of__remoteStackTraceString_6() { return &____remoteStackTraceString_6; }
+	inline void set__remoteStackTraceString_6(String_t* value)
+	{
+		____remoteStackTraceString_6 = value;
+		Il2CppCodeGenWriteBarrier((&____remoteStackTraceString_6), value);
+	}
+
+	inline static int32_t get_offset_of_remote_stack_index_7() { return static_cast<int32_t>(offsetof(Exception_t, ___remote_stack_index_7)); }
+	inline int32_t get_remote_stack_index_7() const { return ___remote_stack_index_7; }
+	inline int32_t* get_address_of_remote_stack_index_7() { return &___remote_stack_index_7; }
+	inline void set_remote_stack_index_7(int32_t value)
+	{
+		___remote_stack_index_7 = value;
+	}
+
+	inline static int32_t get_offset_of_hresult_8() { return static_cast<int32_t>(offsetof(Exception_t, ___hresult_8)); }
+	inline int32_t get_hresult_8() const { return ___hresult_8; }
+	inline int32_t* get_address_of_hresult_8() { return &___hresult_8; }
+	inline void set_hresult_8(int32_t value)
+	{
+		___hresult_8 = value;
+	}
+
+	inline static int32_t get_offset_of_source_9() { return static_cast<int32_t>(offsetof(Exception_t, ___source_9)); }
+	inline String_t* get_source_9() const { return ___source_9; }
+	inline String_t** get_address_of_source_9() { return &___source_9; }
+	inline void set_source_9(String_t* value)
+	{
+		___source_9 = value;
+		Il2CppCodeGenWriteBarrier((&___source_9), value);
+	}
+
+	inline static int32_t get_offset_of__data_10() { return static_cast<int32_t>(offsetof(Exception_t, ____data_10)); }
+	inline RuntimeObject* get__data_10() const { return ____data_10; }
+	inline RuntimeObject** get_address_of__data_10() { return &____data_10; }
+	inline void set__data_10(RuntimeObject* value)
+	{
+		____data_10 = value;
+		Il2CppCodeGenWriteBarrier((&____data_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // EXCEPTION_T_H
 #ifndef STREAM_T1273022909_H
 #define STREAM_T1273022909_H
 #ifdef __clang__
@@ -11986,78 +12141,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // DONTDESTROYONLOAD_T1456007215_H
-#ifndef DRAWLINE_T3711110361_H
-#define DRAWLINE_T3711110361_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// DrawLine
-struct  DrawLine_t3711110361  : public MonoBehaviour_t3962482529
-{
-public:
-	// System.Single DrawLine::distanceFromCamera
-	float ___distanceFromCamera_4;
-	// UnityEngine.GameObject DrawLine::line
-	GameObject_t1113636619 * ___line_5;
-	// System.Collections.Generic.List`1<UnityEngine.GameObject> DrawLine::linesInScene
-	List_1_t2585711361 * ___linesInScene_6;
-	// UnityEngine.LineRenderer DrawLine::lineRenderer
-	LineRenderer_t3154350270 * ___lineRenderer_7;
-	// System.Int32 DrawLine::index
-	int32_t ___index_8;
-
-public:
-	inline static int32_t get_offset_of_distanceFromCamera_4() { return static_cast<int32_t>(offsetof(DrawLine_t3711110361, ___distanceFromCamera_4)); }
-	inline float get_distanceFromCamera_4() const { return ___distanceFromCamera_4; }
-	inline float* get_address_of_distanceFromCamera_4() { return &___distanceFromCamera_4; }
-	inline void set_distanceFromCamera_4(float value)
-	{
-		___distanceFromCamera_4 = value;
-	}
-
-	inline static int32_t get_offset_of_line_5() { return static_cast<int32_t>(offsetof(DrawLine_t3711110361, ___line_5)); }
-	inline GameObject_t1113636619 * get_line_5() const { return ___line_5; }
-	inline GameObject_t1113636619 ** get_address_of_line_5() { return &___line_5; }
-	inline void set_line_5(GameObject_t1113636619 * value)
-	{
-		___line_5 = value;
-		Il2CppCodeGenWriteBarrier((&___line_5), value);
-	}
-
-	inline static int32_t get_offset_of_linesInScene_6() { return static_cast<int32_t>(offsetof(DrawLine_t3711110361, ___linesInScene_6)); }
-	inline List_1_t2585711361 * get_linesInScene_6() const { return ___linesInScene_6; }
-	inline List_1_t2585711361 ** get_address_of_linesInScene_6() { return &___linesInScene_6; }
-	inline void set_linesInScene_6(List_1_t2585711361 * value)
-	{
-		___linesInScene_6 = value;
-		Il2CppCodeGenWriteBarrier((&___linesInScene_6), value);
-	}
-
-	inline static int32_t get_offset_of_lineRenderer_7() { return static_cast<int32_t>(offsetof(DrawLine_t3711110361, ___lineRenderer_7)); }
-	inline LineRenderer_t3154350270 * get_lineRenderer_7() const { return ___lineRenderer_7; }
-	inline LineRenderer_t3154350270 ** get_address_of_lineRenderer_7() { return &___lineRenderer_7; }
-	inline void set_lineRenderer_7(LineRenderer_t3154350270 * value)
-	{
-		___lineRenderer_7 = value;
-		Il2CppCodeGenWriteBarrier((&___lineRenderer_7), value);
-	}
-
-	inline static int32_t get_offset_of_index_8() { return static_cast<int32_t>(offsetof(DrawLine_t3711110361, ___index_8)); }
-	inline int32_t get_index_8() const { return ___index_8; }
-	inline int32_t* get_address_of_index_8() { return &___index_8; }
-	inline void set_index_8(int32_t value)
-	{
-		___index_8 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // DRAWLINE_T3711110361_H
 #ifndef SAVELOADMANAGER_T4010657880_H
 #define SAVELOADMANAGER_T4010657880_H
 #ifdef __clang__
@@ -12070,83 +12153,28 @@ public:
 struct  SaveLoadManager_t4010657880  : public MonoBehaviour_t3962482529
 {
 public:
-	// UnityEngine.GameObject SaveLoadManager::exploreEnv
-	GameObject_t1113636619 * ___exploreEnv_4;
-	// UnityEngine.GameObject SaveLoadManager::saveDone
-	GameObject_t1113636619 * ___saveDone_5;
 	// UnityEngine.GameObject SaveLoadManager::loadSession
-	GameObject_t1113636619 * ___loadSession_6;
+	GameObject_t1113636619 * ___loadSession_4;
 	// UnityEngine.GameObject SaveLoadManager::contentItem
-	GameObject_t1113636619 * ___contentItem_7;
-	// UnityEngine.GameObject SaveLoadManager::loadDone
-	GameObject_t1113636619 * ___loadDone_8;
-	// UnityEngine.GameObject SaveLoadManager::warningToExplore
-	GameObject_t1113636619 * ___warningToExplore_9;
-	// UnityEngine.Transform SaveLoadManager::canvas
-	Transform_t3600365921 * ___canvas_11;
+	GameObject_t1113636619 * ___contentItem_5;
 
 public:
-	inline static int32_t get_offset_of_exploreEnv_4() { return static_cast<int32_t>(offsetof(SaveLoadManager_t4010657880, ___exploreEnv_4)); }
-	inline GameObject_t1113636619 * get_exploreEnv_4() const { return ___exploreEnv_4; }
-	inline GameObject_t1113636619 ** get_address_of_exploreEnv_4() { return &___exploreEnv_4; }
-	inline void set_exploreEnv_4(GameObject_t1113636619 * value)
+	inline static int32_t get_offset_of_loadSession_4() { return static_cast<int32_t>(offsetof(SaveLoadManager_t4010657880, ___loadSession_4)); }
+	inline GameObject_t1113636619 * get_loadSession_4() const { return ___loadSession_4; }
+	inline GameObject_t1113636619 ** get_address_of_loadSession_4() { return &___loadSession_4; }
+	inline void set_loadSession_4(GameObject_t1113636619 * value)
 	{
-		___exploreEnv_4 = value;
-		Il2CppCodeGenWriteBarrier((&___exploreEnv_4), value);
+		___loadSession_4 = value;
+		Il2CppCodeGenWriteBarrier((&___loadSession_4), value);
 	}
 
-	inline static int32_t get_offset_of_saveDone_5() { return static_cast<int32_t>(offsetof(SaveLoadManager_t4010657880, ___saveDone_5)); }
-	inline GameObject_t1113636619 * get_saveDone_5() const { return ___saveDone_5; }
-	inline GameObject_t1113636619 ** get_address_of_saveDone_5() { return &___saveDone_5; }
-	inline void set_saveDone_5(GameObject_t1113636619 * value)
+	inline static int32_t get_offset_of_contentItem_5() { return static_cast<int32_t>(offsetof(SaveLoadManager_t4010657880, ___contentItem_5)); }
+	inline GameObject_t1113636619 * get_contentItem_5() const { return ___contentItem_5; }
+	inline GameObject_t1113636619 ** get_address_of_contentItem_5() { return &___contentItem_5; }
+	inline void set_contentItem_5(GameObject_t1113636619 * value)
 	{
-		___saveDone_5 = value;
-		Il2CppCodeGenWriteBarrier((&___saveDone_5), value);
-	}
-
-	inline static int32_t get_offset_of_loadSession_6() { return static_cast<int32_t>(offsetof(SaveLoadManager_t4010657880, ___loadSession_6)); }
-	inline GameObject_t1113636619 * get_loadSession_6() const { return ___loadSession_6; }
-	inline GameObject_t1113636619 ** get_address_of_loadSession_6() { return &___loadSession_6; }
-	inline void set_loadSession_6(GameObject_t1113636619 * value)
-	{
-		___loadSession_6 = value;
-		Il2CppCodeGenWriteBarrier((&___loadSession_6), value);
-	}
-
-	inline static int32_t get_offset_of_contentItem_7() { return static_cast<int32_t>(offsetof(SaveLoadManager_t4010657880, ___contentItem_7)); }
-	inline GameObject_t1113636619 * get_contentItem_7() const { return ___contentItem_7; }
-	inline GameObject_t1113636619 ** get_address_of_contentItem_7() { return &___contentItem_7; }
-	inline void set_contentItem_7(GameObject_t1113636619 * value)
-	{
-		___contentItem_7 = value;
-		Il2CppCodeGenWriteBarrier((&___contentItem_7), value);
-	}
-
-	inline static int32_t get_offset_of_loadDone_8() { return static_cast<int32_t>(offsetof(SaveLoadManager_t4010657880, ___loadDone_8)); }
-	inline GameObject_t1113636619 * get_loadDone_8() const { return ___loadDone_8; }
-	inline GameObject_t1113636619 ** get_address_of_loadDone_8() { return &___loadDone_8; }
-	inline void set_loadDone_8(GameObject_t1113636619 * value)
-	{
-		___loadDone_8 = value;
-		Il2CppCodeGenWriteBarrier((&___loadDone_8), value);
-	}
-
-	inline static int32_t get_offset_of_warningToExplore_9() { return static_cast<int32_t>(offsetof(SaveLoadManager_t4010657880, ___warningToExplore_9)); }
-	inline GameObject_t1113636619 * get_warningToExplore_9() const { return ___warningToExplore_9; }
-	inline GameObject_t1113636619 ** get_address_of_warningToExplore_9() { return &___warningToExplore_9; }
-	inline void set_warningToExplore_9(GameObject_t1113636619 * value)
-	{
-		___warningToExplore_9 = value;
-		Il2CppCodeGenWriteBarrier((&___warningToExplore_9), value);
-	}
-
-	inline static int32_t get_offset_of_canvas_11() { return static_cast<int32_t>(offsetof(SaveLoadManager_t4010657880, ___canvas_11)); }
-	inline Transform_t3600365921 * get_canvas_11() const { return ___canvas_11; }
-	inline Transform_t3600365921 ** get_address_of_canvas_11() { return &___canvas_11; }
-	inline void set_canvas_11(Transform_t3600365921 * value)
-	{
-		___canvas_11 = value;
-		Il2CppCodeGenWriteBarrier((&___canvas_11), value);
+		___contentItem_5 = value;
+		Il2CppCodeGenWriteBarrier((&___contentItem_5), value);
 	}
 };
 
@@ -12154,16 +12182,16 @@ struct SaveLoadManager_t4010657880_StaticFields
 {
 public:
 	// UnityEngine.GameObject SaveLoadManager::loadInstance
-	GameObject_t1113636619 * ___loadInstance_10;
+	GameObject_t1113636619 * ___loadInstance_6;
 
 public:
-	inline static int32_t get_offset_of_loadInstance_10() { return static_cast<int32_t>(offsetof(SaveLoadManager_t4010657880_StaticFields, ___loadInstance_10)); }
-	inline GameObject_t1113636619 * get_loadInstance_10() const { return ___loadInstance_10; }
-	inline GameObject_t1113636619 ** get_address_of_loadInstance_10() { return &___loadInstance_10; }
-	inline void set_loadInstance_10(GameObject_t1113636619 * value)
+	inline static int32_t get_offset_of_loadInstance_6() { return static_cast<int32_t>(offsetof(SaveLoadManager_t4010657880_StaticFields, ___loadInstance_6)); }
+	inline GameObject_t1113636619 * get_loadInstance_6() const { return ___loadInstance_6; }
+	inline GameObject_t1113636619 ** get_address_of_loadInstance_6() { return &___loadInstance_6; }
+	inline void set_loadInstance_6(GameObject_t1113636619 * value)
 	{
-		___loadInstance_10 = value;
-		Il2CppCodeGenWriteBarrier((&___loadInstance_10), value);
+		___loadInstance_6 = value;
+		Il2CppCodeGenWriteBarrier((&___loadInstance_6), value);
 	}
 };
 
@@ -13093,6 +13121,113 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // VIDEOFORMATSEXAMPLE_T2303262312_H
+#ifndef WINDOWMANAGER_T1304188793_H
+#define WINDOWMANAGER_T1304188793_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// WindowManager
+struct  WindowManager_t1304188793  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.GameObject WindowManager::askNewDocument
+	GameObject_t1113636619 * ___askNewDocument_4;
+	// UnityEngine.GameObject WindowManager::warningToExplore
+	GameObject_t1113636619 * ___warningToExplore_5;
+	// UnityEngine.GameObject WindowManager::guideToLoad
+	GameObject_t1113636619 * ___guideToLoad_6;
+	// UnityEngine.GameObject WindowManager::exploreEnv
+	GameObject_t1113636619 * ___exploreEnv_7;
+	// UnityEngine.GameObject WindowManager::saveDone
+	GameObject_t1113636619 * ___saveDone_8;
+	// UnityEngine.GameObject WindowManager::loadDone
+	GameObject_t1113636619 * ___loadDone_9;
+	// UnityEngine.GameObject WindowManager::updateDone
+	GameObject_t1113636619 * ___updateDone_10;
+	// UnityEngine.Transform WindowManager::canvas
+	Transform_t3600365921 * ___canvas_11;
+
+public:
+	inline static int32_t get_offset_of_askNewDocument_4() { return static_cast<int32_t>(offsetof(WindowManager_t1304188793, ___askNewDocument_4)); }
+	inline GameObject_t1113636619 * get_askNewDocument_4() const { return ___askNewDocument_4; }
+	inline GameObject_t1113636619 ** get_address_of_askNewDocument_4() { return &___askNewDocument_4; }
+	inline void set_askNewDocument_4(GameObject_t1113636619 * value)
+	{
+		___askNewDocument_4 = value;
+		Il2CppCodeGenWriteBarrier((&___askNewDocument_4), value);
+	}
+
+	inline static int32_t get_offset_of_warningToExplore_5() { return static_cast<int32_t>(offsetof(WindowManager_t1304188793, ___warningToExplore_5)); }
+	inline GameObject_t1113636619 * get_warningToExplore_5() const { return ___warningToExplore_5; }
+	inline GameObject_t1113636619 ** get_address_of_warningToExplore_5() { return &___warningToExplore_5; }
+	inline void set_warningToExplore_5(GameObject_t1113636619 * value)
+	{
+		___warningToExplore_5 = value;
+		Il2CppCodeGenWriteBarrier((&___warningToExplore_5), value);
+	}
+
+	inline static int32_t get_offset_of_guideToLoad_6() { return static_cast<int32_t>(offsetof(WindowManager_t1304188793, ___guideToLoad_6)); }
+	inline GameObject_t1113636619 * get_guideToLoad_6() const { return ___guideToLoad_6; }
+	inline GameObject_t1113636619 ** get_address_of_guideToLoad_6() { return &___guideToLoad_6; }
+	inline void set_guideToLoad_6(GameObject_t1113636619 * value)
+	{
+		___guideToLoad_6 = value;
+		Il2CppCodeGenWriteBarrier((&___guideToLoad_6), value);
+	}
+
+	inline static int32_t get_offset_of_exploreEnv_7() { return static_cast<int32_t>(offsetof(WindowManager_t1304188793, ___exploreEnv_7)); }
+	inline GameObject_t1113636619 * get_exploreEnv_7() const { return ___exploreEnv_7; }
+	inline GameObject_t1113636619 ** get_address_of_exploreEnv_7() { return &___exploreEnv_7; }
+	inline void set_exploreEnv_7(GameObject_t1113636619 * value)
+	{
+		___exploreEnv_7 = value;
+		Il2CppCodeGenWriteBarrier((&___exploreEnv_7), value);
+	}
+
+	inline static int32_t get_offset_of_saveDone_8() { return static_cast<int32_t>(offsetof(WindowManager_t1304188793, ___saveDone_8)); }
+	inline GameObject_t1113636619 * get_saveDone_8() const { return ___saveDone_8; }
+	inline GameObject_t1113636619 ** get_address_of_saveDone_8() { return &___saveDone_8; }
+	inline void set_saveDone_8(GameObject_t1113636619 * value)
+	{
+		___saveDone_8 = value;
+		Il2CppCodeGenWriteBarrier((&___saveDone_8), value);
+	}
+
+	inline static int32_t get_offset_of_loadDone_9() { return static_cast<int32_t>(offsetof(WindowManager_t1304188793, ___loadDone_9)); }
+	inline GameObject_t1113636619 * get_loadDone_9() const { return ___loadDone_9; }
+	inline GameObject_t1113636619 ** get_address_of_loadDone_9() { return &___loadDone_9; }
+	inline void set_loadDone_9(GameObject_t1113636619 * value)
+	{
+		___loadDone_9 = value;
+		Il2CppCodeGenWriteBarrier((&___loadDone_9), value);
+	}
+
+	inline static int32_t get_offset_of_updateDone_10() { return static_cast<int32_t>(offsetof(WindowManager_t1304188793, ___updateDone_10)); }
+	inline GameObject_t1113636619 * get_updateDone_10() const { return ___updateDone_10; }
+	inline GameObject_t1113636619 ** get_address_of_updateDone_10() { return &___updateDone_10; }
+	inline void set_updateDone_10(GameObject_t1113636619 * value)
+	{
+		___updateDone_10 = value;
+		Il2CppCodeGenWriteBarrier((&___updateDone_10), value);
+	}
+
+	inline static int32_t get_offset_of_canvas_11() { return static_cast<int32_t>(offsetof(WindowManager_t1304188793, ___canvas_11)); }
+	inline Transform_t3600365921 * get_canvas_11() const { return ___canvas_11; }
+	inline Transform_t3600365921 ** get_address_of_canvas_11() { return &___canvas_11; }
+	inline void set_canvas_11(Transform_t3600365921 * value)
+	{
+		___canvas_11 = value;
+		Il2CppCodeGenWriteBarrier((&___canvas_11), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // WINDOWMANAGER_T1304188793_H
 #ifndef WORLDMAPMANAGER_T2538599596_H
 #define WORLDMAPMANAGER_T2538599596_H
 #ifdef __clang__
@@ -13111,22 +13246,16 @@ public:
 	GameObject_t1113636619 * ___loadingScreen_5;
 	// UnityEngine.GameObject WorldMapManager::allMaterials
 	GameObject_t1113636619 * ___allMaterials_6;
-	// SaveLoadManager WorldMapManager::saveLoadManager
-	SaveLoadManager_t4010657880 * ___saveLoadManager_7;
+	// WindowManager WorldMapManager::windowManager
+	WindowManager_t1304188793 * ___windowManager_8;
 	// System.Boolean WorldMapManager::relocalizing
-	bool ___relocalizing_8;
-	// System.Single WorldMapManager::delayToLoad
-	float ___delayToLoad_9;
-	// System.String WorldMapManager::loadedWorldMapName
-	String_t* ___loadedWorldMapName_10;
-	// UnityEngine.XR.iOS.serializableARWorldMap WorldMapManager::serializedWorldMap
-	serializableARWorldMap_t2514323794 * ___serializedWorldMap_11;
-	// UnityEngine.XR.iOS.ARWorldMap WorldMapManager::m_LoadedMap
-	ARWorldMap_t2240790807 * ___m_LoadedMap_12;
+	bool ___relocalizing_9;
+	// System.Single WorldMapManager::startTime
+	float ___startTime_10;
 	// UnityEngine.XR.iOS.ARTrackingStateReason WorldMapManager::m_LastReason
-	int32_t ___m_LastReason_13;
+	int32_t ___m_LastReason_11;
 	// UnityEngine.XR.iOS.ARWorldMappingStatus WorldMapManager::lastStatus
-	int32_t ___lastStatus_14;
+	int32_t ___lastStatus_12;
 
 public:
 	inline static int32_t get_offset_of_m_ARCameraManager_4() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___m_ARCameraManager_4)); }
@@ -13156,72 +13285,62 @@ public:
 		Il2CppCodeGenWriteBarrier((&___allMaterials_6), value);
 	}
 
-	inline static int32_t get_offset_of_saveLoadManager_7() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___saveLoadManager_7)); }
-	inline SaveLoadManager_t4010657880 * get_saveLoadManager_7() const { return ___saveLoadManager_7; }
-	inline SaveLoadManager_t4010657880 ** get_address_of_saveLoadManager_7() { return &___saveLoadManager_7; }
-	inline void set_saveLoadManager_7(SaveLoadManager_t4010657880 * value)
+	inline static int32_t get_offset_of_windowManager_8() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___windowManager_8)); }
+	inline WindowManager_t1304188793 * get_windowManager_8() const { return ___windowManager_8; }
+	inline WindowManager_t1304188793 ** get_address_of_windowManager_8() { return &___windowManager_8; }
+	inline void set_windowManager_8(WindowManager_t1304188793 * value)
 	{
-		___saveLoadManager_7 = value;
-		Il2CppCodeGenWriteBarrier((&___saveLoadManager_7), value);
+		___windowManager_8 = value;
+		Il2CppCodeGenWriteBarrier((&___windowManager_8), value);
 	}
 
-	inline static int32_t get_offset_of_relocalizing_8() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___relocalizing_8)); }
-	inline bool get_relocalizing_8() const { return ___relocalizing_8; }
-	inline bool* get_address_of_relocalizing_8() { return &___relocalizing_8; }
-	inline void set_relocalizing_8(bool value)
+	inline static int32_t get_offset_of_relocalizing_9() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___relocalizing_9)); }
+	inline bool get_relocalizing_9() const { return ___relocalizing_9; }
+	inline bool* get_address_of_relocalizing_9() { return &___relocalizing_9; }
+	inline void set_relocalizing_9(bool value)
 	{
-		___relocalizing_8 = value;
+		___relocalizing_9 = value;
 	}
 
-	inline static int32_t get_offset_of_delayToLoad_9() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___delayToLoad_9)); }
-	inline float get_delayToLoad_9() const { return ___delayToLoad_9; }
-	inline float* get_address_of_delayToLoad_9() { return &___delayToLoad_9; }
-	inline void set_delayToLoad_9(float value)
+	inline static int32_t get_offset_of_startTime_10() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___startTime_10)); }
+	inline float get_startTime_10() const { return ___startTime_10; }
+	inline float* get_address_of_startTime_10() { return &___startTime_10; }
+	inline void set_startTime_10(float value)
 	{
-		___delayToLoad_9 = value;
+		___startTime_10 = value;
 	}
 
-	inline static int32_t get_offset_of_loadedWorldMapName_10() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___loadedWorldMapName_10)); }
-	inline String_t* get_loadedWorldMapName_10() const { return ___loadedWorldMapName_10; }
-	inline String_t** get_address_of_loadedWorldMapName_10() { return &___loadedWorldMapName_10; }
-	inline void set_loadedWorldMapName_10(String_t* value)
+	inline static int32_t get_offset_of_m_LastReason_11() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___m_LastReason_11)); }
+	inline int32_t get_m_LastReason_11() const { return ___m_LastReason_11; }
+	inline int32_t* get_address_of_m_LastReason_11() { return &___m_LastReason_11; }
+	inline void set_m_LastReason_11(int32_t value)
 	{
-		___loadedWorldMapName_10 = value;
-		Il2CppCodeGenWriteBarrier((&___loadedWorldMapName_10), value);
+		___m_LastReason_11 = value;
 	}
 
-	inline static int32_t get_offset_of_serializedWorldMap_11() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___serializedWorldMap_11)); }
-	inline serializableARWorldMap_t2514323794 * get_serializedWorldMap_11() const { return ___serializedWorldMap_11; }
-	inline serializableARWorldMap_t2514323794 ** get_address_of_serializedWorldMap_11() { return &___serializedWorldMap_11; }
-	inline void set_serializedWorldMap_11(serializableARWorldMap_t2514323794 * value)
+	inline static int32_t get_offset_of_lastStatus_12() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___lastStatus_12)); }
+	inline int32_t get_lastStatus_12() const { return ___lastStatus_12; }
+	inline int32_t* get_address_of_lastStatus_12() { return &___lastStatus_12; }
+	inline void set_lastStatus_12(int32_t value)
 	{
-		___serializedWorldMap_11 = value;
-		Il2CppCodeGenWriteBarrier((&___serializedWorldMap_11), value);
+		___lastStatus_12 = value;
 	}
+};
 
-	inline static int32_t get_offset_of_m_LoadedMap_12() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___m_LoadedMap_12)); }
-	inline ARWorldMap_t2240790807 * get_m_LoadedMap_12() const { return ___m_LoadedMap_12; }
-	inline ARWorldMap_t2240790807 ** get_address_of_m_LoadedMap_12() { return &___m_LoadedMap_12; }
-	inline void set_m_LoadedMap_12(ARWorldMap_t2240790807 * value)
-	{
-		___m_LoadedMap_12 = value;
-		Il2CppCodeGenWriteBarrier((&___m_LoadedMap_12), value);
-	}
+struct WorldMapManager_t2538599596_StaticFields
+{
+public:
+	// System.String WorldMapManager::loadedWorldMapName
+	String_t* ___loadedWorldMapName_7;
 
-	inline static int32_t get_offset_of_m_LastReason_13() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___m_LastReason_13)); }
-	inline int32_t get_m_LastReason_13() const { return ___m_LastReason_13; }
-	inline int32_t* get_address_of_m_LastReason_13() { return &___m_LastReason_13; }
-	inline void set_m_LastReason_13(int32_t value)
+public:
+	inline static int32_t get_offset_of_loadedWorldMapName_7() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596_StaticFields, ___loadedWorldMapName_7)); }
+	inline String_t* get_loadedWorldMapName_7() const { return ___loadedWorldMapName_7; }
+	inline String_t** get_address_of_loadedWorldMapName_7() { return &___loadedWorldMapName_7; }
+	inline void set_loadedWorldMapName_7(String_t* value)
 	{
-		___m_LastReason_13 = value;
-	}
-
-	inline static int32_t get_offset_of_lastStatus_14() { return static_cast<int32_t>(offsetof(WorldMapManager_t2538599596, ___lastStatus_14)); }
-	inline int32_t get_lastStatus_14() const { return ___lastStatus_14; }
-	inline int32_t* get_address_of_lastStatus_14() { return &___lastStatus_14; }
-	inline void set_lastStatus_14(int32_t value)
-	{
-		___lastStatus_14 = value;
+		___loadedWorldMapName_7 = value;
+		Il2CppCodeGenWriteBarrier((&___loadedWorldMapName_7), value);
 	}
 };
 
@@ -14002,41 +14121,6 @@ public:
 		m_Items[index] = value;
 	}
 };
-// System.Char[]
-struct CharU5BU5D_t3528271667  : public RuntimeArray
-{
-public:
-	ALIGN_FIELD (8) Il2CppChar m_Items[1];
-
-public:
-	inline Il2CppChar GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline Il2CppChar* GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, Il2CppChar value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-	}
-	inline Il2CppChar GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline Il2CppChar* GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, Il2CppChar value)
-	{
-		m_Items[index] = value;
-	}
-};
 // System.String[]
 struct StringU5BU5D_t1281789340  : public RuntimeArray
 {
@@ -14069,6 +14153,43 @@ public:
 		return m_Items + index;
 	}
 	inline void SetAtUnchecked(il2cpp_array_size_t index, String_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// UnityEngine.GameObject[]
+struct GameObjectU5BU5D_t3328599146  : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) GameObject_t1113636619 * m_Items[1];
+
+public:
+	inline GameObject_t1113636619 * GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline GameObject_t1113636619 ** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, GameObject_t1113636619 * value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+	inline GameObject_t1113636619 * GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline GameObject_t1113636619 ** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, GameObject_t1113636619 * value)
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);
@@ -14835,12 +14956,6 @@ extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * Component_get_gameObject_
 extern "C" IL2CPP_METHOD_ATTR UnityARUserAnchorData_t1976826249  UnityARSessionNativeInterface_AddUserAnchorFromGameObject_m3087613556 (UnityARSessionNativeInterface_t3929719369 * __this, GameObject_t1113636619 * ___go0, const RuntimeMethod* method);
 // System.String UnityEngine.XR.iOS.UnityARUserAnchorData::get_identifierStr()
 extern "C" IL2CPP_METHOD_ATTR String_t* UnityARUserAnchorData_get_identifierStr_m122781054 (UnityARUserAnchorData_t1976826249 * __this, const RuntimeMethod* method);
-// System.Void UnityEngine.XR.iOS.UnityARSessionNativeInterface/ARUserAnchorRemoved::.ctor(System.Object,System.IntPtr)
-extern "C" IL2CPP_METHOD_ATTR void ARUserAnchorRemoved__ctor_m586540762 (ARUserAnchorRemoved_t23344545 * __this, RuntimeObject * ___object0, intptr_t ___method1, const RuntimeMethod* method);
-// System.Void UnityEngine.XR.iOS.UnityARSessionNativeInterface::add_ARUserAnchorRemovedEvent(UnityEngine.XR.iOS.UnityARSessionNativeInterface/ARUserAnchorRemoved)
-extern "C" IL2CPP_METHOD_ATTR void UnityARSessionNativeInterface_add_ARUserAnchorRemovedEvent_m3520224501 (RuntimeObject * __this /* static, unused */, ARUserAnchorRemoved_t23344545 * ___value0, const RuntimeMethod* method);
-// System.Boolean System.String::op_Equality(System.String,System.String)
-extern "C" IL2CPP_METHOD_ATTR bool String_op_Equality_m920492651 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
 // UnityEngine.Transform UnityEngine.GameObject::get_transform()
 extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * GameObject_get_transform_m1369836730 (GameObject_t1113636619 * __this, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Transform::get_localScale()
@@ -15205,25 +15320,23 @@ inline void Enumerator_Dispose_m510309855 (Enumerator_t1010806104 * __this, cons
 }
 // System.Boolean UnityEngine.XR.iOS.ARKitWorldTrackingSessionConfiguration::get_IsSupported()
 extern "C" IL2CPP_METHOD_ATTR bool ARKitWorldTrackingSessionConfiguration_get_IsSupported_m4234602811 (ARKitWorldTrackingSessionConfiguration_t273386347 * __this, const RuntimeMethod* method);
+// UnityEngine.GameObject UnityEngine.GameObject::FindGameObjectWithTag(System.String)
+extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * GameObject_FindGameObjectWithTag_m2129039296 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
+// System.Void WindowManager::CheckCanvasTransform()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_CheckCanvasTransform_m2112171164 (WindowManager_t1304188793 * __this, const RuntimeMethod* method);
+// UnityEngine.GameObject WindowManager::SpawnInCanvas(UnityEngine.GameObject)
+extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * WindowManager_SpawnInCanvas_m54798459 (WindowManager_t1304188793 * __this, GameObject_t1113636619 * ___go0, const RuntimeMethod* method);
+// System.Void UnityEngine.Object::Destroy(UnityEngine.Object,System.Single)
+extern "C" IL2CPP_METHOD_ATTR void Object_Destroy_m3118546832 (RuntimeObject * __this /* static, unused */, Object_t631007953 * p0, float p1, const RuntimeMethod* method);
 // UnityEngine.GameObject UnityEngine.GameObject::Find(System.String)
 extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * GameObject_Find_m2032535176 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
-// !!0 UnityEngine.GameObject::GetComponent<SaveLoadManager>()
-inline SaveLoadManager_t4010657880 * GameObject_GetComponent_TisSaveLoadManager_t4010657880_m1117738828 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
+// !!0 UnityEngine.GameObject::GetComponent<WorldMapManager>()
+inline WorldMapManager_t2538599596 * GameObject_GetComponent_TisWorldMapManager_t2538599596_m4094422853 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
 {
-	return ((  SaveLoadManager_t4010657880 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
+	return ((  WorldMapManager_t2538599596 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
 }
-// System.Single UnityEngine.Time::get_deltaTime()
-extern "C" IL2CPP_METHOD_ATTR float Time_get_deltaTime_m372706562 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
-// System.Boolean WorldMapManager::finishedRelocalizing()
-extern "C" IL2CPP_METHOD_ATTR bool WorldMapManager_finishedRelocalizing_m1604053525 (WorldMapManager_t2538599596 * __this, const RuntimeMethod* method);
-// System.Void SaveLoadManager::RelocalizeSuccessful()
-extern "C" IL2CPP_METHOD_ATTR void SaveLoadManager_RelocalizeSuccessful_m2282846343 (SaveLoadManager_t4010657880 * __this, const RuntimeMethod* method);
-// System.Boolean System.String::op_Inequality(System.String,System.String)
-extern "C" IL2CPP_METHOD_ATTR bool String_op_Inequality_m215368492 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
-// System.String[] System.String::Split(System.Char[])
-extern "C" IL2CPP_METHOD_ATTR StringU5BU5D_t1281789340* String_Split_m3646115398 (String_t* __this, CharU5BU5D_t3528271667* p0, const RuntimeMethod* method);
-// System.Void WorldMapManager::LoadLinesFromFile(System.String)
-extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_LoadLinesFromFile_m898967437 (WorldMapManager_t2538599596 * __this, String_t* ___pathText0, const RuntimeMethod* method);
+// System.Void WorldMapManager::SaveAnyway()
+extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_SaveAnyway_m3407925849 (WorldMapManager_t2538599596 * __this, const RuntimeMethod* method);
 // System.DateTime System.DateTime::get_Now()
 extern "C" IL2CPP_METHOD_ATTR DateTime_t3738529785  DateTime_get_Now_m1277138875 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.String System.DateTime::ToString(System.String)
@@ -15238,14 +15351,32 @@ extern "C" IL2CPP_METHOD_ATTR int32_t DateTime_get_Minute_m87527789 (DateTime_t3
 extern "C" IL2CPP_METHOD_ATTR int32_t DateTime_get_Second_m2686182256 (DateTime_t3738529785 * __this, const RuntimeMethod* method);
 // System.String System.String::Concat(System.String[])
 extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m1809518182 (RuntimeObject * __this /* static, unused */, StringU5BU5D_t1281789340* p0, const RuntimeMethod* method);
-// System.Boolean SaveLoadManager::CanSave(UnityEngine.XR.iOS.ARTrackingStateReason,UnityEngine.XR.iOS.ARWorldMappingStatus)
-extern "C" IL2CPP_METHOD_ATTR bool SaveLoadManager_CanSave_m298016875 (SaveLoadManager_t4010657880 * __this, int32_t ___reason0, int32_t ___status1, const RuntimeMethod* method);
-// System.String UnityEngine.PlayerPrefs::GetString(System.String,System.String)
-extern "C" IL2CPP_METHOD_ATTR String_t* PlayerPrefs_GetString_m614532710 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
-// System.Void UnityEngine.PlayerPrefs::SetString(System.String,System.String)
-extern "C" IL2CPP_METHOD_ATTR void PlayerPrefs_SetString_m2101271233 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
-// System.Void SaveLoadManager::SpawnWarningToExplore()
-extern "C" IL2CPP_METHOD_ATTR void SaveLoadManager_SpawnWarningToExplore_m1369036446 (SaveLoadManager_t4010657880 * __this, const RuntimeMethod* method);
+// !!0 UnityEngine.GameObject::GetComponent<WindowManager>()
+inline WindowManager_t1304188793 * GameObject_GetComponent_TisWindowManager_t1304188793_m4098762704 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
+{
+	return ((  WindowManager_t1304188793 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
+}
+// System.Boolean WorldMapManager::finishedRelocalizing()
+extern "C" IL2CPP_METHOD_ATTR bool WorldMapManager_finishedRelocalizing_m1604053525 (WorldMapManager_t2538599596 * __this, const RuntimeMethod* method);
+// System.Single UnityEngine.Time::get_time()
+extern "C" IL2CPP_METHOD_ATTR float Time_get_time_m2907476221 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+// System.Void WindowManager::RelocalizeSuccessful()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_RelocalizeSuccessful_m2124409283 (WindowManager_t1304188793 * __this, const RuntimeMethod* method);
+// System.Boolean System.String::op_Inequality(System.String,System.String)
+extern "C" IL2CPP_METHOD_ATTR bool String_op_Inequality_m215368492 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
+// System.Void WorldMapManager::LoadLinesFromFile(System.String)
+extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_LoadLinesFromFile_m898967437 (WorldMapManager_t2538599596 * __this, String_t* ___pathText0, const RuntimeMethod* method);
+// !!0 UnityEngine.GameObject::GetComponent<SaveLoadManager>()
+inline SaveLoadManager_t4010657880 * GameObject_GetComponent_TisSaveLoadManager_t4010657880_m1117738828 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
+{
+	return ((  SaveLoadManager_t4010657880 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
+}
+// System.Boolean SaveLoadManager::CanSave(UnityEngine.XR.iOS.ARWorldMappingStatus)
+extern "C" IL2CPP_METHOD_ATTR bool SaveLoadManager_CanSave_m3299033638 (SaveLoadManager_t4010657880 * __this, int32_t ___status0, const RuntimeMethod* method);
+// System.Void WindowManager::SpawnWarningToExplore()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_SpawnWarningToExplore_m4111473343 (WindowManager_t1304188793 * __this, const RuntimeMethod* method);
+// System.Void WindowManager::SpawnExploreEnvironment()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_SpawnExploreEnvironment_m4030748144 (WindowManager_t1304188793 * __this, const RuntimeMethod* method);
 // UnityEngine.XR.iOS.UnityARSessionNativeInterface WorldMapManager::get_session()
 extern "C" IL2CPP_METHOD_ATTR UnityARSessionNativeInterface_t3929719369 * WorldMapManager_get_session_m4054597902 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Void System.Action`1<UnityEngine.XR.iOS.ARWorldMap>::.ctor(System.Object,System.IntPtr)
@@ -15255,6 +15386,8 @@ inline void Action_1__ctor_m941087542 (Action_1_t2413258402 * __this, RuntimeObj
 }
 // System.Void UnityEngine.XR.iOS.UnityARSessionNativeInterface::GetCurrentWorldMapAsync(System.Action`1<UnityEngine.XR.iOS.ARWorldMap>)
 extern "C" IL2CPP_METHOD_ATTR void UnityARSessionNativeInterface_GetCurrentWorldMapAsync_m1688705226 (UnityARSessionNativeInterface_t3929719369 * __this, Action_1_t2413258402 * ___completionCallback0, const RuntimeMethod* method);
+// System.Boolean System.String::op_Equality(System.String,System.String)
+extern "C" IL2CPP_METHOD_ATTR bool String_op_Equality_m920492651 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
 // System.String WorldMapManager::GetFileName()
 extern "C" IL2CPP_METHOD_ATTR String_t* WorldMapManager_GetFileName_m3759558755 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.String UnityEngine.Application::get_persistentDataPath()
@@ -15265,22 +15398,20 @@ extern "C" IL2CPP_METHOD_ATTR String_t* Path_Combine_m3389272516 (RuntimeObject 
 extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_SaveLinesInScene_m817905919 (WorldMapManager_t2538599596 * __this, String_t* ___fileName0, const RuntimeMethod* method);
 // System.Boolean UnityEngine.XR.iOS.ARWorldMap::Save(System.String)
 extern "C" IL2CPP_METHOD_ATTR bool ARWorldMap_Save_m696239647 (ARWorldMap_t2240790807 * __this, String_t* ___path0, const RuntimeMethod* method);
+// System.String UnityEngine.PlayerPrefs::GetString(System.String,System.String)
+extern "C" IL2CPP_METHOD_ATTR String_t* PlayerPrefs_GetString_m614532710 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
 // System.String System.String::Concat(System.Object,System.Object,System.Object)
 extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m1715369213 (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, RuntimeObject * p1, RuntimeObject * p2, const RuntimeMethod* method);
-// System.Void SaveLoadManager::SaveSuccessful()
-extern "C" IL2CPP_METHOD_ATTR void SaveLoadManager_SaveSuccessful_m3802216688 (SaveLoadManager_t4010657880 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.PlayerPrefs::SetString(System.String,System.String)
+extern "C" IL2CPP_METHOD_ATTR void PlayerPrefs_SetString_m2101271233 (RuntimeObject * __this /* static, unused */, String_t* p0, String_t* p1, const RuntimeMethod* method);
+// System.Void WindowManager::SaveSuccessful()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_SaveSuccessful_m239911447 (WindowManager_t1304188793 * __this, const RuntimeMethod* method);
+// System.Void WindowManager::UpdateSuccessful()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_UpdateSuccessful_m3367646750 (WindowManager_t1304188793 * __this, const RuntimeMethod* method);
 // System.IO.FileStream System.IO.File::Open(System.String,System.IO.FileMode)
 extern "C" IL2CPP_METHOD_ATTR FileStream_t4292183065 * File_Open_m664439378 (RuntimeObject * __this /* static, unused */, String_t* p0, int32_t p1, const RuntimeMethod* method);
-// !!0 UnityEngine.GameObject::GetComponent<DrawLine>()
-inline DrawLine_t3711110361 * GameObject_GetComponent_TisDrawLine_t3711110361_m94459780 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
-{
-	return ((  DrawLine_t3711110361 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
-}
-// System.Int32 System.Collections.Generic.List`1<UnityEngine.GameObject>::get_Count()
-inline int32_t List_1_get_Count_m2812834599 (List_1_t2585711361 * __this, const RuntimeMethod* method)
-{
-	return ((  int32_t (*) (List_1_t2585711361 *, const RuntimeMethod*))List_1_get_Count_m2934127733_gshared)(__this, method);
-}
+// UnityEngine.GameObject[] UnityEngine.GameObject::FindGameObjectsWithTag(System.String)
+extern "C" IL2CPP_METHOD_ATTR GameObjectU5BU5D_t3328599146* GameObject_FindGameObjectsWithTag_m2585173894 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
 // System.Void LineRendererData::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void LineRendererData__ctor_m2544541233 (LineRendererData_t2483329549 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<SingleLineRendererData>::.ctor()
@@ -15304,6 +15435,18 @@ inline void List_1_Add_m788545020 (List_1_t60975514 * __this, SingleLineRenderer
 {
 	((  void (*) (List_1_t60975514 *, SingleLineRendererData_t2883868068 *, const RuntimeMethod*))List_1_Add_m3338814081_gshared)(__this, p0, method);
 }
+// System.Int32 System.Collections.Generic.List`1<SingleLineRendererData>::get_Count()
+inline int32_t List_1_get_Count_m321283854 (List_1_t60975514 * __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (List_1_t60975514 *, const RuntimeMethod*))List_1_get_Count_m2934127733_gshared)(__this, method);
+}
+// !!0 UnityEngine.GameObject::GetComponent<UpdateWorldMappingStatus>()
+inline UpdateWorldMappingStatus_t2738391865 * GameObject_GetComponent_TisUpdateWorldMappingStatus_t2738391865_m1586204052 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
+{
+	return ((  UpdateWorldMappingStatus_t2738391865 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
+}
+// System.Void UpdateWorldMappingStatus::ChangeTextTo(System.String)
+extern "C" IL2CPP_METHOD_ATTR void UpdateWorldMappingStatus_ChangeTextTo_m1464168588 (UpdateWorldMappingStatus_t2738391865 * __this, String_t* ___txt0, const RuntimeMethod* method);
 // System.Void SingleLineRendererData::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void SingleLineRendererData__ctor_m828546693 (SingleLineRendererData_t2883868068 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<Vector3Ser>::.ctor()
@@ -15387,6 +15530,8 @@ extern "C" IL2CPP_METHOD_ATTR QuaternionSer_t4279557438 * SingleLineRendererData
 extern "C" IL2CPP_METHOD_ATTR Quaternion_t2301928331  QuaternionSer_op_Implicit_m2344099152 (RuntimeObject * __this /* static, unused */, QuaternionSer_t4279557438 * ___rValue0, const RuntimeMethod* method);
 // Vector3Ser SingleLineRendererData::get_scale()
 extern "C" IL2CPP_METHOD_ATTR Vector3Ser_t2557195495 * SingleLineRendererData_get_scale_m3188061261 (SingleLineRendererData_t2883868068 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.GameObject::set_tag(System.String)
+extern "C" IL2CPP_METHOD_ATTR void GameObject_set_tag_m2353670106 (GameObject_t1113636619 * __this, String_t* p0, const RuntimeMethod* method);
 // !!0 UnityEngine.GameObject::AddComponent<UnityEngine.LineRenderer>()
 inline LineRenderer_t3154350270 * GameObject_AddComponent_TisLineRenderer_t3154350270_m2920077551 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
 {
@@ -15460,12 +15605,8 @@ inline void Enumerator_Dispose_m671822350 (Enumerator_t1950219391 * __this, cons
 }
 // UnityEngine.XR.iOS.ARWorldMap UnityEngine.XR.iOS.ARWorldMap::Load(System.String)
 extern "C" IL2CPP_METHOD_ATTR ARWorldMap_t2240790807 * ARWorldMap_Load_m229573624 (RuntimeObject * __this /* static, unused */, String_t* ___path0, const RuntimeMethod* method);
-// UnityEngine.Vector3 UnityEngine.XR.iOS.ARWorldMap::get_center()
-extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  ARWorldMap_get_center_m2261591742 (ARWorldMap_t2240790807 * __this, const RuntimeMethod* method);
-// UnityEngine.Vector3 UnityEngine.XR.iOS.ARWorldMap::get_extent()
-extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  ARWorldMap_get_extent_m815776976 (ARWorldMap_t2240790807 * __this, const RuntimeMethod* method);
-// System.Void UnityEngine.Debug::LogFormat(System.String,System.Object[])
-extern "C" IL2CPP_METHOD_ATTR void Debug_LogFormat_m309087137 (RuntimeObject * __this /* static, unused */, String_t* p0, ObjectU5BU5D_t2843939325* p1, const RuntimeMethod* method);
+// System.Void WindowManager::SpawnGuideToLoad()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_SpawnGuideToLoad_m2266493816 (WindowManager_t1304188793 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.XR.iOS.UnityARSessionNativeInterface::set_ARSessionShouldAttemptRelocalization(System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void UnityARSessionNativeInterface_set_ARSessionShouldAttemptRelocalization_m3516918436 (RuntimeObject * __this /* static, unused */, bool ___value0, const RuntimeMethod* method);
 // UnityEngine.XR.iOS.ARKitWorldTrackingSessionConfiguration UnityARCameraManager::get_sessionConfiguration()
@@ -28117,48 +28258,6 @@ extern "C" IL2CPP_METHOD_ATTR void UnityARUserAnchorComponent_Start_m756554043 (
 		// m_AnchorId = anchor.identifierStr;
 		String_t* L_3 = UnityARUserAnchorData_get_identifierStr_m122781054((UnityARUserAnchorData_t1976826249 *)(&V_0), /*hidden argument*/NULL);
 		__this->set_m_AnchorId_4(L_3);
-		// UnityARSessionNativeInterface.ARUserAnchorRemovedEvent += RemoveAnchor;
-		intptr_t L_4 = (intptr_t)UnityARUserAnchorComponent_RemoveAnchor_m967835569_RuntimeMethod_var;
-		ARUserAnchorRemoved_t23344545 * L_5 = (ARUserAnchorRemoved_t23344545 *)il2cpp_codegen_object_new(ARUserAnchorRemoved_t23344545_il2cpp_TypeInfo_var);
-		ARUserAnchorRemoved__ctor_m586540762(L_5, __this, L_4, /*hidden argument*/NULL);
-		// UnityARSessionNativeInterface.ARUserAnchorRemovedEvent += RemoveAnchor;
-		UnityARSessionNativeInterface_add_ARUserAnchorRemovedEvent_m3520224501(NULL /*static, unused*/, L_5, /*hidden argument*/NULL);
-		// }
-		return;
-	}
-}
-// System.Void UnityEngine.XR.iOS.UnityARUserAnchorComponent::RemoveAnchor(UnityEngine.XR.iOS.ARUserAnchor)
-extern "C" IL2CPP_METHOD_ATTR void UnityARUserAnchorComponent_RemoveAnchor_m967835569 (UnityARUserAnchorComponent_t969893952 * __this, ARUserAnchor_t1406831531  ___anchor0, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (UnityARUserAnchorComponent_RemoveAnchor_m967835569_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// if(anchor.identifier == m_AnchorId)
-		String_t* L_0 = (&___anchor0)->get_identifier_0();
-		String_t* L_1 = __this->get_m_AnchorId_4();
-		// if(anchor.identifier == m_AnchorId)
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		bool L_2 = String_op_Equality_m920492651(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		if (!L_2)
-		{
-			goto IL_0023;
-		}
-	}
-	{
-		// Destroy(gameObject);
-		// Destroy(gameObject);
-		GameObject_t1113636619 * L_3 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
-		// Destroy(gameObject);
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		Object_Destroy_m565254235(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
-	}
-
-IL_0023:
-	{
 		// }
 		return;
 	}
@@ -33035,104 +33134,131 @@ extern "C" IL2CPP_METHOD_ATTR void UpdateWorldMappingStatus_CheckWorldMapStatus_
 		// text.text = "Ready to Save";
 		NullCheck(L_1);
 		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_1, _stringLiteral2625448996);
-		goto IL_0033;
+		goto IL_0061;
 	}
 
 IL_0023:
 	{
-		// text.text = "Exploring Surroundings";
-		Text_t1901882714 * L_2 = __this->get_text_4();
-		// text.text = "Exploring Surroundings";
-		NullCheck(L_2);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_2, _stringLiteral2563506616);
+		// else if (cam.worldMappingStatus == ARWorldMappingStatus.ARWorldMappingStatusNotAvailable || cam.worldMappingStatus == ARWorldMappingStatus.ARWorldMappingStatusLimited)
+		int32_t L_2 = (&___cam0)->get_worldMappingStatus_8();
+		if (!L_2)
+		{
+			goto IL_003c;
+		}
 	}
-
-IL_0033:
 	{
-		// if (cam.trackingState == ARTrackingState.ARTrackingStateLimited)
-		int32_t L_3 = (&___cam0)->get_trackingState_2();
+		int32_t L_3 = (&___cam0)->get_worldMappingStatus_8();
 		if ((!(((uint32_t)L_3) == ((uint32_t)1))))
 		{
-			goto IL_00bd;
+			goto IL_0051;
+		}
+	}
+
+IL_003c:
+	{
+		// text.text = "Not available";
+		Text_t1901882714 * L_4 = __this->get_text_4();
+		// text.text = "Not available";
+		NullCheck(L_4);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_4, _stringLiteral2660018904);
+		goto IL_0061;
+	}
+
+IL_0051:
+	{
+		// text.text = "Exploring Surroundings";
+		Text_t1901882714 * L_5 = __this->get_text_4();
+		// text.text = "Exploring Surroundings";
+		NullCheck(L_5);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_5, _stringLiteral2563506616);
+	}
+
+IL_0061:
+	{
+		// if (cam.trackingState == ARTrackingState.ARTrackingStateLimited)
+		int32_t L_6 = (&___cam0)->get_trackingState_2();
+		if ((!(((uint32_t)L_6) == ((uint32_t)1))))
+		{
+			goto IL_00eb;
 		}
 	}
 	{
 		// if (cam.trackingReason == ARTrackingStateReason.ARTrackingStateReasonExcessiveMotion)
-		int32_t L_4 = (&___cam0)->get_trackingReason_3();
-		if ((!(((uint32_t)L_4) == ((uint32_t)2))))
+		int32_t L_7 = (&___cam0)->get_trackingReason_3();
+		if ((!(((uint32_t)L_7) == ((uint32_t)2))))
 		{
-			goto IL_0063;
+			goto IL_0091;
 		}
 	}
 	{
 		// tracking.text = "Too much motion";
-		Text_t1901882714 * L_5 = __this->get_tracking_5();
+		Text_t1901882714 * L_8 = __this->get_tracking_5();
 		// tracking.text = "Too much motion";
-		NullCheck(L_5);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_5, _stringLiteral2141794953);
-		goto IL_00b7;
+		NullCheck(L_8);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_8, _stringLiteral2141794953);
+		goto IL_00e5;
 	}
 
-IL_0063:
+IL_0091:
 	{
 		// else if (cam.trackingReason == ARTrackingStateReason.ARTrackingStateReasonInsufficientFeatures)
-		int32_t L_6 = (&___cam0)->get_trackingReason_3();
-		if ((!(((uint32_t)L_6) == ((uint32_t)3))))
+		int32_t L_9 = (&___cam0)->get_trackingReason_3();
+		if ((!(((uint32_t)L_9) == ((uint32_t)3))))
 		{
-			goto IL_0085;
+			goto IL_00b3;
 		}
 	}
 	{
 		// tracking.text = "Not enough features";
-		Text_t1901882714 * L_7 = __this->get_tracking_5();
+		Text_t1901882714 * L_10 = __this->get_tracking_5();
 		// tracking.text = "Not enough features";
-		NullCheck(L_7);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_7, _stringLiteral158429674);
-		goto IL_00b7;
+		NullCheck(L_10);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_10, _stringLiteral158429674);
+		goto IL_00e5;
 	}
 
-IL_0085:
+IL_00b3:
 	{
 		// else if (cam.trackingReason == ARTrackingStateReason.ARTrackingStateReasonRelocalizing)
-		int32_t L_8 = (&___cam0)->get_trackingReason_3();
-		if ((!(((uint32_t)L_8) == ((uint32_t)4))))
+		int32_t L_11 = (&___cam0)->get_trackingReason_3();
+		if ((!(((uint32_t)L_11) == ((uint32_t)4))))
 		{
-			goto IL_00a7;
+			goto IL_00d5;
 		}
 	}
 	{
-		// tracking.text = "Relocalizing";
-		Text_t1901882714 * L_9 = __this->get_tracking_5();
-		// tracking.text = "Relocalizing";
-		NullCheck(L_9);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_9, _stringLiteral2023251955);
-		goto IL_00b7;
+		// tracking.text = "Searching...";
+		Text_t1901882714 * L_12 = __this->get_tracking_5();
+		// tracking.text = "Searching...";
+		NullCheck(L_12);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_12, _stringLiteral950268370);
+		goto IL_00e5;
 	}
 
-IL_00a7:
+IL_00d5:
 	{
 		// tracking.text = "";
-		Text_t1901882714 * L_10 = __this->get_tracking_5();
+		Text_t1901882714 * L_13 = __this->get_tracking_5();
 		// tracking.text = "";
-		NullCheck(L_10);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_10, _stringLiteral757602046);
+		NullCheck(L_13);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_13, _stringLiteral757602046);
 	}
 
-IL_00b7:
+IL_00e5:
 	{
-		goto IL_00cd;
+		goto IL_00fb;
 	}
 
-IL_00bd:
+IL_00eb:
 	{
 		// tracking.text = "";
-		Text_t1901882714 * L_11 = __this->get_tracking_5();
+		Text_t1901882714 * L_14 = __this->get_tracking_5();
 		// tracking.text = "";
-		NullCheck(L_11);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_11, _stringLiteral757602046);
+		NullCheck(L_14);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_14, _stringLiteral757602046);
 	}
 
-IL_00cd:
+IL_00fb:
 	{
 		// }
 		return;
@@ -33878,16 +34004,295 @@ IL_0069:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void WindowManager::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager__ctor_m2825114314 (WindowManager_t1304188793 * __this, const RuntimeMethod* method)
+{
+	{
+		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void WindowManager::Awake()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_Awake_m2702222266 (WindowManager_t1304188793 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WindowManager_Awake_m2702222266_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// canvas = GameObject.FindGameObjectWithTag("Canvas").transform;
+		// canvas = GameObject.FindGameObjectWithTag("Canvas").transform;
+		GameObject_t1113636619 * L_0 = GameObject_FindGameObjectWithTag_m2129039296(NULL /*static, unused*/, _stringLiteral2323074440, /*hidden argument*/NULL);
+		// canvas = GameObject.FindGameObjectWithTag("Canvas").transform;
+		NullCheck(L_0);
+		Transform_t3600365921 * L_1 = GameObject_get_transform_m1369836730(L_0, /*hidden argument*/NULL);
+		__this->set_canvas_11(L_1);
+		// }
+		return;
+	}
+}
+// System.Void WindowManager::CheckCanvasTransform()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_CheckCanvasTransform_m2112171164 (WindowManager_t1304188793 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WindowManager_CheckCanvasTransform_m2112171164_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if(canvas == null)
+		Transform_t3600365921 * L_0 = __this->get_canvas_11();
+		// if(canvas == null)
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_1 = Object_op_Equality_m1810815630(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_0027;
+		}
+	}
+	{
+		// canvas = GameObject.FindGameObjectWithTag("Canvas").transform;
+		// canvas = GameObject.FindGameObjectWithTag("Canvas").transform;
+		GameObject_t1113636619 * L_2 = GameObject_FindGameObjectWithTag_m2129039296(NULL /*static, unused*/, _stringLiteral2323074440, /*hidden argument*/NULL);
+		// canvas = GameObject.FindGameObjectWithTag("Canvas").transform;
+		NullCheck(L_2);
+		Transform_t3600365921 * L_3 = GameObject_get_transform_m1369836730(L_2, /*hidden argument*/NULL);
+		__this->set_canvas_11(L_3);
+	}
+
+IL_0027:
+	{
+		// }
+		return;
+	}
+}
+// UnityEngine.GameObject WindowManager::SpawnInCanvas(UnityEngine.GameObject)
+extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * WindowManager_SpawnInCanvas_m54798459 (WindowManager_t1304188793 * __this, GameObject_t1113636619 * ___go0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WindowManager_SpawnInCanvas_m54798459_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	GameObject_t1113636619 * V_0 = NULL;
+	{
+		// CheckCanvasTransform();
+		// CheckCanvasTransform();
+		WindowManager_CheckCanvasTransform_m2112171164(__this, /*hidden argument*/NULL);
+		// return Instantiate(go, canvas);
+		GameObject_t1113636619 * L_0 = ___go0;
+		Transform_t3600365921 * L_1 = __this->get_canvas_11();
+		// return Instantiate(go, canvas);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		GameObject_t1113636619 * L_2 = Object_Instantiate_TisGameObject_t1113636619_m3215236302(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3215236302_RuntimeMethod_var);
+		V_0 = L_2;
+		goto IL_0019;
+	}
+
+IL_0019:
+	{
+		// }
+		GameObject_t1113636619 * L_3 = V_0;
+		return L_3;
+	}
+}
+// System.Void WindowManager::SaveSuccessful()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_SaveSuccessful_m239911447 (WindowManager_t1304188793 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WindowManager_SaveSuccessful_m239911447_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// Destroy(SpawnInCanvas(saveDone), 3f);
+		GameObject_t1113636619 * L_0 = __this->get_saveDone_8();
+		// Destroy(SpawnInCanvas(saveDone), 3f);
+		GameObject_t1113636619 * L_1 = WindowManager_SpawnInCanvas_m54798459(__this, L_0, /*hidden argument*/NULL);
+		// Destroy(SpawnInCanvas(saveDone), 3f);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_Destroy_m3118546832(NULL /*static, unused*/, L_1, (3.0f), /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void WindowManager::UpdateSuccessful()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_UpdateSuccessful_m3367646750 (WindowManager_t1304188793 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WindowManager_UpdateSuccessful_m3367646750_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// Destroy(SpawnInCanvas(updateDone), 3f);
+		GameObject_t1113636619 * L_0 = __this->get_updateDone_10();
+		// Destroy(SpawnInCanvas(updateDone), 3f);
+		GameObject_t1113636619 * L_1 = WindowManager_SpawnInCanvas_m54798459(__this, L_0, /*hidden argument*/NULL);
+		// Destroy(SpawnInCanvas(updateDone), 3f);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_Destroy_m3118546832(NULL /*static, unused*/, L_1, (3.0f), /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void WindowManager::RelocalizeSuccessful()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_RelocalizeSuccessful_m2124409283 (WindowManager_t1304188793 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WindowManager_RelocalizeSuccessful_m2124409283_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// Destroy(SpawnInCanvas(loadDone), 3f);
+		GameObject_t1113636619 * L_0 = __this->get_loadDone_9();
+		// Destroy(SpawnInCanvas(loadDone), 3f);
+		GameObject_t1113636619 * L_1 = WindowManager_SpawnInCanvas_m54798459(__this, L_0, /*hidden argument*/NULL);
+		// Destroy(SpawnInCanvas(loadDone), 3f);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_Destroy_m3118546832(NULL /*static, unused*/, L_1, (3.0f), /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void WindowManager::SpawnExploreEnvironment()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_SpawnExploreEnvironment_m4030748144 (WindowManager_t1304188793 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WindowManager_SpawnExploreEnvironment_m4030748144_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// Destroy(SpawnInCanvas(exploreEnv), 4f);
+		GameObject_t1113636619 * L_0 = __this->get_exploreEnv_7();
+		// Destroy(SpawnInCanvas(exploreEnv), 4f);
+		GameObject_t1113636619 * L_1 = WindowManager_SpawnInCanvas_m54798459(__this, L_0, /*hidden argument*/NULL);
+		// Destroy(SpawnInCanvas(exploreEnv), 4f);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_Destroy_m3118546832(NULL /*static, unused*/, L_1, (4.0f), /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void WindowManager::SpawnWarningToExplore()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_SpawnWarningToExplore_m4111473343 (WindowManager_t1304188793 * __this, const RuntimeMethod* method)
+{
+	{
+		// SpawnInCanvas(warningToExplore);
+		GameObject_t1113636619 * L_0 = __this->get_warningToExplore_5();
+		// SpawnInCanvas(warningToExplore);
+		WindowManager_SpawnInCanvas_m54798459(__this, L_0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void WindowManager::SpawnGuideToLoad()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_SpawnGuideToLoad_m2266493816 (WindowManager_t1304188793 * __this, const RuntimeMethod* method)
+{
+	{
+		// SpawnInCanvas(guideToLoad);
+		GameObject_t1113636619 * L_0 = __this->get_guideToLoad_6();
+		// SpawnInCanvas(guideToLoad);
+		WindowManager_SpawnInCanvas_m54798459(__this, L_0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void WindowManager::SpawnAskToRestartDocument()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_SpawnAskToRestartDocument_m537368721 (WindowManager_t1304188793 * __this, const RuntimeMethod* method)
+{
+	{
+		// SpawnInCanvas(askNewDocument);
+		GameObject_t1113636619 * L_0 = __this->get_askNewDocument_4();
+		// SpawnInCanvas(askNewDocument);
+		WindowManager_SpawnInCanvas_m54798459(__this, L_0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void WindowManager::SaveFromWindow()
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_SaveFromWindow_m3890900149 (WindowManager_t1304188793 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WindowManager_SaveFromWindow_m3890900149_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	WorldMapManager_t2538599596 * V_0 = NULL;
+	{
+		// WorldMapManager manager = GameObject.Find("WorldMapManager").GetComponent<WorldMapManager>();
+		// WorldMapManager manager = GameObject.Find("WorldMapManager").GetComponent<WorldMapManager>();
+		GameObject_t1113636619 * L_0 = GameObject_Find_m2032535176(NULL /*static, unused*/, _stringLiteral1533775202, /*hidden argument*/NULL);
+		// WorldMapManager manager = GameObject.Find("WorldMapManager").GetComponent<WorldMapManager>();
+		NullCheck(L_0);
+		WorldMapManager_t2538599596 * L_1 = GameObject_GetComponent_TisWorldMapManager_t2538599596_m4094422853(L_0, /*hidden argument*/GameObject_GetComponent_TisWorldMapManager_t2538599596_m4094422853_RuntimeMethod_var);
+		V_0 = L_1;
+		// if(manager != null)
+		WorldMapManager_t2538599596 * L_2 = V_0;
+		// if(manager != null)
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_3 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_2, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_3)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		// manager.SaveAnyway();
+		WorldMapManager_t2538599596 * L_4 = V_0;
+		// manager.SaveAnyway();
+		NullCheck(L_4);
+		WorldMapManager_SaveAnyway_m3407925849(L_4, /*hidden argument*/NULL);
+	}
+
+IL_0023:
+	{
+		// }
+		return;
+	}
+}
+// System.Void WindowManager::DestroyWindow(UnityEngine.GameObject)
+extern "C" IL2CPP_METHOD_ATTR void WindowManager_DestroyWindow_m1227835643 (WindowManager_t1304188793 * __this, GameObject_t1113636619 * ___go0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WindowManager_DestroyWindow_m1227835643_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// Destroy(go);
+		GameObject_t1113636619 * L_0 = ___go0;
+		// Destroy(go);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_Destroy_m565254235(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void WorldMapManager::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void WorldMapManager__ctor_m4129481033 (WorldMapManager_t2538599596 * __this, const RuntimeMethod* method)
 {
 	{
-		// [SerializeField] UnityARCameraManager m_ARCameraManager = null;
-		__this->set_m_ARCameraManager_4((UnityARCameraManager_t4002280589 *)NULL);
-		// [SerializeField] GameObject loadingScreen = null;
-		__this->set_loadingScreen_5((GameObject_t1113636619 *)NULL);
-		// [SerializeField] GameObject allMaterials = null;
-		__this->set_allMaterials_6((GameObject_t1113636619 *)NULL);
 		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -33917,6 +34322,91 @@ IL_000c:
 		return L_1;
 	}
 }
+// System.String WorldMapManager::GetFileName()
+extern "C" IL2CPP_METHOD_ATTR String_t* WorldMapManager_GetFileName_m3759558755 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WorldMapManager_GetFileName_m3759558755_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	DateTime_t3738529785  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	String_t* V_1 = NULL;
+	int32_t V_2 = 0;
+	int32_t V_3 = 0;
+	int32_t V_4 = 0;
+	String_t* V_5 = NULL;
+	{
+		// DateTime dt = DateTime.Now;
+		IL2CPP_RUNTIME_CLASS_INIT(DateTime_t3738529785_il2cpp_TypeInfo_var);
+		DateTime_t3738529785  L_0 = DateTime_get_Now_m1277138875(NULL /*static, unused*/, /*hidden argument*/NULL);
+		V_0 = L_0;
+		// string pathToSave = string.Concat(dt.ToString("MMM dd"), "  ", dt.Hour.ToString(), ":", dt.Minute.ToString(), ":", dt.Second.ToString());
+		StringU5BU5D_t1281789340* L_1 = (StringU5BU5D_t1281789340*)SZArrayNew(StringU5BU5D_t1281789340_il2cpp_TypeInfo_var, (uint32_t)7);
+		StringU5BU5D_t1281789340* L_2 = L_1;
+		// string pathToSave = string.Concat(dt.ToString("MMM dd"), "  ", dt.Hour.ToString(), ":", dt.Minute.ToString(), ":", dt.Second.ToString());
+		String_t* L_3 = DateTime_ToString_m3718521780((DateTime_t3738529785 *)(&V_0), _stringLiteral1273382550, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, L_3);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_3);
+		StringU5BU5D_t1281789340* L_4 = L_2;
+		NullCheck(L_4);
+		ArrayElementTypeCheck (L_4, _stringLiteral3450517376);
+		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral3450517376);
+		StringU5BU5D_t1281789340* L_5 = L_4;
+		// string pathToSave = string.Concat(dt.ToString("MMM dd"), "  ", dt.Hour.ToString(), ":", dt.Minute.ToString(), ":", dt.Second.ToString());
+		int32_t L_6 = DateTime_get_Hour_m4153505178((DateTime_t3738529785 *)(&V_0), /*hidden argument*/NULL);
+		V_2 = L_6;
+		// string pathToSave = string.Concat(dt.ToString("MMM dd"), "  ", dt.Hour.ToString(), ":", dt.Minute.ToString(), ":", dt.Second.ToString());
+		String_t* L_7 = Int32_ToString_m141394615((int32_t*)(&V_2), /*hidden argument*/NULL);
+		NullCheck(L_5);
+		ArrayElementTypeCheck (L_5, L_7);
+		(L_5)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)L_7);
+		StringU5BU5D_t1281789340* L_8 = L_5;
+		NullCheck(L_8);
+		ArrayElementTypeCheck (L_8, _stringLiteral3452614550);
+		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteral3452614550);
+		StringU5BU5D_t1281789340* L_9 = L_8;
+		// string pathToSave = string.Concat(dt.ToString("MMM dd"), "  ", dt.Hour.ToString(), ":", dt.Minute.ToString(), ":", dt.Second.ToString());
+		int32_t L_10 = DateTime_get_Minute_m87527789((DateTime_t3738529785 *)(&V_0), /*hidden argument*/NULL);
+		V_3 = L_10;
+		// string pathToSave = string.Concat(dt.ToString("MMM dd"), "  ", dt.Hour.ToString(), ":", dt.Minute.ToString(), ":", dt.Second.ToString());
+		String_t* L_11 = Int32_ToString_m141394615((int32_t*)(&V_3), /*hidden argument*/NULL);
+		NullCheck(L_9);
+		ArrayElementTypeCheck (L_9, L_11);
+		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)L_11);
+		StringU5BU5D_t1281789340* L_12 = L_9;
+		NullCheck(L_12);
+		ArrayElementTypeCheck (L_12, _stringLiteral3452614550);
+		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)_stringLiteral3452614550);
+		StringU5BU5D_t1281789340* L_13 = L_12;
+		// string pathToSave = string.Concat(dt.ToString("MMM dd"), "  ", dt.Hour.ToString(), ":", dt.Minute.ToString(), ":", dt.Second.ToString());
+		int32_t L_14 = DateTime_get_Second_m2686182256((DateTime_t3738529785 *)(&V_0), /*hidden argument*/NULL);
+		V_4 = L_14;
+		// string pathToSave = string.Concat(dt.ToString("MMM dd"), "  ", dt.Hour.ToString(), ":", dt.Minute.ToString(), ":", dt.Second.ToString());
+		String_t* L_15 = Int32_ToString_m141394615((int32_t*)(&V_4), /*hidden argument*/NULL);
+		NullCheck(L_13);
+		ArrayElementTypeCheck (L_13, L_15);
+		(L_13)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)L_15);
+		// string pathToSave = string.Concat(dt.ToString("MMM dd"), "  ", dt.Hour.ToString(), ":", dt.Minute.ToString(), ":", dt.Second.ToString());
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_16 = String_Concat_m1809518182(NULL /*static, unused*/, L_13, /*hidden argument*/NULL);
+		V_1 = L_16;
+		// return pathToSave;
+		String_t* L_17 = V_1;
+		V_5 = L_17;
+		goto IL_008b;
+	}
+
+IL_008b:
+	{
+		// }
+		String_t* L_18 = V_5;
+		return L_18;
+	}
+}
 // System.Void WorldMapManager::Start()
 extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_Start_m1381697079 (WorldMapManager_t2538599596 * __this, const RuntimeMethod* method)
 {
@@ -33934,19 +34424,19 @@ extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_Start_m1381697079 (WorldMapMa
 		// UnityARSessionNativeInterface.ARFrameUpdatedEvent += OnFrameUpdate;
 		IL2CPP_RUNTIME_CLASS_INIT(UnityARSessionNativeInterface_t3929719369_il2cpp_TypeInfo_var);
 		UnityARSessionNativeInterface_add_ARFrameUpdatedEvent_m3366057771(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
-		// saveLoadManager = GameObject.Find("SaveLoadManager").GetComponent<SaveLoadManager>();
-		// saveLoadManager = GameObject.Find("SaveLoadManager").GetComponent<SaveLoadManager>();
-		GameObject_t1113636619 * L_2 = GameObject_Find_m2032535176(NULL /*static, unused*/, _stringLiteral3005833486, /*hidden argument*/NULL);
-		// saveLoadManager = GameObject.Find("SaveLoadManager").GetComponent<SaveLoadManager>();
+		// windowManager = GameObject.Find("WindowManager").GetComponent<WindowManager>();
+		// windowManager = GameObject.Find("WindowManager").GetComponent<WindowManager>();
+		GameObject_t1113636619 * L_2 = GameObject_Find_m2032535176(NULL /*static, unused*/, _stringLiteral299364399, /*hidden argument*/NULL);
+		// windowManager = GameObject.Find("WindowManager").GetComponent<WindowManager>();
 		NullCheck(L_2);
-		SaveLoadManager_t4010657880 * L_3 = GameObject_GetComponent_TisSaveLoadManager_t4010657880_m1117738828(L_2, /*hidden argument*/GameObject_GetComponent_TisSaveLoadManager_t4010657880_m1117738828_RuntimeMethod_var);
-		__this->set_saveLoadManager_7(L_3);
+		WindowManager_t1304188793 * L_3 = GameObject_GetComponent_TisWindowManager_t1304188793_m4098762704(L_2, /*hidden argument*/GameObject_GetComponent_TisWindowManager_t1304188793_m4098762704_RuntimeMethod_var);
+		__this->set_windowManager_8(L_3);
 		// relocalizing = false;
-		__this->set_relocalizing_8((bool)0);
+		__this->set_relocalizing_9((bool)0);
+		// startTime = 0f;
+		__this->set_startTime_10((0.0f));
 		// loadedWorldMapName = "";
-		__this->set_loadedWorldMapName_10(_stringLiteral757602046);
-		// delayToLoad = 0f;
-		__this->set_delayToLoad_9((0.0f));
+		((WorldMapManager_t2538599596_StaticFields*)il2cpp_codegen_static_fields_for(WorldMapManager_t2538599596_il2cpp_TypeInfo_var))->set_loadedWorldMapName_7(_stringLiteral757602046);
 		// }
 		return;
 	}
@@ -33954,23 +34444,82 @@ extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_Start_m1381697079 (WorldMapMa
 // System.Void WorldMapManager::Update()
 extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_Update_m1324246752 (WorldMapManager_t2538599596 * __this, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
-		// if(relocalizing)
-		bool L_0 = __this->get_relocalizing_8();
+		il2cpp_codegen_initialize_method (WorldMapManager_Update_m1324246752_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	{
+		// if (relocalizing && finishedRelocalizing())
+		bool L_0 = __this->get_relocalizing_9();
 		if (!L_0)
 		{
-			goto IL_001e;
+			goto IL_007a;
 		}
 	}
 	{
-		// delayToLoad += Time.deltaTime;
-		float L_1 = __this->get_delayToLoad_9();
-		// delayToLoad += Time.deltaTime;
-		float L_2 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_delayToLoad_9(((float)il2cpp_codegen_add((float)L_1, (float)L_2)));
+		// if (relocalizing && finishedRelocalizing())
+		bool L_1 = WorldMapManager_finishedRelocalizing_m1604053525(__this, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_007a;
+		}
+	}
+	{
+		// if(Time.time - startTime > 2f)
+		float L_2 = Time_get_time_m2907476221(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_3 = __this->get_startTime_10();
+		if ((!(((float)((float)il2cpp_codegen_subtract((float)L_2, (float)L_3))) > ((float)(2.0f)))))
+		{
+			goto IL_0079;
+		}
+	}
+	{
+		// relocalizing = false;
+		__this->set_relocalizing_9((bool)0);
+		// windowManager.RelocalizeSuccessful();
+		WindowManager_t1304188793 * L_4 = __this->get_windowManager_8();
+		// windowManager.RelocalizeSuccessful();
+		NullCheck(L_4);
+		WindowManager_RelocalizeSuccessful_m2124409283(L_4, /*hidden argument*/NULL);
+		// if(loadedWorldMapName != "")
+		String_t* L_5 = ((WorldMapManager_t2538599596_StaticFields*)il2cpp_codegen_static_fields_for(WorldMapManager_t2538599596_il2cpp_TypeInfo_var))->get_loadedWorldMapName_7();
+		// if(loadedWorldMapName != "")
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_6 = String_op_Inequality_m215368492(NULL /*static, unused*/, L_5, _stringLiteral757602046, /*hidden argument*/NULL);
+		if (!L_6)
+		{
+			goto IL_0078;
+		}
+	}
+	{
+		// Debug.Log("Loading lines");
+		// Debug.Log("Loading lines");
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+		Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral351172016, /*hidden argument*/NULL);
+		// string linesFileName = string.Concat(loadedWorldMapName, ".dat");
+		String_t* L_7 = ((WorldMapManager_t2538599596_StaticFields*)il2cpp_codegen_static_fields_for(WorldMapManager_t2538599596_il2cpp_TypeInfo_var))->get_loadedWorldMapName_7();
+		// string linesFileName = string.Concat(loadedWorldMapName, ".dat");
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_8 = String_Concat_m3937257545(NULL /*static, unused*/, L_7, _stringLiteral3490508455, /*hidden argument*/NULL);
+		V_0 = L_8;
+		// LoadLinesFromFile(linesFileName);
+		String_t* L_9 = V_0;
+		// LoadLinesFromFile(linesFileName);
+		WorldMapManager_LoadLinesFromFile_m898967437(__this, L_9, /*hidden argument*/NULL);
 	}
 
-IL_001e:
+IL_0078:
+	{
+	}
+
+IL_0079:
+	{
+	}
+
+IL_007a:
 	{
 		// }
 		return;
@@ -33979,90 +34528,13 @@ IL_001e:
 // System.Void WorldMapManager::OnFrameUpdate(UnityEngine.XR.iOS.UnityARCamera)
 extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_OnFrameUpdate_m3236777077 (WorldMapManager_t2538599596 * __this, UnityARCamera_t2069150450  ___arCamera0, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (WorldMapManager_OnFrameUpdate_m3236777077_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	String_t* V_0 = NULL;
 	{
 		// m_LastReason = arCamera.trackingReason;
 		int32_t L_0 = (&___arCamera0)->get_trackingReason_3();
-		__this->set_m_LastReason_13(L_0);
+		__this->set_m_LastReason_11(L_0);
 		// lastStatus = arCamera.worldMappingStatus;
 		int32_t L_1 = (&___arCamera0)->get_worldMappingStatus_8();
-		__this->set_lastStatus_14(L_1);
-		// if (relocalizing && finishedRelocalizing() && delayToLoad > 0.5f)
-		bool L_2 = __this->get_relocalizing_8();
-		if (!L_2)
-		{
-			goto IL_00a1;
-		}
-	}
-	{
-		// if (relocalizing && finishedRelocalizing() && delayToLoad > 0.5f)
-		bool L_3 = WorldMapManager_finishedRelocalizing_m1604053525(__this, /*hidden argument*/NULL);
-		if (!L_3)
-		{
-			goto IL_00a1;
-		}
-	}
-	{
-		float L_4 = __this->get_delayToLoad_9();
-		if ((!(((float)L_4) > ((float)(0.5f)))))
-		{
-			goto IL_00a1;
-		}
-	}
-	{
-		// relocalizing = false;
-		__this->set_relocalizing_8((bool)0);
-		// delayToLoad = 0f;
-		__this->set_delayToLoad_9((0.0f));
-		// saveLoadManager.RelocalizeSuccessful();
-		SaveLoadManager_t4010657880 * L_5 = __this->get_saveLoadManager_7();
-		// saveLoadManager.RelocalizeSuccessful();
-		NullCheck(L_5);
-		SaveLoadManager_RelocalizeSuccessful_m2282846343(L_5, /*hidden argument*/NULL);
-		// if(loadedWorldMapName != "")
-		String_t* L_6 = __this->get_loadedWorldMapName_10();
-		// if(loadedWorldMapName != "")
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		bool L_7 = String_op_Inequality_m215368492(NULL /*static, unused*/, L_6, _stringLiteral757602046, /*hidden argument*/NULL);
-		if (!L_7)
-		{
-			goto IL_00a0;
-		}
-	}
-	{
-		// string linesFileName = loadedWorldMapName.Split('.')[0] + ".dat";
-		String_t* L_8 = __this->get_loadedWorldMapName_10();
-		CharU5BU5D_t3528271667* L_9 = (CharU5BU5D_t3528271667*)SZArrayNew(CharU5BU5D_t3528271667_il2cpp_TypeInfo_var, (uint32_t)1);
-		CharU5BU5D_t3528271667* L_10 = L_9;
-		NullCheck(L_10);
-		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(0), (Il2CppChar)((int32_t)46));
-		// string linesFileName = loadedWorldMapName.Split('.')[0] + ".dat";
-		NullCheck(L_8);
-		StringU5BU5D_t1281789340* L_11 = String_Split_m3646115398(L_8, L_10, /*hidden argument*/NULL);
-		NullCheck(L_11);
-		int32_t L_12 = 0;
-		String_t* L_13 = (L_11)->GetAt(static_cast<il2cpp_array_size_t>(L_12));
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_14 = String_Concat_m3937257545(NULL /*static, unused*/, L_13, _stringLiteral3490508455, /*hidden argument*/NULL);
-		V_0 = L_14;
-		// LoadLinesFromFile(linesFileName);
-		String_t* L_15 = V_0;
-		// LoadLinesFromFile(linesFileName);
-		WorldMapManager_LoadLinesFromFile_m898967437(__this, L_15, /*hidden argument*/NULL);
-	}
-
-IL_00a0:
-	{
-	}
-
-IL_00a1:
-	{
+		__this->set_lastStatus_12(L_1);
 		// }
 		return;
 	}
@@ -34071,151 +34543,18 @@ IL_00a1:
 extern "C" IL2CPP_METHOD_ATTR bool WorldMapManager_finishedRelocalizing_m1604053525 (WorldMapManager_t2538599596 * __this, const RuntimeMethod* method)
 {
 	bool V_0 = false;
-	bool V_1 = false;
-	int32_t G_B4_0 = 0;
-	int32_t G_B6_0 = 0;
 	{
-		// bool res = (m_LastReason == ARTrackingStateReason.ARTrackingStateReasonNone &&
-		int32_t L_0 = __this->get_m_LastReason_13();
-		if (L_0)
-		{
-			goto IL_0026;
-		}
-	}
-	{
-		int32_t L_1 = __this->get_lastStatus_14();
-		if ((((int32_t)L_1) == ((int32_t)3)))
-		{
-			goto IL_0023;
-		}
-	}
-	{
-		int32_t L_2 = __this->get_lastStatus_14();
-		G_B4_0 = ((((int32_t)L_2) == ((int32_t)1))? 1 : 0);
-		goto IL_0024;
+		// return m_LastReason != ARTrackingStateReason.ARTrackingStateReasonRelocalizing;
+		int32_t L_0 = __this->get_m_LastReason_11();
+		V_0 = (bool)((((int32_t)((((int32_t)L_0) == ((int32_t)4))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_0013;
 	}
 
-IL_0023:
-	{
-		G_B4_0 = 1;
-	}
-
-IL_0024:
-	{
-		G_B6_0 = G_B4_0;
-		goto IL_0027;
-	}
-
-IL_0026:
-	{
-		G_B6_0 = 0;
-	}
-
-IL_0027:
-	{
-		V_0 = (bool)G_B6_0;
-		// return res;
-		bool L_3 = V_0;
-		V_1 = L_3;
-		goto IL_002f;
-	}
-
-IL_002f:
+IL_0013:
 	{
 		// }
-		bool L_4 = V_1;
-		return L_4;
-	}
-}
-// System.String WorldMapManager::GetFileName()
-extern "C" IL2CPP_METHOD_ATTR String_t* WorldMapManager_GetFileName_m3759558755 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (WorldMapManager_GetFileName_m3759558755_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	DateTime_t3738529785  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	String_t* V_1 = NULL;
-	String_t* V_2 = NULL;
-	int32_t V_3 = 0;
-	int32_t V_4 = 0;
-	int32_t V_5 = 0;
-	String_t* V_6 = NULL;
-	{
-		// DateTime dt = DateTime.Now;
-		IL2CPP_RUNTIME_CLASS_INIT(DateTime_t3738529785_il2cpp_TypeInfo_var);
-		DateTime_t3738529785  L_0 = DateTime_get_Now_m1277138875(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_0 = L_0;
-		// string pathToSave = dt.ToString("MMM dd") + " " + " ";
-		// string pathToSave = dt.ToString("MMM dd") + " " + " ";
-		String_t* L_1 = DateTime_ToString_m3718521780((DateTime_t3738529785 *)(&V_0), _stringLiteral1273382550, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_2 = String_Concat_m3937257545(NULL /*static, unused*/, L_1, _stringLiteral3450517376, /*hidden argument*/NULL);
-		V_1 = L_2;
-		// pathToSave += dt.Hour.ToString() + ":" + dt.Minute.ToString() + ":" + dt.Second.ToString() + ".worldmap";
-		String_t* L_3 = V_1;
-		V_2 = L_3;
-		StringU5BU5D_t1281789340* L_4 = (StringU5BU5D_t1281789340*)SZArrayNew(StringU5BU5D_t1281789340_il2cpp_TypeInfo_var, (uint32_t)7);
-		StringU5BU5D_t1281789340* L_5 = L_4;
-		String_t* L_6 = V_2;
-		NullCheck(L_5);
-		ArrayElementTypeCheck (L_5, L_6);
-		(L_5)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_6);
-		StringU5BU5D_t1281789340* L_7 = L_5;
-		// pathToSave += dt.Hour.ToString() + ":" + dt.Minute.ToString() + ":" + dt.Second.ToString() + ".worldmap";
-		int32_t L_8 = DateTime_get_Hour_m4153505178((DateTime_t3738529785 *)(&V_0), /*hidden argument*/NULL);
-		V_3 = L_8;
-		// pathToSave += dt.Hour.ToString() + ":" + dt.Minute.ToString() + ":" + dt.Second.ToString() + ".worldmap";
-		String_t* L_9 = Int32_ToString_m141394615((int32_t*)(&V_3), /*hidden argument*/NULL);
-		NullCheck(L_7);
-		ArrayElementTypeCheck (L_7, L_9);
-		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_9);
-		StringU5BU5D_t1281789340* L_10 = L_7;
-		NullCheck(L_10);
-		ArrayElementTypeCheck (L_10, _stringLiteral3452614550);
-		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteral3452614550);
-		StringU5BU5D_t1281789340* L_11 = L_10;
-		// pathToSave += dt.Hour.ToString() + ":" + dt.Minute.ToString() + ":" + dt.Second.ToString() + ".worldmap";
-		int32_t L_12 = DateTime_get_Minute_m87527789((DateTime_t3738529785 *)(&V_0), /*hidden argument*/NULL);
-		V_4 = L_12;
-		// pathToSave += dt.Hour.ToString() + ":" + dt.Minute.ToString() + ":" + dt.Second.ToString() + ".worldmap";
-		String_t* L_13 = Int32_ToString_m141394615((int32_t*)(&V_4), /*hidden argument*/NULL);
-		NullCheck(L_11);
-		ArrayElementTypeCheck (L_11, L_13);
-		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_13);
-		StringU5BU5D_t1281789340* L_14 = L_11;
-		NullCheck(L_14);
-		ArrayElementTypeCheck (L_14, _stringLiteral3452614550);
-		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral3452614550);
-		StringU5BU5D_t1281789340* L_15 = L_14;
-		// pathToSave += dt.Hour.ToString() + ":" + dt.Minute.ToString() + ":" + dt.Second.ToString() + ".worldmap";
-		int32_t L_16 = DateTime_get_Second_m2686182256((DateTime_t3738529785 *)(&V_0), /*hidden argument*/NULL);
-		V_5 = L_16;
-		// pathToSave += dt.Hour.ToString() + ":" + dt.Minute.ToString() + ":" + dt.Second.ToString() + ".worldmap";
-		String_t* L_17 = Int32_ToString_m141394615((int32_t*)(&V_5), /*hidden argument*/NULL);
-		NullCheck(L_15);
-		ArrayElementTypeCheck (L_15, L_17);
-		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)L_17);
-		StringU5BU5D_t1281789340* L_18 = L_15;
-		NullCheck(L_18);
-		ArrayElementTypeCheck (L_18, _stringLiteral2555481935);
-		(L_18)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)_stringLiteral2555481935);
-		String_t* L_19 = String_Concat_m1809518182(NULL /*static, unused*/, L_18, /*hidden argument*/NULL);
-		V_1 = L_19;
-		// return pathToSave;
-		String_t* L_20 = V_1;
-		V_6 = L_20;
-		goto IL_009a;
-	}
-
-IL_009a:
-	{
-		// }
-		String_t* L_21 = V_6;
-		return L_21;
+		bool L_1 = V_0;
+		return L_1;
 	}
 }
 // System.Void WorldMapManager::Save()
@@ -34227,76 +34566,83 @@ extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_Save_m1685066494 (WorldMapMan
 		il2cpp_codegen_initialize_method (WorldMapManager_Save_m1685066494_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
+	SaveLoadManager_t4010657880 * V_0 = NULL;
 	{
+		// SaveLoadManager saveLoadManager = GameObject.Find("SaveLoadManager").GetComponent<SaveLoadManager>();
+		// SaveLoadManager saveLoadManager = GameObject.Find("SaveLoadManager").GetComponent<SaveLoadManager>();
+		GameObject_t1113636619 * L_0 = GameObject_Find_m2032535176(NULL /*static, unused*/, _stringLiteral3005833486, /*hidden argument*/NULL);
+		// SaveLoadManager saveLoadManager = GameObject.Find("SaveLoadManager").GetComponent<SaveLoadManager>();
+		NullCheck(L_0);
+		SaveLoadManager_t4010657880 * L_1 = GameObject_GetComponent_TisSaveLoadManager_t4010657880_m1117738828(L_0, /*hidden argument*/GameObject_GetComponent_TisSaveLoadManager_t4010657880_m1117738828_RuntimeMethod_var);
+		V_0 = L_1;
 		// if(saveLoadManager != null)
-		SaveLoadManager_t4010657880 * L_0 = __this->get_saveLoadManager_7();
+		SaveLoadManager_t4010657880 * L_2 = V_0;
 		// if(saveLoadManager != null)
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_1 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_0, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_1)
+		bool L_3 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_2, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_3)
 		{
-			goto IL_0087;
+			goto IL_004b;
 		}
 	}
 	{
-		// if(saveLoadManager.CanSave(m_LastReason, lastStatus))
-		SaveLoadManager_t4010657880 * L_2 = __this->get_saveLoadManager_7();
-		int32_t L_3 = __this->get_m_LastReason_13();
-		int32_t L_4 = __this->get_lastStatus_14();
-		// if(saveLoadManager.CanSave(m_LastReason, lastStatus))
-		NullCheck(L_2);
-		bool L_5 = SaveLoadManager_CanSave_m298016875(L_2, L_3, L_4, /*hidden argument*/NULL);
-		if (!L_5)
+		// if(saveLoadManager.CanSave(lastStatus))
+		SaveLoadManager_t4010657880 * L_4 = V_0;
+		int32_t L_5 = __this->get_lastStatus_12();
+		// if(saveLoadManager.CanSave(lastStatus))
+		NullCheck(L_4);
+		bool L_6 = SaveLoadManager_CanSave_m3299033638(L_4, L_5, /*hidden argument*/NULL);
+		if (!L_6)
 		{
-			goto IL_0086;
+			goto IL_003f;
 		}
 	}
 	{
-		// if(PlayerPrefs.GetString("IsFirstTime", "true") == "true")
-		// if(PlayerPrefs.GetString("IsFirstTime", "true") == "true")
-		String_t* L_6 = PlayerPrefs_GetString_m614532710(NULL /*static, unused*/, _stringLiteral3199899030, _stringLiteral4002445229, /*hidden argument*/NULL);
-		// if(PlayerPrefs.GetString("IsFirstTime", "true") == "true")
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		bool L_7 = String_op_Equality_m920492651(NULL /*static, unused*/, L_6, _stringLiteral4002445229, /*hidden argument*/NULL);
-		if (!L_7)
-		{
-			goto IL_006f;
-		}
+		// windowManager.SpawnWarningToExplore();
+		WindowManager_t1304188793 * L_7 = __this->get_windowManager_8();
+		// windowManager.SpawnWarningToExplore();
+		NullCheck(L_7);
+		WindowManager_SpawnWarningToExplore_m4111473343(L_7, /*hidden argument*/NULL);
+		goto IL_004a;
 	}
+
+IL_003f:
 	{
-		// PlayerPrefs.SetString("IsFirstTime", "false");
-		// PlayerPrefs.SetString("IsFirstTime", "false");
-		PlayerPrefs_SetString_m2101271233(NULL /*static, unused*/, _stringLiteral3199899030, _stringLiteral3875954633, /*hidden argument*/NULL);
-		// saveLoadManager.SpawnWarningToExplore();
-		SaveLoadManager_t4010657880 * L_8 = __this->get_saveLoadManager_7();
-		// saveLoadManager.SpawnWarningToExplore();
+		// windowManager.SpawnExploreEnvironment();
+		WindowManager_t1304188793 * L_8 = __this->get_windowManager_8();
+		// windowManager.SpawnExploreEnvironment();
 		NullCheck(L_8);
-		SaveLoadManager_SpawnWarningToExplore_m1369036446(L_8, /*hidden argument*/NULL);
-		goto IL_0085;
+		WindowManager_SpawnExploreEnvironment_m4030748144(L_8, /*hidden argument*/NULL);
 	}
 
-IL_006f:
+IL_004a:
+	{
+	}
+
+IL_004b:
+	{
+		// }
+		return;
+	}
+}
+// System.Void WorldMapManager::SaveAnyway()
+extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_SaveAnyway_m3407925849 (WorldMapManager_t2538599596 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (WorldMapManager_SaveAnyway_m3407925849_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
 	{
 		// session.GetCurrentWorldMapAsync(OnWorldMap);
-		UnityARSessionNativeInterface_t3929719369 * L_9 = WorldMapManager_get_session_m4054597902(NULL /*static, unused*/, /*hidden argument*/NULL);
-		intptr_t L_10 = (intptr_t)WorldMapManager_OnWorldMap_m528558470_RuntimeMethod_var;
-		Action_1_t2413258402 * L_11 = (Action_1_t2413258402 *)il2cpp_codegen_object_new(Action_1_t2413258402_il2cpp_TypeInfo_var);
-		Action_1__ctor_m941087542(L_11, __this, L_10, /*hidden argument*/Action_1__ctor_m941087542_RuntimeMethod_var);
+		UnityARSessionNativeInterface_t3929719369 * L_0 = WorldMapManager_get_session_m4054597902(NULL /*static, unused*/, /*hidden argument*/NULL);
+		intptr_t L_1 = (intptr_t)WorldMapManager_OnWorldMap_m528558470_RuntimeMethod_var;
+		Action_1_t2413258402 * L_2 = (Action_1_t2413258402 *)il2cpp_codegen_object_new(Action_1_t2413258402_il2cpp_TypeInfo_var);
+		Action_1__ctor_m941087542(L_2, __this, L_1, /*hidden argument*/Action_1__ctor_m941087542_RuntimeMethod_var);
 		// session.GetCurrentWorldMapAsync(OnWorldMap);
-		NullCheck(L_9);
-		UnityARSessionNativeInterface_GetCurrentWorldMapAsync_m1688705226(L_9, L_11, /*hidden argument*/NULL);
-	}
-
-IL_0085:
-	{
-	}
-
-IL_0086:
-	{
-	}
-
-IL_0087:
-	{
+		NullCheck(L_0);
+		UnityARSessionNativeInterface_GetCurrentWorldMapAsync_m1688705226(L_0, L_2, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -34318,7 +34664,7 @@ extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_OnWorldMap_m528558470 (WorldM
 		ARWorldMap_t2240790807 * L_0 = ___worldMap0;
 		if (!L_0)
 		{
-			goto IL_0077;
+			goto IL_00d2;
 		}
 	}
 	{
@@ -34327,55 +34673,109 @@ extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_OnWorldMap_m528558470 (WorldM
 		// loadingScreen.SetActive(true);
 		NullCheck(L_1);
 		GameObject_SetActive_m796801857(L_1, (bool)1, /*hidden argument*/NULL);
-		// string fileName = GetFileName();
-		String_t* L_2 = WorldMapManager_GetFileName_m3759558755(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_0 = L_2;
-		// string pathToSave = Path.Combine(Application.persistentDataPath, fileName);
-		String_t* L_3 = Application_get_persistentDataPath_m1428108154(NULL /*static, unused*/, /*hidden argument*/NULL);
-		String_t* L_4 = V_0;
-		// string pathToSave = Path.Combine(Application.persistentDataPath, fileName);
-		IL2CPP_RUNTIME_CLASS_INIT(Path_t1605229823_il2cpp_TypeInfo_var);
-		String_t* L_5 = Path_Combine_m3389272516(NULL /*static, unused*/, L_3, L_4, /*hidden argument*/NULL);
-		V_1 = L_5;
-		// SaveLinesInScene(fileName);
-		String_t* L_6 = V_0;
-		// SaveLinesInScene(fileName);
-		WorldMapManager_SaveLinesInScene_m817905919(__this, L_6, /*hidden argument*/NULL);
-		// worldMap.Save(pathToSave);
-		ARWorldMap_t2240790807 * L_7 = ___worldMap0;
-		String_t* L_8 = V_1;
-		// worldMap.Save(pathToSave);
-		NullCheck(L_7);
-		ARWorldMap_Save_m696239647(L_7, L_8, /*hidden argument*/NULL);
-		// string allMaps = PlayerPrefs.GetString("AllWorldMaps", "");
-		// string allMaps = PlayerPrefs.GetString("AllWorldMaps", "");
-		String_t* L_9 = PlayerPrefs_GetString_m614532710(NULL /*static, unused*/, _stringLiteral2856859908, _stringLiteral757602046, /*hidden argument*/NULL);
-		V_2 = L_9;
-		// allMaps += fileName + '?';
-		String_t* L_10 = V_2;
-		String_t* L_11 = V_0;
-		Il2CppChar L_12 = ((Il2CppChar)((int32_t)63));
-		RuntimeObject * L_13 = Box(Char_t3634460470_il2cpp_TypeInfo_var, &L_12);
+		// string fileName = "";
+		V_0 = _stringLiteral757602046;
+		// if(loadedWorldMapName == "")
+		String_t* L_2 = ((WorldMapManager_t2538599596_StaticFields*)il2cpp_codegen_static_fields_for(WorldMapManager_t2538599596_il2cpp_TypeInfo_var))->get_loadedWorldMapName_7();
+		// if(loadedWorldMapName == "")
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_14 = String_Concat_m1715369213(NULL /*static, unused*/, L_10, L_11, L_13, /*hidden argument*/NULL);
-		V_2 = L_14;
-		// PlayerPrefs.SetString("AllWorldMaps", allMaps);
-		String_t* L_15 = V_2;
-		// PlayerPrefs.SetString("AllWorldMaps", allMaps);
-		PlayerPrefs_SetString_m2101271233(NULL /*static, unused*/, _stringLiteral2856859908, L_15, /*hidden argument*/NULL);
-		// saveLoadManager.SaveSuccessful();
-		SaveLoadManager_t4010657880 * L_16 = __this->get_saveLoadManager_7();
-		// saveLoadManager.SaveSuccessful();
-		NullCheck(L_16);
-		SaveLoadManager_SaveSuccessful_m3802216688(L_16, /*hidden argument*/NULL);
-		// loadingScreen.SetActive(false);
-		GameObject_t1113636619 * L_17 = __this->get_loadingScreen_5();
-		// loadingScreen.SetActive(false);
-		NullCheck(L_17);
-		GameObject_SetActive_m796801857(L_17, (bool)0, /*hidden argument*/NULL);
+		bool L_3 = String_op_Equality_m920492651(NULL /*static, unused*/, L_2, _stringLiteral757602046, /*hidden argument*/NULL);
+		if (!L_3)
+		{
+			goto IL_0039;
+		}
+	}
+	{
+		// fileName = GetFileName();
+		String_t* L_4 = WorldMapManager_GetFileName_m3759558755(NULL /*static, unused*/, /*hidden argument*/NULL);
+		V_0 = L_4;
+		goto IL_0049;
 	}
 
-IL_0077:
+IL_0039:
+	{
+		// fileName = string.Concat(loadedWorldMapName, ".worldmap");
+		String_t* L_5 = ((WorldMapManager_t2538599596_StaticFields*)il2cpp_codegen_static_fields_for(WorldMapManager_t2538599596_il2cpp_TypeInfo_var))->get_loadedWorldMapName_7();
+		// fileName = string.Concat(loadedWorldMapName, ".worldmap");
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_6 = String_Concat_m3937257545(NULL /*static, unused*/, L_5, _stringLiteral2555481935, /*hidden argument*/NULL);
+		V_0 = L_6;
+	}
+
+IL_0049:
+	{
+		// string pathToSave = Path.Combine(Application.persistentDataPath, string.Concat(fileName, ".worldmap"));
+		String_t* L_7 = Application_get_persistentDataPath_m1428108154(NULL /*static, unused*/, /*hidden argument*/NULL);
+		String_t* L_8 = V_0;
+		// string pathToSave = Path.Combine(Application.persistentDataPath, string.Concat(fileName, ".worldmap"));
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_9 = String_Concat_m3937257545(NULL /*static, unused*/, L_8, _stringLiteral2555481935, /*hidden argument*/NULL);
+		// string pathToSave = Path.Combine(Application.persistentDataPath, string.Concat(fileName, ".worldmap"));
+		IL2CPP_RUNTIME_CLASS_INIT(Path_t1605229823_il2cpp_TypeInfo_var);
+		String_t* L_10 = Path_Combine_m3389272516(NULL /*static, unused*/, L_7, L_9, /*hidden argument*/NULL);
+		V_1 = L_10;
+		// SaveLinesInScene(fileName);
+		String_t* L_11 = V_0;
+		// SaveLinesInScene(fileName);
+		WorldMapManager_SaveLinesInScene_m817905919(__this, L_11, /*hidden argument*/NULL);
+		// worldMap.Save(pathToSave);
+		ARWorldMap_t2240790807 * L_12 = ___worldMap0;
+		String_t* L_13 = V_1;
+		// worldMap.Save(pathToSave);
+		NullCheck(L_12);
+		ARWorldMap_Save_m696239647(L_12, L_13, /*hidden argument*/NULL);
+		// if(fileName != loadedWorldMapName)
+		String_t* L_14 = V_0;
+		String_t* L_15 = ((WorldMapManager_t2538599596_StaticFields*)il2cpp_codegen_static_fields_for(WorldMapManager_t2538599596_il2cpp_TypeInfo_var))->get_loadedWorldMapName_7();
+		// if(fileName != loadedWorldMapName)
+		bool L_16 = String_op_Inequality_m215368492(NULL /*static, unused*/, L_14, L_15, /*hidden argument*/NULL);
+		if (!L_16)
+		{
+			goto IL_00b8;
+		}
+	}
+	{
+		// string allMaps = PlayerPrefs.GetString("AllWorldMaps", "");
+		// string allMaps = PlayerPrefs.GetString("AllWorldMaps", "");
+		String_t* L_17 = PlayerPrefs_GetString_m614532710(NULL /*static, unused*/, _stringLiteral2856859908, _stringLiteral757602046, /*hidden argument*/NULL);
+		V_2 = L_17;
+		// PlayerPrefs.SetString("AllWorldMaps", string.Concat(allMaps, fileName, '?'));
+		String_t* L_18 = V_2;
+		String_t* L_19 = V_0;
+		Il2CppChar L_20 = ((Il2CppChar)((int32_t)63));
+		RuntimeObject * L_21 = Box(Char_t3634460470_il2cpp_TypeInfo_var, &L_20);
+		// PlayerPrefs.SetString("AllWorldMaps", string.Concat(allMaps, fileName, '?'));
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_22 = String_Concat_m1715369213(NULL /*static, unused*/, L_18, L_19, L_21, /*hidden argument*/NULL);
+		// PlayerPrefs.SetString("AllWorldMaps", string.Concat(allMaps, fileName, '?'));
+		PlayerPrefs_SetString_m2101271233(NULL /*static, unused*/, _stringLiteral2856859908, L_22, /*hidden argument*/NULL);
+		// windowManager.SaveSuccessful();
+		WindowManager_t1304188793 * L_23 = __this->get_windowManager_8();
+		// windowManager.SaveSuccessful();
+		NullCheck(L_23);
+		WindowManager_SaveSuccessful_m239911447(L_23, /*hidden argument*/NULL);
+		goto IL_00c5;
+	}
+
+IL_00b8:
+	{
+		// windowManager.UpdateSuccessful();
+		WindowManager_t1304188793 * L_24 = __this->get_windowManager_8();
+		// windowManager.UpdateSuccessful();
+		NullCheck(L_24);
+		WindowManager_UpdateSuccessful_m3367646750(L_24, /*hidden argument*/NULL);
+	}
+
+IL_00c5:
+	{
+		// loadingScreen.SetActive(false);
+		GameObject_t1113636619 * L_25 = __this->get_loadingScreen_5();
+		// loadingScreen.SetActive(false);
+		NullCheck(L_25);
+		GameObject_SetActive_m796801857(L_25, (bool)0, /*hidden argument*/NULL);
+	}
+
+IL_00d2:
 	{
 		// }
 		return;
@@ -34393,10 +34793,11 @@ extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_SaveLinesInScene_m817905919 (
 	String_t* V_0 = NULL;
 	BinaryFormatter_t3197753202 * V_1 = NULL;
 	FileStream_t4292183065 * V_2 = NULL;
-	List_1_t2585711361 * V_3 = NULL;
+	GameObjectU5BU5D_t3328599146* V_3 = NULL;
 	LineRendererData_t2483329549 * V_4 = NULL;
 	int32_t V_5 = 0;
 	SingleLineRendererData_t2883868068 * V_6 = NULL;
+	Exception_t * V_7 = NULL;
 	Exception_t * __last_unhandled_exception = 0;
 	NO_UNUSED_WARNING (__last_unhandled_exception);
 	Exception_t * __exception_local = 0;
@@ -34404,187 +34805,227 @@ extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_SaveLinesInScene_m817905919 (
 	int32_t __leave_target = -1;
 	NO_UNUSED_WARNING (__leave_target);
 	{
-		// string pathToSave = Path.Combine(Application.persistentDataPath, fileName.Split('.')[0] + ".dat");
+		// string pathToSave = Path.Combine(Application.persistentDataPath, string.Concat(fileName, ".dat"));
 		String_t* L_0 = Application_get_persistentDataPath_m1428108154(NULL /*static, unused*/, /*hidden argument*/NULL);
 		String_t* L_1 = ___fileName0;
-		CharU5BU5D_t3528271667* L_2 = (CharU5BU5D_t3528271667*)SZArrayNew(CharU5BU5D_t3528271667_il2cpp_TypeInfo_var, (uint32_t)1);
-		CharU5BU5D_t3528271667* L_3 = L_2;
-		NullCheck(L_3);
-		(L_3)->SetAt(static_cast<il2cpp_array_size_t>(0), (Il2CppChar)((int32_t)46));
-		// string pathToSave = Path.Combine(Application.persistentDataPath, fileName.Split('.')[0] + ".dat");
-		NullCheck(L_1);
-		StringU5BU5D_t1281789340* L_4 = String_Split_m3646115398(L_1, L_3, /*hidden argument*/NULL);
-		NullCheck(L_4);
-		int32_t L_5 = 0;
-		String_t* L_6 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
+		// string pathToSave = Path.Combine(Application.persistentDataPath, string.Concat(fileName, ".dat"));
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_7 = String_Concat_m3937257545(NULL /*static, unused*/, L_6, _stringLiteral3490508455, /*hidden argument*/NULL);
-		// string pathToSave = Path.Combine(Application.persistentDataPath, fileName.Split('.')[0] + ".dat");
+		String_t* L_2 = String_Concat_m3937257545(NULL /*static, unused*/, L_1, _stringLiteral3490508455, /*hidden argument*/NULL);
+		// string pathToSave = Path.Combine(Application.persistentDataPath, string.Concat(fileName, ".dat"));
 		IL2CPP_RUNTIME_CLASS_INIT(Path_t1605229823_il2cpp_TypeInfo_var);
-		String_t* L_8 = Path_Combine_m3389272516(NULL /*static, unused*/, L_0, L_7, /*hidden argument*/NULL);
-		V_0 = L_8;
+		String_t* L_3 = Path_Combine_m3389272516(NULL /*static, unused*/, L_0, L_2, /*hidden argument*/NULL);
+		V_0 = L_3;
 		// BinaryFormatter formatter = new BinaryFormatter();
-		BinaryFormatter_t3197753202 * L_9 = (BinaryFormatter_t3197753202 *)il2cpp_codegen_object_new(BinaryFormatter_t3197753202_il2cpp_TypeInfo_var);
-		BinaryFormatter__ctor_m971003555(L_9, /*hidden argument*/NULL);
-		V_1 = L_9;
-		// using(FileStream file = File.Open(pathToSave, FileMode.Create))
-		String_t* L_10 = V_0;
-		// using(FileStream file = File.Open(pathToSave, FileMode.Create))
-		FileStream_t4292183065 * L_11 = File_Open_m664439378(NULL /*static, unused*/, L_10, 2, /*hidden argument*/NULL);
-		V_2 = L_11;
+		BinaryFormatter_t3197753202 * L_4 = (BinaryFormatter_t3197753202 *)il2cpp_codegen_object_new(BinaryFormatter_t3197753202_il2cpp_TypeInfo_var);
+		BinaryFormatter__ctor_m971003555(L_4, /*hidden argument*/NULL);
+		V_1 = L_4;
 	}
 
-IL_0037:
+IL_001d:
 	try
 	{ // begin try (depth: 1)
 		{
-			// List<GameObject> linesActive = GameObject.Find("LineDrawer").GetComponent<DrawLine>().linesInScene;
-			// List<GameObject> linesActive = GameObject.Find("LineDrawer").GetComponent<DrawLine>().linesInScene;
-			GameObject_t1113636619 * L_12 = GameObject_Find_m2032535176(NULL /*static, unused*/, _stringLiteral163229389, /*hidden argument*/NULL);
-			// List<GameObject> linesActive = GameObject.Find("LineDrawer").GetComponent<DrawLine>().linesInScene;
-			NullCheck(L_12);
-			DrawLine_t3711110361 * L_13 = GameObject_GetComponent_TisDrawLine_t3711110361_m94459780(L_12, /*hidden argument*/GameObject_GetComponent_TisDrawLine_t3711110361_m94459780_RuntimeMethod_var);
-			NullCheck(L_13);
-			List_1_t2585711361 * L_14 = L_13->get_linesInScene_6();
-			V_3 = L_14;
-			// if(linesActive.Count > 0)
-			List_1_t2585711361 * L_15 = V_3;
-			// if(linesActive.Count > 0)
-			NullCheck(L_15);
-			int32_t L_16 = List_1_get_Count_m2812834599(L_15, /*hidden argument*/List_1_get_Count_m2812834599_RuntimeMethod_var);
-			if ((((int32_t)L_16) <= ((int32_t)0)))
+			// FileStream file = File.Open(pathToSave, FileMode.Create);
+			String_t* L_5 = V_0;
+			// FileStream file = File.Open(pathToSave, FileMode.Create);
+			FileStream_t4292183065 * L_6 = File_Open_m664439378(NULL /*static, unused*/, L_5, 2, /*hidden argument*/NULL);
+			V_2 = L_6;
+			// GameObject[] linesInScene = GameObject.FindGameObjectsWithTag("Line");
+			// GameObject[] linesInScene = GameObject.FindGameObjectsWithTag("Line");
+			GameObjectU5BU5D_t3328599146* L_7 = GameObject_FindGameObjectsWithTag_m2585173894(NULL /*static, unused*/, _stringLiteral2792132920, /*hidden argument*/NULL);
+			V_3 = L_7;
+			// if(linesInScene.Length > 0)
+			GameObjectU5BU5D_t3328599146* L_8 = V_3;
+			NullCheck(L_8);
+			if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_8)->max_length))))) <= ((int32_t)0)))
 			{
-				goto IL_00be;
+				goto IL_00c2;
 			}
 		}
 
-IL_0059:
+IL_003a:
 		{
 			// LineRendererData data = new LineRendererData();
-			LineRendererData_t2483329549 * L_17 = (LineRendererData_t2483329549 *)il2cpp_codegen_object_new(LineRendererData_t2483329549_il2cpp_TypeInfo_var);
-			LineRendererData__ctor_m2544541233(L_17, /*hidden argument*/NULL);
-			V_4 = L_17;
+			LineRendererData_t2483329549 * L_9 = (LineRendererData_t2483329549 *)il2cpp_codegen_object_new(LineRendererData_t2483329549_il2cpp_TypeInfo_var);
+			LineRendererData__ctor_m2544541233(L_9, /*hidden argument*/NULL);
+			V_4 = L_9;
 			// data.lines = new List<SingleLineRendererData>();
-			LineRendererData_t2483329549 * L_18 = V_4;
+			LineRendererData_t2483329549 * L_10 = V_4;
 			// data.lines = new List<SingleLineRendererData>();
-			List_1_t60975514 * L_19 = (List_1_t60975514 *)il2cpp_codegen_object_new(List_1_t60975514_il2cpp_TypeInfo_var);
-			List_1__ctor_m3423707902(L_19, /*hidden argument*/List_1__ctor_m3423707902_RuntimeMethod_var);
+			List_1_t60975514 * L_11 = (List_1_t60975514 *)il2cpp_codegen_object_new(List_1_t60975514_il2cpp_TypeInfo_var);
+			List_1__ctor_m3423707902(L_11, /*hidden argument*/List_1__ctor_m3423707902_RuntimeMethod_var);
 			// data.lines = new List<SingleLineRendererData>();
-			NullCheck(L_18);
-			LineRendererData_set_lines_m4029156307(L_18, L_19, /*hidden argument*/NULL);
-			// for (int i = 0; i < linesActive.Count; i++)
+			NullCheck(L_10);
+			LineRendererData_set_lines_m4029156307(L_10, L_11, /*hidden argument*/NULL);
+			// for (int i = 0; i < linesInScene.Length; i++)
 			V_5 = 0;
-			goto IL_00a7;
+			goto IL_0096;
 		}
 
-IL_0075:
+IL_0056:
 		{
-			// SingleLineRendererData lineData = LineRendererToData(linesActive[i].GetComponent<LineRenderer>());
-			List_1_t2585711361 * L_20 = V_3;
-			int32_t L_21 = V_5;
-			// SingleLineRendererData lineData = LineRendererToData(linesActive[i].GetComponent<LineRenderer>());
-			NullCheck(L_20);
-			GameObject_t1113636619 * L_22 = List_1_get_Item_m3743125852(L_20, L_21, /*hidden argument*/List_1_get_Item_m3743125852_RuntimeMethod_var);
-			// SingleLineRendererData lineData = LineRendererToData(linesActive[i].GetComponent<LineRenderer>());
-			NullCheck(L_22);
-			LineRenderer_t3154350270 * L_23 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_22, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
-			// SingleLineRendererData lineData = LineRendererToData(linesActive[i].GetComponent<LineRenderer>());
-			SingleLineRendererData_t2883868068 * L_24 = WorldMapManager_LineRendererToData_m69957661(__this, L_23, /*hidden argument*/NULL);
-			V_6 = L_24;
-			// if(lineData != null)
-			SingleLineRendererData_t2883868068 * L_25 = V_6;
-			if (!L_25)
+			// SingleLineRendererData lineData = null;
+			V_6 = (SingleLineRendererData_t2883868068 *)NULL;
+			// if(linesInScene[i] != null)
+			GameObjectU5BU5D_t3328599146* L_12 = V_3;
+			int32_t L_13 = V_5;
+			NullCheck(L_12);
+			int32_t L_14 = L_13;
+			GameObject_t1113636619 * L_15 = (L_12)->GetAt(static_cast<il2cpp_array_size_t>(L_14));
+			// if(linesInScene[i] != null)
+			IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+			bool L_16 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_15, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+			if (!L_16)
 			{
-				goto IL_00a0;
+				goto IL_007a;
 			}
 		}
 
-IL_0092:
+IL_0069:
+		{
+			// lineData = LineRendererToData(linesInScene[i].GetComponent<LineRenderer>());
+			GameObjectU5BU5D_t3328599146* L_17 = V_3;
+			int32_t L_18 = V_5;
+			NullCheck(L_17);
+			int32_t L_19 = L_18;
+			GameObject_t1113636619 * L_20 = (L_17)->GetAt(static_cast<il2cpp_array_size_t>(L_19));
+			// lineData = LineRendererToData(linesInScene[i].GetComponent<LineRenderer>());
+			NullCheck(L_20);
+			LineRenderer_t3154350270 * L_21 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_20, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
+			// lineData = LineRendererToData(linesInScene[i].GetComponent<LineRenderer>());
+			SingleLineRendererData_t2883868068 * L_22 = WorldMapManager_LineRendererToData_m69957661(__this, L_21, /*hidden argument*/NULL);
+			V_6 = L_22;
+		}
+
+IL_007a:
+		{
+			// if(lineData != null)
+			SingleLineRendererData_t2883868068 * L_23 = V_6;
+			if (!L_23)
+			{
+				goto IL_008f;
+			}
+		}
+
+IL_0081:
 		{
 			// data.lines.Add(lineData);
-			LineRendererData_t2483329549 * L_26 = V_4;
+			LineRendererData_t2483329549 * L_24 = V_4;
 			// data.lines.Add(lineData);
-			NullCheck(L_26);
-			List_1_t60975514 * L_27 = LineRendererData_get_lines_m3238207813(L_26, /*hidden argument*/NULL);
-			SingleLineRendererData_t2883868068 * L_28 = V_6;
+			NullCheck(L_24);
+			List_1_t60975514 * L_25 = LineRendererData_get_lines_m3238207813(L_24, /*hidden argument*/NULL);
+			SingleLineRendererData_t2883868068 * L_26 = V_6;
 			// data.lines.Add(lineData);
-			NullCheck(L_27);
-			List_1_Add_m788545020(L_27, L_28, /*hidden argument*/List_1_Add_m788545020_RuntimeMethod_var);
+			NullCheck(L_25);
+			List_1_Add_m788545020(L_25, L_26, /*hidden argument*/List_1_Add_m788545020_RuntimeMethod_var);
+		}
+
+IL_008f:
+		{
+			// for (int i = 0; i < linesInScene.Length; i++)
+			int32_t L_27 = V_5;
+			V_5 = ((int32_t)il2cpp_codegen_add((int32_t)L_27, (int32_t)1));
+		}
+
+IL_0096:
+		{
+			// for (int i = 0; i < linesInScene.Length; i++)
+			int32_t L_28 = V_5;
+			GameObjectU5BU5D_t3328599146* L_29 = V_3;
+			NullCheck(L_29);
+			if ((((int32_t)L_28) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_29)->max_length)))))))
+			{
+				goto IL_0056;
+			}
 		}
 
 IL_00a0:
 		{
-			// for (int i = 0; i < linesActive.Count; i++)
-			int32_t L_29 = V_5;
-			V_5 = ((int32_t)il2cpp_codegen_add((int32_t)L_29, (int32_t)1));
-		}
-
-IL_00a7:
-		{
-			// for (int i = 0; i < linesActive.Count; i++)
-			int32_t L_30 = V_5;
-			List_1_t2585711361 * L_31 = V_3;
-			// for (int i = 0; i < linesActive.Count; i++)
+			// if(data.lines.Count > 0 && file != null)
+			LineRendererData_t2483329549 * L_30 = V_4;
+			// if(data.lines.Count > 0 && file != null)
+			NullCheck(L_30);
+			List_1_t60975514 * L_31 = LineRendererData_get_lines_m3238207813(L_30, /*hidden argument*/NULL);
+			// if(data.lines.Count > 0 && file != null)
 			NullCheck(L_31);
-			int32_t L_32 = List_1_get_Count_m2812834599(L_31, /*hidden argument*/List_1_get_Count_m2812834599_RuntimeMethod_var);
-			if ((((int32_t)L_30) < ((int32_t)L_32)))
+			int32_t L_32 = List_1_get_Count_m321283854(L_31, /*hidden argument*/List_1_get_Count_m321283854_RuntimeMethod_var);
+			if ((((int32_t)L_32) <= ((int32_t)0)))
 			{
-				goto IL_0075;
+				goto IL_00c1;
 			}
 		}
 
-IL_00b4:
+IL_00b2:
 		{
-			// formatter.Serialize(file, data);
-			BinaryFormatter_t3197753202 * L_33 = V_1;
-			FileStream_t4292183065 * L_34 = V_2;
-			LineRendererData_t2483329549 * L_35 = V_4;
-			// formatter.Serialize(file, data);
-			NullCheck(L_33);
-			BinaryFormatter_Serialize_m1744386044(L_33, L_34, L_35, /*hidden argument*/NULL);
+			FileStream_t4292183065 * L_33 = V_2;
+			if (!L_33)
+			{
+				goto IL_00c1;
+			}
 		}
 
-IL_00be:
+IL_00b8:
 		{
-			IL2CPP_LEAVE(0xD1, FINALLY_00c4);
+			// formatter.Serialize(file, data);
+			BinaryFormatter_t3197753202 * L_34 = V_1;
+			FileStream_t4292183065 * L_35 = V_2;
+			LineRendererData_t2483329549 * L_36 = V_4;
+			// formatter.Serialize(file, data);
+			NullCheck(L_34);
+			BinaryFormatter_Serialize_m1744386044(L_34, L_35, L_36, /*hidden argument*/NULL);
+		}
+
+IL_00c1:
+		{
+		}
+
+IL_00c2:
+		{
+			// file.Close();
+			FileStream_t4292183065 * L_37 = V_2;
+			// file.Close();
+			NullCheck(L_37);
+			VirtActionInvoker0::Invoke(12 /* System.Void System.IO.Stream::Close() */, L_37);
+			// catch (Exception e)
+			goto IL_00fe;
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
-		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_00c4;
+		__exception_local = (Exception_t *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (Exception_t_il2cpp_TypeInfo_var, il2cpp_codegen_object_class(e.ex)))
+			goto CATCH_00ce;
+		throw e;
 	}
 
-FINALLY_00c4:
-	{ // begin finally (depth: 1)
-		{
-			FileStream_t4292183065 * L_36 = V_2;
-			if (!L_36)
-			{
-				goto IL_00d0;
-			}
-		}
+CATCH_00ce:
+	{ // begin catch(System.Exception)
+		V_7 = ((Exception_t *)__exception_local);
+		// Debug.Log(e.ToString());
+		Exception_t * L_38 = V_7;
+		// Debug.Log(e.ToString());
+		NullCheck(L_38);
+		String_t* L_39 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_38);
+		// Debug.Log(e.ToString());
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+		Debug_Log_m4051431634(NULL /*static, unused*/, L_39, /*hidden argument*/NULL);
+		// GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(e.ToString());
+		// GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(e.ToString());
+		GameObject_t1113636619 * L_40 = GameObject_Find_m2032535176(NULL /*static, unused*/, _stringLiteral3987835886, /*hidden argument*/NULL);
+		// GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(e.ToString());
+		NullCheck(L_40);
+		UpdateWorldMappingStatus_t2738391865 * L_41 = GameObject_GetComponent_TisUpdateWorldMappingStatus_t2738391865_m1586204052(L_40, /*hidden argument*/GameObject_GetComponent_TisUpdateWorldMappingStatus_t2738391865_m1586204052_RuntimeMethod_var);
+		Exception_t * L_42 = V_7;
+		// GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(e.ToString());
+		NullCheck(L_42);
+		String_t* L_43 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_42);
+		// GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(e.ToString());
+		NullCheck(L_41);
+		UpdateWorldMappingStatus_ChangeTextTo_m1464168588(L_41, L_43, /*hidden argument*/NULL);
+		goto IL_00fe;
+	} // end catch (depth: 1)
 
-IL_00ca:
-		{
-			FileStream_t4292183065 * L_37 = V_2;
-			// using(FileStream file = File.Open(pathToSave, FileMode.Create))
-			NullCheck(L_37);
-			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_37);
-		}
-
-IL_00d0:
-		{
-			IL2CPP_END_FINALLY(196)
-		}
-	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(196)
-	{
-		IL2CPP_JUMP_TBL(0xD1, IL_00d1)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
-	}
-
-IL_00d1:
+IL_00fe:
 	{
 		// }
 		return;
@@ -34802,14 +35243,15 @@ extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_LoadLinesFromFile_m898967437 
 		s_Il2CppMethodInitialized = true;
 	}
 	String_t* V_0 = NULL;
-	FileStream_t4292183065 * V_1 = NULL;
-	BinaryFormatter_t3197753202 * V_2 = NULL;
-	LineRendererData_t2483329549 * V_3 = NULL;
+	LineRendererData_t2483329549 * V_1 = NULL;
+	FileStream_t4292183065 * V_2 = NULL;
+	BinaryFormatter_t3197753202 * V_3 = NULL;
 	SingleLineRendererData_t2883868068 * V_4 = NULL;
 	Enumerator_t1950219391  V_5;
 	memset(&V_5, 0, sizeof(V_5));
 	GameObject_t1113636619 * V_6 = NULL;
 	int32_t V_7 = 0;
+	Exception_t * V_8 = NULL;
 	Exception_t * __last_unhandled_exception = 0;
 	NO_UNUSED_WARNING (__last_unhandled_exception);
 	Exception_t * __exception_local = 0;
@@ -34824,403 +35266,501 @@ extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_LoadLinesFromFile_m898967437 
 		IL2CPP_RUNTIME_CLASS_INIT(Path_t1605229823_il2cpp_TypeInfo_var);
 		String_t* L_2 = Path_Combine_m3389272516(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
 		V_0 = L_2;
+		// LineRendererData data = null;
+		V_1 = (LineRendererData_t2483329549 *)NULL;
 		// if(File.Exists(pathToLoad))
 		String_t* L_3 = V_0;
 		// if(File.Exists(pathToLoad))
 		bool L_4 = File_Exists_m3943585060(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
 		if (!L_4)
 		{
-			goto IL_0226;
+			goto IL_0287;
 		}
 	}
 	{
-		// using(FileStream file = File.Open(pathToLoad, FileMode.Open))
-		String_t* L_5 = V_0;
-		// using(FileStream file = File.Open(pathToLoad, FileMode.Open))
-		FileStream_t4292183065 * L_6 = File_Open_m664439378(NULL /*static, unused*/, L_5, 3, /*hidden argument*/NULL);
-		V_1 = L_6;
 	}
 
-IL_0021:
+IL_001b:
 	try
 	{ // begin try (depth: 1)
 		{
-			// BinaryFormatter formatter = new BinaryFormatter();
-			BinaryFormatter_t3197753202 * L_7 = (BinaryFormatter_t3197753202 *)il2cpp_codegen_object_new(BinaryFormatter_t3197753202_il2cpp_TypeInfo_var);
-			BinaryFormatter__ctor_m971003555(L_7, /*hidden argument*/NULL);
-			V_2 = L_7;
-			// LineRendererData data = (LineRendererData) formatter.Deserialize(file);
-			BinaryFormatter_t3197753202 * L_8 = V_2;
-			FileStream_t4292183065 * L_9 = V_1;
-			// LineRendererData data = (LineRendererData) formatter.Deserialize(file);
-			NullCheck(L_8);
-			RuntimeObject * L_10 = BinaryFormatter_Deserialize_m193346007(L_8, L_9, /*hidden argument*/NULL);
-			V_3 = ((LineRendererData_t2483329549 *)CastclassClass((RuntimeObject*)L_10, LineRendererData_t2483329549_il2cpp_TypeInfo_var));
-			// foreach(SingleLineRendererData line in data.lines)
-			LineRendererData_t2483329549 * L_11 = V_3;
-			// foreach(SingleLineRendererData line in data.lines)
-			NullCheck(L_11);
-			List_1_t60975514 * L_12 = LineRendererData_get_lines_m3238207813(L_11, /*hidden argument*/NULL);
-			// foreach(SingleLineRendererData line in data.lines)
-			NullCheck(L_12);
-			Enumerator_t1950219391  L_13 = List_1_GetEnumerator_m202911483(L_12, /*hidden argument*/List_1_GetEnumerator_m202911483_RuntimeMethod_var);
-			V_5 = L_13;
+			// using(FileStream file = File.Open(pathToLoad, FileMode.Open))
+			String_t* L_5 = V_0;
+			// using(FileStream file = File.Open(pathToLoad, FileMode.Open))
+			FileStream_t4292183065 * L_6 = File_Open_m664439378(NULL /*static, unused*/, L_5, 3, /*hidden argument*/NULL);
+			V_2 = L_6;
 		}
 
-IL_0043:
+IL_0024:
 		try
 		{ // begin try (depth: 2)
 			{
-				goto IL_01f3;
-			}
-
-IL_0048:
-			{
-				// foreach(SingleLineRendererData line in data.lines)
-				// foreach(SingleLineRendererData line in data.lines)
-				SingleLineRendererData_t2883868068 * L_14 = Enumerator_get_Current_m4224656471((Enumerator_t1950219391 *)(&V_5), /*hidden argument*/Enumerator_get_Current_m4224656471_RuntimeMethod_var);
-				V_4 = L_14;
-				// GameObject go = new GameObject();
-				GameObject_t1113636619 * L_15 = (GameObject_t1113636619 *)il2cpp_codegen_object_new(GameObject_t1113636619_il2cpp_TypeInfo_var);
-				GameObject__ctor_m3707688467(L_15, /*hidden argument*/NULL);
-				V_6 = L_15;
-				// go.transform.position = line.position;
-				GameObject_t1113636619 * L_16 = V_6;
-				// go.transform.position = line.position;
-				NullCheck(L_16);
-				Transform_t3600365921 * L_17 = GameObject_get_transform_m1369836730(L_16, /*hidden argument*/NULL);
-				SingleLineRendererData_t2883868068 * L_18 = V_4;
-				// go.transform.position = line.position;
-				NullCheck(L_18);
-				Vector3Ser_t2557195495 * L_19 = SingleLineRendererData_get_position_m581230842(L_18, /*hidden argument*/NULL);
-				// go.transform.position = line.position;
-				Vector3_t3722313464  L_20 = Vector3Ser_op_Implicit_m2322330946(NULL /*static, unused*/, L_19, /*hidden argument*/NULL);
-				// go.transform.position = line.position;
-				NullCheck(L_17);
-				Transform_set_position_m3387557959(L_17, L_20, /*hidden argument*/NULL);
-				// go.transform.rotation = line.rotation;
-				GameObject_t1113636619 * L_21 = V_6;
-				// go.transform.rotation = line.rotation;
-				NullCheck(L_21);
-				Transform_t3600365921 * L_22 = GameObject_get_transform_m1369836730(L_21, /*hidden argument*/NULL);
-				SingleLineRendererData_t2883868068 * L_23 = V_4;
-				// go.transform.rotation = line.rotation;
-				NullCheck(L_23);
-				QuaternionSer_t4279557438 * L_24 = SingleLineRendererData_get_rotation_m1001563269(L_23, /*hidden argument*/NULL);
-				// go.transform.rotation = line.rotation;
-				Quaternion_t2301928331  L_25 = QuaternionSer_op_Implicit_m2344099152(NULL /*static, unused*/, L_24, /*hidden argument*/NULL);
-				// go.transform.rotation = line.rotation;
-				NullCheck(L_22);
-				Transform_set_rotation_m3524318132(L_22, L_25, /*hidden argument*/NULL);
-				// go.transform.localScale = line.scale;
-				GameObject_t1113636619 * L_26 = V_6;
-				// go.transform.localScale = line.scale;
-				NullCheck(L_26);
-				Transform_t3600365921 * L_27 = GameObject_get_transform_m1369836730(L_26, /*hidden argument*/NULL);
-				SingleLineRendererData_t2883868068 * L_28 = V_4;
-				// go.transform.localScale = line.scale;
-				NullCheck(L_28);
-				Vector3Ser_t2557195495 * L_29 = SingleLineRendererData_get_scale_m3188061261(L_28, /*hidden argument*/NULL);
-				// go.transform.localScale = line.scale;
-				Vector3_t3722313464  L_30 = Vector3Ser_op_Implicit_m2322330946(NULL /*static, unused*/, L_29, /*hidden argument*/NULL);
-				// go.transform.localScale = line.scale;
-				NullCheck(L_27);
-				Transform_set_localScale_m3053443106(L_27, L_30, /*hidden argument*/NULL);
-				// go.AddComponent<LineRenderer>();
-				GameObject_t1113636619 * L_31 = V_6;
-				// go.AddComponent<LineRenderer>();
-				NullCheck(L_31);
-				GameObject_AddComponent_TisLineRenderer_t3154350270_m2920077551(L_31, /*hidden argument*/GameObject_AddComponent_TisLineRenderer_t3154350270_m2920077551_RuntimeMethod_var);
-				// go.GetComponent<LineRenderer>().startColor = line.startColor;
-				GameObject_t1113636619 * L_32 = V_6;
-				// go.GetComponent<LineRenderer>().startColor = line.startColor;
-				NullCheck(L_32);
-				LineRenderer_t3154350270 * L_33 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_32, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
-				SingleLineRendererData_t2883868068 * L_34 = V_4;
-				// go.GetComponent<LineRenderer>().startColor = line.startColor;
-				NullCheck(L_34);
-				ColorSer_t1940368198 * L_35 = SingleLineRendererData_get_startColor_m1724053124(L_34, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().startColor = line.startColor;
-				Color_t2555686324  L_36 = ColorSer_op_Implicit_m3247474435(NULL /*static, unused*/, L_35, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().startColor = line.startColor;
-				NullCheck(L_33);
-				LineRenderer_set_startColor_m307692187(L_33, L_36, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().endColor = line.startColor;
-				GameObject_t1113636619 * L_37 = V_6;
-				// go.GetComponent<LineRenderer>().endColor = line.startColor;
-				NullCheck(L_37);
-				LineRenderer_t3154350270 * L_38 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_37, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
-				SingleLineRendererData_t2883868068 * L_39 = V_4;
-				// go.GetComponent<LineRenderer>().endColor = line.startColor;
-				NullCheck(L_39);
-				ColorSer_t1940368198 * L_40 = SingleLineRendererData_get_startColor_m1724053124(L_39, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().endColor = line.startColor;
-				Color_t2555686324  L_41 = ColorSer_op_Implicit_m3247474435(NULL /*static, unused*/, L_40, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().endColor = line.startColor;
-				NullCheck(L_38);
-				LineRenderer_set_endColor_m2330841811(L_38, L_41, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().startWidth = line.startWidth;
-				GameObject_t1113636619 * L_42 = V_6;
-				// go.GetComponent<LineRenderer>().startWidth = line.startWidth;
-				NullCheck(L_42);
-				LineRenderer_t3154350270 * L_43 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_42, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
-				SingleLineRendererData_t2883868068 * L_44 = V_4;
-				// go.GetComponent<LineRenderer>().startWidth = line.startWidth;
-				NullCheck(L_44);
-				float L_45 = SingleLineRendererData_get_startWidth_m3965665884(L_44, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().startWidth = line.startWidth;
-				NullCheck(L_43);
-				LineRenderer_set_startWidth_m1093267133(L_43, L_45, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().endWidth = line.endWidth;
-				GameObject_t1113636619 * L_46 = V_6;
-				// go.GetComponent<LineRenderer>().endWidth = line.endWidth;
-				NullCheck(L_46);
-				LineRenderer_t3154350270 * L_47 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_46, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
-				SingleLineRendererData_t2883868068 * L_48 = V_4;
-				// go.GetComponent<LineRenderer>().endWidth = line.endWidth;
-				NullCheck(L_48);
-				float L_49 = SingleLineRendererData_get_endWidth_m4155149773(L_48, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().endWidth = line.endWidth;
-				NullCheck(L_47);
-				LineRenderer_set_endWidth_m4252049505(L_47, L_49, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().numCornerVertices = line.cornerVertices;
-				GameObject_t1113636619 * L_50 = V_6;
-				// go.GetComponent<LineRenderer>().numCornerVertices = line.cornerVertices;
-				NullCheck(L_50);
-				LineRenderer_t3154350270 * L_51 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_50, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
-				SingleLineRendererData_t2883868068 * L_52 = V_4;
-				// go.GetComponent<LineRenderer>().numCornerVertices = line.cornerVertices;
-				NullCheck(L_52);
-				int32_t L_53 = SingleLineRendererData_get_cornerVertices_m1399635222(L_52, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().numCornerVertices = line.cornerVertices;
-				NullCheck(L_51);
-				LineRenderer_set_numCornerVertices_m3505561437(L_51, L_53, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().numCapVertices = line.cornerVertices;
-				GameObject_t1113636619 * L_54 = V_6;
-				// go.GetComponent<LineRenderer>().numCapVertices = line.cornerVertices;
-				NullCheck(L_54);
-				LineRenderer_t3154350270 * L_55 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_54, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
-				SingleLineRendererData_t2883868068 * L_56 = V_4;
-				// go.GetComponent<LineRenderer>().numCapVertices = line.cornerVertices;
-				NullCheck(L_56);
-				int32_t L_57 = SingleLineRendererData_get_cornerVertices_m1399635222(L_56, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().numCapVertices = line.cornerVertices;
-				NullCheck(L_55);
-				LineRenderer_set_numCapVertices_m2429094428(L_55, L_57, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.GetComponent<AllMaterials>().materials[(int)line.material];
-				GameObject_t1113636619 * L_58 = V_6;
-				// go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.GetComponent<AllMaterials>().materials[(int)line.material];
-				NullCheck(L_58);
-				LineRenderer_t3154350270 * L_59 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_58, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
-				GameObject_t1113636619 * L_60 = __this->get_allMaterials_6();
-				// go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.GetComponent<AllMaterials>().materials[(int)line.material];
-				NullCheck(L_60);
-				AllMaterials_t3879404035 * L_61 = GameObject_GetComponent_TisAllMaterials_t3879404035_m2001441589(L_60, /*hidden argument*/GameObject_GetComponent_TisAllMaterials_t3879404035_m2001441589_RuntimeMethod_var);
-				NullCheck(L_61);
-				MaterialU5BU5D_t561872642* L_62 = L_61->get_materials_4();
-				SingleLineRendererData_t2883868068 * L_63 = V_4;
-				// go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.GetComponent<AllMaterials>().materials[(int)line.material];
-				NullCheck(L_63);
-				int32_t L_64 = SingleLineRendererData_get_material_m298800950(L_63, /*hidden argument*/NULL);
-				NullCheck(L_62);
-				int32_t L_65 = L_64;
-				Material_t340375123 * L_66 = (L_62)->GetAt(static_cast<il2cpp_array_size_t>(L_65));
-				// go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.GetComponent<AllMaterials>().materials[(int)line.material];
-				NullCheck(L_59);
-				Renderer_set_sharedMaterial_m2374163090(L_59, L_66, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().positionCount = line.points.Count;
-				GameObject_t1113636619 * L_67 = V_6;
-				// go.GetComponent<LineRenderer>().positionCount = line.points.Count;
-				NullCheck(L_67);
-				LineRenderer_t3154350270 * L_68 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_67, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
-				SingleLineRendererData_t2883868068 * L_69 = V_4;
-				// go.GetComponent<LineRenderer>().positionCount = line.points.Count;
-				NullCheck(L_69);
-				List_1_t4029270237 * L_70 = SingleLineRendererData_get_points_m2917228895(L_69, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().positionCount = line.points.Count;
-				NullCheck(L_70);
-				int32_t L_71 = List_1_get_Count_m1186522723(L_70, /*hidden argument*/List_1_get_Count_m1186522723_RuntimeMethod_var);
-				// go.GetComponent<LineRenderer>().positionCount = line.points.Count;
-				NullCheck(L_68);
-				LineRenderer_set_positionCount_m2226639690(L_68, L_71, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().textureMode = LineTextureMode.Tile;
-				GameObject_t1113636619 * L_72 = V_6;
-				// go.GetComponent<LineRenderer>().textureMode = LineTextureMode.Tile;
-				NullCheck(L_72);
-				LineRenderer_t3154350270 * L_73 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_72, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
-				// go.GetComponent<LineRenderer>().textureMode = LineTextureMode.Tile;
-				NullCheck(L_73);
-				LineRenderer_set_textureMode_m1484331011(L_73, 1, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().receiveShadows = false;
-				GameObject_t1113636619 * L_74 = V_6;
-				// go.GetComponent<LineRenderer>().receiveShadows = false;
-				NullCheck(L_74);
-				LineRenderer_t3154350270 * L_75 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_74, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
-				// go.GetComponent<LineRenderer>().receiveShadows = false;
-				NullCheck(L_75);
-				Renderer_set_receiveShadows_m108599289(L_75, (bool)0, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().useWorldSpace = false;
-				GameObject_t1113636619 * L_76 = V_6;
-				// go.GetComponent<LineRenderer>().useWorldSpace = false;
-				NullCheck(L_76);
-				LineRenderer_t3154350270 * L_77 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_76, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
-				// go.GetComponent<LineRenderer>().useWorldSpace = false;
-				NullCheck(L_77);
-				LineRenderer_set_useWorldSpace_m2472758901(L_77, (bool)0, /*hidden argument*/NULL);
-				// for (int i = 0; i < line.points.Count; i++)
-				V_7 = 0;
-				goto IL_01b7;
-			}
-
-IL_0190:
-			{
-				// go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
-				GameObject_t1113636619 * L_78 = V_6;
-				// go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
-				NullCheck(L_78);
-				LineRenderer_t3154350270 * L_79 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_78, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
-				int32_t L_80 = V_7;
-				SingleLineRendererData_t2883868068 * L_81 = V_4;
-				// go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
-				NullCheck(L_81);
-				List_1_t4029270237 * L_82 = SingleLineRendererData_get_points_m2917228895(L_81, /*hidden argument*/NULL);
-				int32_t L_83 = V_7;
-				// go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
-				NullCheck(L_82);
-				Vector3Ser_t2557195495 * L_84 = List_1_get_Item_m2893049366(L_82, L_83, /*hidden argument*/List_1_get_Item_m2893049366_RuntimeMethod_var);
-				// go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
-				Vector3_t3722313464  L_85 = Vector3Ser_op_Implicit_m2322330946(NULL /*static, unused*/, L_84, /*hidden argument*/NULL);
-				// go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
-				NullCheck(L_79);
-				LineRenderer_SetPosition_m2111131184(L_79, L_80, L_85, /*hidden argument*/NULL);
-				// for (int i = 0; i < line.points.Count; i++)
-				int32_t L_86 = V_7;
-				V_7 = ((int32_t)il2cpp_codegen_add((int32_t)L_86, (int32_t)1));
-			}
-
-IL_01b7:
-			{
-				// for (int i = 0; i < line.points.Count; i++)
-				int32_t L_87 = V_7;
-				SingleLineRendererData_t2883868068 * L_88 = V_4;
-				// for (int i = 0; i < line.points.Count; i++)
-				NullCheck(L_88);
-				List_1_t4029270237 * L_89 = SingleLineRendererData_get_points_m2917228895(L_88, /*hidden argument*/NULL);
-				// for (int i = 0; i < line.points.Count; i++)
-				NullCheck(L_89);
-				int32_t L_90 = List_1_get_Count_m1186522723(L_89, /*hidden argument*/List_1_get_Count_m1186522723_RuntimeMethod_var);
-				if ((((int32_t)L_87) < ((int32_t)L_90)))
+				// if(file != null)
+				FileStream_t4292183065 * L_7 = V_2;
+				if (!L_7)
 				{
-					goto IL_0190;
+					goto IL_0040;
 				}
 			}
 
-IL_01ca:
+IL_002b:
 			{
-				// go.AddComponent<UnityARUserAnchorComponent>();
-				GameObject_t1113636619 * L_91 = V_6;
-				// go.AddComponent<UnityARUserAnchorComponent>();
-				NullCheck(L_91);
-				GameObject_AddComponent_TisUnityARUserAnchorComponent_t969893952_m3507687242(L_91, /*hidden argument*/GameObject_AddComponent_TisUnityARUserAnchorComponent_t969893952_m3507687242_RuntimeMethod_var);
-				// Instantiate(go, go.transform.position, go.transform.rotation);
-				GameObject_t1113636619 * L_92 = V_6;
-				GameObject_t1113636619 * L_93 = V_6;
-				// Instantiate(go, go.transform.position, go.transform.rotation);
-				NullCheck(L_93);
-				Transform_t3600365921 * L_94 = GameObject_get_transform_m1369836730(L_93, /*hidden argument*/NULL);
-				// Instantiate(go, go.transform.position, go.transform.rotation);
-				NullCheck(L_94);
-				Vector3_t3722313464  L_95 = Transform_get_position_m36019626(L_94, /*hidden argument*/NULL);
-				GameObject_t1113636619 * L_96 = V_6;
-				// Instantiate(go, go.transform.position, go.transform.rotation);
-				NullCheck(L_96);
-				Transform_t3600365921 * L_97 = GameObject_get_transform_m1369836730(L_96, /*hidden argument*/NULL);
-				// Instantiate(go, go.transform.position, go.transform.rotation);
-				NullCheck(L_97);
-				Quaternion_t2301928331  L_98 = Transform_get_rotation_m3502953881(L_97, /*hidden argument*/NULL);
-				// Instantiate(go, go.transform.position, go.transform.rotation);
-				IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-				Object_Instantiate_TisGameObject_t1113636619_m3006960551(NULL /*static, unused*/, L_92, L_95, L_98, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3006960551_RuntimeMethod_var);
+				// BinaryFormatter formatter = new BinaryFormatter();
+				BinaryFormatter_t3197753202 * L_8 = (BinaryFormatter_t3197753202 *)il2cpp_codegen_object_new(BinaryFormatter_t3197753202_il2cpp_TypeInfo_var);
+				BinaryFormatter__ctor_m971003555(L_8, /*hidden argument*/NULL);
+				V_3 = L_8;
+				// data = (LineRendererData) formatter.Deserialize(file);
+				BinaryFormatter_t3197753202 * L_9 = V_3;
+				FileStream_t4292183065 * L_10 = V_2;
+				// data = (LineRendererData) formatter.Deserialize(file);
+				NullCheck(L_9);
+				RuntimeObject * L_11 = BinaryFormatter_Deserialize_m193346007(L_9, L_10, /*hidden argument*/NULL);
+				V_1 = ((LineRendererData_t2483329549 *)CastclassClass((RuntimeObject*)L_11, LineRendererData_t2483329549_il2cpp_TypeInfo_var));
 			}
 
-IL_01f3:
+IL_0040:
 			{
-				// foreach(SingleLineRendererData line in data.lines)
-				bool L_99 = Enumerator_MoveNext_m1399265557((Enumerator_t1950219391 *)(&V_5), /*hidden argument*/Enumerator_MoveNext_m1399265557_RuntimeMethod_var);
-				if (L_99)
-				{
-					goto IL_0048;
-				}
-			}
-
-IL_01ff:
-			{
-				IL2CPP_LEAVE(0x212, FINALLY_0204);
+				IL2CPP_LEAVE(0x53, FINALLY_0046);
 			}
 		} // end try (depth: 2)
 		catch(Il2CppExceptionWrapper& e)
 		{
 			__last_unhandled_exception = (Exception_t *)e.ex;
-			goto FINALLY_0204;
+			goto FINALLY_0046;
 		}
 
-FINALLY_0204:
+FINALLY_0046:
 		{ // begin finally (depth: 2)
-			// foreach(SingleLineRendererData line in data.lines)
-			Enumerator_Dispose_m671822350((Enumerator_t1950219391 *)(&V_5), /*hidden argument*/Enumerator_Dispose_m671822350_RuntimeMethod_var);
-			IL2CPP_END_FINALLY(516)
+			{
+				FileStream_t4292183065 * L_12 = V_2;
+				if (!L_12)
+				{
+					goto IL_0052;
+				}
+			}
+
+IL_004c:
+			{
+				FileStream_t4292183065 * L_13 = V_2;
+				// using(FileStream file = File.Open(pathToLoad, FileMode.Open))
+				NullCheck(L_13);
+				InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_13);
+			}
+
+IL_0052:
+			{
+				IL2CPP_END_FINALLY(70)
+			}
 		} // end finally (depth: 2)
-		IL2CPP_CLEANUP(516)
+		IL2CPP_CLEANUP(70)
 		{
-			IL2CPP_JUMP_TBL(0x212, IL_0212)
+			IL2CPP_JUMP_TBL(0x53, IL_0053)
 			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 		}
 
-IL_0212:
+IL_0053:
 		{
-			IL2CPP_LEAVE(0x225, FINALLY_0218);
+			// if(data == null)
+			LineRendererData_t2483329549 * L_14 = V_1;
+			if (L_14)
+			{
+				goto IL_005e;
+			}
+		}
+
+IL_0059:
+		{
+			// return;
+			goto IL_0287;
+		}
+
+IL_005e:
+		{
+			// foreach(SingleLineRendererData line in data.lines)
+			LineRendererData_t2483329549 * L_15 = V_1;
+			// foreach(SingleLineRendererData line in data.lines)
+			NullCheck(L_15);
+			List_1_t60975514 * L_16 = LineRendererData_get_lines_m3238207813(L_15, /*hidden argument*/NULL);
+			// foreach(SingleLineRendererData line in data.lines)
+			NullCheck(L_16);
+			Enumerator_t1950219391  L_17 = List_1_GetEnumerator_m202911483(L_16, /*hidden argument*/List_1_GetEnumerator_m202911483_RuntimeMethod_var);
+			V_5 = L_17;
+		}
+
+IL_006c:
+		try
+		{ // begin try (depth: 2)
+			{
+				goto IL_0231;
+			}
+
+IL_0071:
+			{
+				// foreach(SingleLineRendererData line in data.lines)
+				// foreach(SingleLineRendererData line in data.lines)
+				SingleLineRendererData_t2883868068 * L_18 = Enumerator_get_Current_m4224656471((Enumerator_t1950219391 *)(&V_5), /*hidden argument*/Enumerator_get_Current_m4224656471_RuntimeMethod_var);
+				V_4 = L_18;
+				// if(line != null)
+				SingleLineRendererData_t2883868068 * L_19 = V_4;
+				if (!L_19)
+				{
+					goto IL_0230;
+				}
+			}
+
+IL_0082:
+			{
+				// GameObject go = new GameObject();
+				GameObject_t1113636619 * L_20 = (GameObject_t1113636619 *)il2cpp_codegen_object_new(GameObject_t1113636619_il2cpp_TypeInfo_var);
+				GameObject__ctor_m3707688467(L_20, /*hidden argument*/NULL);
+				V_6 = L_20;
+				// go.transform.position = line.position;
+				GameObject_t1113636619 * L_21 = V_6;
+				// go.transform.position = line.position;
+				NullCheck(L_21);
+				Transform_t3600365921 * L_22 = GameObject_get_transform_m1369836730(L_21, /*hidden argument*/NULL);
+				SingleLineRendererData_t2883868068 * L_23 = V_4;
+				// go.transform.position = line.position;
+				NullCheck(L_23);
+				Vector3Ser_t2557195495 * L_24 = SingleLineRendererData_get_position_m581230842(L_23, /*hidden argument*/NULL);
+				// go.transform.position = line.position;
+				Vector3_t3722313464  L_25 = Vector3Ser_op_Implicit_m2322330946(NULL /*static, unused*/, L_24, /*hidden argument*/NULL);
+				// go.transform.position = line.position;
+				NullCheck(L_22);
+				Transform_set_position_m3387557959(L_22, L_25, /*hidden argument*/NULL);
+				// go.transform.rotation = line.rotation;
+				GameObject_t1113636619 * L_26 = V_6;
+				// go.transform.rotation = line.rotation;
+				NullCheck(L_26);
+				Transform_t3600365921 * L_27 = GameObject_get_transform_m1369836730(L_26, /*hidden argument*/NULL);
+				SingleLineRendererData_t2883868068 * L_28 = V_4;
+				// go.transform.rotation = line.rotation;
+				NullCheck(L_28);
+				QuaternionSer_t4279557438 * L_29 = SingleLineRendererData_get_rotation_m1001563269(L_28, /*hidden argument*/NULL);
+				// go.transform.rotation = line.rotation;
+				Quaternion_t2301928331  L_30 = QuaternionSer_op_Implicit_m2344099152(NULL /*static, unused*/, L_29, /*hidden argument*/NULL);
+				// go.transform.rotation = line.rotation;
+				NullCheck(L_27);
+				Transform_set_rotation_m3524318132(L_27, L_30, /*hidden argument*/NULL);
+				// go.transform.localScale = line.scale;
+				GameObject_t1113636619 * L_31 = V_6;
+				// go.transform.localScale = line.scale;
+				NullCheck(L_31);
+				Transform_t3600365921 * L_32 = GameObject_get_transform_m1369836730(L_31, /*hidden argument*/NULL);
+				SingleLineRendererData_t2883868068 * L_33 = V_4;
+				// go.transform.localScale = line.scale;
+				NullCheck(L_33);
+				Vector3Ser_t2557195495 * L_34 = SingleLineRendererData_get_scale_m3188061261(L_33, /*hidden argument*/NULL);
+				// go.transform.localScale = line.scale;
+				Vector3_t3722313464  L_35 = Vector3Ser_op_Implicit_m2322330946(NULL /*static, unused*/, L_34, /*hidden argument*/NULL);
+				// go.transform.localScale = line.scale;
+				NullCheck(L_32);
+				Transform_set_localScale_m3053443106(L_32, L_35, /*hidden argument*/NULL);
+				// go.tag = "Line";
+				GameObject_t1113636619 * L_36 = V_6;
+				// go.tag = "Line";
+				NullCheck(L_36);
+				GameObject_set_tag_m2353670106(L_36, _stringLiteral2792132920, /*hidden argument*/NULL);
+				// go.AddComponent<LineRenderer>();
+				GameObject_t1113636619 * L_37 = V_6;
+				// go.AddComponent<LineRenderer>();
+				NullCheck(L_37);
+				GameObject_AddComponent_TisLineRenderer_t3154350270_m2920077551(L_37, /*hidden argument*/GameObject_AddComponent_TisLineRenderer_t3154350270_m2920077551_RuntimeMethod_var);
+				// go.GetComponent<LineRenderer>().startColor = line.startColor;
+				GameObject_t1113636619 * L_38 = V_6;
+				// go.GetComponent<LineRenderer>().startColor = line.startColor;
+				NullCheck(L_38);
+				LineRenderer_t3154350270 * L_39 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_38, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
+				SingleLineRendererData_t2883868068 * L_40 = V_4;
+				// go.GetComponent<LineRenderer>().startColor = line.startColor;
+				NullCheck(L_40);
+				ColorSer_t1940368198 * L_41 = SingleLineRendererData_get_startColor_m1724053124(L_40, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().startColor = line.startColor;
+				Color_t2555686324  L_42 = ColorSer_op_Implicit_m3247474435(NULL /*static, unused*/, L_41, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().startColor = line.startColor;
+				NullCheck(L_39);
+				LineRenderer_set_startColor_m307692187(L_39, L_42, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().endColor = line.startColor;
+				GameObject_t1113636619 * L_43 = V_6;
+				// go.GetComponent<LineRenderer>().endColor = line.startColor;
+				NullCheck(L_43);
+				LineRenderer_t3154350270 * L_44 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_43, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
+				SingleLineRendererData_t2883868068 * L_45 = V_4;
+				// go.GetComponent<LineRenderer>().endColor = line.startColor;
+				NullCheck(L_45);
+				ColorSer_t1940368198 * L_46 = SingleLineRendererData_get_startColor_m1724053124(L_45, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().endColor = line.startColor;
+				Color_t2555686324  L_47 = ColorSer_op_Implicit_m3247474435(NULL /*static, unused*/, L_46, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().endColor = line.startColor;
+				NullCheck(L_44);
+				LineRenderer_set_endColor_m2330841811(L_44, L_47, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().startWidth = line.startWidth;
+				GameObject_t1113636619 * L_48 = V_6;
+				// go.GetComponent<LineRenderer>().startWidth = line.startWidth;
+				NullCheck(L_48);
+				LineRenderer_t3154350270 * L_49 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_48, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
+				SingleLineRendererData_t2883868068 * L_50 = V_4;
+				// go.GetComponent<LineRenderer>().startWidth = line.startWidth;
+				NullCheck(L_50);
+				float L_51 = SingleLineRendererData_get_startWidth_m3965665884(L_50, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().startWidth = line.startWidth;
+				NullCheck(L_49);
+				LineRenderer_set_startWidth_m1093267133(L_49, L_51, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().endWidth = line.endWidth;
+				GameObject_t1113636619 * L_52 = V_6;
+				// go.GetComponent<LineRenderer>().endWidth = line.endWidth;
+				NullCheck(L_52);
+				LineRenderer_t3154350270 * L_53 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_52, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
+				SingleLineRendererData_t2883868068 * L_54 = V_4;
+				// go.GetComponent<LineRenderer>().endWidth = line.endWidth;
+				NullCheck(L_54);
+				float L_55 = SingleLineRendererData_get_endWidth_m4155149773(L_54, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().endWidth = line.endWidth;
+				NullCheck(L_53);
+				LineRenderer_set_endWidth_m4252049505(L_53, L_55, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().numCornerVertices = line.cornerVertices;
+				GameObject_t1113636619 * L_56 = V_6;
+				// go.GetComponent<LineRenderer>().numCornerVertices = line.cornerVertices;
+				NullCheck(L_56);
+				LineRenderer_t3154350270 * L_57 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_56, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
+				SingleLineRendererData_t2883868068 * L_58 = V_4;
+				// go.GetComponent<LineRenderer>().numCornerVertices = line.cornerVertices;
+				NullCheck(L_58);
+				int32_t L_59 = SingleLineRendererData_get_cornerVertices_m1399635222(L_58, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().numCornerVertices = line.cornerVertices;
+				NullCheck(L_57);
+				LineRenderer_set_numCornerVertices_m3505561437(L_57, L_59, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().numCapVertices = line.cornerVertices;
+				GameObject_t1113636619 * L_60 = V_6;
+				// go.GetComponent<LineRenderer>().numCapVertices = line.cornerVertices;
+				NullCheck(L_60);
+				LineRenderer_t3154350270 * L_61 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_60, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
+				SingleLineRendererData_t2883868068 * L_62 = V_4;
+				// go.GetComponent<LineRenderer>().numCapVertices = line.cornerVertices;
+				NullCheck(L_62);
+				int32_t L_63 = SingleLineRendererData_get_cornerVertices_m1399635222(L_62, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().numCapVertices = line.cornerVertices;
+				NullCheck(L_61);
+				LineRenderer_set_numCapVertices_m2429094428(L_61, L_63, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.GetComponent<AllMaterials>().materials[(int)line.material];
+				GameObject_t1113636619 * L_64 = V_6;
+				// go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.GetComponent<AllMaterials>().materials[(int)line.material];
+				NullCheck(L_64);
+				LineRenderer_t3154350270 * L_65 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_64, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
+				GameObject_t1113636619 * L_66 = __this->get_allMaterials_6();
+				// go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.GetComponent<AllMaterials>().materials[(int)line.material];
+				NullCheck(L_66);
+				AllMaterials_t3879404035 * L_67 = GameObject_GetComponent_TisAllMaterials_t3879404035_m2001441589(L_66, /*hidden argument*/GameObject_GetComponent_TisAllMaterials_t3879404035_m2001441589_RuntimeMethod_var);
+				NullCheck(L_67);
+				MaterialU5BU5D_t561872642* L_68 = L_67->get_materials_4();
+				SingleLineRendererData_t2883868068 * L_69 = V_4;
+				// go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.GetComponent<AllMaterials>().materials[(int)line.material];
+				NullCheck(L_69);
+				int32_t L_70 = SingleLineRendererData_get_material_m298800950(L_69, /*hidden argument*/NULL);
+				NullCheck(L_68);
+				int32_t L_71 = L_70;
+				Material_t340375123 * L_72 = (L_68)->GetAt(static_cast<il2cpp_array_size_t>(L_71));
+				// go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.GetComponent<AllMaterials>().materials[(int)line.material];
+				NullCheck(L_65);
+				Renderer_set_sharedMaterial_m2374163090(L_65, L_72, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().positionCount = line.points.Count;
+				GameObject_t1113636619 * L_73 = V_6;
+				// go.GetComponent<LineRenderer>().positionCount = line.points.Count;
+				NullCheck(L_73);
+				LineRenderer_t3154350270 * L_74 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_73, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
+				SingleLineRendererData_t2883868068 * L_75 = V_4;
+				// go.GetComponent<LineRenderer>().positionCount = line.points.Count;
+				NullCheck(L_75);
+				List_1_t4029270237 * L_76 = SingleLineRendererData_get_points_m2917228895(L_75, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().positionCount = line.points.Count;
+				NullCheck(L_76);
+				int32_t L_77 = List_1_get_Count_m1186522723(L_76, /*hidden argument*/List_1_get_Count_m1186522723_RuntimeMethod_var);
+				// go.GetComponent<LineRenderer>().positionCount = line.points.Count;
+				NullCheck(L_74);
+				LineRenderer_set_positionCount_m2226639690(L_74, L_77, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().textureMode = LineTextureMode.Tile;
+				GameObject_t1113636619 * L_78 = V_6;
+				// go.GetComponent<LineRenderer>().textureMode = LineTextureMode.Tile;
+				NullCheck(L_78);
+				LineRenderer_t3154350270 * L_79 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_78, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
+				// go.GetComponent<LineRenderer>().textureMode = LineTextureMode.Tile;
+				NullCheck(L_79);
+				LineRenderer_set_textureMode_m1484331011(L_79, 1, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().receiveShadows = false;
+				GameObject_t1113636619 * L_80 = V_6;
+				// go.GetComponent<LineRenderer>().receiveShadows = false;
+				NullCheck(L_80);
+				LineRenderer_t3154350270 * L_81 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_80, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
+				// go.GetComponent<LineRenderer>().receiveShadows = false;
+				NullCheck(L_81);
+				Renderer_set_receiveShadows_m108599289(L_81, (bool)0, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().useWorldSpace = false;
+				GameObject_t1113636619 * L_82 = V_6;
+				// go.GetComponent<LineRenderer>().useWorldSpace = false;
+				NullCheck(L_82);
+				LineRenderer_t3154350270 * L_83 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_82, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
+				// go.GetComponent<LineRenderer>().useWorldSpace = false;
+				NullCheck(L_83);
+				LineRenderer_set_useWorldSpace_m2472758901(L_83, (bool)0, /*hidden argument*/NULL);
+				// for (int i = 0; i < line.points.Count; i++)
+				V_7 = 0;
+				goto IL_01f4;
+			}
+
+IL_01cd:
+			{
+				// go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
+				GameObject_t1113636619 * L_84 = V_6;
+				// go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
+				NullCheck(L_84);
+				LineRenderer_t3154350270 * L_85 = GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727(L_84, /*hidden argument*/GameObject_GetComponent_TisLineRenderer_t3154350270_m1162201727_RuntimeMethod_var);
+				int32_t L_86 = V_7;
+				SingleLineRendererData_t2883868068 * L_87 = V_4;
+				// go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
+				NullCheck(L_87);
+				List_1_t4029270237 * L_88 = SingleLineRendererData_get_points_m2917228895(L_87, /*hidden argument*/NULL);
+				int32_t L_89 = V_7;
+				// go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
+				NullCheck(L_88);
+				Vector3Ser_t2557195495 * L_90 = List_1_get_Item_m2893049366(L_88, L_89, /*hidden argument*/List_1_get_Item_m2893049366_RuntimeMethod_var);
+				// go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
+				Vector3_t3722313464  L_91 = Vector3Ser_op_Implicit_m2322330946(NULL /*static, unused*/, L_90, /*hidden argument*/NULL);
+				// go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
+				NullCheck(L_85);
+				LineRenderer_SetPosition_m2111131184(L_85, L_86, L_91, /*hidden argument*/NULL);
+				// for (int i = 0; i < line.points.Count; i++)
+				int32_t L_92 = V_7;
+				V_7 = ((int32_t)il2cpp_codegen_add((int32_t)L_92, (int32_t)1));
+			}
+
+IL_01f4:
+			{
+				// for (int i = 0; i < line.points.Count; i++)
+				int32_t L_93 = V_7;
+				SingleLineRendererData_t2883868068 * L_94 = V_4;
+				// for (int i = 0; i < line.points.Count; i++)
+				NullCheck(L_94);
+				List_1_t4029270237 * L_95 = SingleLineRendererData_get_points_m2917228895(L_94, /*hidden argument*/NULL);
+				// for (int i = 0; i < line.points.Count; i++)
+				NullCheck(L_95);
+				int32_t L_96 = List_1_get_Count_m1186522723(L_95, /*hidden argument*/List_1_get_Count_m1186522723_RuntimeMethod_var);
+				if ((((int32_t)L_93) < ((int32_t)L_96)))
+				{
+					goto IL_01cd;
+				}
+			}
+
+IL_0207:
+			{
+				// go.AddComponent<UnityARUserAnchorComponent>();
+				GameObject_t1113636619 * L_97 = V_6;
+				// go.AddComponent<UnityARUserAnchorComponent>();
+				NullCheck(L_97);
+				GameObject_AddComponent_TisUnityARUserAnchorComponent_t969893952_m3507687242(L_97, /*hidden argument*/GameObject_AddComponent_TisUnityARUserAnchorComponent_t969893952_m3507687242_RuntimeMethod_var);
+				// Instantiate(go, go.transform.position, go.transform.rotation);
+				GameObject_t1113636619 * L_98 = V_6;
+				GameObject_t1113636619 * L_99 = V_6;
+				// Instantiate(go, go.transform.position, go.transform.rotation);
+				NullCheck(L_99);
+				Transform_t3600365921 * L_100 = GameObject_get_transform_m1369836730(L_99, /*hidden argument*/NULL);
+				// Instantiate(go, go.transform.position, go.transform.rotation);
+				NullCheck(L_100);
+				Vector3_t3722313464  L_101 = Transform_get_position_m36019626(L_100, /*hidden argument*/NULL);
+				GameObject_t1113636619 * L_102 = V_6;
+				// Instantiate(go, go.transform.position, go.transform.rotation);
+				NullCheck(L_102);
+				Transform_t3600365921 * L_103 = GameObject_get_transform_m1369836730(L_102, /*hidden argument*/NULL);
+				// Instantiate(go, go.transform.position, go.transform.rotation);
+				NullCheck(L_103);
+				Quaternion_t2301928331  L_104 = Transform_get_rotation_m3502953881(L_103, /*hidden argument*/NULL);
+				// Instantiate(go, go.transform.position, go.transform.rotation);
+				IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+				Object_Instantiate_TisGameObject_t1113636619_m3006960551(NULL /*static, unused*/, L_98, L_101, L_104, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3006960551_RuntimeMethod_var);
+			}
+
+IL_0230:
+			{
+			}
+
+IL_0231:
+			{
+				// foreach(SingleLineRendererData line in data.lines)
+				bool L_105 = Enumerator_MoveNext_m1399265557((Enumerator_t1950219391 *)(&V_5), /*hidden argument*/Enumerator_MoveNext_m1399265557_RuntimeMethod_var);
+				if (L_105)
+				{
+					goto IL_0071;
+				}
+			}
+
+IL_023d:
+			{
+				IL2CPP_LEAVE(0x250, FINALLY_0242);
+			}
+		} // end try (depth: 2)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__last_unhandled_exception = (Exception_t *)e.ex;
+			goto FINALLY_0242;
+		}
+
+FINALLY_0242:
+		{ // begin finally (depth: 2)
+			// foreach(SingleLineRendererData line in data.lines)
+			Enumerator_Dispose_m671822350((Enumerator_t1950219391 *)(&V_5), /*hidden argument*/Enumerator_Dispose_m671822350_RuntimeMethod_var);
+			IL2CPP_END_FINALLY(578)
+		} // end finally (depth: 2)
+		IL2CPP_CLEANUP(578)
+		{
+			IL2CPP_JUMP_TBL(0x250, IL_0250)
+			IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		}
+
+IL_0250:
+		{
+			// catch(Exception e)
+			goto IL_0286;
 		}
 	} // end try (depth: 1)
 	catch(Il2CppExceptionWrapper& e)
 	{
-		__last_unhandled_exception = (Exception_t *)e.ex;
-		goto FINALLY_0218;
+		__exception_local = (Exception_t *)e.ex;
+		if(il2cpp_codegen_class_is_assignable_from (Exception_t_il2cpp_TypeInfo_var, il2cpp_codegen_object_class(e.ex)))
+			goto CATCH_0256;
+		throw e;
 	}
 
-FINALLY_0218:
-	{ // begin finally (depth: 1)
-		{
-			FileStream_t4292183065 * L_100 = V_1;
-			if (!L_100)
-			{
-				goto IL_0224;
-			}
-		}
+CATCH_0256:
+	{ // begin catch(System.Exception)
+		V_8 = ((Exception_t *)__exception_local);
+		// Debug.Log(e.ToString());
+		Exception_t * L_106 = V_8;
+		// Debug.Log(e.ToString());
+		NullCheck(L_106);
+		String_t* L_107 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_106);
+		// Debug.Log(e.ToString());
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
+		Debug_Log_m4051431634(NULL /*static, unused*/, L_107, /*hidden argument*/NULL);
+		// GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(e.ToString());
+		// GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(e.ToString());
+		GameObject_t1113636619 * L_108 = GameObject_Find_m2032535176(NULL /*static, unused*/, _stringLiteral3987835886, /*hidden argument*/NULL);
+		// GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(e.ToString());
+		NullCheck(L_108);
+		UpdateWorldMappingStatus_t2738391865 * L_109 = GameObject_GetComponent_TisUpdateWorldMappingStatus_t2738391865_m1586204052(L_108, /*hidden argument*/GameObject_GetComponent_TisUpdateWorldMappingStatus_t2738391865_m1586204052_RuntimeMethod_var);
+		Exception_t * L_110 = V_8;
+		// GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(e.ToString());
+		NullCheck(L_110);
+		String_t* L_111 = VirtFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_110);
+		// GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(e.ToString());
+		NullCheck(L_109);
+		UpdateWorldMappingStatus_ChangeTextTo_m1464168588(L_109, L_111, /*hidden argument*/NULL);
+		goto IL_0286;
+	} // end catch (depth: 1)
 
-IL_021e:
-		{
-			FileStream_t4292183065 * L_101 = V_1;
-			// using(FileStream file = File.Open(pathToLoad, FileMode.Open))
-			NullCheck(L_101);
-			InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t3640265483_il2cpp_TypeInfo_var, L_101);
-		}
-
-IL_0224:
-		{
-			IL2CPP_END_FINALLY(536)
-		}
-	} // end finally (depth: 1)
-	IL2CPP_CLEANUP(536)
+IL_0286:
 	{
-		IL2CPP_JUMP_TBL(0x225, IL_0225)
-		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
 	}
 
-IL_0225:
-	{
-	}
-
-IL_0226:
+IL_0287:
 	{
 		// }
 		return;
@@ -35239,91 +35779,108 @@ extern "C" IL2CPP_METHOD_ATTR void WorldMapManager_Load_m825725316 (WorldMapMana
 	ARKitWorldTrackingSessionConfiguration_t273386347  V_1;
 	memset(&V_1, 0, sizeof(V_1));
 	int32_t V_2 = 0;
+	GameObject_t1113636619 * V_3 = NULL;
+	GameObjectU5BU5D_t3328599146* V_4 = NULL;
+	int32_t V_5 = 0;
 	{
-		// var worldMap = ARWorldMap.Load(Path.Combine(Application.persistentDataPath, fileName));
+		// var worldMap = ARWorldMap.Load(Path.Combine(Application.persistentDataPath, string.Concat(fileName, ".worldmap")));
 		String_t* L_0 = Application_get_persistentDataPath_m1428108154(NULL /*static, unused*/, /*hidden argument*/NULL);
 		String_t* L_1 = ___fileName0;
-		// var worldMap = ARWorldMap.Load(Path.Combine(Application.persistentDataPath, fileName));
+		// var worldMap = ARWorldMap.Load(Path.Combine(Application.persistentDataPath, string.Concat(fileName, ".worldmap")));
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_2 = String_Concat_m3937257545(NULL /*static, unused*/, L_1, _stringLiteral2555481935, /*hidden argument*/NULL);
+		// var worldMap = ARWorldMap.Load(Path.Combine(Application.persistentDataPath, string.Concat(fileName, ".worldmap")));
 		IL2CPP_RUNTIME_CLASS_INIT(Path_t1605229823_il2cpp_TypeInfo_var);
-		String_t* L_2 = Path_Combine_m3389272516(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		// var worldMap = ARWorldMap.Load(Path.Combine(Application.persistentDataPath, fileName));
-		ARWorldMap_t2240790807 * L_3 = ARWorldMap_Load_m229573624(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
-		V_0 = L_3;
-		// if (worldMap != null && m_LoadedMap != worldMap)
-		ARWorldMap_t2240790807 * L_4 = V_0;
-		if (!L_4)
+		String_t* L_3 = Path_Combine_m3389272516(NULL /*static, unused*/, L_0, L_2, /*hidden argument*/NULL);
+		// var worldMap = ARWorldMap.Load(Path.Combine(Application.persistentDataPath, string.Concat(fileName, ".worldmap")));
+		ARWorldMap_t2240790807 * L_4 = ARWorldMap_Load_m229573624(NULL /*static, unused*/, L_3, /*hidden argument*/NULL);
+		V_0 = L_4;
+		// if (worldMap != null)
+		ARWorldMap_t2240790807 * L_5 = V_0;
+		if (!L_5)
 		{
-			goto IL_008f;
+			goto IL_00a1;
 		}
 	}
 	{
-		ARWorldMap_t2240790807 * L_5 = __this->get_m_LoadedMap_12();
-		ARWorldMap_t2240790807 * L_6 = V_0;
-		if ((((RuntimeObject*)(ARWorldMap_t2240790807 *)L_5) == ((RuntimeObject*)(ARWorldMap_t2240790807 *)L_6)))
-		{
-			goto IL_008f;
-		}
-	}
-	{
-		// m_LoadedMap = worldMap;
-		ARWorldMap_t2240790807 * L_7 = V_0;
-		__this->set_m_LoadedMap_12(L_7);
+		// windowManager.SpawnGuideToLoad();
+		WindowManager_t1304188793 * L_6 = __this->get_windowManager_8();
+		// windowManager.SpawnGuideToLoad();
+		NullCheck(L_6);
+		WindowManager_SpawnGuideToLoad_m2266493816(L_6, /*hidden argument*/NULL);
 		// loadedWorldMapName = fileName;
-		String_t* L_8 = ___fileName0;
-		__this->set_loadedWorldMapName_10(L_8);
-		// Debug.LogFormat("Map loaded. Center: {0} Extent: {1}", worldMap.center, worldMap.extent);
-		ObjectU5BU5D_t2843939325* L_9 = (ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)2);
-		ObjectU5BU5D_t2843939325* L_10 = L_9;
-		ARWorldMap_t2240790807 * L_11 = V_0;
-		// Debug.LogFormat("Map loaded. Center: {0} Extent: {1}", worldMap.center, worldMap.extent);
-		NullCheck(L_11);
-		Vector3_t3722313464  L_12 = ARWorldMap_get_center_m2261591742(L_11, /*hidden argument*/NULL);
-		Vector3_t3722313464  L_13 = L_12;
-		RuntimeObject * L_14 = Box(Vector3_t3722313464_il2cpp_TypeInfo_var, &L_13);
-		NullCheck(L_10);
-		ArrayElementTypeCheck (L_10, L_14);
-		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_14);
-		ObjectU5BU5D_t2843939325* L_15 = L_10;
-		ARWorldMap_t2240790807 * L_16 = V_0;
-		// Debug.LogFormat("Map loaded. Center: {0} Extent: {1}", worldMap.center, worldMap.extent);
-		NullCheck(L_16);
-		Vector3_t3722313464  L_17 = ARWorldMap_get_extent_m815776976(L_16, /*hidden argument*/NULL);
-		Vector3_t3722313464  L_18 = L_17;
-		RuntimeObject * L_19 = Box(Vector3_t3722313464_il2cpp_TypeInfo_var, &L_18);
-		NullCheck(L_15);
-		ArrayElementTypeCheck (L_15, L_19);
-		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject *)L_19);
-		// Debug.LogFormat("Map loaded. Center: {0} Extent: {1}", worldMap.center, worldMap.extent);
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
-		Debug_LogFormat_m309087137(NULL /*static, unused*/, _stringLiteral3573715958, L_15, /*hidden argument*/NULL);
+		String_t* L_7 = ___fileName0;
+		((WorldMapManager_t2538599596_StaticFields*)il2cpp_codegen_static_fields_for(WorldMapManager_t2538599596_il2cpp_TypeInfo_var))->set_loadedWorldMapName_7(L_7);
 		// UnityARSessionNativeInterface.ARSessionShouldAttemptRelocalization = true;
 		// UnityARSessionNativeInterface.ARSessionShouldAttemptRelocalization = true;
 		IL2CPP_RUNTIME_CLASS_INIT(UnityARSessionNativeInterface_t3929719369_il2cpp_TypeInfo_var);
 		UnityARSessionNativeInterface_set_ARSessionShouldAttemptRelocalization_m3516918436(NULL /*static, unused*/, (bool)1, /*hidden argument*/NULL);
 		// relocalizing = true;
-		__this->set_relocalizing_8((bool)1);
-		// var config = m_ARCameraManager.sessionConfiguration;
-		UnityARCameraManager_t4002280589 * L_20 = __this->get_m_ARCameraManager_4();
-		// var config = m_ARCameraManager.sessionConfiguration;
-		NullCheck(L_20);
-		ARKitWorldTrackingSessionConfiguration_t273386347  L_21 = UnityARCameraManager_get_sessionConfiguration_m3942467652(L_20, /*hidden argument*/NULL);
-		V_1 = L_21;
+		__this->set_relocalizing_9((bool)1);
+		// startTime = Time.time;
+		// startTime = Time.time;
+		float L_8 = Time_get_time_m2907476221(NULL /*static, unused*/, /*hidden argument*/NULL);
+		__this->set_startTime_10(L_8);
+		// ARKitWorldTrackingSessionConfiguration config = m_ARCameraManager.sessionConfiguration;
+		UnityARCameraManager_t4002280589 * L_9 = __this->get_m_ARCameraManager_4();
+		// ARKitWorldTrackingSessionConfiguration config = m_ARCameraManager.sessionConfiguration;
+		NullCheck(L_9);
+		ARKitWorldTrackingSessionConfiguration_t273386347  L_10 = UnityARCameraManager_get_sessionConfiguration_m3942467652(L_9, /*hidden argument*/NULL);
+		V_1 = L_10;
 		// config.worldMap = worldMap;
-		ARWorldMap_t2240790807 * L_22 = V_0;
+		ARWorldMap_t2240790807 * L_11 = V_0;
 		// config.worldMap = worldMap;
-		ARKitWorldTrackingSessionConfiguration_set_worldMap_m722344241((ARKitWorldTrackingSessionConfiguration_t273386347 *)(&V_1), L_22, /*hidden argument*/NULL);
+		ARKitWorldTrackingSessionConfiguration_set_worldMap_m722344241((ARKitWorldTrackingSessionConfiguration_t273386347 *)(&V_1), L_11, /*hidden argument*/NULL);
 		// UnityARSessionRunOption runOption = UnityARSessionRunOption.ARSessionRunOptionRemoveExistingAnchors | UnityARSessionRunOption.ARSessionRunOptionResetTracking;
 		V_2 = 3;
-		// session.RunWithConfigAndOptions(config, runOption);
-		UnityARSessionNativeInterface_t3929719369 * L_23 = WorldMapManager_get_session_m4054597902(NULL /*static, unused*/, /*hidden argument*/NULL);
-		ARKitWorldTrackingSessionConfiguration_t273386347  L_24 = V_1;
-		int32_t L_25 = V_2;
-		// session.RunWithConfigAndOptions(config, runOption);
-		NullCheck(L_23);
-		UnityARSessionNativeInterface_RunWithConfigAndOptions_m2136170177(L_23, L_24, L_25, /*hidden argument*/NULL);
+		// foreach(GameObject go in GameObject.FindGameObjectsWithTag("Line"))
+		// foreach(GameObject go in GameObject.FindGameObjectsWithTag("Line"))
+		GameObjectU5BU5D_t3328599146* L_12 = GameObject_FindGameObjectsWithTag_m2585173894(NULL /*static, unused*/, _stringLiteral2792132920, /*hidden argument*/NULL);
+		V_4 = L_12;
+		V_5 = 0;
+		goto IL_0089;
 	}
 
-IL_008f:
+IL_0077:
+	{
+		// foreach(GameObject go in GameObject.FindGameObjectsWithTag("Line"))
+		GameObjectU5BU5D_t3328599146* L_13 = V_4;
+		int32_t L_14 = V_5;
+		NullCheck(L_13);
+		int32_t L_15 = L_14;
+		GameObject_t1113636619 * L_16 = (L_13)->GetAt(static_cast<il2cpp_array_size_t>(L_15));
+		V_3 = L_16;
+		// Destroy(go);
+		GameObject_t1113636619 * L_17 = V_3;
+		// Destroy(go);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_Destroy_m565254235(NULL /*static, unused*/, L_17, /*hidden argument*/NULL);
+		// foreach(GameObject go in GameObject.FindGameObjectsWithTag("Line"))
+		int32_t L_18 = V_5;
+		V_5 = ((int32_t)il2cpp_codegen_add((int32_t)L_18, (int32_t)1));
+	}
+
+IL_0089:
+	{
+		int32_t L_19 = V_5;
+		GameObjectU5BU5D_t3328599146* L_20 = V_4;
+		NullCheck(L_20);
+		if ((((int32_t)L_19) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_20)->max_length)))))))
+		{
+			goto IL_0077;
+		}
+	}
+	{
+		// session.RunWithConfigAndOptions(config, runOption);
+		UnityARSessionNativeInterface_t3929719369 * L_21 = WorldMapManager_get_session_m4054597902(NULL /*static, unused*/, /*hidden argument*/NULL);
+		ARKitWorldTrackingSessionConfiguration_t273386347  L_22 = V_1;
+		int32_t L_23 = V_2;
+		// session.RunWithConfigAndOptions(config, runOption);
+		NullCheck(L_21);
+		UnityARSessionNativeInterface_RunWithConfigAndOptions_m2136170177(L_21, L_22, L_23, /*hidden argument*/NULL);
+	}
+
+IL_00a1:
 	{
 		// }
 		return;

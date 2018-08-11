@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+// stores all material needed to draw a line
 public class AllMaterials : MonoBehaviour
 {
 	public Material[] materials;

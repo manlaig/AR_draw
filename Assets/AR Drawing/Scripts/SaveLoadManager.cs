@@ -1,69 +1,21 @@
 ﻿using UnityEngine;
 using UnityEngine.XR.iOS;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class SaveLoadManager : MonoBehaviour
 {
-    [SerializeField] GameObject exploreEnv, saveDone, loadSession, contentItem;
-    [SerializeField] GameObject loadDone, warningToExplore, guideToLoad, updateDone;
+    [SerializeField] GameObject loadSession, contentItem;
 
     static GameObject loadInstance = null;
 
-    Transform canvas = null;
-
-
-    void Start()
-    {
-        canvas = GameObject.Find("Canvas").transform;
-    }
-
 
     // checking if the camera is currently in mapped state
-    public bool CanSave (ARTrackingStateReason reason, ARWorldMappingStatus status)
+    public bool CanSave (ARWorldMappingStatus status)
     {
-        if (reason != ARTrackingStateReason.ARTrackingStateReasonNone || status != ARWorldMappingStatus.ARWorldMappingStatusMapped && exploreEnv != null)
-        {
-            SpawnInCanvasAndDestroy(exploreEnv);
-            return false;
-        }
-        return true;
-	}
-
-
-    public void SaveSuccessful()
-    {
-        SpawnInCanvasAndDestroy(saveDone);
-    }
-
-
-    public void UpdateSuccessful()
-    {
-        SpawnInCanvasAndDestroy(updateDone);
-    }
-
-
-    public void RelocalizeSuccessful()
-    {
-        SpawnInCanvasAndDestroy(loadDone);
-    }
-
-
-    public void SpawnWarningToExplore()
-    {
-        Instantiate(warningToExplore, canvas);
-    }
-
-
-    public void SpawnGuideToLoad()
-    {
-        Instantiate(guideToLoad, canvas);
-    }
-
-
-	void SpawnInCanvasAndDestroy(GameObject go)
-	{
-		GameObject instance = Instantiate(go, canvas);
-		Destroy(instance, 4f);
+        if (status == ARWorldMappingStatus.ARWorldMappingStatusMapped || status == ARWorldMappingStatus.ARWorldMappingStatusExtending)
+            return true;
+        return false;
 	}
 
 
@@ -71,7 +23,7 @@ public class SaveLoadManager : MonoBehaviour
     public void LoadSession(Text worldMapText)
     {
         WorldMapManager manager = GameObject.Find("WorldMapManager").GetComponent<WorldMapManager>();
-        manager.Load(worldMapText.text + ".worldmap");
+        manager.Load(worldMapText.text);
     }
 
 
@@ -81,14 +33,14 @@ public class SaveLoadManager : MonoBehaviour
         if (loadInstance == null)
             LoadSessionWindow();
         else
-            DestroyWindow(loadInstance);
+            Destroy(loadInstance);
     }
 
 
     void LoadSessionWindow()
     {
-		string[] maps = FetchWorldMaps();
-        loadInstance = Instantiate(loadSession, canvas);
+		List<string> maps = FetchWorldMaps();
+        loadInstance = Instantiate(loadSession, GameObject.FindGameObjectWithTag("Canvas").transform);
 
         if (maps != null)
         {
@@ -98,43 +50,41 @@ public class SaveLoadManager : MonoBehaviour
                 {
 					Debug.Log(s);
                     GameObject listItem = Instantiate(contentItem, GameObject.Find("Content").transform);
-                    foreach (Text t in listItem.GetComponentsInChildren<Text>())
-                        if (t != null)
-                            t.text = s;
+                    Text t = listItem.GetComponentInChildren<Text>();
+                    if (t != null)
+                        t.text = s;
                 }
             }
         }
     }
 
 
-    public void DestroyWindow(GameObject go)
-    {
-        Destroy(go);
-    }
-
-
-    public void SaveFromWindow()
-    {
-        WorldMapManager manager = GameObject.Find("WorldMapManager").GetComponent<WorldMapManager>();
-        if(manager != null)
-            manager.Save();
-    }
-
-
-    string[] FetchWorldMaps()
+    List<string> FetchWorldMaps()
     {
         string allMaps = PlayerPrefs.GetString("AllWorldMaps", "");
+        string previous = "";
 
         if (allMaps != "")
         {
             string[] words = allMaps.Split('?');
+            List<string> maps = new List<string>();
 
             // splitting fileNames from extensions
             for (int i = 0; i < words.Length; i++)
-                words[i] = words[i].Split('.')[0];
-            return words;
+            {
+                if(previous == "")
+                {
+                    previous = words[i];
+                    maps.Add(previous);
+                }
+                else if(words[i] != previous)
+                {
+                    maps.Add(words[i]);
+                    previous = words[i];
+                }
+            }
+            return maps;
         }
-
         return null;
     }
 }

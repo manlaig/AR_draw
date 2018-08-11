@@ -96,12 +96,12 @@ e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 6bb2e5603571c8c181826651a1ba0a81 Assembly-CSharp.dll:.BallMaker
 e853e897ab942dd9fb05f93f0847abc2 Assembly-CSharp.dll:.ARReferenceObjectsSetAsset
-cbd04869f31301291b08a3499a665cef Assembly-CSharp.dll:.DrawLine
+627832bbac7302b3da5acdf89659062d Assembly-CSharp.dll:.DrawLine
 4d2d42db4c27e07841fb2faaf34c05e0 Assembly-CSharp.dll:.UnityARCameraManager
 012b296c983be26320743b44e167e73f Assembly-CSharp.dll:.UnityARFaceMeshManager
 86a8302157c3be681753dec2ada1f168 Assembly-CSharp.dll:.VideoFormatsExample
 dc70db2ecf406347a103102a2b99cda8 Assembly-CSharp.dll:.BallMover
-c85a659dd8d7832509c2f65c774e05fb Assembly-CSharp.dll:.SaveLoadManager
+2a21d6b10af079fee2f94c2f6a6a26c4 Assembly-CSharp.dll:.SaveLoadManager
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9e61f3535f3c55760a1cedfbd114f4af UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 754551afe4f2531f58476bf14c510657 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -225,6 +225,7 @@ e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 49cfed380cf14a3e83a561150e54a5f7 Assembly-CSharp.dll:.GenerateEnvironmentProbeAnchors
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
+4757a1b45dbdc933dac35475698045c4 Assembly-CSharp.dll:.WindowManager
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 bf5cbeb343b015b4fda69d21e2bd78be Assembly-CSharp.dll:.ReflectionProbeGameObject
 3f42425699bc6a69ac5d412efe1d01a5 Assembly-CSharp.dll:.ARReferenceImage

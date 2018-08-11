@@ -563,6 +563,8 @@ struct GUIElement_t3567083079;
 struct GUILayer_t2783472903;
 // UnityEngine.GameObject
 struct GameObject_t1113636619;
+// UnityEngine.GameObject[]
+struct GameObjectU5BU5D_t3328599146;
 // UnityEngine.Gradient
 struct Gradient_t3067099924;
 // UnityEngine.Gyroscope
@@ -1368,6 +1370,7 @@ struct DisallowMultipleComponentU5BU5D_t3936143868;
 struct DisplayU5BU5D_t103034768;
 struct ExecuteInEditModeU5BU5D_t3239458680;
 struct PlayerLoopSystemU5BU5D_t1150299252;
+struct GameObjectU5BU5D_t3328599146;
 struct KeyframeU5BU5D_t1068524471;
 struct ObjectU5BU5D_t1417781964;
 struct PlayableBindingU5BU5D_t829358056;
@@ -17209,6 +17212,43 @@ public:
 		m_Items[index] = value;
 	}
 };
+// UnityEngine.GameObject[]
+struct GameObjectU5BU5D_t3328599146  : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) GameObject_t1113636619 * m_Items[1];
+
+public:
+	inline GameObject_t1113636619 * GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline GameObject_t1113636619 ** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, GameObject_t1113636619 * value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+	inline GameObject_t1113636619 * GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline GameObject_t1113636619 ** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, GameObject_t1113636619 * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
 // UnityEngine.Touch[]
 struct TouchU5BU5D_t1849554061  : public RuntimeArray
 {
@@ -29780,6 +29820,35 @@ extern "C" IL2CPP_METHOD_ATTR String_t* GameObject_get_tag_m3951609671 (GameObje
 	String_t* retVal = _il2cpp_icall_func(__this);
 	return retVal;
 }
+// System.Void UnityEngine.GameObject::set_tag(System.String)
+extern "C" IL2CPP_METHOD_ATTR void GameObject_set_tag_m2353670106 (GameObject_t1113636619 * __this, String_t* ___value0, const RuntimeMethod* method)
+{
+	typedef void (*GameObject_set_tag_m2353670106_ftn) (GameObject_t1113636619 *, String_t*);
+	static GameObject_set_tag_m2353670106_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GameObject_set_tag_m2353670106_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::set_tag(System.String)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// UnityEngine.GameObject UnityEngine.GameObject::FindGameObjectWithTag(System.String)
+extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * GameObject_FindGameObjectWithTag_m2129039296 (RuntimeObject * __this /* static, unused */, String_t* ___tag0, const RuntimeMethod* method)
+{
+	typedef GameObject_t1113636619 * (*GameObject_FindGameObjectWithTag_m2129039296_ftn) (String_t*);
+	static GameObject_FindGameObjectWithTag_m2129039296_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GameObject_FindGameObjectWithTag_m2129039296_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::FindGameObjectWithTag(System.String)");
+	GameObject_t1113636619 * retVal = _il2cpp_icall_func(___tag0);
+	return retVal;
+}
+// UnityEngine.GameObject[] UnityEngine.GameObject::FindGameObjectsWithTag(System.String)
+extern "C" IL2CPP_METHOD_ATTR GameObjectU5BU5D_t3328599146* GameObject_FindGameObjectsWithTag_m2585173894 (RuntimeObject * __this /* static, unused */, String_t* ___tag0, const RuntimeMethod* method)
+{
+	typedef GameObjectU5BU5D_t3328599146* (*GameObject_FindGameObjectsWithTag_m2585173894_ftn) (String_t*);
+	static GameObject_FindGameObjectsWithTag_m2585173894_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GameObject_FindGameObjectsWithTag_m2585173894_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::FindGameObjectsWithTag(System.String)");
+	GameObjectU5BU5D_t3328599146* retVal = _il2cpp_icall_func(___tag0);
+	return retVal;
+}
 // System.Void UnityEngine.GameObject::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
 extern "C" IL2CPP_METHOD_ATTR void GameObject_SendMessage_m3720186693 (GameObject_t1113636619 * __this, String_t* ___methodName0, RuntimeObject * ___value1, int32_t ___options2, const RuntimeMethod* method)
 {
@@ -30838,6 +30907,15 @@ extern "C" IL2CPP_METHOD_ATTR void LineRenderer_set_textureMode_m1484331011 (Lin
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (LineRenderer_set_textureMode_m1484331011_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.LineRenderer::set_textureMode(UnityEngine.LineTextureMode)");
 	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Void UnityEngine.LineRenderer::Simplify(System.Single)
+extern "C" IL2CPP_METHOD_ATTR void LineRenderer_Simplify_m881319172 (LineRenderer_t3154350270 * __this, float ___tolerance0, const RuntimeMethod* method)
+{
+	typedef void (*LineRenderer_Simplify_m881319172_ftn) (LineRenderer_t3154350270 *, float);
+	static LineRenderer_Simplify_m881319172_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (LineRenderer_Simplify_m881319172_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.LineRenderer::Simplify(System.Single)");
+	_il2cpp_icall_func(__this, ___tolerance0);
 }
 // System.Void UnityEngine.LineRenderer::SetPositions(UnityEngine.Vector3[])
 extern "C" IL2CPP_METHOD_ATTR void LineRenderer_SetPositions_m1969530996 (LineRenderer_t3154350270 * __this, Vector3U5BU5D_t1718750761* ___positions0, const RuntimeMethod* method)

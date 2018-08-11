@@ -57,6 +57,8 @@ MonoBehaviour:
     type: 2}
   contentItem: {fileID: 1340992098355528, guid: 600e58b26d35c463e891c2e3fa4eb75e,
     type: 2}
+  askNewDocument: {fileID: 1188849362262970, guid: 3396084d325e54a2798e730fc17e8f48,
+    type: 2}
   loadDone: {fileID: 1733382487250252, guid: 71c0ca052bda348ab9b56c29a929c9cb, type: 2}
   warningToExplore: {fileID: 1392215117946326, guid: 52da672a1c9804adbbf7dad6a1244da7,
     type: 2}

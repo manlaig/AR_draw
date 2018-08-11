@@ -59,6 +59,7 @@
      <Compile Include="Assets\AR Drawing\Scripts\DrawLine.cs" />
      <Compile Include="Assets\AR Drawing\Scripts\LineRendererData.cs" />
      <Compile Include="Assets\AR Drawing\Scripts\SaveLoadManager.cs" />
+     <Compile Include="Assets\AR Drawing\Scripts\WindowManager.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitFaceTrackingRemoteConnection.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitRemoteConnection.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ConnectionMessageIds.cs" />

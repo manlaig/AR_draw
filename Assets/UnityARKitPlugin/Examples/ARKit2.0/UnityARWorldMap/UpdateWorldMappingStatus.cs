@@ -17,6 +17,8 @@ public class UpdateWorldMappingStatus : MonoBehaviour
 	{
         if (cam.worldMappingStatus == ARWorldMappingStatus.ARWorldMappingStatusMapped)
             text.text = "Ready to Save";
+        else if (cam.worldMappingStatus == ARWorldMappingStatus.ARWorldMappingStatusNotAvailable || cam.worldMappingStatus == ARWorldMappingStatus.ARWorldMappingStatusLimited)
+            text.text = "Not available";
         else
             text.text = "Exploring Surroundings";
 

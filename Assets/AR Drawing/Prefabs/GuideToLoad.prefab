@@ -155,7 +155,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114914407610624176, guid: 042e0040c557a434186b8f2f8e63adc5,
+      - m_Target: {fileID: 114452998156774146, guid: 94ddf6f8754a9414f8ff6e4580cb60fb,
           type: 2}
         m_MethodName: DestroyWindow
         m_Mode: 2

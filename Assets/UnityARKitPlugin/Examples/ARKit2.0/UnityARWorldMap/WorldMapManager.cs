@@ -7,17 +7,17 @@ using UnityEngine.XR.iOS;
 
 public class WorldMapManager : MonoBehaviour
 {
-    [SerializeField] UnityARCameraManager m_ARCameraManager = null;
-    [SerializeField] GameObject loadingScreen = null;
-    [SerializeField] GameObject allMaterials = null;
+    [SerializeField] UnityARCameraManager m_ARCameraManager;
+    [SerializeField] GameObject loadingScreen;
+    [SerializeField] GameObject allMaterials;
 
-    SaveLoadManager saveLoadManager; // my custom component (not part of plugin)
-    bool relocalizing; // my custom defined variable
-    float delayToLoad; // my custom defined variable
-    string loadedWorldMapName; // my custom defined variable
+    public static string loadedWorldMapName; // without extension
 
-	serializableARWorldMap serializedWorldMap;
-	ARWorldMap m_LoadedMap;
+    WindowManager windowManager;
+    bool relocalizing;
+    float startTime;
+	//serializableARWorldMap serializedWorldMap;
+	//ARWorldMap m_LoadedMap;
     ARTrackingStateReason m_LastReason;
     ARWorldMappingStatus lastStatus;
 
@@ -27,20 +27,42 @@ public class WorldMapManager : MonoBehaviour
     }
 
 
+    static string GetFileName()
+    {
+        DateTime dt = DateTime.Now;
+        string pathToSave = string.Concat(dt.ToString("MMM dd"), "  ", dt.Hour.ToString(), ":", dt.Minute.ToString(), ":", dt.Second.ToString());
+        return pathToSave;
+    }
+
+
     void Start()
     {
         UnityARSessionNativeInterface.ARFrameUpdatedEvent += OnFrameUpdate;
-        saveLoadManager = GameObject.Find("SaveLoadManager").GetComponent<SaveLoadManager>();
+        windowManager = GameObject.Find("WindowManager").GetComponent<WindowManager>();
         relocalizing = false;
+        startTime = 0f;
         loadedWorldMapName = "";
-        delayToLoad = 0f;
     }
 
 
     void Update()
     {
-        if(relocalizing)
-            delayToLoad += Time.deltaTime;
+        if (relocalizing && finishedRelocalizing())
+        {
+            if(Time.time - startTime > 2f)
+            {
+                relocalizing = false;
+                windowManager.RelocalizeSuccessful();
+
+                // load the lines from path here because the user has to be relocalized in order to draw the lines
+                if(loadedWorldMapName != "")
+                {
+                    Debug.Log("Loading lines");
+                    string linesFileName = string.Concat(loadedWorldMapName, ".dat");
+                    LoadLinesFromFile(linesFileName);
+                }
+            }
+        }
     }
 
 
@@ -48,57 +70,32 @@ public class WorldMapManager : MonoBehaviour
     {
         m_LastReason = arCamera.trackingReason;
         lastStatus = arCamera.worldMappingStatus;
-
-        if (relocalizing && finishedRelocalizing() && delayToLoad > 0.5f)
-        {
-            relocalizing = false;
-            delayToLoad = 0f;
-            saveLoadManager.RelocalizeSuccessful();
-
-            // load the lines from path here because the user has to be relocalized in order to draw the lines
-            if(loadedWorldMapName != "")
-            {
-                string linesFileName = loadedWorldMapName.Split('.')[0] + ".dat";
-                LoadLinesFromFile(linesFileName);
-            }
-        }
     }
 
 
     bool finishedRelocalizing()
     {
-        bool res = (m_LastReason == ARTrackingStateReason.ARTrackingStateReasonNone &&
-                    (lastStatus == ARWorldMappingStatus.ARWorldMappingStatusMapped
-                     || lastStatus == ARWorldMappingStatus.ARWorldMappingStatusLimited));
-        return res;
-    }
-
-
-    static string GetFileName()
-    {
-        DateTime dt = DateTime.Now;
-        string pathToSave = dt.ToString("MMM dd") + " " + " ";
-        pathToSave += dt.Hour.ToString() + ":" + dt.Minute.ToString() + ":" + dt.Second.ToString() + ".worldmap";
-        return pathToSave;
+        return m_LastReason != ARTrackingStateReason.ARTrackingStateReasonRelocalizing;
     }
 
 
     public void Save()
     {
+        SaveLoadManager saveLoadManager = GameObject.Find("SaveLoadManager").GetComponent<SaveLoadManager>();
+
         if(saveLoadManager != null)
         {
-            if(saveLoadManager.CanSave(m_LastReason, lastStatus))
-            {
-                int count = PlayerPrefs.GetInt("FirstTimeSaving", 0);
-                if(count == 0)
-                {
-                    PlayerPrefs.SetInt("FirstTimeSaving", 1);
-                    saveLoadManager.SpawnWarningToExplore();
-                }
-                else
-                    session.GetCurrentWorldMapAsync(OnWorldMap);
-            }
+            if(saveLoadManager.CanSave(lastStatus))
+                windowManager.SpawnWarningToExplore();
+            else
+                windowManager.SpawnExploreEnvironment();
         }
+    }
+
+
+    public void SaveAnyway()
+    {
+        session.GetCurrentWorldMapAsync(OnWorldMap);
     }
 
 
@@ -114,21 +111,23 @@ public class WorldMapManager : MonoBehaviour
             else
                 fileName = loadedWorldMapName;
 
-            string pathToSave = Path.Combine(Application.persistentDataPath, fileName);
+            string pathToSave = Path.Combine(Application.persistentDataPath, string.Concat(fileName, ".worldmap"));
 
-            // saving the lineRenderers as a biteArray
+            // saving the lineRenderers in scene
             SaveLinesInScene(fileName);
             worldMap.Save(pathToSave);
 
-            string allMaps = PlayerPrefs.GetString("AllWorldMaps", "");
-            allMaps += fileName + '?';
-            PlayerPrefs.SetString("AllWorldMaps", allMaps);
 
             if(fileName != loadedWorldMapName)
-                saveLoadManager.SaveSuccessful();
+            {
+                string allMaps = PlayerPrefs.GetString("AllWorldMaps", "");
+                PlayerPrefs.SetString("AllWorldMaps", string.Concat(allMaps, fileName, '?'));
+                windowManager.SaveSuccessful();
+            }
             else
-                saveLoadManager.UpdateSuccessful();
-                
+            {
+                windowManager.UpdateSuccessful();
+            } 
             loadingScreen.SetActive(false);
         }
     }
@@ -136,26 +135,38 @@ public class WorldMapManager : MonoBehaviour
 
     void SaveLinesInScene(string fileName)
     {
-        string pathToSave = Path.Combine(Application.persistentDataPath, fileName.Split('.')[0] + ".dat");
-
+        string pathToSave = Path.Combine(Application.persistentDataPath, string.Concat(fileName, ".dat"));
         BinaryFormatter formatter = new BinaryFormatter();
 
-        using(FileStream file = File.Open(pathToSave, FileMode.Create))
+        try
         {
-            List<GameObject> linesActive = GameObject.Find("LineDrawer").GetComponent<DrawLine>().linesInScene;
-            if(linesActive.Count > 0)
+            FileStream file = File.Open(pathToSave, FileMode.Create);
+            GameObject[] linesInScene = GameObject.FindGameObjectsWithTag("Line");
+
+            if(linesInScene.Length > 0)
             {
                 LineRendererData data = new LineRendererData();
                 data.lines = new List<SingleLineRendererData>();
                 
-                for (int i = 0; i < linesActive.Count; i++)
+                for (int i = 0; i < linesInScene.Length; i++)
                 {
-                    SingleLineRendererData lineData = LineRendererToData(linesActive[i].GetComponent<LineRenderer>());
+                    SingleLineRendererData lineData = null;
+                    
+                    if(linesInScene[i] != null)
+                        lineData = LineRendererToData(linesInScene[i].GetComponent<LineRenderer>());
+
                     if(lineData != null)
                         data.lines.Add(lineData);
                 }
-                formatter.Serialize(file, data);
+                if(data.lines.Count > 0 && file != null)
+                    formatter.Serialize(file, data); 
             }
+            file.Close();
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e.ToString());
+            GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(e.ToString());
         }
     }
 
@@ -189,74 +200,91 @@ public class WorldMapManager : MonoBehaviour
     void LoadLinesFromFile(string pathText)
     {
         string pathToLoad = Path.Combine(Application.persistentDataPath, pathText);
+        LineRendererData data = null;
 
         if(File.Exists(pathToLoad))
         {
-            using(FileStream file = File.Open(pathToLoad, FileMode.Open))
+            try
             {
-                BinaryFormatter formatter = new BinaryFormatter();
-                LineRendererData data = (LineRendererData) formatter.Deserialize(file);
+                using(FileStream file = File.Open(pathToLoad, FileMode.Open))
+                {
+                    if(file != null)
+                    {
+                        BinaryFormatter formatter = new BinaryFormatter();
+                        data = (LineRendererData) formatter.Deserialize(file);
+                    }
+                }
+
+                if(data == null)
+                    return;
 
                 foreach(SingleLineRendererData line in data.lines)
                 {
-                    GameObject go = new GameObject();
-                    
-                    go.transform.position = line.position;
-                    go.transform.rotation = line.rotation;
-                    go.transform.localScale = line.scale;
-                    
-                    go.AddComponent<LineRenderer>();
-                    
-                    go.GetComponent<LineRenderer>().startColor = line.startColor;
-                    go.GetComponent<LineRenderer>().endColor = line.startColor;
-                    go.GetComponent<LineRenderer>().startWidth = line.startWidth;
-                    go.GetComponent<LineRenderer>().endWidth = line.endWidth;
-                    go.GetComponent<LineRenderer>().numCornerVertices = line.cornerVertices;
-                    go.GetComponent<LineRenderer>().numCapVertices = line.cornerVertices;
-                    go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.GetComponent<AllMaterials>().materials[(int)line.material];
-                    go.GetComponent<LineRenderer>().positionCount = line.points.Count;
-                    go.GetComponent<LineRenderer>().textureMode = LineTextureMode.Tile;
-                    go.GetComponent<LineRenderer>().receiveShadows = false;
-                    go.GetComponent<LineRenderer>().useWorldSpace = false;
+                    if(line != null)
+                    {
+                        GameObject go = new GameObject();
+                        
+                        go.transform.position = line.position;
+                        go.transform.rotation = line.rotation;
+                        go.transform.localScale = line.scale;
+                        
+                        go.tag = "Line";
+                        
+                        go.AddComponent<LineRenderer>();
 
-                    for (int i = 0; i < line.points.Count; i++)
-                        go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
+                        go.GetComponent<LineRenderer>().startColor = line.startColor;
+                        go.GetComponent<LineRenderer>().endColor = line.startColor;
+                        go.GetComponent<LineRenderer>().startWidth = line.startWidth;
+                        go.GetComponent<LineRenderer>().endWidth = line.endWidth;
+                        go.GetComponent<LineRenderer>().numCornerVertices = line.cornerVertices;
+                        go.GetComponent<LineRenderer>().numCapVertices = line.cornerVertices;
+                        go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.GetComponent<AllMaterials>().materials[(int)line.material];
+                        go.GetComponent<LineRenderer>().positionCount = line.points.Count;
+                        go.GetComponent<LineRenderer>().textureMode = LineTextureMode.Tile;
+                        go.GetComponent<LineRenderer>().receiveShadows = false;
+                        go.GetComponent<LineRenderer>().useWorldSpace = false;
+                        for (int i = 0; i < line.points.Count; i++)
+                            go.GetComponent<LineRenderer>().SetPosition(i, line.points[i]);
 
-                    go.AddComponent<UnityARUserAnchorComponent>();
+                        go.AddComponent<UnityARUserAnchorComponent>();
 
-                    Instantiate(go, go.transform.position, go.transform.rotation);
+                        Instantiate(go, go.transform.position, go.transform.rotation);
+                    }
                 }
+            }
+            catch(Exception e)
+            {
+                Debug.Log(e.ToString());
+                GameObject.Find("Text").GetComponent<UpdateWorldMappingStatus>().ChangeTextTo(e.ToString());
             }
         }
     }
-
+ 
 
     public void Load(string fileName)
     {
-        var worldMap = ARWorldMap.Load(Path.Combine(Application.persistentDataPath, fileName));
+        var worldMap = ARWorldMap.Load(Path.Combine(Application.persistentDataPath, string.Concat(fileName, ".worldmap")));
 
-        if (worldMap != null && m_LoadedMap != worldMap)
+        if (worldMap != null)
         {
-            if(PlayerPrefs.GetInt("FirstTimeLoading", 0) == 0)
-            {
-                PlayerPrefs.SetInt("FirstTimeLoading", 1);
-                saveLoadManager.SpawnGuideToLoad();
-            }
+            windowManager.SpawnGuideToLoad();
 
-            m_LoadedMap = worldMap;
             loadedWorldMapName = fileName;
 
-            Debug.LogFormat("Map loaded. Center: {0} Extent: {1}", worldMap.center, worldMap.extent);
+            //Debug.LogFormat("Map loaded. Center: {0} Extent: {1}", worldMap.center, worldMap.extent);
 
             UnityARSessionNativeInterface.ARSessionShouldAttemptRelocalization = true;
             relocalizing = true;
+            startTime = Time.time;
 
-            var config = m_ARCameraManager.sessionConfiguration;
+            ARKitWorldTrackingSessionConfiguration config = m_ARCameraManager.sessionConfiguration;
             config.worldMap = worldMap;
-			UnityARSessionRunOption runOption = UnityARSessionRunOption.ARSessionRunOptionRemoveExistingAnchors | UnityARSessionRunOption.ARSessionRunOptionResetTracking;
+            UnityARSessionRunOption runOption = UnityARSessionRunOption.ARSessionRunOptionRemoveExistingAnchors | UnityARSessionRunOption.ARSessionRunOptionResetTracking;
 
-			session.RunWithConfigAndOptions(config, runOption);
+            foreach(GameObject go in GameObject.FindGameObjectsWithTag("Line"))
+                Destroy(go);                        
 
+            session.RunWithConfigAndOptions(config, runOption);
         }
     }
 
