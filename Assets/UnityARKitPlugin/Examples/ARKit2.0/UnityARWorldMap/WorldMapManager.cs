@@ -16,8 +16,6 @@ public class WorldMapManager : MonoBehaviour
     WindowManager windowManager;
     bool relocalizing;
     float startTime;
-	//serializableARWorldMap serializedWorldMap;
-	//ARWorldMap m_LoadedMap;
     ARTrackingStateReason m_LastReason;
     ARWorldMappingStatus lastStatus;
 
@@ -54,7 +52,7 @@ public class WorldMapManager : MonoBehaviour
                 relocalizing = false;
                 windowManager.RelocalizeSuccessful();
 
-                // load the lines from path here because the user has to be relocalized in order to draw the lines
+                /*load the lines from path here because the user has to be relocalized in order to draw the lines*/
                 if(loadedWorldMapName != "")
                 {
                     Debug.Log("Loading lines");
@@ -271,8 +269,6 @@ public class WorldMapManager : MonoBehaviour
 
             loadedWorldMapName = fileName;
 
-            //Debug.LogFormat("Map loaded. Center: {0} Extent: {1}", worldMap.center, worldMap.extent);
-
             UnityARSessionNativeInterface.ARSessionShouldAttemptRelocalization = true;
             relocalizing = true;
             startTime = Time.time;
@@ -287,44 +283,4 @@ public class WorldMapManager : MonoBehaviour
             session.RunWithConfigAndOptions(config, runOption);
         }
     }
-
-    /*
-	public void SaveSerialized()
-	{
-		session.GetCurrentWorldMapAsync(OnWorldMapSerialized);
-	}
-
-
-    void OnWorldMapSerialized(ARWorldMap worldMap)
-    {
-        if (worldMap != null)
-        {
-            //we have an operator that converts a ARWorldMap to a serializableARWorldMap
-            serializedWorldMap = worldMap;
-            Debug.Log("ARWorldMap serialized to serializableARWorldMap");
-        }
-    }
-
-
-	public void LoadSerialized()
-	{
-		Debug.Log("Loading ARWorldMap from serialized data");
-		//we have an operator that converts a serializableARWorldMap to a ARWorldMap
-		ARWorldMap worldMap = serializedWorldMap;
-		if (worldMap != null)
-		{
-			m_LoadedMap = worldMap;
-			Debug.LogFormat("Map loaded. Center: {0} Extent: {1}", worldMap.center, worldMap.extent);
-
-			UnityARSessionNativeInterface.ARSessionShouldAttemptRelocalization = true;
-
-			var config = m_ARCameraManager.sessionConfiguration;
-			config.worldMap = worldMap;
-			UnityARSessionRunOption runOption = UnityARSessionRunOption.ARSessionRunOptionRemoveExistingAnchors | UnityARSessionRunOption.ARSessionRunOptionResetTracking;
-
-			Debug.Log("Restarting session with worldMap");
-			session.RunWithConfigAndOptions(config, runOption);
-		}
-	}
-    */
 }
