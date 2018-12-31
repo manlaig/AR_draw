@@ -6,26 +6,12 @@ public class WindowManager : MonoBehaviour
 {
 	[SerializeField] GameObject askNewDocument, warningToExplore, guideToLoad;
     [SerializeField] GameObject exploreEnv, saveDone, loadDone, updateDone;
-
-	Transform canvas;
-
-	void Awake()
-    {
-        canvas = GameObject.FindGameObjectWithTag("Canvas").transform;
-    }
-	
-
-	void CheckCanvasTransform()
-    {
-        if(canvas == null)
-            canvas = GameObject.FindGameObjectWithTag("Canvas").transform;
-    }
+	[SerializeField] Transform canvasTransform;
 
 
 	GameObject SpawnInCanvas(GameObject go)
 	{
-		CheckCanvasTransform();
-        return Instantiate(go, canvas);
+        return Instantiate(go, canvasTransform);
 	}
 
 

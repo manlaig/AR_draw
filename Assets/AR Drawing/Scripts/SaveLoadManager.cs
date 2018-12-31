@@ -3,6 +3,10 @@ using UnityEngine.XR.iOS;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
+/*
+ TRY NOT TO MESS WITH THIS FILE
+ I SPENT A WHOLE DAY DEBUGGING IT
+ */
 public class SaveLoadManager : MonoBehaviour
 {
     [SerializeField] GameObject loadSession, contentItem;
@@ -39,17 +43,17 @@ public class SaveLoadManager : MonoBehaviour
 
     void LoadSessionWindow()
     {
-		List<string> maps = FetchWorldMaps();
+		HashSet<string> maps = FetchWorldMaps();
         loadInstance = Instantiate(loadSession, GameObject.FindGameObjectWithTag("Canvas").transform);
 
         if (maps != null)
         {
+            Transform contentTransform = GameObject.Find("Content").transform;
             foreach (string s in maps)
             {
                 if (s != "" && s != " ")
                 {
-					Debug.Log(s);
-                    GameObject listItem = Instantiate(contentItem, GameObject.Find("Content").transform);
+                    GameObject listItem = Instantiate(contentItem, contentTransform);
                     Text t = listItem.GetComponentInChildren<Text>();
                     if (t != null)
                         t.text = s;
@@ -59,7 +63,7 @@ public class SaveLoadManager : MonoBehaviour
     }
 
 
-    List<string> FetchWorldMaps()
+    HashSet<string> FetchWorldMaps()
     {
         string allMaps = PlayerPrefs.GetString("AllWorldMaps", "");
         string previous = "";
@@ -67,7 +71,7 @@ public class SaveLoadManager : MonoBehaviour
         if (allMaps != "")
         {
             string[] words = allMaps.Split('?');
-            List<string> maps = new List<string>();
+            HashSet<string> maps = new HashSet<string>();
 
             // splitting fileNames from extensions
             for (int i = 0; i < words.Length; i++)

@@ -8,14 +8,17 @@ public class DrawLine : MonoBehaviour
 {
     [SerializeField] float distanceFromCamera = 1f;
     [SerializeField] GameObject line;
+
+    [Header("For simplifying lines")]
     [SerializeField] float tolerance = 2f;
     [SerializeField] float deltaBetweenPoints = 0.03f;
 
+    [Header("For detecting button press")]
+    [SerializeField] GraphicRaycaster graphicRaycaster;
+    [SerializeField] EventSystem eventSystem;
+
     // reference to current lineRenderer to add more points
     LineRenderer lineRenderer;
-
-    GameObject canvas;
-    EventSystem eventSystem;
 
 	// to show a point when user just draws a point, so index = 2
     int index = 2;
@@ -23,8 +26,6 @@ public class DrawLine : MonoBehaviour
 	void Start ()
     {
         lineRenderer = null;
-        canvas = GameObject.Find("Canvas");
-        eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
 	}
 
     void Update ()
@@ -86,13 +87,13 @@ public class DrawLine : MonoBehaviour
 
     bool ButtonPressed(int i = 0)
     {
-        if (canvas != null && eventSystem != null)
+        if (graphicRaycaster != null && eventSystem != null)
         {
             PointerEventData data = new PointerEventData(eventSystem);
             data.position = Input.GetTouch(i).position;
 
             List<RaycastResult> results = new List<RaycastResult>();
-            canvas.GetComponent<GraphicRaycaster>().Raycast(data, results);
+            graphicRaycaster.GetComponent<GraphicRaycaster>().Raycast(data, results);
 
             foreach (RaycastResult res in results)
                 if (res.gameObject.tag != "Canvas")

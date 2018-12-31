@@ -92,7 +92,7 @@
 
         [GetAppController() interfaceWillChangeOrientationTo: ConvertToIosScreenOrientation(newOrient)];
 
-        [coordinator animateAlongsideTransition: nil completion:^(id < UIViewControllerTransitionCoordinatorContext > context) {
+        [coordinator animateAlongsideTransition: nil completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
             [self.view setNeedsLayout];
             [GetAppController() interfaceDidChangeOrientationFrom: ConvertToIosScreenOrientation(curOrient)];
 

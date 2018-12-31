@@ -9,7 +9,7 @@ public class WorldMapManager : MonoBehaviour
 {
     [SerializeField] UnityARCameraManager m_ARCameraManager;
     [SerializeField] GameObject loadingScreen;
-    [SerializeField] GameObject allMaterials;
+    [SerializeField] MaterialSO allMaterials;
 
     public static string loadedWorldMapName; // without extension
 
@@ -184,7 +184,7 @@ public class WorldMapManager : MonoBehaviour
         data.startColor = line.startColor;
         data.startWidth = line.startWidth;
         data.endWidth = line.endWidth;
-        data.material = (MaterialsEnum) allMaterials.GetComponent<AllMaterials>().GetCorrespondingIndex(line.sharedMaterial);
+        data.material = (MaterialsEnum) allMaterials.GetCorrespondingIndex(line.sharedMaterial);
         data.cornerVertices = line.numCornerVertices;
         
         data.position = line.gameObject.transform.position;
@@ -236,7 +236,7 @@ public class WorldMapManager : MonoBehaviour
                         go.GetComponent<LineRenderer>().endWidth = line.endWidth;
                         go.GetComponent<LineRenderer>().numCornerVertices = line.cornerVertices;
                         go.GetComponent<LineRenderer>().numCapVertices = line.cornerVertices;
-                        go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.GetComponent<AllMaterials>().materials[(int)line.material];
+                        go.GetComponent<LineRenderer>().sharedMaterial = allMaterials.materials[(int)line.material];
                         go.GetComponent<LineRenderer>().positionCount = line.points.Count;
                         go.GetComponent<LineRenderer>().textureMode = LineTextureMode.Tile;
                         go.GetComponent<LineRenderer>().receiveShadows = false;

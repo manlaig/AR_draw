@@ -1,12 +1,12 @@
 
 #include "RegisterFeatures.h"
 
-extern bool gEnableGyroscope;
-extern bool gEnableStylusTouch;
+extern "C" void UnityEnableGyroscope(bool value);
+extern "C" void UnityEnableStylusTouch(bool value);
 
 void RegisterFeatures()
 {
-    gEnableGyroscope = false;
-    gEnableStylusTouch = false;
+    UnityEnableGyroscope(false);
+    UnityEnableStylusTouch(false);
 }
 

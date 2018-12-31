@@ -5,9 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Vector3Ser
 {
-    public float x { get; set; }
-    public float y { get; set; }
-    public float z { get; set; }
+    public float x, y, z;
 
     public Vector3Ser(float xx, float yy, float zz)
     {
@@ -31,10 +29,7 @@ public class Vector3Ser
 [System.Serializable]
 public class QuaternionSer
 {
-    public float x { get; set; }
-    public float y { get; set; }
-    public float z { get; set; }
-    public float w { get; set; }
+    public float x, y, z, w;
 
     public QuaternionSer(float xx, float yy, float zz, float ww)
     {
@@ -59,10 +54,7 @@ public class QuaternionSer
 [System.Serializable]
 public class ColorSer
 {
-    public float r { get; set; }
-    public float g { get; set; }
-    public float b { get; set; }
-    public float a { get; set; }
+    public float r, g, b, a;
 
     public ColorSer(float xx, float yy, float zz, float ww)
     {

@@ -42,10 +42,3 @@
 }
 
 @end
-
-extern "C" void UnityNotifyAutoOrientationChange()
-{
-#if UNITY_SUPPORT_ROTATION
-    [GetAppController() forceAutorotatingControllerToRefreshEnabledOrientationsIfNeeded];
-#endif
-}

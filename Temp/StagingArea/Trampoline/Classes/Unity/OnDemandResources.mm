@@ -29,7 +29,6 @@ extern "C" OnDemandResourcesRequestData* UnityOnDemandResourcesCreateRequest(NSS
     return data;
 }
 
-
 extern "C" void UnityOnDemandResourcesRelease(OnDemandResourcesRequestData* data)
 {
     [data->request endAccessingResources];
@@ -64,7 +63,6 @@ extern "C" NSString* UnityOnDemandResourcesGetResourcePath(OnDemandResourcesRequ
     return path;
 }
 
-
 #else // ENABLE_IOS_ON_DEMAND_RESOURCES
 
 
@@ -80,7 +78,6 @@ extern "C" OnDemandResourcesRequestData* UnityOnDemandResourcesCreateRequest(NSS
         handler(handlerData, NULL);
     return data;
 }
-
 
 extern "C" void UnityOnDemandResourcesRelease(OnDemandResourcesRequestData* data)
 {
@@ -105,6 +102,5 @@ extern "C" NSString* UnityOnDemandResourcesGetResourcePath(OnDemandResourcesRequ
 {
     return [NSString stringWithUTF8String: resource];
 }
-
 
 #endif // ENABLE_IOS_ON_DEMAND_RESOURCES
