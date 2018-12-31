@@ -1,5 +1,13 @@
-# AR_draw
+# AR Draw
 
-<a href="https://imgflip.com/gif/2flrpe"><img src="https://i.imgflip.com/2flrpe.gif" title="Drawing with Line Renderers and attaching ARAnchors"/></a>
+## Drawing a line and attaching ARAnchors
 
-<a href="https://imgflip.com/gif/2flrgs"><img src="https://i.imgflip.com/2flrgs.gif" title="Deserializing Line Renderers"/></a>
+Draw lines that can be saved locally where you drew it
+
+<img src="https://i.imgflip.com/2flrpe.gif" title="Drawing with Line Renderers and attaching ARAnchors"/>
+
+## Loading saved lines and world map
+
+Retrieve previous drawing sessions when you visit the place you saved
+
+<img src="https://i.imgflip.com/2flrgs.gif" title="Deserializing Line Renderers"/>
